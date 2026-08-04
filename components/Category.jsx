@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 const products = [
   {
     title: "Double Row Angular Contact Ball Bearings",
-    image: "/arb-images/DOUBLE POINT ANGULAR CONTACT.webp",
+    image: "/arb-images/DOUBLE POINT ANGULAR CONTACT.png",
     desc: "Designed to accommodate combined radial and axial loads in both directions, offering high rigidity and reliable performance for demanding industrial applications.",
 
 link:"/products/ball-bearing/double-row-angular-contact-ball-bearings"
@@ -20,31 +20,31 @@ link:"/products/ball-bearing/double-row-angular-contact-ball-bearings"
   },
   {
     title: "Four Point Contact Ball Bearings",
-    image: "/arb-images/FOUR POINT ANGULAR CONTACT.webp",
+    image: "/arb-images/FOUR POINT ANGULAR CONTACT.png",
     desc: "Engineered to support axial loads in both directions while occupying minimal space, making them ideal for gearboxes, pumps, and industrial machinery.",
     link:"/products/ball-bearing/four-point-contact-ball-bearings"
   },
   {
     title: "Ball Bearings",
-    image: "/arb-images/BALL BEARING 62208 2RS.webp",
+    image: "/arb-images/BALL BEARING 62208 2RS.png",
     desc: "Precision-engineered ball bearings deliver smooth rotation, low friction, high-speed operation, and extended service life across automotive and industrial applications.",
     link:"/products/ball-bearing/ball-bearings"
   },
   {
     title: "Wheel Bearings",
-    image: "/arb-images/Wheel Bearing.webp",
+    image: "/arb-images/Wheel Bearing.png",
     desc: "High-performance wheel bearings provide smooth wheel rotation, reduced friction, and enhanced durability for reliable automotive performance and safety.",
     link:"/products/wheel-bearing/wheel-bearings"
   },
   {
     title: "Cylindrical Roller Bearings",
-    image: "/arb-images/CYLINDRICAL BEARING NU-212 E.webp",
+    image: "/arb-images/CYLINDRICAL BEARING NU-212 E.png",
     desc: "Built to handle heavy radial loads with exceptional rigidity, ensuring efficient performance in electric motors, gearboxes, and heavy industrial equipment.",
     link:"/products/roller-bearings/cylindrical-roller-bearings"
   },
   {
     title: "Mix Cylindrical Roller Bearings",
-    image: "/arb-images/CYLINDRICAL BEARING JC 8003.webp",
+    image: "/arb-images/CYLINDRICAL BEARING JC 8003.png",
     desc: "Manufactured for high load capacity and dependable operation, these bearings offer superior strength and durability for demanding industrial and automotive applications.",
     link:"/products/roller-bearings/mix-cylindrical-roller-bearings"
   },
