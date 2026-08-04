@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Premium 3D Bearing Animation ===== */
+
+.perspective {
+  perspective: 1200px;
+}
+
+.bearing-3d {
+  transform-style: preserve-3d;
+  transform-origin: center;
+  animation: bearing3d 8s ease-in-out infinite;
+  will-change: transform;
+  filter: drop-shadow(0 25px 45px rgba(0, 140, 255, .35));
+}
+
+@keyframes bearing3d {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) translateY(0px) scale(1);
+  }
+
+  15% {
+    transform: rotateY(18deg) rotateX(5deg) translateY(-8px) scale(1.03);
+  }
+
+  30% {
+    transform: rotateY(35deg) rotateX(0deg) translateY(-15px) scale(1.06);
+  }
+
+  50% {
+    transform: rotateY(0deg) rotateX(-6deg) translateY(-20px) scale(1.08);
+  }
+
+  70% {
+    transform: rotateY(-35deg) rotateX(0deg) translateY(-15px) scale(1.06);
+  }
+
+  85% {
+    transform: rotateY(-18deg) rotateX(5deg) translateY(-8px) scale(1.03);
+  }
+
+  100% {
+    transform: rotateY(0deg) rotateX(0deg) translateY(0px) scale(1);
+  }
+}
+
+
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slow-spin {
+  animation: slowSpin 20s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+.testimonialSwiper {
+  padding-bottom: 70px;
+}
+
+.testimonialSwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.testimonialSwiper .swiper-pagination-bullet-active {
+  width: 32px;
+  border-radius: 9999px;
+  background: #28186C;
+}
+
+.testimonialSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.testimonialSwiper .swiper-slide > div {
+  width: 100%;
+}

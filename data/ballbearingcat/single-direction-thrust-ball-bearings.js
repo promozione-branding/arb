@@ -1,0 +1,588 @@
+export default {
+  category: {
+    name: "Ball-Bearing",
+    slug: "ball-bearing",
+
+    pageContent: {
+      hero: {
+        title: "Leading Ball Bearings supplier",
+        description:
+          "Precision-engineered ball bearings designed for high performance, durability, and reliable operation across automotive and industrial applications.",
+        // image: "/ball-bearings.png",
+      },
+
+      intro: {
+        title: "Ball Bearing",
+        description:
+          "Explore our comprehensive range of ball bearings, engineered for precision, durability, and reliable performance across automotive, industrial, and heavy-duty applications.",
+      },
+
+      section1: {
+        badge: "Premium Ball Bearings",
+        title: "Precision-Engineered for Maximum Performance ",
+        description:
+          "Designed for demanding industrial applications, ARB ball bearings deliver exceptional reliability, smooth operation, and long service life with precision engineering and superior quality.",
+        image: "/ball-bearings.png",
+        features: [
+          "High Precision Engineering",
+          "Low Friction Performance",
+          
+          "Corrosion Resistant",
+          "Heavy-Duty Reliability",
+        ],
+      },
+
+      section2: {
+        badge: "Engineered Performance",
+        title: "Built for Maximum Reliability & Precision ",
+        description:
+          "As a leading ball bearings supplier, ARB Bearings designs and manufactures high-performance ball bearings that deliver exceptional precision, durability, and efficiency. Engineered for demanding automotive and industrial applications, our bearings ensure smooth operation, reduced maintenance, and long-lasting reliability.",
+        image: "/ball-bearings.png",
+        stats: {
+          title: "2x",
+          text: "Higher Load Capacity",
+        },
+      },
+    },
+  },
+  subCategory: {
+    name: "Single Direction Thrust Ball Bearings",
+    slug: "single-direction-thrust-ball-bearings",
+    heroTitle: "Single Direction Thrust Ball Bearings",
+    heroDescription:
+      "Versatile, low-friction bearings suited for high-speed operation under radial and moderate axial loads in both directions.",
+ image: "/arb-images/THRUST BEARING.png",
+    description:
+      "Single direction thrust ball bearings engineered to handle axial loads efficiently while delivering stable performance, precision, and long-lasting reliability.",
+
+    features: [
+     "Optimized Axial Load Support",
+"High Running Accuracy",
+"Robust Construction",
+"Reliable Performance"
+
+    ],
+
+  
+    applications: ["Agricultural", "Automotive", "Industrial"],
+  },
+  products: [
+    {
+      model: "51100",
+      slug: "51100",
+      dimensions: {
+        "Internal Diameter (mm)": 10,
+        "Outer Diameter (mm)": 24,
+        "Bearing Height (mm)": 9,
+        "Mass (Kg)": 0.02,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51100.pdf",
+    },
+    {
+      model: "51101",
+      slug: "51101",
+      dimensions: {
+        "Internal Diameter (mm)": 12,
+        "Outer Diameter (mm)": 26,
+        "Bearing Height (mm)": 9,
+        "Mass (Kg)": 0.022,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51101.pdf",
+    },
+    {
+      model: "51102",
+      slug: "51102",
+      dimensions: {
+        "Internal Diameter (mm)": 15,
+        "Outer Diameter (mm)": 28,
+        "Bearing Height (mm)": 9,
+        "Mass (Kg)": 0.023,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51102.pdf",
+    },
+    {
+      model: "51202",
+      slug: "51202",
+      dimensions: {
+        "Internal Diameter (mm)": 15,
+        "Outer Diameter (mm)": 32,
+        "Bearing Height (mm)": 12,
+        "Mass (Kg)": 0.046,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51202.pdf",
+    },
+    {
+      model: "51103",
+      slug: "51103",
+      dimensions: {
+        "Internal Diameter (mm)": 17,
+        "Outer Diameter (mm)": 30,
+        "Bearing Height (mm)": 9,
+        "Mass (Kg)": 0.025,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51103.pdf",
+    },
+    {
+      model: "51104",
+      slug: "51104",
+      dimensions: {
+        "Internal Diameter (mm)": 20,
+        "Outer Diameter (mm)": 35,
+        "Bearing Height (mm)": 10,
+        "Mass (Kg)": 0.038,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51104.pdf",
+    },
+    {
+      model: "51204",
+      slug: "51204",
+      dimensions: {
+        "Internal Diameter (mm)": 20,
+        "Outer Diameter (mm)": 40,
+        "Bearing Height (mm)": 14,
+        "Mass (Kg)": 0.083,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51204.pdf",
+    },
+    {
+      model: "51105",
+      slug: "51105",
+      dimensions: {
+        "Internal Diameter (mm)": 25,
+        "Outer Diameter (mm)": 42,
+        "Bearing Height (mm)": 11,
+        "Mass (Kg)": 0.056,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51105.pdf",
+    },
+    {
+      model: "51205",
+      slug: "51205",
+      dimensions: {
+        "Internal Diameter (mm)": 25,
+        "Outer Diameter (mm)": 47,
+        "Bearing Height (mm)": 15,
+        "Mass (Kg)": 0.13,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51205.pdf",
+    },
+    {
+      model: "51106",
+      slug: "51106",
+      dimensions: {
+        "Internal Diameter (mm)": 30,
+        "Outer Diameter (mm)": 47,
+        "Bearing Height (mm)": 11,
+        "Mass (Kg)": 0.063,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51106.pdf",
+    },
+    {
+      model: "51206",
+      slug: "51206",
+      dimensions: {
+        "Internal Diameter (mm)": 30,
+        "Outer Diameter (mm)": 52,
+        "Bearing Height (mm)": 16,
+        "Mass (Kg)": 0.15,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51206.pdf",
+    },
+    {
+      model: "51107",
+      slug: "51107",
+      dimensions: {
+        "Internal Diameter (mm)": 35,
+        "Outer Diameter (mm)": 52,
+        "Bearing Height (mm)": 12,
+        "Mass (Kg)": 0.08,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51107.pdf",
+    },
+    {
+      model: "51207",
+      slug: "51207",
+      dimensions: {
+        "Internal Diameter (mm)": 35,
+        "Outer Diameter (mm)": 62,
+        "Bearing Height (mm)": 18,
+        "Mass (Kg)": 0.22,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51207.pdf",
+    },
+    {
+      model: "51108",
+      slug: "51108",
+      dimensions: {
+        "Internal Diameter (mm)": 40,
+        "Outer Diameter (mm)": 60,
+        "Bearing Height (mm)": 13,
+        "Mass (Kg)": 0.12,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51108.pdf",
+    },
+    {
+      model: "51208",
+      slug: "51208",
+      dimensions: {
+        "Internal Diameter (mm)": 40,
+        "Outer Diameter (mm)": 68,
+        "Bearing Height (mm)": 19,
+        "Mass (Kg)": 0.28,
+      },
+
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51208.pdf",
+    },
+    {
+      model: "51109",
+      slug: "51109",
+      dimensions: {
+        "Internal Diameter (mm)": 45,
+        "Outer Diameter (mm)": 65,
+        "Bearing Height (mm)": 14,
+        "Mass (Kg)": 0.14,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51109.pdf",
+    },
+    {
+      model: "51209",
+      slug: "51209",
+      dimensions: {
+        "Internal Diameter (mm)": 45,
+        "Outer Diameter (mm)": 73,
+        "Bearing Height (mm)": 20,
+        "Mass (Kg)": 0.3,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51209.pdf",
+    },
+    {
+      model: "51110",
+      slug: "51110",
+      dimensions: {
+        "Internal Diameter (mm)": 50,
+        "Outer Diameter (mm)": 70,
+        "Bearing Height (mm)": 14,
+        "Mass (Kg)": 0.16,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51110.pdf",
+    },
+    {
+      model: "51210",
+      slug: "51210",
+      dimensions: {
+        "Internal Diameter (mm)": 50,
+        "Outer Diameter (mm)": 78,
+        "Bearing Height (mm)": 22,
+        "Mass (Kg)": 0.37,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51210.pdf",
+    },
+    {
+      model: "51310",
+      slug: "51310",
+      dimensions: {
+        "Internal Diameter (mm)": 50,
+        "Outer Diameter (mm)": 95,
+        "Bearing Height (mm)": 31,
+        "Mass (Kg)": 0.94,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51310.pdf",
+    },
+    {
+      model: "51111",
+      slug: "51111",
+      dimensions: {
+        "Internal Diameter (mm)": 55,
+        "Outer Diameter (mm)": 78,
+        "Bearing Height (mm)": 16,
+        "Mass (Kg)": 0.23,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51111.pdf",
+    },
+    {
+      model: "51211",
+      slug: "51211",
+      dimensions: {
+        "Internal Diameter (mm)": 55,
+        "Outer Diameter (mm)": 90,
+        "Bearing Height (mm)": 25,
+        "Mass (Kg)": 0.59,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51211.pdf",
+    },
+    {
+      model: "51112",
+      slug: "51112",
+      dimensions: {
+        "Internal Diameter (mm)": 60,
+        "Outer Diameter (mm)": 85,
+        "Bearing Height (mm)": 17,
+        "Mass (Kg)": 0.2,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51112.pdf",
+    },
+    {
+      model: "51212",
+      slug: "51212",
+      dimensions: {
+        "Internal Diameter (mm)": 60,
+        "Outer Diameter (mm)": 95,
+        "Bearing Height (mm)": 26,
+        "Mass (Kg)": 0.65,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51212.pdf",
+    },
+    {
+      model: "51113",
+      slug: "51113",
+      dimensions: {
+        "Internal Diameter (mm)": 65,
+        "Outer Diameter (mm)": 90,
+        "Bearing Height (mm)": 18,
+        "Mass (Kg)": 0.33,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51113.pdf",
+    },
+    {
+      model: "51213",
+      slug: "51213",
+      dimensions: {
+        "Internal Diameter (mm)": 65,
+        "Outer Diameter (mm)": 100,
+        "Bearing Height (mm)": 27,
+        "Mass (Kg)": 0.78,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51213.pdf",
+    },
+    {
+      model: "51114",
+      slug: "51114",
+      dimensions: {
+        "Internal Diameter (mm)": 70,
+        "Outer Diameter (mm)": 95,
+        "Bearing Height (mm)": 18,
+        "Mass (Kg)": 0.35,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51114.pdf",
+    },
+    {
+      model: "51214",
+      slug: "51214",
+      dimensions: {
+        "Internal Diameter (mm)": 70,
+        "Outer Diameter (mm)": 105,
+        "Bearing Height (mm)": 27,
+        "Mass (Kg)": 0.79,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51214.pdf",
+    },
+    {
+      model: "51314",
+      slug: "51314",
+      dimensions: {
+        "Internal Diameter (mm)": 70,
+        "Outer Diameter (mm)": 125,
+        "Bearing Height (mm)": 40,
+        "Mass (Kg)": 0.94,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51314.pdf",
+    },
+    {
+      model: "51115",
+      slug: "51115",
+      dimensions: {
+        "Internal Diameter (mm)": 75,
+        "Outer Diameter (mm)": 100,
+        "Bearing Height (mm)": 19,
+        "Mass (Kg)": 0.4,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51115.pdf",
+    },
+    {
+      model: "51215",
+      slug: "51215",
+      dimensions: {
+        "Internal Diameter (mm)": 75,
+        "Outer Diameter (mm)": 110,
+        "Bearing Height (mm)": 27,
+        "Mass (Kg)": 0.83,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51215.pdf",
+    },
+    {
+      model: "51116",
+      slug: "51116",
+      dimensions: {
+        "Internal Diameter (mm)": 80,
+        "Outer Diameter (mm)": 105,
+        "Bearing Height (mm)": 19,
+        "Mass (Kg)": 0.42,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51116.pdf",
+    },
+    {
+      model: "51216",
+      slug: "51216",
+      dimensions: {
+        "Internal Diameter (mm)": 80,
+        "Outer Diameter (mm)": 115,
+        "Bearing Height (mm)": 28,
+        "Mass (Kg)": 0.91,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51216.pdf",
+    },
+    {
+      model: "51117",
+      slug: "51117",
+      dimensions: {
+        "Internal Diameter (mm)": 85,
+        "Outer Diameter (mm)": 110,
+        "Bearing Height (mm)": 19,
+        "Mass (Kg)": 0.44,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51117.pdf",
+    },
+    {
+      model: "51217",
+      slug: "51217",
+      dimensions: {
+        "Internal Diameter (mm)": 85,
+        "Outer Diameter (mm)": 125,
+        "Bearing Height (mm)": 31,
+        "Mass (Kg)": 1.2,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51217.pdf",
+    },
+    {
+      model: "51118",
+      slug: "51118",
+      dimensions: {
+        "Internal Diameter (mm)": 90,
+        "Outer Diameter (mm)": 120,
+        "Bearing Height (mm)": 22,
+        "Mass (Kg)": 0.67,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51118.pdf",
+    },
+    {
+      model: "51218",
+      slug: "51218",
+      dimensions: {
+        "Internal Diameter (mm)": 90,
+        "Outer Diameter (mm)": 135,
+        "Bearing Height (mm)": 35,
+        "Mass (Kg)": 1.7,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51218.pdf",
+    },
+    {
+      model: "51318",
+      slug: "51318",
+      dimensions: {
+        "Internal Diameter (mm)": 90,
+        "Outer Diameter (mm)": 155,
+        "Bearing Height (mm)": 50,
+        "Mass (Kg)": 3.8,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51318.pdf",
+    },
+    {
+      model: "51120",
+      slug: "51120",
+      dimensions: {
+        "Internal Diameter (mm)": 100,
+        "Outer Diameter (mm)": 135,
+        "Bearing Height (mm)": 25,
+        "Mass (Kg)": 0.97,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51120.pdf",
+    },
+    {
+      model: "51220",
+      slug: "51220",
+      dimensions: {
+        "Internal Diameter (mm)": 100,
+        "Outer Diameter (mm)": 150,
+        "Bearing Height (mm)": 38,
+        "Mass (Kg)": 2.2,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51220.pdf",
+    },
+    {
+      model: "51122",
+      slug: "51122",
+      dimensions: {
+        "Internal Diameter (mm)": 110,
+        "Outer Diameter (mm)": 145,
+        "Bearing Height (mm)": 25,
+        "Mass (Kg)": 1.05,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51122.pdf",
+    },
+    {
+      model: "51222",
+      slug: "51222",
+      dimensions: {
+        "Internal Diameter (mm)": 110,
+        "Outer Diameter (mm)": 160,
+        "Bearing Height (mm)": 38,
+        "Mass (Kg)": 2.4,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51222.pdf",
+    },
+    {
+      model: "51326",
+      slug: "51326",
+      dimensions: {
+        "Internal Diameter (mm)": 130,
+        "Outer Diameter (mm)": 225,
+        "Bearing Height (mm)": 75,
+        "Mass (Kg)": 13,
+      },
+      image: "/arb-images/THRUST BEARING.png",
+      pdf: "/pdfs/51326.pdf",
+    },
+  ],
+};
