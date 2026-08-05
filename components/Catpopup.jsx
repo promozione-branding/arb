@@ -5,14 +5,14 @@ import axios from "axios";
 
 import { toast } from "react-toastify";
 
-export default function ContactForm({ IATFpen, onClose }) {
+export default function ContactForm({ Onpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
 
   const [successMessage, setSuccessMessage] = useState("");
 
   const [loading, setLoading] = useState(false);
 
-  if (!IATFpen) return null;
+  if (!Onpen) return null;
 
   const handleClose = () => {
     onClose();
@@ -24,7 +24,7 @@ export default function ContactForm({ IATFpen, onClose }) {
       setLoading(true);
 
       const { data } = await axios.post("https://brandbnalo.com/api/form/add", {
-        platform: "arb website enquiry Form",
+        platform: "arb website brochure request Form",
 
         platformEmail: "arb@gmail.com",
 
@@ -104,11 +104,8 @@ Contact: ${values.phone}`;
   return (
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/50 p-4 overflow-y-auto">
       <div
-        className="relative border-2 border-white z-[1000] rounded-3xl shadow-2xl p-6 md:p-10 w-full max-w-[570px] text-white bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(/there-are-two-gears-that-are-water-with-some-liquid_1034997-124995.avif)",
-        }}
+        className="relative border-2 border-white z-[1000] rounded-3xl shadow-2xl p-6 md:p-10 w-full max-w-[570px] text-white bg-blue-800"
+       
       >
         {/* OVERLAY */}
         <div className="absolute  inset-0 bg-black/70 rounded-3xl"></div>
@@ -117,18 +114,18 @@ Contact: ${values.phone}`;
         <div className="relative z-[10001]">
           {/* CLOSE BUTTON */}
           <button
-            className="absolute top-0 right-0 text-white hover:text-red-500 text-2xl cursor-pointer"
+            className="absolute -top-7 -right-5 text-white hover:text-red-500 text-2xl cursor-pointer"
             onClick={handleClose}
           >
             ✕
           </button>
 
           {/* HEADING */}
-          <h2 className="text-center text-white text-2xl md:text-3xl font-semibold">
-            Get In Touch With Us
+          <h2 className="text-center text-white animate-pulse text-2xl md:text-3xl font-semibold">
+           Request the Product Catalogue
           </h2>
 
-          <div className="w-28 h-[4px] bg-blue-600 mx-auto mt-3 mb-8 rounded-full"></div>
+          <div className="w-28 h-[4px] bg-blue-600 mx-auto mt-3 mb-5 rounded-full"></div>
 
           {!submitted ? (
             <form className="space-y-4" onSubmit={handleSubmit}>

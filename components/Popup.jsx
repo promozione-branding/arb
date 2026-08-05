@@ -30,8 +30,8 @@ export default function ContactForm() {
       setLoading(true);
 
       const formData = {
-        platform: "shiva steel popup Form",
-        platformEmail: "shivasteel2019@gmail.com",
+        platform: "arb website popup Form",
+        platformEmail: "arb@gmail.com",
         name,
         phone,
         email,
@@ -58,7 +58,7 @@ Contact: ${phone}`;
 
         setTimeout(() => {
           window.open(
-            `https://wa.me/919873656785?text=${encodeURIComponent(
+            `https://wa.me/919856785?text=${encodeURIComponent(
               whatsappText,
             )}`,
             "_blank",

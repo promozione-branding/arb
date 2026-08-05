@@ -4,13 +4,13 @@ import { useState } from "react";import Image from 'next/image';
 import Link from "next/link";
 import { ChevronDown, Menu, X, PhoneCall, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-
+import Enquiry from "@/components/Enquiry";
 export default function Navbar({ categories }) {
 
 
 
 
-
+ const [isFormOpen, setIsFormOpen] = useState(false);
   
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -136,8 +136,8 @@ export default function Navbar({ categories }) {
                 <FaWhatsapp size={20} />
               </a>
 
-              <Link
-                href="/contact-us"
+              <button
+                onClick={() => setIsFormOpen(true)}
                 className="group relative overflow-hidden rounded-full bg-white px-7 py-4 border border-blue-700 text-red-600 font-semibold shadow-[0_17px_40px_rgba(255,106,43,.45)] transition-all duration-500 hover:scale-105"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -148,7 +148,7 @@ export default function Navbar({ categories }) {
                   />
                 </span>
                 <span className="absolute inset-0 bg-white/20 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700 skew-x-12" />
-              </Link>
+              </button>
             </div>
 
             <div className="flex lg:hidden items-center gap-3">
@@ -380,6 +380,18 @@ export default function Navbar({ categories }) {
           </div>
         </div>
       )}
+
+
+
+
+
+    {isFormOpen && (
+        <Enquiry
+          IATFpen={isFormOpen}
+          onClose={() => setIsFormOpen(false)}
+        />
+      )}
+
     </header>
   );
 }

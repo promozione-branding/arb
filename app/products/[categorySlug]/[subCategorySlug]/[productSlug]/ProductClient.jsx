@@ -20,11 +20,11 @@ import {
   Car,
   Boxes,
 } from "lucide-react";
-
+import Catpopup from "@/components/Catpopup";
 export default function ProductClient({ result }) {
   const { entry, product } = result;
   const { category, subCategory } = entry;
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [FormOpen, setFormOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
 
   const specifications = {
@@ -34,7 +34,7 @@ export default function ProductClient({ result }) {
   };
 
   const [loading, setLoading] = useState(false);
-
+ const [isFormOpen, setIsFormOpen] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -206,17 +206,19 @@ ${message}`;
               <ArrowRight size={16} />
             </button>
 
-            {product.pdf && (
-              <a
-                href={product.pdf}
+          
+              <button
+                onClick={() => setFormOpen(true)}
+               
+              
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border rounded-lg px-7 py-3 flex items-center gap-2 hover:bg-white transition"
               >
                 <Download size={16} />
                 BROCHURE
-              </a>
-            )}
+              </button>
+           
           </div>
 
           {/* Tabs */}
@@ -306,9 +308,9 @@ ${message}`;
             <div className="py-14">
               <h2 className="text-3xl font-bold mb-8">Downloads</h2>
 
-              {product.pdf ? (
-                <a
-                  href={product.pdf}
+            
+                <button onClick={() => setFormOpen(true)}
+                 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between border rounded-xl p-6 hover:shadow-lg transition bg-white"
@@ -320,10 +322,8 @@ ${message}`;
                   </div>
 
                   <Download size={24} />
-                </a>
-              ) : (
-                <p className="text-gray-500">No brochure available.</p>
-              )}
+                </button>
+           
             </div>
           )}
         </div>
@@ -436,9 +436,26 @@ ${message}`;
         </div>
       </section>
 
-      {isFormOpen && (
-        <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
+
+
+
+{FormOpen && (
+  <Catpopup
+    Onpen={FormOpen}
+    onClose={() => setFormOpen(false)}
+  />
+)}
+
+    {isFormOpen && (
+        <Enquiry
+          IATFpen={isFormOpen}
+          onClose={() => setIsFormOpen(false)}
+        />
       )}
+
+
+
     </div>
   );
 }

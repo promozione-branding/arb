@@ -1,7 +1,7 @@
-// app/grease/page.jsx
-
+"use client"
+import { useState } from "react";
 import Image from "next/image";
-
+import Enquiry from "@/components/Enquiry";
 const greaseVariants = [
   {
     title: "Crystal Red Gel Grease",
@@ -56,6 +56,9 @@ const applications = [
 ];
 
 export default function GreasePage() {
+const [isFormOpen, setIsFormOpen] = useState(false);
+
+
   return (
     <main className="bg-white">
       {/* Hero */}
@@ -277,15 +280,24 @@ export default function GreasePage() {
           </p>
 
           <div className="mt-6">
-            <a
-              href="/contact-us"
+            <button
+              onClick={() => setIsFormOpen(true)}
               className="inline-flex items-center rounded-full bg-red-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-red-700 hover:scale-105"
             >
               Enquire Now
-            </a>
+            </button>
           </div>
         </div>
       </section>
+
+
+    {isFormOpen && (
+        <Enquiry
+          IATFpen={isFormOpen}
+          onClose={() => setIsFormOpen(false)}
+        />
+      )}
+
     </main>
   );
 }

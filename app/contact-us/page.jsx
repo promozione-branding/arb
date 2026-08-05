@@ -158,36 +158,47 @@ const contactCards = [
 
 <section className="relative max-w-7xl mx-auto -mt-12 px-6 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-  {contactCards.map((card, index) => {
-    const Icon = card.icon;
+{contactCards.map((card, index) => {
+  const Icon = card.icon;
 
-    return (
-      <div
-        key={index}
-        className="rounded-3xl border border-slate-200 bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-      >
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100">
-          <Icon className="h-7 w-7 text-blue-700" />
-        </div>
-
-        <h3 className="mt-5 text-xl font-bold text-slate-900">
-          {card.title}
-        </h3>
-
-        <div className="mt-3 space-y-1">
-          {card.value.map((item, i) => (
-            <p key={i} className="text-sm leading-7 text-slate-600 break-words">
-              {item}
-            </p>
-          ))}
-        </div>
+  return (
+    <div
+      key={index}
+      className="rounded-3xl border border-slate-200 bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+    >
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100">
+        <Icon className="h-7 w-7 text-blue-700" />
       </div>
-    );
-  })}
+
+      <h3 className="mt-5 text-xl font-bold text-slate-900">
+        {card.title}
+      </h3>
+
+      <div className="mt-3 space-y-1">
+        {card.value.map((item, i) => {
+          const isEmail = item.includes("@");
+          const href = isEmail
+            ? `mailto:${item}`
+            : `tel:${item.replace(/\s+/g, "")}`;
+
+          return (
+            <a
+              key={i}
+              href={href}
+              className="block break-words text-sm leading-7 text-slate-600 transition-colors hover:text-blue-700"
+            >
+              {item}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  );
+})}
 
 </section>
 
-
+  
 
     <section className="max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-10 items-start">
      <div className="rounded-[32px] border border-slate-200 bg-white p-8 lg:p-10 shadow-xl">

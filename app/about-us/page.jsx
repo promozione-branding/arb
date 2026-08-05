@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ArrowRight, Download, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Enquiry from "@/components/Enquiry";
+
+import Catpopup from "@/components/Catpopup";
 import { useState } from "react";
 export default function AboutPage() {
   const why = [
@@ -21,6 +23,8 @@ export default function AboutPage() {
 
 
  const [isFormOpen, setIsFormOpen] = useState(false);
+const [FormOpen, setFormOpen] = useState(false);
+
   return (
     <main className="bg-white text-slate-800">
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
@@ -112,7 +116,7 @@ export default function AboutPage() {
             <Link href="/products/ball-bearing" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold flex items-center gap-2">
               Explore Products <ArrowRight size={18} />
             </Link>
-            <button onClick={()=> setIsFormOpen(true)}  className="border border-white px-7 py-4 rounded-full font-semibold flex items-center gap-2">
+            <button onClick={()=> setFormOpen(true)}  className="border border-white px-7 py-4 rounded-full font-semibold flex items-center gap-2">
               Download Catalogue <Download size={18} />
             </button>
           </div>
@@ -209,6 +213,14 @@ export default function AboutPage() {
  {isFormOpen && (
         <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
       )}
+
+
+      {FormOpen && (
+  <Catpopup
+    Onpen={FormOpen}
+    onClose={() => setFormOpen(false)}
+  />
+)}
 
 
     </main>

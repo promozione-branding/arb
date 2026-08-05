@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Enquiry from "@/components/Enquiry";
+import Catpopup from "@/components/Catpopup";
 import { useState } from "react";
 
 import {
@@ -40,7 +40,7 @@ export default function HeroSection() {
         }}
         className="relative w-full min-h-screen lg:min-h-[700px] overflow-hidden flex items-center pt-10 lg:py-0"
       >
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-5 md:px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center  lg:gap-6">
             {/* LEFT CONTENT */}
             <div className=" text-center lg:text-left">
@@ -83,7 +83,7 @@ export default function HeroSection() {
                 <div className="grid grid-cols-2 lg:grid-cols-4">
                                     {/* Card 1 */}
                   <div className="flex flex-col items-center lg:items-start justify-center py-5 lg:py-6 border-r border-b lg:border-b-0 border-gray-200">
-                    <div className="text-center lg:text-left px-3">
+                    <div className="text-center lg:text-left ">
                       <Award className="w-8 h-8 lg:w-9 lg:h-9 text-[#4B63B8] mb-2 mx-auto lg:mx-0" />
                       <h3 className="font-semibold text-sm lg:text-base text-black">
                         Made in India
@@ -93,7 +93,7 @@ export default function HeroSection() {
 
                   {/* Card 2 */}
                   <div className="flex flex-col items-center lg:items-start justify-center py-5 lg:py-6 border-r border-b lg:border-b-0 border-gray-200">
-                    <div className="text-center lg:text-left px-3">
+                    <div className="text-center lg:text-left px-2">
                       <BadgeCheck className="w-8 h-8 lg:w-9 lg:h-9 text-[#4B63B8] mb-2 mx-auto lg:mx-0" />
                       <h3 className="font-semibold text-sm lg:text-base text-black">
                         IATF Certified
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
                   {/* Card 4 */}
                   <div className="flex flex-col items-center lg:items-start justify-center py-5 lg:py-6">
-                    <div className="text-center lg:text-left px-3">
+                    <div className="text-center lg:text-left px-2">
                       <Settings className="w-8 h-8 lg:w-9 lg:h-9 text-[#4B63B8] mb-2 mx-auto lg:mx-0" />
                       <h3 className="font-semibold text-sm lg:text-base text-black whitespace-nowrap">
                         Custom Solutions
@@ -161,8 +161,8 @@ export default function HeroSection() {
 
 
             {isFormOpen && (
-        <Enquiry
-          IATFpen={isFormOpen}
+        <Catpopup
+          Onpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
         />
       )}

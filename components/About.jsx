@@ -68,7 +68,7 @@ export default function AboutSection() {
           {/* Floating Experience Card */}
 
           <div className="absolute -bottom-10 left-10 rounded-2xl border border-blue-500/20 bg-[#0d2036]/95 px-8 py-6 shadow-[0_20px_60px_rgba(0,0,0,.45)] backdrop-blur-xl">
-            <h3 className="text-5xl font-extrabold text-white">70+</h3>
+            <h3 className="text-5xl font-extrabold text-white">60+</h3>
 
             <p className="mt-2 text-sm text-gray-300">
               Years of Engineering Excellence

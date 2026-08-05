@@ -459,7 +459,7 @@ const faqs = [
                           Bearing Supplier in  {city}
                         </Link>
                         <p className="text-2xl md:text-[42px] font-semibold">
-                            +91454553454
+                          +91-7834872136
                         </p>
                         <p className="text-lg text-white">
                             For More Details Contact Us Now!
@@ -467,7 +467,7 @@ const faqs = [
                     </div>
 
                     <div>
-                        <a href="tel:+918810422935" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        <a href="tel:+917834872136" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                             Connect Now
                         </a>
                     </div>
