@@ -132,7 +132,7 @@ Moscow 119571, Russia
               <div className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
                 <a
-                  href="tel:+917065650411"
+                  href="tel:+917834872136"
                   className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                 >
                    +91-7834872136
@@ -142,7 +142,7 @@ Moscow 119571, Russia
                  <div className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
                 <a
-                  href="tel:+917065650411"
+                  href="tel:+79859834837"
                   className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                 >
                  +7-9859834837

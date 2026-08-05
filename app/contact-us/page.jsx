@@ -40,9 +40,10 @@ const handleChange = (e) => {
   try {
     setLoading(true);
 
+
     const payload = {
       platform: "ARB Bearings Contact Form",
-      platformEmail: "marketing@arb-bearings.com",
+      platformEmail: "arbbearings.com",
 
       name: form.name,
       phone: form.phone,
@@ -88,6 +89,8 @@ ${form.message}
     setLoading(false);
   }
 };
+
+
 
 const contactCards = [
   {
