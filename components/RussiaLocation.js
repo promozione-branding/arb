@@ -24,7 +24,7 @@ const products = [
   {
     title: "Шариковые подшипники",
     desc: "Высокая грузоподъемность, превосходная долговечность, идеально подходит для радиальных и осевых нагрузок.",
-    image: "/arb-images/BALL BEARING 62208 2RS.webp",
+    image: "/arb-images/BALL BEARING 62208 2RS.png",
     applications: [
       "Электродвигатели",
       "Автомобили",
@@ -38,7 +38,7 @@ const products = [
   {
     title: "Подшипники колес",
     desc: "Прецизионные подшипники ступицы колеса, плавная работа, долговечная надежность.",
-    image: "/arb-images/Wheel Bearing.webp",
+    image: "/arb-images/Wheel Bearing.png",
     applications: [
       "Горнодобывающая промышленность",
       "Стальные заводы",
@@ -54,7 +54,7 @@ const products = [
   {
     title: "Роликовые подшипники",
     desc: "Плавное вращение, низкое трение, надежная работа для универсальных применений.",
-    image: "/arb-images/CYLINDRICAL BEARING JC 8003.webp",
+    image: "/arb-images/prodtaper.png",
     applications: [
       "Электродвигатели",
       "Автомобили",

@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 const products = [
   {
     title: "Double Row Angular Contact Ball Bearings",
-    image: "/arb-images/DOUBLE POINT ANGULAR CONTACT.png",
+    image: "/arb-images/DOUBLE POINT ANGULAR.png",
     desc: "Designed to accommodate combined radial and axial loads in both directions, offering high rigidity and reliable performance for demanding industrial applications.",
 
 link:"/products/ball-bearing/double-row-angular-contact-ball-bearings"
