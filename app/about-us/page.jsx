@@ -10,7 +10,7 @@ import Catpopup from "@/components/Catpopup";
 import { useState } from "react";
 export default function AboutPage() {
   const why = [
-    "70+ Years of Industry Expertise",
+    "60+ Years of Industry Expertise",
     "Established in 1990",
     "Leading Bearing supplier in India",
     "Six Advanced Manufacturing Facilities",

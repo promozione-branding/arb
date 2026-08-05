@@ -94,8 +94,9 @@ const contactCards = [
     icon: Phone,
     title: "Call Us",
     value: [
+        "+91-7834872136",
       "+7-9859834837",
-      "+91-7834872136",
+    
     ],
   },
   {
