@@ -117,25 +117,9 @@ export default async function SubCategoryPage({ params }) {
               className="h-full w-full object-cover "
             />
 
-            <div className="absolute bottom-0 left-0 rounded-2xl bg-white p-5 shadow-xl">
-              <p className="text-sm text-slate-500">
-                Performance
-              </p>
+           
 
-              <p className="text-3xl font-bold text-[#DA2416]">
-                99.8%
-              </p>
-            </div>
-
-            <div className="absolute right-0 -top-20 rounded-2xl bg-slate-900 px-6 py-5 text-white shadow-xl">
-              <p className="text-xs uppercase tracking-wider text-slate-400">
-                Engineered For
-              </p>
-
-              <p className="mt-2 font-semibold">
-                Heavy Industrial Use
-              </p>
-            </div>
+           
           </div>
         </div>
       </section>
