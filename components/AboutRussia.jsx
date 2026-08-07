@@ -37,7 +37,7 @@ export default function AboutRussia() {
                 loop
                 playsInline
               >
-                <source src="/video4.mp4" type="video/mp4" />
+                <source src="https://pub-7d937c7331834e4a9e6d3a588b9bfa59.r2.dev/arb/Corporate%20movie%20-%20English%20(2).mp4" type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
