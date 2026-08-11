@@ -207,17 +207,7 @@ export default function AboutSection() {
               sm:leading-7
             "
           >
-            ARB Bearings, which has accumulated more than 60+ years of
-            experience in the bearing industry, began its manufacturing
-            operations way back in 1990. Based in Delhi, India, ARB Bearings is
-            headed by highly qualified professionals who have extensive
-            knowledge of the industry, thanks to which ARB Bearings is known as
-            one of the most reliable producers of high-quality bearings. With
-            an unwavering focus on quality and durability along with innovative
-            thinking, ARB Bearings has managed to earn the trust of customers
-            from diverse industries including automotive, agriculture,
-            industrial machines, railway, mining, power, construction, and many
-            others.
+         With 60+ years of bearings industry know-how and manufacturing operations since 1990, ARB Bearings is often seen as a trusted supplier of top-notch bearings globally. Our precision-engineered bearing solutions are put together for durability, reliability, and those demanding, kind of hard-use applications across various industries.
           </p>
 
           {/* Industries */}
