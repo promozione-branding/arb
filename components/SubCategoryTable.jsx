@@ -131,7 +131,7 @@ const loadKeys =
 
   return (
 
-  <div className="w-full mx-auto px-30 mb-10 py-10">
+  <div className="w-full mx-auto px-8 md:px-30 mb-10 py-10">
   <nav className="mb-2 text-sm text-gray-400">
     {category.name} /{" "}
     <span className="text-gray-700">{subCategory.name}</span>

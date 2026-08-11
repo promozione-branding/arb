@@ -51,7 +51,7 @@ link:"/products/ball-bearing/double-row-angular-contact-ball-bearings"
 ];
 export default function ProductCategories() {
   return (
-    <section className="py-16 bg-white">
+    <section className="md:py-16 bg-white">
       <div className="max-w-7xl mx-auto ">
         <Swiper
           modules={[Navigation, Autoplay]}

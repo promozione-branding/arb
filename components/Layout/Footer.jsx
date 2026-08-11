@@ -68,7 +68,7 @@ export default function Footer() {
               {[
                 ["Home", "/"],
                 ["About Us", "/about-us"],
-                ["Articles", "/blogs"],
+                ["Articles", "/our-blogs"],
                 ["Contact Us", "/contact-us"],
                
                 ["Shipping Policy", "/shipping-policy"],

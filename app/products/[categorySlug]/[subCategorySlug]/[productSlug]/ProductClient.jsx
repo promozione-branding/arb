@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -15,15 +16,13 @@ import {
   Clock,
   ArrowRight,
   Download,
-  Factory,
-  Bike,
-  Car,
-  Boxes,
 } from "lucide-react";
 import Catpopup from "@/components/Catpopup";
+
 export default function ProductClient({ result }) {
   const { entry, product } = result;
   const { category, subCategory } = entry;
+
   const [FormOpen, setFormOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
 
@@ -34,7 +33,7 @@ export default function ProductClient({ result }) {
   };
 
   const [loading, setLoading] = useState(false);
- const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -56,7 +55,7 @@ export default function ProductClient({ result }) {
 
       const formData = {
         platform: "ARB Bearings Product Enquiry",
-        platformEmail: "yourcompany@email.com", // Change this
+        platformEmail: "yourcompany@email.com",
         name,
         phone,
         email,
@@ -67,7 +66,7 @@ export default function ProductClient({ result }) {
 
       const { data } = await axios.post(
         "https://brandbnalo.com/api/form/add",
-        formData,
+        formData
       );
 
       if (data.success) {
@@ -87,8 +86,10 @@ Requirement :
 ${message}`;
 
         window.open(
-          `https://wa.me/919999402424?text=${encodeURIComponent(whatsappText)}`,
-          "_blank",
+          `https://wa.me/919999402424?text=${encodeURIComponent(
+            whatsappText
+          )}`,
+          "_blank"
         );
 
         setName("");
@@ -107,169 +108,334 @@ ${message}`;
   };
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen">
+    <div className="min-h-screen overflow-x-hidden bg-[#f8fafc]">
       {/* HERO */}
 
-      <section className="w-full px-6 mx-auto grid lg:grid-cols-2">
+      <section className="mx-auto grid w-full grid-cols-1 px-4 sm:px-6 lg:grid-cols-2 lg:px-6">
         {/* LEFT */}
 
-        <div className="border-r border-slate-200">
-          <div className="sticky top-24 px-10 py-14">
+        <div className="border-r-0 border-slate-200 lg:border-r">
+          <div
+            className="
+              sticky
+              top-24
+              px-0
+              py-8
+              sm:px-4
+              sm:py-10
+              md:px-6
+              lg:px-10
+              lg:py-14
+            "
+          >
             <Image
               src={product.image}
               alt={product.model}
               width={700}
               height={700}
-              className="w-full object-contain"
+              className="
+                mx-auto
+                h-auto
+                max-h-[400px]
+                w-full
+                object-contain
+                sm:max-h-[500px]
+                md:max-h-[550px]
+                lg:max-h-none
+              "
             />
 
-            <div className="flex gap-3 mt-8">
-              <span className="bg-[#28186C] text-white text-xs px-4 py-2 rounded">
+            <div
+              className="
+                mt-6
+                flex
+                flex-wrap
+                gap-2
+                sm:mt-8
+                sm:gap-3
+              "
+            >
+              <span className="rounded bg-[#28186C] px-3 py-2 text-[10px] text-white sm:px-4 sm:text-xs">
                 INDUSTRIAL GRADE
               </span>
 
-              <span className="bg-[#28186C] text-white text-xs px-4 py-2 rounded">
+              <span className="rounded bg-[#28186C] px-3 py-2 text-[10px] text-white sm:px-4 sm:text-xs">
                 HIGH PRECISION
               </span>
             </div>
 
-            <div className="mt-10 border-t pt-5">
-              <p className="text-xs tracking-widest text-gray-500">MODEL NO.</p>
+            <div className="mt-7 border-t pt-5 sm:mt-10">
+              <p className="text-[10px] tracking-widest text-gray-500 sm:text-xs">
+                MODEL NO.
+              </p>
 
-              <h3 className="font-bold mt-2 text-xl">{product.model}</h3>
+              <h3 className="mt-2 break-words text-lg font-bold sm:text-xl">
+                {product.model}
+              </h3>
             </div>
           </div>
         </div>
 
         {/* RIGHT */}
 
-        <div className="bg-[#edf6ff] px-10 py-14">
+        <div className="bg-[#edf6ff] px-4 py-8 sm:px-6 sm:py-10 md:px-8 lg:px-10 lg:py-14">
           {/* Breadcrumb */}
 
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <Link href="/">Home</Link>
+          <div
+            className="
+              mb-5
+              flex
+              flex-wrap
+              items-center
+              gap-x-1.5
+              gap-y-2
+              text-xs
+              text-gray-500
+              sm:mb-6
+              sm:gap-2
+              sm:text-sm
+            "
+          >
+            <Link href="/" className="shrink-0">
+              Home
+            </Link>
 
-            <ChevronRight size={12} />
+            <ChevronRight size={12} className="shrink-0" />
 
-            <Link href={`/products/${category.slug}`}>{category.name}</Link>
+            <Link
+              href={`/products/${category.slug}`}
+              className="max-w-[130px] truncate sm:max-w-none"
+            >
+              {category.name}
+            </Link>
 
-            <ChevronRight size={12} />
+            <ChevronRight size={12} className="shrink-0" />
 
-            <Link href={`/products/${category.slug}/${subCategory.slug}`}>
+            <Link
+              href={`/products/${category.slug}/${subCategory.slug}`}
+              className="max-w-[150px] truncate sm:max-w-none"
+            >
               {subCategory.name}
             </Link>
 
-            <ChevronRight size={12} />
+            <ChevronRight size={12} className="shrink-0" />
 
-            <span className="font-semibold text-black">{product.model}</span>
+            <span className="max-w-[180px] truncate font-semibold text-black sm:max-w-none">
+              {product.model}
+            </span>
           </div>
 
-          <h2 className="text-4xl font-bold mb-6">
-            {product.model} <span> {subCategory.name}</span>
+          <h2
+            className="
+              mb-5
+              break-words
+              text-2xl
+              font-bold
+              leading-tight
+              sm:mb-6
+              sm:text-3xl
+              md:text-4xl
+            "
+          >
+            {product.model} <span>{subCategory.name}</span>
           </h2>
 
-              <p className="text-slate-900 leading-8">
-                {subCategory.description}
-              </p>
-
+          <p className="text-sm leading-7 text-slate-900 sm:text-base sm:leading-8">
+            {subCategory.description}
+          </p>
 
           {/* Feature Cards */}
 
-          <div className="grid grid-cols-2 gap-4 mt-8">
+          <div
+            className="
+              mt-7
+              grid
+              grid-cols-1
+              gap-3
+              min-[480px]:grid-cols-2
+              sm:mt-8
+              sm:gap-4
+            "
+          >
             {subCategory.features?.map((feature, index) => (
-              <div key={index} className="bg-white border rounded-lg p-4  ">
+              <div
+                key={index}
+                className="rounded-lg border bg-white p-4"
+              >
                 <div className="mb-3">
-                  {index === 0 && <Shield className="text-red-600" />}
+                  {index === 0 && (
+                    <Shield className="text-red-600" size={22} />
+                  )}
 
-                  {index === 1 && <Grid3x3 className="text-red-600" />}
+                  {index === 1 && (
+                    <Grid3x3 className="text-red-600" size={22} />
+                  )}
 
-                  {index === 2 && <ArrowLeftRight className="text-red-600" />}
+                  {index === 2 && (
+                    <ArrowLeftRight className="text-red-600" size={22} />
+                  )}
 
-                  {index > 2 && <Clock className="text-red-600" />}
+                  {index > 2 && (
+                    <Clock className="text-red-600" size={22} />
+                  )}
                 </div>
 
-                <h3 className="font-bold text-sm mb-2">FEATURE {index + 1}</h3>
+                <h3 className="mb-2 text-xs font-bold sm:text-sm">
+                  FEATURE {index + 1}
+                </h3>
 
-                <p className="text-md text-slate-800">{feature}</p>
+                <p className="break-words text-sm text-slate-800 sm:text-base">
+                  {feature}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Buttons */}
 
-          <div className="flex gap-4 mt-10">
+          <div
+            className="
+              mt-8
+              flex
+              w-full
+              flex-col
+              gap-3
+              sm:mt-10
+              sm:flex-row
+              sm:flex-wrap
+              sm:gap-4
+            "
+          >
             <button
               onClick={() => setIsFormOpen(true)}
-              className="bg-[#28186C] hover:bg-[#1d1250] transition text-white rounded-lg px-7 py-3 flex items-center gap-2"
+              className="
+                flex
+                w-full
+                items-center
+                justify-center
+                gap-2
+                rounded-lg
+                bg-[#28186C]
+                px-7
+                py-3
+                text-sm
+                text-white
+                transition
+                hover:bg-[#1d1250]
+                sm:w-auto
+              "
             >
               ENQUIRE NOW
               <ArrowRight size={16} />
             </button>
 
-          
-              <button
-                onClick={() => setFormOpen(true)}
-               
-              
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border rounded-lg px-7 py-3 flex items-center gap-2 hover:bg-white transition"
-              >
-                <Download size={16} />
-                BROCHURE
-              </button>
-           
+            <button
+              onClick={() => setFormOpen(true)}
+              className="
+                flex
+                w-full
+                items-center
+                justify-center
+                gap-2
+                rounded-lg
+                border
+                px-7
+                py-3
+                text-sm
+                transition
+                hover:bg-white
+                sm:w-auto
+              "
+            >
+              <Download size={16} />
+              BROCHURE
+            </button>
           </div>
 
           {/* Tabs */}
 
-          <div className="flex gap-10 border-b mt-16">
+          <div
+            className="
+              mt-12
+              flex
+              w-full
+              gap-7
+              overflow-x-auto
+              border-b
+              scrollbar-hide
+              sm:mt-16
+              sm:gap-10
+            "
+          >
             <button
               onClick={() => setActiveTab("overview")}
-              className={`pb-4 border-b-2 transition ${
-                activeTab === "overview"
-                  ? "border-red-600"
-                  : "border-transparent"
-              }`}
+              className={`
+                shrink-0
+                pb-3
+                text-xs
+                font-medium
+                transition
+                sm:pb-4
+                sm:text-sm
+                ${
+                  activeTab === "overview"
+                    ? "border-b-2 border-red-600"
+                    : "border-b-2 border-transparent"
+                }
+              `}
             >
               PRODUCT OVERVIEW
             </button>
 
             <button
               onClick={() => setActiveTab("downloads")}
-              className={`pb-4 border-b-2 transition ${
-                activeTab === "downloads"
-                  ? "border-red-600"
-                  : "border-transparent"
-              }`}
+              className={`
+                shrink-0
+                pb-3
+                text-xs
+                font-medium
+                transition
+                sm:pb-4
+                sm:text-sm
+                ${
+                  activeTab === "downloads"
+                    ? "border-b-2 border-red-600"
+                    : "border-b-2 border-transparent"
+                }
+              `}
             >
               DOWNLOADS
             </button>
           </div>
-          {/*  OVERVIEW  */}
+
+          {/* OVERVIEW */}
 
           {activeTab === "overview" && (
-            <div className="py-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">
+            <div className="py-8 sm:py-12">
+              <h2 className="mb-4 text-2xl font-bold text-slate-900 sm:mb-5 sm:text-3xl">
                 About {subCategory.name}
               </h2>
 
-              <p className="text-slate-600 leading-8">
+              <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
                 {subCategory.description}
               </p>
 
               {subCategory.features?.length > 0 && (
                 <>
-                  <hr className="my-10" />
+                  <hr className="my-8 sm:my-10" />
 
-                  <h3 className="text-2xl font-bold mb-6">Product Features</h3>
+                  <h3 className="mb-5 text-xl font-bold sm:mb-6 sm:text-2xl">
+                    Product Features
+                  </h3>
 
                   <ul className="space-y-4">
                     {subCategory.features.map((feature, index) => (
                       <li key={index} className="flex gap-3">
-                        <span className="w-2 h-2 rounded-full bg-red-600 mt-3" />
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-red-600" />
 
-                        <span className="text-slate-700">{feature}</span>
+                        <span className="break-words text-sm text-slate-700 sm:text-base">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -278,22 +444,44 @@ ${message}`;
 
               {subCategory.applications?.length > 0 && (
                 <>
-                  <hr className="my-12" />
+                  <hr className="my-9 sm:my-12" />
 
-                  <h3 className="text-3xl font-bold mb-8">
+                  <h3 className="mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">
                     Industrial Applications
                   </h3>
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+
+                  <div
+                    className="
+                      grid
+                      grid-cols-1
+                      gap-3
+                      min-[480px]:grid-cols-2
+                      lg:grid-cols-4
+                      sm:gap-5
+                    "
+                  >
                     {subCategory.applications.map((item, index) => (
                       <div
                         key={index}
-                        className="group rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:bg-[#28186C] hover:border-[#1C398E]"
+                        className="
+                          group
+                          rounded-2xl
+                          border
+                          border-slate-200
+                          bg-white
+                          p-4
+                          transition-all
+                          duration-300
+                          hover:border-[#1C398E]
+                          hover:bg-[#28186C]
+                          sm:p-4
+                        "
                       >
                         <div className="mb-2 text-sm font-semibold tracking-[0.25em] text-[#1C398E] transition-all group-hover:text-white/70">
                           {(index + 1).toString().padStart(2, "0")}
                         </div>
 
-                        <h3 className="text-lg font-semibold leading-7 text-slate-900 transition-all group-hover:text-white">
+                        <h3 className="break-words text-base font-semibold leading-6 text-slate-900 transition-all group-hover:text-white sm:text-lg sm:leading-7">
                           {item}
                         </h3>
                       </div>
@@ -304,26 +492,47 @@ ${message}`;
             </div>
           )}
 
+          {/* DOWNLOADS */}
+
           {activeTab === "downloads" && (
-            <div className="py-14">
-              <h2 className="text-3xl font-bold mb-8">Downloads</h2>
+            <div className="py-10 sm:py-14">
+              <h2 className="mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">
+                Downloads
+              </h2>
 
-            
-                <button onClick={() => setFormOpen(true)}
-                 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between border rounded-xl p-6 hover:shadow-lg transition bg-white"
-                >
-                  <div>
-                    <h4 className="font-semibold">Product Datasheet</h4>
+              <button
+                onClick={() => setFormOpen(true)}
+                className="
+                  flex
+                  w-full
+                  items-center
+                  justify-between
+                  gap-4
+                  rounded-xl
+                  border
+                  bg-white
+                  p-4
+                  text-left
+                  transition
+                  hover:shadow-lg
+                  sm:p-6
+                "
+              >
+                <div className="min-w-0">
+                  <h4 className="break-words font-semibold">
+                    Product Datasheet
+                  </h4>
 
-                    <p className="text-sm text-gray-500">PDF Document</p>
-                  </div>
+                  <p className="mt-1 text-sm text-gray-500">
+                    PDF Document
+                  </p>
+                </div>
 
-                  <Download size={24} />
-                </button>
-           
+                <Download
+                  size={22}
+                  className="shrink-0 sm:h-6 sm:w-6"
+                />
+              </button>
             </div>
           )}
         </div>
@@ -331,34 +540,67 @@ ${message}`;
 
       {/* ======================================================
           SPECIFICATIONS + ENQUIRY FORM
-          Paste the next part here
       ====================================================== */}
 
-      <section className="py-10 bg-gradient-to-b from-white to-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center text-[#6A1F2B] mb-13">
+      <section className="bg-gradient-to-b from-white to-slate-100 py-10 sm:py-14 lg:py-16">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+          <h2
+            className="
+              mb-9
+              text-center
+              text-3xl
+              font-bold
+              text-[#6A1F2B]
+              sm:mb-12
+              sm:text-4xl
+              lg:mb-13
+              lg:text-5xl
+            "
+          >
             Product Specifications
           </h2>
 
-          <div className="grid lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 gap-7 lg:grid-cols-5 lg:gap-10">
             {/* Specifications */}
 
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-[30px] shadow-xl border border-slate-200 p-10">
-                <p className="uppercase tracking-[3px] text-sm text-gray-400 mb-6">
+              <div
+                className="
+                  rounded-2xl
+                  border
+                  border-slate-200
+                  bg-white
+                  p-5
+                  shadow-xl
+                  sm:rounded-[30px]
+                  sm:p-7
+                  md:p-10
+                "
+              >
+                <p className="mb-5 text-xs uppercase tracking-[2px] text-gray-400 sm:mb-6 sm:text-sm sm:tracking-[3px]">
                   Technical Details
                 </p>
 
                 {Object.entries(specifications).map(([key, value]) => (
                   <div
                     key={key}
-                    className="grid grid-cols-2 py-5 border-b border-dashed"
+                    className="
+                      grid
+                      grid-cols-1
+                      gap-1
+                      border-b
+                      border-dashed
+                      py-4
+                      sm:grid-cols-2
+                      sm:gap-4
+                      sm:py-5
+                    "
                   >
-                    <h4 className="font-medium text-slate-700">
+                    <h4 className="break-words text-sm font-medium text-slate-700 sm:text-base">
                       {labelFor(key)}
                     </h4>
 
-                    <p className="text-right font-bold text-[#6A1F2B]">
+                    <p className="break-words text-left text-sm font-bold text-[#6A1F2B] sm:text-right sm:text-base">
                       {value}
                     </p>
                   </div>
@@ -369,20 +611,33 @@ ${message}`;
             {/* Enquiry */}
 
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-[30px] shadow-2xl border p-8">
-                <h2 className="text-3xl font-bold mb-2">Submit Your Enquiry</h2>
+              <div
+                className="
+                  rounded-2xl
+                  border
+                  bg-white
+                  p-5
+                  shadow-2xl
+                  sm:rounded-[30px]
+                  sm:p-7
+                  md:p-8
+                "
+              >
+                <h2 className="mb-2 text-2xl font-bold sm:text-3xl">
+                  Submit Your Enquiry
+                </h2>
 
-                <p className="text-gray-500 mb-4">
+                <p className="mb-5 text-sm text-gray-500 sm:mb-4">
                   Our team will contact you shortly.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-5 ">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                   <input
                     type="text"
                     placeholder="Full Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full h-14 border rounded-xl px-4 outline-none focus:border-[#28186C]"
+                    className="h-14 w-full rounded-xl border px-4 text-sm outline-none focus:border-[#28186C]"
                     required
                   />
 
@@ -394,7 +649,7 @@ ${message}`;
                       setPhone(e.target.value.replace(/\D/g, ""))
                     }
                     placeholder="Phone Number"
-                    className="w-full h-14 border rounded-xl px-4 outline-none focus:border-[#28186C]"
+                    className="h-14 w-full rounded-xl border px-4 text-sm outline-none focus:border-[#28186C]"
                     required
                   />
 
@@ -403,7 +658,7 @@ ${message}`;
                     placeholder="Email Address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full h-14 border rounded-xl px-4 outline-none focus:border-[#28186C]"
+                    className="h-14 w-full rounded-xl border px-4 text-sm outline-none focus:border-[#28186C]"
                     required
                   />
 
@@ -411,21 +666,32 @@ ${message}`;
                     type="text"
                     value={product.model}
                     readOnly
-                    className="w-full h-14 border rounded-xl px-4 bg-gray-50"
+                    className="h-14 w-full rounded-xl border bg-gray-50 px-4 text-sm"
                   />
+
                   <textarea
                     rows={4}
                     placeholder="Your Requirement"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full border rounded-xl p-4 outline-none focus:border-[#28186C]"
+                    className="w-full rounded-xl border p-4 text-sm outline-none focus:border-[#28186C]"
                     required
                   />
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full h-14 rounded-xl bg-[#28186C] text-white font-semibold hover:bg-[#1f1455] transition disabled:opacity-50"
+                    className="
+                      h-14
+                      w-full
+                      rounded-xl
+                      bg-[#28186C]
+                      font-semibold
+                      text-white
+                      transition
+                      hover:bg-[#1f1455]
+                      disabled:opacity-50
+                    "
                   >
                     {loading ? "Submitting..." : "Submit Enquiry"}
                   </button>
@@ -436,26 +702,20 @@ ${message}`;
         </div>
       </section>
 
+      {FormOpen && (
+        <Catpopup
+          Onpen={FormOpen}
+          onClose={() => setFormOpen(false)}
+        />
+      )}
 
-
-
-
-{FormOpen && (
-  <Catpopup
-    Onpen={FormOpen}
-    onClose={() => setFormOpen(false)}
-  />
-)}
-
-    {isFormOpen && (
+      {isFormOpen && (
         <Enquiry
           IATFpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
         />
       )}
-
-
-
     </div>
   );
 }
+

@@ -97,7 +97,7 @@ export default function Navbar({ categories }) {
               </div>
 
               <Link
-                href="/blogs"
+                href="/our-blogs"
                 className="relative text-[17px] font-semibold text-white transition hover:text-[#ff6a2b]"
               >
                 News & Events

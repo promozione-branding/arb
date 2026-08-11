@@ -31,7 +31,7 @@ export default async function SubCategoryPage({ params }) {
     <>
      
       <section className="border-b bg-gradient-to-br from-slate-50 via-white to-blue-50/40">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 pt-10 md:pt-0 md:py-16 lg:grid-cols-[1.2fr_0.8fr]">
 
           <div>
             <nav className="mb-6 flex flex-wrap items-center gap-2 text-sm text-slate-500">
@@ -47,6 +47,7 @@ export default async function SubCategoryPage({ params }) {
               >
                 {category.name}
               </Link>
+              
 
               <span>/</span>
 
@@ -60,14 +61,14 @@ export default async function SubCategoryPage({ params }) {
               
             </span>
 
-            <h1 className="mt-6 text-5xl font-bold tracking-tight text-slate-900">
+            <h1 className="mt-6 text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
               {subCategory.name}
             </h1> 
             
 
 
 
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-600">
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
 
           
                  {subCategory.description} 

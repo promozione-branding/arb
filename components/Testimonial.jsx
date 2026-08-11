@@ -83,12 +83,12 @@ export default function Testimonials() {
             </span>
           </div>
 
-          <h2 className="mt-3 text-5xl  font-black text-[#16110b] tracking-tight">
+          <h2 className="mt-3 text-4xl md:text-5xl  font-black text-[#16110b] tracking-tight">
             Happy With Customers & Clients
           </h2>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10">
           <Swiper
             modules={[Autoplay, Pagination]}
             slidesPerView={1}
