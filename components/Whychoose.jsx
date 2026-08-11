@@ -1,0 +1,178 @@
+import {
+  Award,
+  Factory,
+  Globe2,
+  Lightbulb,
+  ShieldCheck,
+  Wrench,
+} from "lucide-react";
+
+const whyChooseData = [
+  {
+    number: "01",
+    label: "Experience",
+    title: "60+ Years of Bearing Expertise",
+    description:
+      "With decades of experience in the bearing industry, ARB Bearings delivers dependable solutions backed by deep technical knowledge and manufacturing expertise.",
+    icon: Award,
+  },
+  {
+    number: "02",
+    label: "Quality",
+    title: "Precision & Consistent Quality",
+    description:
+      "Every bearing is manufactured with a strong focus on precision, durability, and consistent performance to meet demanding application requirements.",
+    icon: ShieldCheck,
+  },
+  {
+    number: "03",
+    label: "Manufacturing",
+    title: "Advanced Manufacturing Capabilities",
+    description:
+      "Our modern manufacturing processes combine advanced technology, precision engineering, and stringent quality control to deliver reliable bearings.",
+    icon: Factory,
+  },
+  {
+    number: "04",
+    label: "Reliability",
+    title: "Built for Demanding Applications",
+    description:
+      "ARB Bearings are designed to perform reliably across challenging applications in automotive, agriculture, industrial, railway, mining, power, construction, and earthmoving sectors.",
+    icon: Wrench,
+  },
+  {
+    number: "05",
+    label: "Global Reach",
+    title: "Trusted Worldwide",
+    description:
+      "With bearing solutions supplied to customers across 50+ countries, ARB Bearings supports businesses with reliable products and responsive service.",
+    icon: Globe2,
+  },
+  {
+    number: "06",
+    label: "Innovation",
+    title: "Driven by Continuous Improvement",
+    description:
+      "We continuously improve our products, processes, and technology to deliver bearing solutions that meet evolving industry requirements.",
+    icon: Lightbulb,
+  },
+];
+
+export default function WhyChooseARB() {
+  return (
+    <section className="relative  bg-[#1f0f59] py-20 sm:py-24 lg:py-32">
+ 
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] [background-size:70px_70px]" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-5 ">
+      
+        <div className="grid items-start gap-12 lg:grid-cols-[1.28fr_0.72fr] lg:gap-20">
+         <div className="grid border-t border-white/10 sm:grid-cols-2 sm:gap-x-10">
+            {whyChooseData.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <article
+                  key={item.number}
+                  className="group relative border-b border-white/50 py-8 sm:py-10"
+                >
+                
+                  <div className="flex items-start justify-between">
+                    <div
+                      className="
+                        flex h-11 w-11 items-center justify-center
+                        rounded-xl
+                        border border-white/10
+                        bg-white/[0.04]
+                        text-red-400
+                        transition-all duration-300
+                        group-hover:border-red-500/40
+                        group-hover:bg-red-500
+                        group-hover:text-white
+                      "
+                    >
+                      <Icon className="h-5 w-5" />
+                    </div>
+
+                    <span
+                      className="
+                        text-sm font-semibold tracking-wider
+                        text-white/20
+                        transition-colors duration-300
+                        group-hover:text-red-400
+                      "
+                    >
+                      {item.number}
+                    </span>
+                  </div>
+
+                  {/* Label */}
+                  <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-red-400">
+                    {item.label}
+                  </p>
+
+                  {/* Title */}
+                  <h3 className="mt-2 text-xl font-bold leading-7 text-white sm:text-[22px]">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-4 text-sm leading-7 text-white">
+                    {item.description}
+                  </p>
+
+                  {/* Hover Line */}
+                  <div className="mt-6 h-px w-0 bg-red-500 transition-all duration-500 group-hover:w-12" />
+                </article>
+              );
+            })}
+          </div>
+
+       
+          <div className="lg:sticky lg:top-40 lg:self-start">
+            <div className="flex items-center gap-3">
+              <span className="h-px w-10 bg-red-500" />
+
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-red-400">
+                Why Choose Us
+              </span>
+            </div>
+
+            <h2 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl">
+              Why Choose ARB Bearings?
+            </h2>
+
+            <p className="mt-7 max-w-md text-base leading-8 text-white/80">
+              Decades of expertise, advanced manufacturing, and a commitment
+              to quality make ARB Bearings a dependable partner for demanding
+              bearing applications worldwide.
+            </p>
+
+            {/* Experience Highlight */}
+            <div className="mt-10 flex items-center gap-5 border-l-2 border-red-500 pl-5">
+              <div>
+                <p className="text-4xl font-bold text-white">60+</p>
+
+                <p className="mt-1 text-sm text-white">
+                  Years of expertise
+                </p>
+              </div>
+
+              <div className="h-10 w-px bg-white/10" />
+
+              <div>
+                <p className="text-4xl font-bold text-white">50+</p>
+
+                <p className="mt-1 text-sm text-white">
+                  Countries served
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

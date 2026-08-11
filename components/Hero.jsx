@@ -55,7 +55,7 @@ export default function HeroSection() {
           xl:min-h-[760px]
         "
       >
-        {/* Main Container */}
+       
         <div
           className="
             relative
@@ -83,9 +83,7 @@ export default function HeroSection() {
               2xl:gap-16
             "
           >
-            {/* =====================================================
-                LEFT CONTENT
-            ====================================================== */}
+         
 
             <div className="w-full text-center lg:text-left">
               <p
@@ -101,7 +99,7 @@ export default function HeroSection() {
                   md:text-sm
                 "
               >
-                RUSSIAN PRECISION, GLOBAL TRUST
+               PRECISION ENGINEERED. GLOBALLY TRUSTED.
               </p>
 
               <h1
@@ -117,10 +115,10 @@ export default function HeroSection() {
                   2xl:text-[62px]
                 "
               >
-                PRECISION THAT
+             PRECISION THAT 
 
                 <span className="block text-[#29166F]">
-                  POWER PROGRESS
+                DRIVES PROGRESS
                 </span>
               </h1>
 
@@ -139,12 +137,12 @@ export default function HeroSection() {
                   lg:mx-0
                 "
               >
-                High-quality ball and roller bearings
-                <br className="hidden sm:block" />
-                manufactured in Russia for industries worldwide.
+              High-quality ball and roller bearings engineered for demanding industrial
+             
+               and automotive applications, supplied from India to customers worldwide.
               </p>
 
-              {/* Buttons */}
+           
               <div
                 className="
                   mt-7
@@ -223,9 +221,7 @@ export default function HeroSection() {
                 </button>
               </div>
 
-              {/* =================================================
-                  FEATURES
-              ================================================== */}
+          
 
               <div
                 className="
@@ -238,7 +234,7 @@ export default function HeroSection() {
                 "
               >
                 <div className="grid grid-cols-2 lg:grid-cols-4">
-                  {/* Card 1 */}
+           
                   <div
                     className="
                       flex
@@ -263,7 +259,6 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Card 2 */}
                   <div
                     className="
                       flex
@@ -288,7 +283,7 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Card 3 */}
+                 
                   <div
                     className="
                       flex
@@ -311,7 +306,7 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Card 4 */}
+               
                   <div
                     className="
                       flex
@@ -335,9 +330,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* =====================================================
-                RIGHT CONTENT / SLIDER
-            ====================================================== */}
+        
 
             <div
               className="

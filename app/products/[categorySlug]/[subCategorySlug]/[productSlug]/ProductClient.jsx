@@ -108,11 +108,11 @@ ${message}`;
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f8fafc]">
-      {/* HERO */}
+    <div className="min-h-screen  bg-[#f8fafc]">
+      
 
       <section className="mx-auto grid w-full grid-cols-1 px-4 sm:px-6 lg:grid-cols-2 lg:px-6">
-        {/* LEFT */}
+       
 
         <div className="border-r-0 border-slate-200 lg:border-r">
           <div
@@ -176,10 +176,10 @@ ${message}`;
           </div>
         </div>
 
-        {/* RIGHT */}
+      
 
         <div className="bg-[#edf6ff] px-4 py-8 sm:px-6 sm:py-10 md:px-8 lg:px-10 lg:py-14">
-          {/* Breadcrumb */}
+         
 
           <div
             className="
@@ -244,7 +244,6 @@ ${message}`;
             {subCategory.description}
           </p>
 
-          {/* Feature Cards */}
 
           <div
             className="
@@ -284,9 +283,13 @@ ${message}`;
                   FEATURE {index + 1}
                 </h3>
 
+
+
                 <p className="break-words text-sm text-slate-800 sm:text-base">
                   {feature}
                 </p>
+
+                
               </div>
             ))}
           </div>

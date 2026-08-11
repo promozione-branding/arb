@@ -14,6 +14,7 @@ import Testimonials from "@/components/Testimonial";
 import AboutRussia from "@/components/AboutRussia";
 import Popup from "@/components/Popup"
 import Cta from "@/components/Cta";
+import Whychoose from "@/components/Whychoose"
 export default function Home() {
   return (
 <div>
@@ -27,7 +28,7 @@ export default function Home() {
 <AboutRussia/>
 <Cta/>
   <Category/>
-  {/* <Timeline/> */}
+  <Whychoose/>
 <About/>
     <Count/>
   <Excellence/>

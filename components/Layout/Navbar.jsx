@@ -7,9 +7,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import Enquiry from "@/components/Enquiry";
 export default function Navbar({ categories }) {
 
-
-
-
  const [isFormOpen, setIsFormOpen] = useState(false);
   
   const [activeMenu, setActiveMenu] = useState(null);
