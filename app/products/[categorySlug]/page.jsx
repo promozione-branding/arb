@@ -1,10 +1,9 @@
+
 import Link from "next/link";
 import { getCategoryTree } from "../../../data";
-import { ArrowRight, PhoneCall } from "lucide-react";
 import Cta from "@/components/Cta";
 
 export function generateStaticParams() {
-
   return getCategoryTree().map((category) => ({
     categorySlug: category.slug,
   }));
@@ -19,325 +18,810 @@ export default async function CategoryPage({ params }) {
 
   if (!category) {
     return (
-      <div className="max-w-6xl mx-auto px-6 py-12">Category not found.</div>
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        Category not found.
+      </div>
     );
   }
 
-   const content = category.pageContent;
+  const content = category.pageContent;
 
   return (
-<>
+    <>
+      {/* =========================================================
+          HERO
+      ========================================================== */}
 
-<section className="relative w-full h-[420px] overflow-hidden">
-      {/* Background Image */}
-      <img
-        src="/fbc-bearings2.jpg"
-        alt="Industrial Machinery"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <section className="relative h-[380px] w-full overflow-hidden sm:h-[420px]">
+        {/* Background Image */}
+        <img
+          src="/fbc-bearings2.png"
+          alt="Industrial Machinery"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-   
-
-      {/* Left Content Box */}
-      <div className="absolute left-20 top-1/2 -translate-y-1/2">
-        <div className="relative bg-black/45 backdrop-blur-sm px-10 py-12 w-[620px]">
-          {/* Red Line */}
-          <div className="absolute top-0 right-0 h-full w-1 bg-red-600"></div>
-
-          <h2 className="text-5xl font-bold text-white leading-tight">
-    {content.hero.title}
-          </h2>
-
-          <p className="mt-5 text-md text-white leading-6 max-w-xl">
-     {content.hero.description}
-          </p>
-
-    
-        </div>
-      </div>
-    </section>
-
-
-<div className="bg-gradient-to-b from-slate-50 via-white to-white">
-  <div className="max-w-7xl mx-auto px-6 py-14">
-
-    {/* Breadcrumb */}
-    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-      <Link href="/" className="hover:text-[#DA2416] transition">
-        Home
-      </Link>
-
-      <span>/</span>
-
-      <span className="font-medium text-gray-900">
-        {category.name}
-      </span>
-    </nav>
-
-    {/* Heading */}
-    <div className="max-w-3xl mb-14">
-      <span className="inline-flex rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-[#DA2416]">
-       Our Product Collection
-      </span>
-
-      <h1 className="mt-5 text-5xl font-bold tracking-tight text-gray-900">
-        {category.name}
-      </h1>
-
-      <p className="mt-5 text-lg text-gray-600 leading-8">
-        Browse our premium range of{" "}
-        <span className="font-semibold text-gray-900">
-          {category.name.toLowerCase()}
-        </span>{" "}
-        products with detailed specifications and technical information.
-      </p>
-    </div>
-
-    {/* Cards */}
-    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-      {category.subCategories.map((subCategory) => (
-        <Link
-          key={subCategory.slug}
-          href={`/products/${category.slug}/${subCategory.slug}`}
-          className="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+        {/* Left Content Box */}
+        <div
+          className="
+            absolute
+            left-4
+            right-4
+            top-1/2
+            -translate-y-1/2
+            sm:left-8
+            sm:right-auto
+            md:left-12
+            lg:left-20
+          "
         >
-          {/* Image */}
-          <div className="relative h-60 overflow-hidden">
-            <img
-              src={
-                subCategory.image 
-              }
-              alt={subCategory.name}
-              className="h-full w-full object-contain transition duration-700 group-hover:scale-110"
-            />
+          <div
+            className="
+              relative
+              w-full
+              bg-black/45
+              px-5
+              py-7
+              backdrop-blur-sm
+              sm:w-[520px]
+              sm:px-8
+              sm:py-9
+              md:w-[580px]
+              md:px-10
+              md:py-10
+              lg:w-[620px]
+              lg:py-12
+            "
+          >
+            {/* Red Line */}
+            <div className="absolute right-0 top-0 h-full w-1 bg-red-600" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+            <h2
+              className="
+                text-3xl
+                font-bold
+                leading-tight
+                text-white
+                sm:text-4xl
+                md:text-5xl
+              "
+            >
+              {content.hero.title}
+            </h2>
 
-        
-            
+            <p
+              className="
+                mt-4
+                max-w-xl
+                text-sm
+                leading-6
+                text-white
+                sm:mt-5
+                sm:text-base
+                md:text-md
+              "
+            >
+              {content.hero.description}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          PRODUCT COLLECTION
+      ========================================================== */}
+
+      <div className="bg-gradient-to-b from-slate-50 via-white to-white">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+          {/* Breadcrumb */}
+          <nav
+            className="
+              mb-6
+              flex
+              flex-wrap
+              items-center
+              gap-2
+              text-xs
+              text-gray-500
+              sm:mb-8
+              sm:text-sm
+            "
+          >
+            <Link
+              href="/"
+              className="transition hover:text-[#DA2416]"
+            >
+              Home
+            </Link>
+
+            <span>/</span>
+
+            <span className="font-medium text-gray-900">
+              {category.name}
+            </span>
+          </nav>
+
+          {/* Heading */}
+          <div className="mb-9 max-w-3xl sm:mb-14">
+            <span
+              className="
+                inline-flex
+                rounded-full
+                bg-blue-100
+                px-3
+                py-1
+                text-xs
+                font-medium
+                text-[#DA2416]
+                sm:px-4
+                sm:text-sm
+              "
+            >
+              Our Product Collection
+            </span>
+
+            <h1
+              className="
+                mt-4
+                break-words
+                text-3xl
+                font-bold
+                tracking-tight
+                text-gray-900
+                sm:mt-5
+                sm:text-4xl
+                md:text-5xl
+              "
+            >
+              {category.name}
+            </h1>
+
+            <p
+              className="
+                mt-4
+                text-sm
+                leading-7
+                text-gray-600
+                sm:mt-5
+                sm:text-lg
+                sm:leading-8
+              "
+            >
+              Browse our premium range of{" "}
+              <span className="font-semibold text-gray-900">
+                {category.name.toLowerCase()}
+              </span>{" "}
+              products with detailed specifications and technical
+              information.
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="p-3">
-          <div className="">
+          {/* Cards */}
+          <div
+            className="
+              grid
+              grid-cols-1
+              gap-5
+              min-[480px]:grid-cols-2
+              md:gap-7
+              xl:grid-cols-3
+              xl:gap-8
+            "
+          >
+            {category.subCategories.map((subCategory) => (
+              <Link
+                key={subCategory.slug}
+                href={`/products/${category.slug}/${subCategory.slug}`}
+                className="
+                  group
+                  overflow-hidden
+                  rounded-2xl
+                  bg-white
+                  shadow-lg
+                  shadow-gray-100
+                  transition-all
+                  duration-500
+                  hover:-translate-y-2
+                  hover:shadow-2xl
+                  sm:rounded-3xl
+                "
+              >
+                {/* Image */}
+                <div
+                  className="
+                    relative
+                    h-52
+                    overflow-hidden
+                    sm:h-56
+                    md:h-60
+                  "
+                >
+                  <img
+                    src={subCategory.image}
+                    alt={subCategory.name}
+                    className="
+                      h-full
+                      w-full
+                      object-contain
+                      transition
+                      duration-700
+                      group-hover:scale-110
+                    "
+                  />
 
-  <h3 className="text-xl font-bold mb-3 text-slate-900">
-    {subCategory.name}
-  </h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                </div>
 
-<p className="text-gray-600 leading-7">
-  {subCategory.description}
-</p>
+                {/* Content */}
+                <div className="p-4 sm:p-5">
+                  <h3 className="mb-3 break-words text-lg font-bold text-slate-900 sm:text-xl">
+                    {subCategory.name}
+                  </h3>
 
-</div>
+                  <p className="text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+                    {subCategory.description}
+                  </p>
 
-            <div className="mt-4 flex items-center justify-between">
-              <span className="font-semibold text-[#DA2416]">
-                Explore Collection
-              </span>
+                  <div className="mt-4 flex items-center justify-between gap-3">
+                    <span className="text-sm font-semibold text-[#DA2416] sm:text-base">
+                      Explore Collection
+                    </span>
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-50 text-[#DA2416] transition group-hover:bg-[#DA2416] group-hover:text-white">
-                →
-              </div>
+                    <div
+                      className="
+                        flex
+                        h-10
+                        w-10
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        bg-blue-50
+                        text-[#DA2416]
+                        transition
+                        group-hover:bg-[#DA2416]
+                        group-hover:text-white
+                        sm:h-11
+                        sm:w-11
+                      "
+                    >
+                      →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* =========================================================
+          SECTION 1
+      ========================================================== */}
+
+      <section className="relative overflow-hidden bg-white py-12 sm:py-14 lg:py-16">
+        {/* Background Decorations */}
+        <div className="absolute -left-32 top-0 h-72 w-72 rounded-full bg-blue-100/40 blur-3xl sm:h-96 sm:w-96" />
+
+        <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-slate-100 blur-3xl sm:h-80 sm:w-80" />
+
+        <div
+          className="
+            relative
+            mx-auto
+            grid
+            max-w-7xl
+            grid-cols-1
+            items-center
+            gap-12
+            px-4
+            sm:px-6
+            md:gap-14
+            lg:grid-cols-2
+            lg:gap-16
+            lg:px-8
+          "
+        >
+          {/* LEFT */}
+          <div>
+            <span
+              className="
+                inline-flex
+                rounded-full
+                bg-blue-50
+                px-3
+                py-1.5
+                text-xs
+                font-semibold
+                uppercase
+                tracking-wider
+                text-[#DA2416]
+                sm:px-4
+                sm:py-2
+                sm:text-sm
+              "
+            >
+              {content.section1.badge}
+            </span>
+
+            <h2
+              className="
+                mt-5
+                break-words
+                text-3xl
+                font-bold
+                leading-tight
+                text-slate-900
+                sm:mt-6
+                sm:text-4xl
+              "
+            >
+              {content.section1.title}
+            </h2>
+
+            <p
+              className="
+                mt-4
+                text-sm
+                leading-7
+                text-slate-800
+                sm:mt-5
+                sm:text-lg
+                sm:leading-8
+              "
+            >
+              {content.section1.description}
+            </p>
+
+            {/* Features */}
+            <div
+              className="
+                mt-5
+                grid
+                grid-cols-1
+                gap-4
+                min-[500px]:grid-cols-2
+                sm:gap-5
+              "
+            >
+              {content.section1.features.map((item) => (
+                <div
+                  key={item}
+                  className="
+                    group
+                    flex
+                    items-start
+                    gap-3
+                    rounded-2xl
+                    border
+                    border-slate-200
+                    bg-white
+                    p-4
+                    shadow-sm
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#DA2416]
+                    hover:shadow-lg
+                    sm:gap-4
+                    sm:p-5
+                  "
+                >
+                  {/* Icon */}
+                  <div
+                    className="
+                      flex
+                      h-10
+                      w-10
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-xl
+                      bg-[#DA2416]/10
+                      text-[#DA2416]
+                      transition-all
+                      duration-300
+                      group-hover:bg-[#DA2416]
+                      group-hover:text-white
+                      sm:h-12
+                      sm:w-12
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 sm:h-6 sm:w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+
+                  {/* Text */}
+                  <div className="min-w-0">
+                    <h4 className="break-words text-sm font-semibold text-slate-900 sm:text-md">
+                      {item}
+                    </h4>
+
+                    <p className="mt-1 text-xs leading-5 text-slate-700 sm:text-sm">
+                      Engineered for reliable performance and long service
+                      life.
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Buttons */}
+            <div
+              className="
+                mt-8
+                flex
+                w-full
+                flex-col
+                gap-3
+                sm:mt-12
+                sm:flex-row
+                sm:flex-wrap
+                sm:gap-5
+              "
+            >
+              <button
+                className="
+                  w-full
+                  rounded-xl
+                  bg-[#DA2416]
+                  px-8
+                  py-3.5
+                  font-semibold
+                  text-white
+                  transition
+                  hover:bg-[#DA2416]
+                  sm:w-auto
+                  sm:py-4
+                "
+              >
+                Explore Product
+              </button>
+
+              <button
+                className="
+                  w-full
+                  rounded-xl
+                  border
+                  border-slate-300
+                  px-8
+                  py-3.5
+                  font-semibold
+                  text-slate-700
+                  transition
+                  hover:bg-slate-100
+                  sm:w-auto
+                  sm:py-4
+                "
+              >
+                Download Brochure
+              </button>
             </div>
           </div>
-        </Link>
-      ))}
-    </div>
 
-  </div>
-</div>
+          {/* RIGHT */}
+          <div className="relative mx-auto w-full max-w-[650px]">
+            {/* Background Card */}
+            <div
+              className="
+                absolute
+                inset-5
+                rounded-[30px]
+                bg-gradient-to-br
+                from-[#DA2416]
+                to-slate-800
+                sm:inset-8
+                sm:rounded-[40px]
+                lg:inset-10
+              "
+            />
 
+            {/* Image Card */}
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[30px]
+                bg-white
+                p-5
+                shadow-2xl
+                sm:rounded-[40px]
+                sm:p-8
+                md:p-10
+              "
+            >
+              <img
+                src={content.section1.image}
+                alt=""
+                className="
+                  mx-auto
+                  w-full
+                  object-contain
+                  transition
+                  duration-700
+                  hover:scale-105
+                "
+              />
+            </div>
 
+            {/* Floating Badge */}
+            <div
+              className="
+                absolute
+                -bottom-5
+                left-4
+                rounded-2xl
+                bg-white
+                px-4
+                py-3
+                shadow-xl
+                sm:-bottom-6
+                sm:left-8
+                sm:px-6
+                sm:py-4
+              "
+            >
+              <p className="text-xs text-slate-500 sm:text-sm">
+                Trusted Worldwide
+              </p>
 
+              <p className="text-xl font-bold text-slate-900 sm:text-3xl">
+                50+ Countries
+              </p>
+            </div>
 
+            {/* Floating Badge */}
+            <div
+              className="
+                absolute
+                -top-4
+                right-2
+                rounded-2xl
+                bg-[#DA2416]
+                px-4
+                py-3
+                text-white
+                shadow-xl
+                sm:-top-5
+                sm:right-5
+                sm:px-6
+                sm:py-4
+              "
+            >
+              <p className="text-xs opacity-80 sm:text-sm">
+                Service Life
+              </p>
 
+              <p className="text-2xl font-bold sm:text-3xl">
+                +35%
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* =========================================================
+          SECTION 2
+      ========================================================== */}
 
+      <section className="relative overflow-hidden bg-slate-50 py-12 sm:py-14 lg:py-16">
+        {/* Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#dbeafe,transparent_45%)]" />
 
-
-
-   <section className="relative overflow-hidden bg-white py-12">
-      {/* Background Decorations */}
-      <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-blue-100/40 blur-3xl" />
-      <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-slate-100 blur-3xl" />
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16  lg:grid-cols-2">
-        {/* LEFT */}
-        <div>
-          <span className="inline-flex rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-[#DA2416]">
-          {content.section1.badge}
-          </span>
-
-          <h2 className="mt-6 text-4xl font-bold leading-tight text-slate-900">
-         {content.section1.title}
-          </h2>
-
-          <p className="mt-5 text-lg leading-8 text-slate-800">
-           {content.section1.description}
-          </p>
-
-      {/* Features */}
-<div className="mt-5 grid gap-5 sm:grid-cols-2">
-  {content.section1.features.map((item) => (
-    <div
-      key={item}
-      className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#DA2416] hover:shadow-lg"
-    >
-      {/* Icon */}
-      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#DA2416]/10 text-[#DA2416] transition-all duration-300 group-hover:bg-[#DA2416] group-hover:text-white">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2.5}
+        <div
+          className="
+            relative
+            mx-auto
+            grid
+            max-w-7xl
+            grid-cols-1
+            items-center
+            gap-12
+            px-4
+            sm:px-6
+            md:gap-16
+            lg:grid-cols-2
+            lg:gap-20
+            lg:px-8
+          "
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-      </div>
-
-      {/* Text */}
-      <div>
-        <h4 className="text-md font-semibold text-slate-900">
-          {item}
-        </h4>
-
-        <p className="mt-1 text-sm text-slate-700">
-          Engineered for reliable performance and long service life.
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-          {/* Buttons */}
-          <div className="mt-12 flex gap-5">
-            <button className="rounded-xl bg-[#DA2416] px-8 py-4 font-semibold text-white transition hover:bg-[#DA2416]">
-              Explore Product
-            </button>
-
-            <button className="rounded-xl border border-slate-300 px-8 py-4 font-semibold text-slate-700 transition hover:bg-slate-100">
-              Download Brochure
-            </button>
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="relative">
-          {/* Background Card */}
-          <div className="absolute inset-10 rounded-[40px] bg-gradient-to-br from-[#DA2416] to-slate-800" />
-
-          {/* Image Card */}
-          <div className="relative overflow-hidden rounded-[40px] bg-white p-10 shadow-2xl">
-            <img
-              src={content.section1.image}
-              className="mx-auto w-full object-contain transition duration-700 hover:scale-105"
+          {/* LEFT IMAGE */}
+          <div className="relative mx-auto w-full max-w-[650px]">
+            {/* Decorative Box */}
+            <div
+              className="
+                absolute
+                -left-3
+                top-8
+                h-[85%]
+                w-[85%]
+                rounded-[30px]
+                bg-gradient-to-br
+                from-[#DA2416]
+                to-[#281770]
+                sm:-left-6
+                sm:top-10
+                sm:rounded-[40px]
+                lg:-left-8
+                lg:top-12
+              "
             />
+
+            {/* Main Image */}
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[30px]
+                bg-white
+                p-5
+                shadow-[0_30px_80px_rgba(0,0,0,0.12)]
+                sm:rounded-[40px]
+                sm:p-8
+                md:p-10
+              "
+            >
+              <img
+                src={content.section2.image}
+                alt=""
+                className="
+                  w-full
+                  object-contain
+                  transition
+                  duration-700
+                  hover:scale-105
+                "
+              />
+            </div>
+
+            {/* Floating Card */}
+            <div
+              className="
+                absolute
+                -bottom-5
+                right-3
+                max-w-[220px]
+                rounded-2xl
+                bg-white
+                p-4
+                shadow-xl
+                sm:-bottom-8
+                sm:right-8
+                sm:max-w-none
+                sm:rounded-3xl
+                sm:p-6
+              "
+            >
+              <h3 className="mt-1 text-2xl font-bold text-[#DA2416] sm:text-3xl">
+                {content.section2.stats.title}
+              </h3>
+
+              <p className="mt-2 text-xs text-slate-500 sm:text-sm">
+                {content.section2.stats.text}
+              </p>
+            </div>
           </div>
 
-          {/* Floating Badge */}
-          <div className="absolute -bottom-6 left-10 rounded-2xl bg-white px-6 py-4 shadow-xl">
-            <p className="text-sm text-slate-500">
-              Trusted Worldwide
+          {/* RIGHT CONTENT */}
+          <div>
+            <span
+              className="
+                inline-flex
+                rounded-full
+                bg-blue-100
+                px-3
+                py-1.5
+                text-xs
+                font-semibold
+                uppercase
+                tracking-widest
+                text-[#DA2416]
+                sm:px-4
+                sm:py-2
+                sm:text-sm
+              "
+            >
+              {content.section2.badge}
+            </span>
+
+            <h2
+              className="
+                mt-5
+                break-words
+                text-3xl
+                font-bold
+                leading-tight
+                text-slate-900
+                sm:mt-6
+                sm:text-4xl
+              "
+            >
+              {content.section2.title}
+            </h2>
+
+            <p
+              className="
+                mt-4
+                text-sm
+                leading-7
+                text-slate-800
+                sm:text-lg
+                sm:leading-8
+              "
+            >
+              {content.section2.description}
             </p>
 
-            <p className="text-3xl font-bold text-slate-900">
-              50+ Countries
-            </p>
-          </div>
+            {/* CTA */}
+            <div
+              className="
+                mt-8
+                flex
+                w-full
+                flex-col
+                gap-3
+                sm:mt-12
+                sm:flex-row
+                sm:flex-wrap
+                sm:gap-5
+              "
+            >
+              <button
+                className="
+                  w-full
+                  rounded-xl
+                  bg-[#DA2416]
+                  px-8
+                  py-3.5
+                  font-semibold
+                  text-white
+                  transition
+                  hover:bg-[#DA2416]
+                  sm:w-auto
+                  sm:py-4
+                "
+              >
+                View Product
+              </button>
 
-          {/* Floating Badge */}
-          <div className="absolute -top-5 right-5 rounded-2xl bg-[#DA2416] px-6 py-4 text-white shadow-xl">
-            <p className="text-sm opacity-80">
-              Service Life
-            </p>
-
-            <p className="text-3xl font-bold">
-              +35%
-            </p>
+              <button
+                className="
+                  w-full
+                  rounded-xl
+                  border
+                  border-slate-300
+                  px-8
+                  py-3.5
+                  font-semibold
+                  text-slate-700
+                  transition
+                  hover:bg-white
+                  sm:w-auto
+                  sm:py-4
+                "
+              >
+                Get a Quote
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      {/* CTA */}
 
-
-
-     <section className="relative overflow-hidden bg-slate-50 py-14">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#dbeafe,transparent_45%)]" />
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-20  lg:grid-cols-2">
-        {/* LEFT IMAGE */}
-        <div className="relative">
-
-          {/* Decorative Box */}
-          <div className="absolute -left-8 top-12 h-[85%] w-[85%] rounded-[40px] bg-gradient-to-br from-[#DA2416] to-[#281770]" />
-
-          {/* Main Image */}
-          <div className="relative overflow-hidden rounded-[40px] bg-white p-10 shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
-            <img
-              src={content.section2.image}
-              className="w-full transition duration-700 hover:scale-105"
-            />
-          </div>
-
-          {/* Floating Card */}
-          <div className="absolute -bottom-8 right-8 rounded-3xl bg-white p-6 shadow-xl">
-        
-
-            <h3 className="mt-1 text-3xl font-bold text-[#DA2416]">
-            {content.section2.stats.title}
-            </h3>
-
-            <p className="mt-2 text-sm text-slate-500">
-             {content.section2.stats.text}
-            </p>
-          </div>
-        </div>
-
-        {/* RIGHT CONTENT */}
-        <div>
-          <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#DA2416]">
-     {content.section2.badge}
-          </span>
-
-          <h2 className="mt-6 text-4xl font-bold leading-tight text-slate-900">
-         {content.section2.title}
-          </h2>
-
-          <p className="mt-4 text-lg leading-8 text-slate-800">
-         {content.section2.description}
-          </p>
-
-
-          {/* CTA */}
-          <div className="mt-12 flex gap-5">
-            <button className="rounded-xl bg-[#DA2416] px-8 py-4 font-semibold text-white transition hover:bg-[#DA2416]">
-              View Product
-            </button>
-
-            <button className="rounded-xl border border-slate-300 px-8 py-4 font-semibold text-slate-700 transition hover:bg-white">
-              Get a Quote
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-<Cta/>
-
-
-
-</>
-
-
+      <Cta />
+    </>
   );
 }
+
