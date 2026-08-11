@@ -5,10 +5,12 @@ import { CheckCircle2, Play, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const features = [
-  "Supplier Capabilities in Russia",
+  "Focus on Precision & Reliability",
   "IATF 9001:2015 Certified",
-  "Exporting to 50+ countries worldwide",
-  "Commitment to quality and reliability",
+  "	Exporting to 50+ Countries Worldwide",
+  "	Quality-Driven Manufacturing & Supply",
+  "	Solutions for Industrial & Automotive Applications"
+
 ];
 
 export default function AboutRussia() {
@@ -145,22 +147,14 @@ export default function AboutRussia() {
             </span>
 
             <h2 className="mt-2 text-2xl font-extrabold leading-tight">
-              <span className="text-[#1D4ED8]">
-                A Legacy of Excellence
+              <span className="text-[#29166F]">
+              Trusted Bearing Supplier 
               </span>
 
-              <br />
-
-              <span className="text-gray-900">
-                from Russia
-              </span>
             </h2>
 
             <p className="mt-5 text-[15px] text-black">
-              ARB Bearing is a trusted Russian supplier of high-quality
-              bearings, delivering reliable solutions to industries around the
-              globe. With a strong focus on innovation, precision and
-              durability, our products meet the toughest industrial demands.
+             ARB Bearings is a trusted bearing supplier delivering precision-engineered bearings built for performance, durability, and reliability. From industrial to automotive applications, we provide quality bearing solutions you can count on.
             </p>
 
             <div className="mt-5 space-y-3">

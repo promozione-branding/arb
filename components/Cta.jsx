@@ -28,20 +28,16 @@ const Cta = () => {
               ENGINEERED SOLUTIONS
             </span>
 
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold leading-tight text-white">
-              Need Help Choosing the
-          
-              Right Industrial Product?
+            <h2 className="mt-5 text-3xl md:text-4xl font-bold leading-tight text-white">
+            Need Help Finding the Right Bearing?
             </h2>
 
-            <p className="mt-4 max-w-5xl text-lg leading-8 text-white">
-              From bearings and power transmission components to complete
-              industrial solutions, our technical team will help you select the
-              right product for your application.
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-white">
+            From industrial and automotive bearings to power transmission components, our experts help you choose the right solution for your application.
             </p>
           </div>
 
-          {/* Right */}
+        
        <div className="space-y-5">
   <button
     onClick={() => setIsFormOpen(true)}

@@ -49,11 +49,13 @@ const products = [
   },
 ];
 
+
+
 export default function ProductCategories() {
   return (
     <section className="relative overflow-hidden bg-[#f7f9fc] py-16 ">
 
-      {/* Background Details */}
+    
       <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-blue-100/50 blur-[130px]" />
 
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-red-100/40 blur-[130px]" />
@@ -98,7 +100,6 @@ export default function ProductCategories() {
 
         </div>
 
-    
 
         <div className="relative">
 
@@ -113,23 +114,28 @@ export default function ProductCategories() {
             speed={700}
             spaceBetween={20}
             slidesPerView={1}
+
             breakpoints={{
               640: {
                 slidesPerView: 1.5,
                 spaceBetween: 20,
               },
+
               768: {
                 slidesPerView: 2,
                 spaceBetween: 24,
               },
+
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 24,
               },
+
               1280: {
                 slidesPerView: 4,
                 spaceBetween: 24,
               },
+
             }}
             className="!overflow-visible"
           >
@@ -179,7 +185,6 @@ export default function ProductCategories() {
                   <div className="relative flex h-[250px] items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/50 px-8 pt-8">
 
                 
-
                     <div
                       className="
                         absolute
@@ -194,7 +199,7 @@ export default function ProductCategories() {
                         group-hover:border-blue-200
                       "
                     />
-
+                    
                     <div
                       className="
                         absolute

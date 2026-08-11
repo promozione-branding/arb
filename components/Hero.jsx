@@ -119,7 +119,7 @@ export default function HeroSection() {
               >
                 PRECISION THAT
 
-                <span className="block text-blue-700">
+                <span className="block text-[#29166F]">
                   POWER PROGRESS
                 </span>
               </h1>

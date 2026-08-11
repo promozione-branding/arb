@@ -50,7 +50,7 @@ export default function IndustriesSection() {
           Industries We Serve
         </span>
 
-        <h2 className="mt-3 mb-9 text-3xl font-bold text-blue-700 md:mb-12 md:text-5xl">
+        <h2 className="mt-3 mb-9 text-3xl font-bold text-[#29166F] md:mb-12 md:text-5xl">
           <span className="text-black">Powering Industries</span> Worldwide
         </h2>
 
