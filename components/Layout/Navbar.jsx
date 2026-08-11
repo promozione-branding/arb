@@ -24,7 +24,7 @@ export default function Navbar({ categories }) {
   return (
     <header className="sticky top-0 z-[999] w-full">
       <div className="relative z-[200] backdrop-blur-2xl bg-[#081B2E]/90 border-b border-white/10 shadow-[0_17px_40px_rgba(0,0,0,.18)]">
-        <div className="max-w-7xl mx-auto px-2  md:px-0 ">
+        <div className="max-w-7xl mx-auto px-3   ">
           <div className="h-18 flex items-center justify-between">
            <Link
               href="/"
