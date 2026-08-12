@@ -34,7 +34,7 @@ export default function HeroSection() {
 
   const typedTexts = [
     "DRIVES PROGRESS",
-    "MOVES INDUSTRY",
+    // "MOVES INDUSTRY",
     "POWERS PERFORMANCE",
     
   ];
@@ -189,15 +189,11 @@ export default function HeroSection() {
           "
         />
 
-        {/* =====================================================
-            MOVING LIGHT
-        ====================================================== */}
+     
 
         <div className="hero-light pointer-events-none absolute top-0 h-full w-[160px] bg-gradient-to-r from-transparent via-white/30 to-transparent blur-2xl" />
 
-        {/* =====================================================
-            DECORATIVE TECHNICAL LINES
-        ====================================================== */}
+     
 
         <div className="pointer-events-none absolute left-[5%] top-[18%] hidden h-px w-32 bg-gradient-to-r from-transparent via-blue-500/40 to-transparent lg:block" />
 
@@ -205,9 +201,7 @@ export default function HeroSection() {
 
         <div className="pointer-events-none absolute bottom-[18%] left-[15%] hidden h-px w-28 bg-gradient-to-r from-transparent via-red-500/30 to-transparent lg:block" />
 
-        {/* =====================================================
-            MAIN CONTAINER
-        ====================================================== */}
+    
 
         <div
           className="
@@ -236,12 +230,10 @@ export default function HeroSection() {
               2xl:gap-16
             "
           >
-            {/* =================================================
-                LEFT CONTENT
-            ================================================== */}
+      
 
             <div className="hero-content w-full text-center lg:text-left">
-              {/* TOP LABEL */}
+        
 
               <div
                 className="
@@ -274,9 +266,7 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              {/* =================================================
-                  MAIN HEADING
-              ================================================== */}
+        
 
               <h1
                 className="
@@ -297,7 +287,7 @@ export default function HeroSection() {
                   PRECISION THAT
                 </span>
 
-                {/* TYPEWRITER */}
+        
 
                 <span
                   className="
@@ -332,13 +322,12 @@ export default function HeroSection() {
                 </span>
               </h1>
 
-              {/* PREMIUM UNDERLINE */}
 
               <div className="hero-underline mx-auto mt-5 h-[3px] w-20 overflow-hidden rounded-full bg-blue-100 lg:mx-0">
                 <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-[#29166F] to-blue-500" />
               </div>
 
-              {/* DESCRIPTION */}
+       
 
               <p
                 className="
@@ -360,9 +349,6 @@ export default function HeroSection() {
                 customers worldwide.
               </p>
 
-              {/* =================================================
-                  MINI STATS
-              ================================================== */}
 
               <div
                 className="
@@ -411,9 +397,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* =================================================
-                  BUTTONS
-              ================================================== */}
+            
 
               <div
                 className="
@@ -604,9 +588,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* =================================================
-                RIGHT PRODUCT AREA
-            ================================================== */}
+         
 
             <div
               className="
@@ -619,7 +601,7 @@ export default function HeroSection() {
                 lg:mt-0
               "
             >
-              {/* Product Glow */}
+         
 
               <div
                 className="
@@ -640,7 +622,7 @@ export default function HeroSection() {
                 "
               />
 
-              {/* Rotating ring */}
+            
 
               <div
                 className="
@@ -664,7 +646,7 @@ export default function HeroSection() {
                 "
               />
 
-              {/* Outer ring */}
+      
 
               <div
                 className="
@@ -687,7 +669,6 @@ export default function HeroSection() {
                 "
               />
 
-              {/* Floating labels */}
 
               <div
                 className="
@@ -823,7 +804,7 @@ export default function HeroSection() {
                         h-full
                         w-full
                         object-contain
-                        drop-shadow-[0_30px_45px_rgba(0,0,0,0.16)]
+                       
                       "
                     />
                   </SwiperSlide>
