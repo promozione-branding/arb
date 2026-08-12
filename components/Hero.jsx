@@ -36,7 +36,7 @@ export default function HeroSection() {
     "DRIVES PROGRESS",
     "MOVES INDUSTRY",
     "POWERS PERFORMANCE",
-    "DEFINES PRECISION",
+    
   ];
 
   const [typedText, setTypedText] = useState("");
@@ -392,10 +392,10 @@ export default function HeroSection() {
 
                 <div className="text-left">
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
-                    50+
+                    6+
                   </p>
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
-                    Countries
+                    continents
                   </p>
                 </div>
 
