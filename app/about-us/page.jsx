@@ -49,9 +49,7 @@ const [FormOpen, setFormOpen] = useState(false);
         <div>
           <h2 className="text-4xl font-bold mb-5">About ARB Bearings</h2>
           <p className="text-md leading-relaxed ">
-            Established in 1990 and headquartered in Delhi, India, ARB Bearings
-            is a leading bearing supplier in India with over 60+ years of
-            collective expertise in the bearing industry. Built on a foundation
+          Established in 1990 and headquartered in Delhi, India, ARB Bearings is a trusted bearing supplier with 60+ years of collective industry expertise, delivering reliable bearing solutions to customers worldwide. Built on a foundation
             of engineering excellence, innovation, and customer trust, we
             specialize in manufacturing high-quality industrial bearings and
             precision bearing solutions for customers worldwide. From its
