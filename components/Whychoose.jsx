@@ -151,25 +151,47 @@ export default function WhyChooseARB() {
             </p>
 
             {/* Experience Highlight */}
-            <div className="mt-10 flex items-center gap-5 border-l-2 border-red-500 pl-5">
-              <div>
-                <p className="text-4xl font-bold text-white">60+</p>
+           <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-l-2 border-red-500 pl-5">
+  {/* 1 */}
+  <div>
+    <p className="text-3xl font-bold text-white sm:text-4xl">
+      60+
+    </p>
+    <p className="mt-1 text-sm text-white">
+      Years of expertise
+    </p>
+  </div>
 
-                <p className="mt-1 text-sm text-white">
-                  Years of expertise
-                </p>
-              </div>
+  {/* 2 */}
+  <div>
+    <p className="text-3xl font-bold text-white sm:text-4xl">
+      50+
+    </p>
+    <p className="mt-1 text-sm text-white">
+      Countries served
+    </p>
+  </div>
 
-              <div className="h-10 w-px bg-white/10" />
+  {/* 3 */}
+  <div>
+    <p className="text-3xl font-bold text-white sm:text-4xl">
+      2,500+
+    </p>
+    <p className="mt-1 text-sm text-white">
+      Bearing Products
+    </p>
+  </div>
 
-              <div>
-                <p className="text-4xl font-bold text-white">50+</p>
-
-                <p className="mt-1 text-sm text-white">
-                  Countries served
-                </p>
-              </div>
-            </div>
+  {/* 4 */}
+  <div>
+    <p className="text-3xl font-bold text-white sm:text-4xl">
+      24/7
+    </p>
+    <p className="mt-1 text-sm text-white">
+      Technical Support
+    </p>
+  </div>
+</div>
           </div>
         </div>
       </div>

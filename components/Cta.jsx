@@ -19,7 +19,7 @@ const Cta = () => {
       {/* Accent */}
       <div className="absolute left-0 top-0 h-full w-2 bg-[#DA2416]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl ">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_300px]">
 
           {/* Left */}
@@ -29,7 +29,7 @@ const Cta = () => {
             </span>
 
             <h2 className="mt-5 text-3xl md:text-4xl font-bold leading-tight text-white">
-            Need Help Finding the Right Bearing?
+        Your Application. Our Expertise. The Right Solution
             </h2>
 
             <p className="mt-4 max-w-3xl text-lg leading-8 text-white">

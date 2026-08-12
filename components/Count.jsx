@@ -22,8 +22,8 @@ const stats = [
     icon: BadgeCheck,
     value: 2500,
     suffix: "+",
-    title: "Global",
-    subtitle: "Customers",
+    title: "Bearing",
+    subtitle: "Products",
   },
   {
     icon: Globe2,

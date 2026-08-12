@@ -62,14 +62,14 @@ export default function CursorZoomImage({
           className="
             pointer-events-none
             absolute
-            h-24
-            w-24
+            h-14
+            w-14
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
             border
             border-white/60
-            bg-white/20
+            bg-white/10
             shadow-[0_0_30px_rgba(255,255,255,0.25)]
             backdrop-blur-[2px]
           "

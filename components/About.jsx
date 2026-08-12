@@ -150,9 +150,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* =========================================================
-            RIGHT - CONTENT
-        ========================================================== */}
         <div className="w-full">
           {/* Label */}
           <span
@@ -207,7 +204,7 @@ export default function AboutSection() {
               sm:leading-7
             "
           >
-         With 60+ years of bearings industry know-how and manufacturing operations since 1990, ARB Bearings is often seen as a trusted supplier of top-notch bearings globally. Our precision-engineered bearing solutions are put together for durability, reliability, and those demanding, kind of hard-use applications across various industries.
+         With 60+ years of bearings industry know-how and manufacturing operations since 1990, ARB Bearings is often seen as a trusted manufacturer of top-notch bearings globally. Our precision-engineered bearing solutions are put together for durability, reliability, and those demanding, kind of hard-use applications across various industries.
           </p>
 
           {/* Industries */}

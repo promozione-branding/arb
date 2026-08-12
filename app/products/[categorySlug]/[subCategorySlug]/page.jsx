@@ -323,30 +323,7 @@ export default async function SubCategoryPage({ params }) {
 
               {/* Bottom product label */}
 
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  bottom-5
-                  left-5
-                  rounded-xl
-                  bg-slate-900/80
-                  px-4
-                  py-2
-                  text-xs
-                  font-medium
-                  text-white
-                  opacity-0
-                  backdrop-blur-md
-                  transition-all
-                  duration-500
-                  group-hover:opacity-100
-                  sm:bottom-7
-                  sm:left-7
-                "
-              >
-                {subCategory.name}
-              </div>
+             
             </div>
 
             {/* Floating experience badge */}

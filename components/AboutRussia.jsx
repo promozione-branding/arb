@@ -9,7 +9,7 @@ const features = [
   "IATF 16949:2016 Certified",
   "	Exporting to 50+ Countries Worldwide",
   "	Quality-Driven Manufacturing & Supply",
-  "	Solutions for Industrial & Automotive Applications"
+  "	Solutions for multiple applications"
 
 ];
 
@@ -60,7 +60,7 @@ export default function AboutRussia() {
 
   return (
     <section className="relative overflow-hidden bg-white py-24">
-      {/* Background */}
+    
 
       <div className="absolute inset-0">
         <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[150px]" />
@@ -70,9 +70,11 @@ export default function AboutRussia() {
       <div className="relative w-full mx-auto px-8">
         <div className="grid lg:grid-cols-[0.9fr_1fr_0.8fr] gap-10 items-center">
 
-          {/* VIDEO */}
+  
 
           <div>
+
+
             <div className="relative overflow-hidden rounded-[26px] shadow-2xl group">
 
               <video
@@ -81,8 +83,8 @@ export default function AboutRussia() {
                   w-full
                   h-[250px]
                   sm:h-[350px]
-                  md:h-[420px]
-                  object-contain
+                  md:h-[400px]
+                  object-fill
                 "
                 autoPlay
                 muted
@@ -96,11 +98,11 @@ export default function AboutRussia() {
                 />
               </video>
 
-              {/* Video Overlay */}
+              
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent pointer-events-none" />
 
-              {/* Mute / Unmute */}
+          
 
               <button
                 type="button"
@@ -137,9 +139,12 @@ export default function AboutRussia() {
               </button>
 
             </div>
+
+
+
           </div>
 
-          {/* CONTENT */}
+          
 
           <div>
             <span className="text-sm font-bold uppercase tracking-[3px] text-red-700">
@@ -199,7 +204,7 @@ export default function AboutRussia() {
               className="w-full h-full"
             />
 
-            {/* Pins */}
+        
 
             <span className="absolute top-[42%] left-[40%] h-4 w-4 rounded-full border-2 border-white bg-red-600 shadow-lg animate-pulse" />
 
@@ -209,15 +214,7 @@ export default function AboutRussia() {
 
             <span className="absolute top-[74%] left-[82%] h-4 w-4 rounded-full border-2 border-white bg-red-600 shadow-lg animate-pulse" />
 
-            {/*
-            <Image
-              src="/made-in-russia.png"
-              alt="Made in Russia"
-              width={130}
-              height={130}
-              className="mt-10"
-            />
-            */}
+           
           </div>
 
         </div>

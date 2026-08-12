@@ -24,7 +24,7 @@ import "swiper/css/effect-fade";
 
 export default function HeroSection() {
   const bearingImages = [
-    "/banner/1.png",
+    "/bearinghero.png",
     "/banner/22.png",
     "/banner/3.png",
   ];
@@ -378,7 +378,7 @@ export default function HeroSection() {
 
                 <div className="text-left">
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
-                    6+
+                    6
                   </p>
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
                     continents
