@@ -35,9 +35,9 @@ const faqs = [
         "ARB Bearings is an experienced Bearing Supplier supplying high-quality, precision-engineered bearing solutions to customers across {city} and international markets.",
     },
     {
-      question: "What types of bearings does ARB Bearings manufacture?",
+      question: "What types of bearings does ARB Bearings supply?",
       answer:
-        "ARB Bearings offers a wide range of bearings, including ball bearings, roller bearings, taper roller bearings, spherical roller bearings, cylindrical roller bearings, needle bearings, and thrust bearings.",
+        "ARB Bearings supplies a wide range of high-quality ball and roller bearings, including deep groove ball, tapered roller, cylindrical roller, spherical roller, needle, and thrust bearings for industrial, automotive, agricultural, railway, mining, and other demanding applications.",
     },
     {
       question: "Does ARB Bearings export bearings to {city}?",
