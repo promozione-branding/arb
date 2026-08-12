@@ -10,6 +10,8 @@ import { toast } from "react-toastify";
 import Enquiry from "@/components/Enquiry";
 import {
   ChevronRight,
+
+
   Shield,
   Grid3x3,
   ArrowLeftRight,
@@ -355,7 +357,7 @@ ${message}`;
             </button>
           </div>
 
-          {/* Tabs */}
+       
 
           <div
             className="
@@ -411,7 +413,7 @@ ${message}`;
             </button>
           </div>
 
-          {/* OVERVIEW */}
+     
 
           {activeTab === "overview" && (
             <div className="py-8 sm:py-12">
@@ -495,7 +497,7 @@ ${message}`;
             </div>
           )}
 
-          {/* DOWNLOADS */}
+        
 
           {activeTab === "downloads" && (
             <div className="py-10 sm:py-14">
@@ -541,9 +543,7 @@ ${message}`;
         </div>
       </section>
 
-      {/* ======================================================
-          SPECIFICATIONS + ENQUIRY FORM
-      ====================================================== */}
+
 
       <section className="bg-gradient-to-b from-white to-slate-100 py-10 sm:py-14 lg:py-16">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
@@ -564,7 +564,7 @@ ${message}`;
           </h2>
 
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-5 lg:gap-10">
-            {/* Specifications */}
+           
 
             <div className="lg:col-span-3">
               <div

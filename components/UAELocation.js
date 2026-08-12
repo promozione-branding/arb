@@ -7,10 +7,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ProductsSlider from "@/components/ProductsSlider";
-import { Factory, Store, Hotel, Home, Leaf, Warehouse, Truck, Tags, Handshake } from "lucide-react";
+
 import IndustriesSection from "@/components/IndustriesSection";
 
 import { ChevronDown } from "lucide-react";
+
 
 const Location = () => {
       const [active, setActive] = useState(0);
@@ -20,11 +21,6 @@ const Location = () => {
         ? params.location.split("-in-")[1].split("-")
             .map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
         : "India";
-
-
-
-
-
 
 
 
@@ -62,7 +58,7 @@ const faqs = [
     return (
         <>
         
-   {/* Hero */}
+  
             <div className="">
                 <section
                     style={{
@@ -87,8 +83,7 @@ const faqs = [
          <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-15">
   <div className="mx-auto max-w-7xl  ">
     <div className="grid items-center gap-16 lg:grid-cols-2">
-      
-      {/* Left Content */}
+     
       <div>
         <span className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-1 text-sm font-semibold tracking-wide text-red-600">
           Trusted Worldwide
@@ -116,7 +111,7 @@ const faqs = [
 
     
 
-        {/* Features */}
+       
         <div className="mt-7 grid gap-5 sm:grid-cols-2">
           {[
             "Extensive Product Range",
@@ -150,9 +145,9 @@ const faqs = [
         </div>
       </div>
 
-      {/* Right Side */}
+
+     
       <div className="relative">
-        {/* Background Blur */}
         <div className="absolute top-10 -left-10 h-48 w-48 rounded-full bg-red-100 blur-3xl"></div>
         <div className="absolute -bottom-10 -right-10 h-48 w-48 rounded-full bg-blue-100 blur-3xl"></div>
 
@@ -195,14 +190,14 @@ const faqs = [
 </section>
 
            <section className="relative overflow-hidden bg-white py-15">
-  {/* Background Effects */}
+  
   <div className="absolute inset-0">
     <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-red-50 blur-3xl"></div>
     <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-blue-50 blur-3xl"></div>
   </div>
 
   <div className="relative mx-auto w-full px-6 lg:px-18">
-    {/* Heading */}
+
     <div className="mx-auto max-w-5xl text-center">
       <span className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold tracking-wide text-red-600">
         Why Choose Us
@@ -219,7 +214,7 @@ const faqs = [
       </p>
     </div>
 
-    {/* Cards */}
+    
     <div className="mt-10 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
       {[
         {
@@ -248,12 +243,12 @@ const faqs = [
           key={index}
           className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-red-500 hover:shadow-2xl"
         >
-          {/* Number */}
+      
           <div className="absolute right-6 top-5 text-5xl font-black text-slate-100 transition-all duration-300 group-hover:text-red-100">
             {`0${index + 1}`}
           </div>
 
-          {/* Icon */}
+         
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-600 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +266,7 @@ const faqs = [
             </svg>
           </div>
 
-          {/* Content */}
+         
           <h3 className="mt-8 text-xl font-bold text-[#1B2A41]">
             {item.title}
           </h3>
@@ -280,7 +275,7 @@ const faqs = [
             {item.description}
           </p>
 
-          {/* Bottom Accent */}
+       
           <div className="mt-8 h-1 w-16 rounded-full bg-red-600 transition-all duration-300 group-hover:w-full"></div>
         </div>
       ))}
@@ -363,7 +358,7 @@ const faqs = [
   <div className="mx-auto max-w-7xl">
     <div className="grid items-center gap-16 lg:grid-cols-2">
       
-      {/* Left Content */}
+   
       <div>
         <span className="inline-flex rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
           Manufacturing Excellence
@@ -451,7 +446,7 @@ const faqs = [
 
 
 
-        {/* CTA */}
+       
             <section className="w-full bg-[#28186E] text-white py-5">
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="md:text-left text-center">
@@ -481,7 +476,7 @@ const faqs = [
 
         <div className="grid gap-16 lg:grid-cols-12">
 
-          {/* Left Side */}
+         
           <div className="lg:col-span-4 lg:sticky lg:top-35 h-fit">
 
             <span className="rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
@@ -501,7 +496,7 @@ const faqs = [
 
           </div>
 
-          {/* Right Side */}
+      
           <div className="space-y-5 lg:col-span-8">
 
           {faqs.map((faq, index) => (

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 const features = [
   "Focus on Precision & Reliability",
-  "IATF 9001:2015 Certified",
+  "IATF 16949:2016 Certified",
   "	Exporting to 50+ Countries Worldwide",
   "	Quality-Driven Manufacturing & Supply",
   "	Solutions for Industrial & Automotive Applications"
