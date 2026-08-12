@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { getCategoryTree } from "../../../data";
 import Cta from "@/components/Cta";
-
+import CursorZoomImage from "@/components/CursorZoomImage";
 export function generateStaticParams() {
   return getCategoryTree().map((category) => ({
     categorySlug: category.slug,
@@ -28,19 +28,17 @@ export default async function CategoryPage({ params }) {
 
   return (
     <>
-      {/* =========================================================
-          HERO
-      ========================================================== */}
+  
 
       <section className="relative h-[380px] w-full overflow-hidden sm:h-[420px]">
-        {/* Background Image */}
+     
         <img
           src="/fbc-bearings2.png"
           alt="Industrial Machinery"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
-        {/* Left Content Box */}
+  
         <div
           className="
             absolute
@@ -226,30 +224,50 @@ export default async function CategoryPage({ params }) {
                 "
               >
                 {/* Image */}
-                <div
-                  className="
-                    relative
-                    h-52
-                    overflow-hidden
-                    sm:h-56
-                    md:h-60
-                  "
-                >
-                  <img
-                    src={subCategory.image}
-                    alt={subCategory.name}
-                    className="
-                      h-full
-                      w-full
-                      object-contain
-                      transition
-                      duration-700
-                      group-hover:scale-110
-                    "
-                  />
+           <div
+  className="
+    relative
+    h-52
+    overflow-hidden
+    sm:h-56
+    md:h-60
+  "
+>
+  <CursorZoomImage
+    src={subCategory.image}
+    alt={subCategory.name}
+    zoom={1.25}
+  />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                </div>
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+
+  {/* Zoom indicator */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      right-4
+      top-4
+      flex
+      h-9
+      w-9
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-white/40
+      bg-black/20
+      text-white
+      opacity-0
+      backdrop-blur-md
+      transition-all
+      duration-300
+      group-hover:opacity-100
+    "
+  >
+    +
+  </div>
+</div>
 
                 {/* Content */}
                 <div className="p-4 sm:p-5">
@@ -528,32 +546,25 @@ export default async function CategoryPage({ params }) {
             />
 
             {/* Image Card */}
-            <div
-              className="
-                relative
-                overflow-hidden
-                rounded-[30px]
-                bg-white
-                p-5
-                shadow-2xl
-                sm:rounded-[40px]
-                sm:p-8
-                md:p-10
-              "
-            >
-              <img
-                src={content.section1.image}
-                alt=""
-                className="
-                  mx-auto
-                  w-full
-                  object-contain
-                  transition
-                  duration-700
-                  hover:scale-105
-                "
-              />
-            </div>
+          <div
+  className="
+    relative
+    overflow-hidden
+    rounded-[30px]
+    bg-white
+    p-5
+    shadow-2xl
+    sm:rounded-[40px]
+    sm:p-8
+    md:p-10
+  "
+>
+  <CursorZoomImage
+    src={content.section1.image}
+    alt=""
+    zoom={1.18}
+  />
+</div>
 
             {/* Floating Badge */}
             <div
@@ -660,29 +671,29 @@ export default async function CategoryPage({ params }) {
 
             {/* Main Image */}
             <div
-              className="
-                relative
-                overflow-hidden
-                rounded-[30px]
-                bg-white
-                p-5
-                shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-                sm:rounded-[40px]
-                sm:p-8
-                md:p-10
-              "
+             className="
+  group
+  relative
+  overflow-hidden
+  rounded-2xl
+  border
+  border-slate-200/70
+  bg-white
+  shadow-[0_10px_40px_rgba(15,23,42,0.06)]
+  transition-all
+  duration-500
+  ease-out
+  hover:-translate-y-2
+  hover:border-[#DA2416]/30
+  hover:shadow-[0_25px_70px_rgba(15,23,42,0.14)]
+  sm:rounded-3xl
+"
             >
-              <img
-                src={content.section2.image}
-                alt=""
-                className="
-                  w-full
-                  object-contain
-                  transition
-                  duration-700
-                  hover:scale-105
-                "
-              />
+           <CursorZoomImage
+  src={content.section2.image}
+  alt=""
+  zoom={1.18}
+/>
             </div>
 
             {/* Floating Card */}

@@ -8,6 +8,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Enquiry from "@/components/Enquiry";
+import CursorZoomImage from "@/components/CursorZoomImage";
 import {
   ChevronRight,
 
@@ -120,32 +121,139 @@ ${message}`;
           <div
             className="
               sticky
-              top-24
+              top-10
               px-0
               py-8
               sm:px-4
-              sm:py-10
+          
               md:px-6
               lg:px-10
-              lg:py-14
+              
             "
           >
-            <Image
-              src={product.image}
-              alt={product.model}
-              width={700}
-              height={700}
-              className="
-                mx-auto
-                h-auto
-                max-h-[400px]
-                w-full
-                object-contain
-                sm:max-h-[500px]
-                md:max-h-[550px]
-                lg:max-h-none
-              "
-            />
+          <div
+  className="
+    group
+    relative
+    mx-auto
+    w-full
+    overflow-hidden
+    rounded-[30px]
+    bg-white
+    p-3
+
+    sm:p-5
+    md:p-7
+    lg:p-8
+  "
+>
+  {/* Background Glow */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-1/2
+      top-1/2
+      h-48
+      w-48
+      -translate-x-1/2
+      -translate-y-1/2
+      rounded-full
+      bg-[#28186C]/10
+      blur-3xl
+      transition-all
+      duration-700
+      group-hover:h-72
+      group-hover:w-72
+      group-hover:bg-[#28186C]/15
+    "
+  />
+
+  {/* Decorative Ring */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-1/2
+      top-1/2
+      h-[70%]
+      w-[70%]
+      -translate-x-1/2
+      -translate-y-1/2
+      rounded-full
+      border
+      border-[#28186C]/5
+      transition-all
+      duration-700
+      group-hover:scale-110
+      group-hover:border-[#28186C]/10
+    "
+  />
+
+  {/* Cursor Zoom */}
+
+  <div
+    className="
+      relative
+      z-10
+      h-[360px]
+      w-full
+      sm:h-[460px]
+      md:h-[520px]
+      lg:h-[600px]
+    "
+  >
+    <CursorZoomImage
+      src={product.image}
+      alt={product.model}
+      zoom={1.35}
+      className="
+        drop-shadow-[0_25px_35px_rgba(0,0,0,0.12)]
+        transition-[filter]
+        duration-500
+        group-hover:drop-shadow-[0_30px_50px_rgba(40,24,108,0.22)]
+      "
+    />
+  </div>
+
+  {/* Premium Shine */}
+
+ 
+  {/* Zoom Label */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      bottom-5
+      right-5
+      z-30
+      rounded-full
+      border
+      border-slate-200
+      bg-white/90
+      px-4
+      py-2
+      text-[10px]
+      font-semibold
+      tracking-[0.15em]
+      text-slate-600
+      opacity-0
+      shadow-lg
+      backdrop-blur-md
+      transition-all
+      duration-300
+      group-hover:translate-y-0
+      group-hover:opacity-100
+      translate-y-2
+      sm:text-xs
+    "
+  >
+    MOVE TO EXPLORE
+  </div>
+</div>
 
             <div
               className="
