@@ -46,8 +46,8 @@ export default {
   },
 
   subCategory: {
-    name: "Ball Bearings",
-    slug: "ball-bearings",
+    name: "Single Row Deep groove Ball Bearing - Metric and Inch Series",
+    slug: "single-row-deep-groove-ball-bearing",
     heroTitle: "Ball Bearings",
     image: "/arb-images/Ball-Bearing-Final.webp",
 
@@ -62,7 +62,7 @@ export default {
       "Long Service Life",
     ],
 
-  
+
     applications: [
       "Agricultural",
       "Automotive",

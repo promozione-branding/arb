@@ -61,7 +61,7 @@ export default {
     heroTitle: "Wheel Bearings",
     image: "/arb-images/Wheel Bearing.png",
     description:
-      "Premium wheel bearings designed for smooth wheel rotation, reduced friction, and dependable performance in automotive and heavy-duty applications.",
+      "Premium wheel hub bearings designed for smooth wheel rotation, reduced friction, and reliable performance in automotive and heavy-duty applications.",
 
     features: [
       "Smooth Rotation",

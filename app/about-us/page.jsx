@@ -129,6 +129,7 @@ export default function AboutPage() {
             loop
             playsInline
             preload="auto" />
+            <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" />
         </div>
         <div>
           <h2 className="text-4xl font-bold mb-4">Manufacturing Excellence</h2>
