@@ -30,9 +30,9 @@ const Location = () => {
 
 const faqs = [
     {
-      question: "Who is a reliable Bearing Supplier in {city}?",
+      question: "Who is a reliable Bearing Manufacturer in {city}?",
       answer:
-        "ARB Bearings is an experienced Bearing Supplier supplying high-quality, precision-engineered bearing solutions to customers across {city} and international markets.",
+        "ARB Bearings is an experienced Bearing Manufacturer supplying high-quality, precision-engineered bearing solutions to customers across {city} and international markets.",
     },
     {
       question: "What types of bearings does ARB Bearings manufacture?",
@@ -75,7 +75,7 @@ const faqs = [
                     <div className="absolute inset-0 bg-gray-900/60" />
 
                     <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-20 capitalize md:text-6xl">
-                       Bearing Supplier in  {city}
+                       Bearing Manufacturer in  {city}
                     </h1>
                 </section>
             </div>
@@ -95,16 +95,16 @@ const faqs = [
         </span>
 
         <h2 className="mt-4 text-4xl font-bold leading-tight text-[#1B2A41] ">
-          Leading Bearing Supplier in {city}
+          Leading Bearing Manufacturer in {city}
         </h2>
 
         <p className="mt-3 text-lg  text-slate-900">
-          ARB Bearings is a globally recognized Bearing Supplier delivering
+          ARB Bearings is a globally recognized Bearing Manufacturer delivering
           high-performance bearing solutions to customers across {city} and
           international markets. With decades of engineering excellence,
           advanced manufacturing capabilities, and an unwavering commitment to
           quality, we manufacture precision-engineered bearings that meet the
-          demanding requirements of modern industries.  As an experienced Bearing Supplier, we serve industries including
+          demanding requirements of modern industries.  As an experienced Bearing Manufacturer, we serve industries including
           automotive, mining, construction, agriculture, power generation,
           steel, and heavy engineering. Our bearings are trusted for their
           exceptional durability, precision, high load-carrying capacity, and
@@ -213,7 +213,7 @@ const faqs = [
       </h2>
 
       <p className="mt-4 text-lg leading-8 text-slate-900">
-        Choose ARB Bearings as your trusted Bearing Supplier in {city},
+        Choose ARB Bearings as your trusted Bearing Manufacturer in {city},
         delivering precision-engineered, reliable, and high-performance bearing
         solutions.
       </p>
@@ -240,7 +240,7 @@ const faqs = [
         {
           title: "Global Export Expertise",
           description:
-            "As an experienced Bearing Supplier, we supply quality bearing solutions to global markets.",
+            "As an experienced Bearing Manufacturer, we supply quality bearing solutions to global markets.",
         },
      
       ].map((item, index) => (
@@ -311,7 +311,7 @@ const faqs = [
           </span>
 
           <h2 className="mt-6 text-4xl font-bold leading-tight text-white ">
-            Looking for a Reliable Bearing Supplier in {city}?
+            Looking for a Reliable Bearing Manufacturer in {city}?
           </h2>
 
           <p className="mt-3 text-lg leading-8 text-slate-200">
@@ -374,7 +374,7 @@ const faqs = [
         </h2>
 
         <p className="mt-3 text-lg leading-8 text-slate-600">
-          As a trusted Bearing Supplier in {city}, ARB Bearings follows a
+          As a trusted Bearing Manufacturer in {city}, ARB Bearings follows a
           precision-focused manufacturing process to deliver reliable, durable,
           and high-performance bearing solutions. From premium raw materials to
           final inspection and packaging, every stage is carefully controlled to
@@ -389,7 +389,7 @@ const faqs = [
             },
             {
               title: "Precision Manufacturing",
-              desc: "As an experienced Bearing Supplier, we use advanced machinery and modern manufacturing processes to achieve dimensional accuracy and consistent production quality.",
+              desc: "As an experienced Bearing Manufacturer, we use advanced machinery and modern manufacturing processes to achieve dimensional accuracy and consistent production quality.",
             },
             {
               title: "Controlled Heat Treatment",
@@ -456,7 +456,7 @@ const faqs = [
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="md:text-left text-center">
                         <Link href={"/"} className="text-2xl font-semibold">
-                          Bearing Supplier in  {city}
+                          Bearing Manufacturer in  {city}
                         </Link>
                         <p className="text-2xl md:text-[42px] font-semibold">
                             +91454553454
@@ -489,7 +489,7 @@ const faqs = [
             </span>
 
             <h2 className="mt-6 text-3xl font-bold leading-tight text-[#1B2A41]">
-              Frequently Asked Questions – Bearing Supplier in {city}
+              Frequently Asked Questions – Bearing Manufacturer in {city}
             </h2>
 
             <p className="mt-8 text-lg leading-8 text-slate-800">

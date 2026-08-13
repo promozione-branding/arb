@@ -89,7 +89,7 @@ export default function CoreValues() {
             </h3>
 
             <p className="leading-9 text-slate-600 text-lg">
-              To become the most trusted bearing supplier by delivering
+              To become the most trusted bearing manufacturer by delivering
               innovative, precision-engineered bearing solutions that empower
               industries worldwide. We envision a future where ARB Bearings is
               recognized for setting new benchmarks in quality, reliability, and

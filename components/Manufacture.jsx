@@ -91,7 +91,7 @@ export default function QualityCertification() {
             <div className="mt-6 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-600 to-[#28186C]"></div>
 
             <p className="mt-8 text-lg leading-8 text-black">
-              As a trusted bearing supplier, ARB Bearings is committed to
+              As a trusted bearing manufacturer, ARB Bearings is committed to
               delivering products that meet the highest standards of quality,
               precision, and reliability. Every bearing undergoes rigorous
               testing and inspection throughout the manufacturing process to

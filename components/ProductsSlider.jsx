@@ -34,6 +34,11 @@ const products = [
     link: "/products/roller-bearings",
     desc: "Smooth rotation, low friction, reliable performance for versatile applications",
     image: "/arb-images/prodtaper.png",
+    images: [
+      "/arb-images/roller 1.png",
+      "/arb-images/roller 2.png",
+      "/arb-images/roller 3.png",
+    ],
     applications: [
       "Automobiles",
       "Agricultural Machinery",
@@ -45,30 +50,32 @@ const products = [
   },
 
   {
-    title: "Wheel Bearing / Wheel Bearing Kit",
+    title: "Wheel Bearings / Wheel Bearings Kit",
     link: "/products/wheel-bearing",
     desc: "Precision wheel hub bearings, smooth performance, long-lasting reliability",
-    image: "/wheelbearingcat.png",
+    image: "/arb-images/wheel.png",
+
     applications: [
-      "Mining Equipment",
-      "Steel Plants",
-      "Paper Mills",
-      "Conveyors",
-      "Cement Industry",
+      "Passenger Car",
+      "Agricultural",
+      "Electric Vehicle",
+      "ATV/UTV  Vehicles",
+      "LCVs",
     ],
   },
 
   {
-    title: "Wheel Hub Bearing",
+    title: "Wheel Hub Bearings",
     link: "/products/wheel-bearing",
     desc: "Engineered for smooth rotation, superior load handling, and long-lasting wheel-end reliability",
     image: "/arb-images/Wheel Bearing.png",
+
     applications: [
       "Trucks",
       "Trailers ",
       "Semi Trailers",
       "Buses",
-    ,
+      ,
     ],
   },
 ];
@@ -81,7 +88,7 @@ export default function ProductSlider() {
       <div className="mx-auto max-w-7xl">
 
         {/* Heading */}
-        <div className="mb-9 flex items-end justify-between md:mb-14">
+        <div className="mb-9 flex items-end justify-between md:mb-10">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[3px] text-red-600">
               Our Products
@@ -92,67 +99,15 @@ export default function ProductSlider() {
               Every Rotation
             </h2>
           </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden gap-3 md:flex">
-            <button
-              className="product-prev flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[#29166F] shadow-sm transition hover:bg-[#29166F] hover:text-white"
-            >
-              <ChevronLeft size={20} />
-            </button>
-
-            <button
-              className="product-next flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[#29166F] shadow-sm transition hover:bg-[#29166F] hover:text-white"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
         </div>
 
         {/* Swiper */}
-        <div className="relative">
-
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            spaceBetween={28}
-            slidesPerView={1}
-            loop={true}
-            speed={700}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            navigation={{
-              prevEl: ".product-prev",
-              nextEl: ".product-next",
-            }}
-            pagination={{
-              el: ".product-pagination",
-              clickable: true,
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 28,
-              },
-            }}
-            className="!pb-12"
-          >
-            {products.map((item, index) => (
-              <SwiperSlide key={index} className="h-auto">
-
-                {/* Card */}
-                <div
-                  className="
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {products.map((item, index) => (
+            <>
+              {/* Card */}
+              <div
+                className="
                     group
                     relative
                     h-full
@@ -167,11 +122,11 @@ export default function ProductSlider() {
                     hover:-translate-y-2
                     hover:shadow-2xl
                   "
-                >
+              >
 
-                  {/* Top Accent */}
-                  <div
-                    className="
+                {/* Top Accent */}
+                <div
+                  className="
                       absolute
                       left-0
                       top-0
@@ -188,11 +143,11 @@ export default function ProductSlider() {
                       duration-500
                       group-hover:scale-x-100
                     "
-                  />
+                />
 
-                  {/* Product Image */}
-                  <div
-                    className="
+                {/* Product Image */}
+                <div
+                  className="
                       relative
                       flex
                       h-72
@@ -203,11 +158,11 @@ export default function ProductSlider() {
                       from-slate-50
                       to-white
                     "
-                  >
+                >
 
-                    {/* Background Glow */}
-                    <div
-                      className="
+                  {/* Background Glow */}
+                  <div
+                    className="
                         absolute
                         h-40
                         w-40
@@ -218,11 +173,11 @@ export default function ProductSlider() {
                         duration-500
                         group-hover:scale-125
                       "
-                    />
+                  />
 
-                    {/* Decorative Ring */}
-                    <div
-                      className="
+                  {/* Decorative Ring */}
+                  {/* <div
+                    className="
                         absolute
                         h-52
                         w-52
@@ -234,31 +189,51 @@ export default function ProductSlider() {
                         group-hover:scale-110
                         group-hover:border-blue-200
                       "
-                    />
+                  /> */}
 
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={450}
-                      height={350}
-                      className="
-                        relative
-                        z-10
-                        h-74
-                        w-74
-                        object-contain
-                        transition-transform
-                        duration-700
-                        ease-out
-                        group-hover:scale-110
-                        group-hover:-rotate-2
-                      "
-                    />
+                  <Swiper
+                    modules={[Autoplay, Navigation, Pagination]}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
+                    // navigation
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    className="relative z-10 h-60 w-full product-card-swiper"
+                  >
+                    {/* Main Image */}
+                    <SwiperSlide className="flex items-center justify-center">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={450}
+                        height={350}
+                        className="h-74 w-74 object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
+                      />
+                    </SwiperSlide>
 
-                    {/* View Button */}
-                    <button
-                      onClick={() => setSelectedProduct(item)}
-                      className="
+                    {/* Additional Images */}
+                    {/* {item.images?.map((img, imageIndex) => (
+                      <SwiperSlide
+                        key={imageIndex}
+                        className="flex items-center justify-center"
+                      >
+                        <Image
+                          src={img}
+                          alt={`${item.title} ${imageIndex + 1}`}
+                          width={450}
+                          height={350}
+                          className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
+                        />
+                      </SwiperSlide>
+                    ))} */}
+                  </Swiper>
+
+                  {/* View Button */}
+                  <button
+                    onClick={() => setSelectedProduct(item)}
+                    className="
                         absolute
                         right-5
                         top-5
@@ -277,40 +252,40 @@ export default function ProductSlider() {
                         hover:scale-110
                         hover:bg-blue-600
                       "
-                    >
-                      <Eye size={20} />
-                    </button>
-                  </div>
+                  >
+                    <Eye size={20} />
+                  </button>
+                </div>
 
-                  {/* Content */}
-                  <div className="flex h-[220px] flex-col p-6">
+                {/* Content */}
+                <div className="flex h-[200px] flex-col p-4">
 
-                    <h3 className="line-clamp-2 text-xl font-bold text-slate-900">
-                      {item.title}
-                    </h3>
+                  <h3 className="line-clamp-2 text-xl font-bold text-slate-900">
+                    {item.title}
+                  </h3>
 
-                    <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">
-                      {item.desc}
-                    </p>
+                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">
+                    {item.desc}
+                  </p>
 
-                    {/* Bottom CTA */}
-                    <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-5">
+                  {/* Bottom CTA */}
+                  <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-2">
 
-                      <Link
-                        href={item.link}
-                        className="
+                    <Link
+                      href={item.link}
+                      className="
                           text-sm
                           font-semibold
                           text-[#1C398E]
                           transition
                           group-hover:translate-x-1
                         "
-                      >
-                        View Details
-                      </Link>
+                    >
+                      View Details
+                    </Link>
 
-                      <div
-                        className="
+                    <div
+                      className="
                           flex
                           h-10
                           w-10
@@ -323,21 +298,15 @@ export default function ProductSlider() {
                           group-hover:bg-[#1C398E]
                           group-hover:text-white
                         "
-                      >
-                        <ArrowRight size={18} />
-                      </div>
-
+                    >
+                      <ArrowRight size={18} />
                     </div>
+
                   </div>
                 </div>
-
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* Pagination */}
-          <div className="product-pagination mt-2 flex justify-center" />
-
+              </div>
+            </>
+          ))}
         </div>
       </div>
 
@@ -401,13 +370,44 @@ export default function ProductSlider() {
 
               {/* Image */}
               <div className="flex items-center justify-center bg-blue-50">
-                <Image
-                  src={selectedProduct.image}
-                  alt={selectedProduct.title}
-                  width={720}
-                  height={720}
-                  className="animate-spin-slow object-contain"
-                />
+                <Swiper
+                  modules={[Autoplay, Navigation, Pagination]}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  // navigation
+                  pagination={{ clickable: true }}
+                  loop={true}
+                  className="relative z-10 h-60 w-full product-card-swiper"
+                >
+                  {/* Main Image */}
+                  {selectedProduct.images ?
+                    selectedProduct.images?.map((img, imageIndex) => (
+                      <SwiperSlide
+                        key={imageIndex}
+                        className="flex items-center justify-center"
+                      >
+                        <Image
+                          src={img}
+                          alt={`${selectedProduct.title} ${imageIndex + 1}`}
+                          width={450}
+                          height={350}
+                          className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
+                        />
+                      </SwiperSlide>
+                    ))
+                    :
+                    <SwiperSlide className="flex items-center justify-center">
+                      <Image
+                        src={selectedProduct.image}
+                        alt={selectedProduct.title}
+                        width={450}
+                        height={350}
+                        className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
+                      />
+                    </SwiperSlide>}
+                </Swiper>
               </div>
 
               {/* Content */}
@@ -447,7 +447,7 @@ export default function ProductSlider() {
         </div>
       )}
 
-  
+
     </section>
   );
 }

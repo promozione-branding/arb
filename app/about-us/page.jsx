@@ -12,7 +12,7 @@ export default function AboutPage() {
   const why = [
     "60+ Years of Industry Expertise",
     "Established in 1990",
-    "Leading Bearing supplier in India",
+    "Leading Bearing manufacturer in India",
     "Six Advanced Manufacturing Facilities",
     "2,500+ Bearing Sizes",
     "800+ Dealers & Distribution Network",
@@ -22,8 +22,8 @@ export default function AboutPage() {
   ];
 
 
- const [isFormOpen, setIsFormOpen] = useState(false);
-const [FormOpen, setFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [FormOpen, setFormOpen] = useState(false);
 
   return (
     <main className="bg-white text-slate-800">
@@ -40,7 +40,7 @@ const [FormOpen, setFormOpen] = useState(false);
             About ARB Bearings
           </p>
           <h2 className="text-5xl md:text-7xl font-bold">
-            Leading Bearing supplier Since 1990
+            Leading Bearing manufacturer Since 1990
           </h2>
         </div>
       </section>
@@ -49,7 +49,7 @@ const [FormOpen, setFormOpen] = useState(false);
         <div>
           <h2 className="text-4xl font-bold mb-5">About ARB Bearings</h2>
           <p className="text-md leading-relaxed ">
-          Established in 1990 and headquartered in Delhi, India, ARB Bearings is a trusted bearing supplier with 60+ years of collective industry expertise, delivering reliable bearing solutions to customers worldwide. Built on a foundation
+            Established in 1990 and headquartered in Delhi, India, ARB Bearings is a trusted bearing manufacturer with 60+ years of collective industry expertise, delivering reliable bearing solutions to customers worldwide. Built on a foundation
             of engineering excellence, innovation, and customer trust, we
             specialize in manufacturing high-quality industrial bearings and
             precision bearing solutions for customers worldwide. From its
@@ -67,7 +67,7 @@ const [FormOpen, setFormOpen] = useState(false);
             innovation, advanced manufacturing technologies, and stringent
             quality standards, we remain committed to delivering reliable,
             high-performance bearings that enhance operational efficiency and
-            reinforce our position as a trusted global bearing supplier.
+            reinforce our position as a trusted global bearing manufacturer.
           </p>
         </div>
         <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
@@ -89,7 +89,7 @@ const [FormOpen, setFormOpen] = useState(false);
             <p className="text-lg leading-8 mt-6">
               Through consistent investment in technology, manufacturing
               infrastructure, and skilled professionals, we have established
-              ourselves as a trusted bearing supplier known for quality,
+              ourselves as a trusted bearing manufacturer known for quality,
               precision, and long-term customer relationships.
             </p>
           </div>
@@ -114,7 +114,7 @@ const [FormOpen, setFormOpen] = useState(false);
             <Link href="/products/ball-bearing" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold flex items-center gap-2">
               Explore Products <ArrowRight size={18} />
             </Link>
-            <button onClick={()=> setFormOpen(true)}  className="border border-white px-7 py-4 rounded-full font-semibold flex items-center gap-2">
+            <button onClick={() => setFormOpen(true)} className="border border-white px-7 py-4 rounded-full font-semibold flex items-center gap-2">
               Download Catalogue <Download size={18} />
             </button>
           </div>
@@ -122,20 +122,25 @@ const [FormOpen, setFormOpen] = useState(false);
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-14 items-center">
-        <div className="relative h-[500px] rounded-3xl overflow-hidden">
-          <Image src="/aboutpage.jpeg" alt="" fill className="object-contain" />
+        <div className="relative rounded-3xl overflow-hidden items-center">
+          <video src="/aboutVideo.mp4" className="w-full object-fill"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto" />
         </div>
         <div>
-          <h2 className="text-4xl font-bold mb-8">Manufacturing Excellence</h2>
-          <p className="text-lg leading-8">
-            As a leading bearing supplier, ARB Bearings combines advanced
+          <h2 className="text-4xl font-bold mb-4">Manufacturing Excellence</h2>
+          <p className="text-base">
+            As a leading bearing manufacturer, ARB Bearings combines advanced
             manufacturing technologies with precision engineering to produce
             world-class bearing solutions. Our modern production facilities are
             equipped with cutting-edge machinery, precision machining systems,
             heat treatment processes, automated inspection technologies, and
             advanced testing laboratories.
           </p>
-          <p className="text-lg leading-8 mt-6">
+          <p className="text-base mt-2">
             Every bearing undergoes rigorous quality checks throughout the
             manufacturing process to ensure exceptional accuracy, durability,
             and long service life. Our continuous investment in technology and
@@ -170,7 +175,7 @@ const [FormOpen, setFormOpen] = useState(false);
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {why.map((i) => (
 
-            
+
             <div
               key={i}
               className="rounded-2xl border p-6 flex gap-3 items-start shadow-sm"
@@ -185,7 +190,7 @@ const [FormOpen, setFormOpen] = useState(false);
       <section className="bg-gradient-to-r from-[#28186E] to-slate-900 text-white py-10">
         <div className="max-w-5xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold mb-5">
-            Ready to Partner with a Trusted Bearing supplier?
+            Ready to Partner with a Trusted Bearing manufacturer?
           </h2>
           <p className="text-lg leading-8">
             Whether you're looking for high-quality industrial bearings,
@@ -202,7 +207,7 @@ const [FormOpen, setFormOpen] = useState(false);
             <Link href="/contact-us" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold">
               Contact Us
             </Link>
-            <button onClick={()=> setIsFormOpen(true)} className="border border-white px-7 py-4 rounded-full font-semibold">
+            <button onClick={() => setIsFormOpen(true)} className="border border-white px-7 py-4 rounded-full font-semibold">
               Request a Quote
             </button>
           </div>
@@ -210,17 +215,17 @@ const [FormOpen, setFormOpen] = useState(false);
       </section>
 
 
- {isFormOpen && (
+      {isFormOpen && (
         <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
       )}
 
 
       {FormOpen && (
-  <Catpopup
-    Onpen={FormOpen}
-    onClose={() => setFormOpen(false)}
-  />
-)}
+        <Catpopup
+          Onpen={FormOpen}
+          onClose={() => setFormOpen(false)}
+        />
+      )}
 
 
     </main>

@@ -20,7 +20,7 @@ export default function AboutRussia() {
   useEffect(() => {
     const video = videoRef.current;
 
-    
+
     if (!video) return;
 
     video.muted = true;
@@ -60,8 +60,7 @@ export default function AboutRussia() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
-    
+    <section className="relative overflow-hidden bg-white py-15">
 
       <div className="absolute inset-0">
         <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[150px]" />
@@ -69,24 +68,12 @@ export default function AboutRussia() {
       </div>
 
       <div className="relative w-full mx-auto px-8">
-        <div className="grid lg:grid-cols-[0.9fr_1fr_0.8fr] gap-10 items-center">
-
-  
-
+        <div className="grid lg:grid-cols-[0.9fr_1fr_0.8fr] gap-5 items-center">
           <div>
-
-
             <div className="relative overflow-hidden rounded-[26px] shadow-2xl group">
-
               <video
                 ref={videoRef}
-                className="
-                  w-full
-                  h-[250px]
-                  sm:h-[350px]
-                  md:h-[400px]
-                  object-fill
-                "
+                className="                  w-full                h-full   object-fill"
                 autoPlay
                 muted
                 loop
@@ -99,11 +86,8 @@ export default function AboutRussia() {
                 />
               </video>
 
-              
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent pointer-events-none" />
-
-          
 
               <button
                 type="button"
@@ -138,42 +122,36 @@ export default function AboutRussia() {
                   <Volume2 size={21} />
                 )}
               </button>
-
             </div>
-
-
-
           </div>
-
-          
 
           <div>
             <span className="text-sm font-bold uppercase tracking-[3px] text-red-700">
               ABOUT ARB BEARING
             </span>
 
-            <h2 className="mt-2 text-2xl font-extrabold leading-tight">
+            <h2 className="mt- text-2xl font-extrabold leading-tight">
               <span className="text-[#29166F]">
-              Trusted Bearing Supplier 
+                Trusted Bearing Manufacturer
               </span>
 
             </h2>
 
-            <p className="mt-5 text-[15px] text-black">
-             ARB Bearings is a trusted bearing supplier delivering precision-engineered bearings built for performance, durability, and reliability. From industrial to automotive applications, we provide quality bearing solutions you can count on.
+            <p className="mt-2 text-[15px] text-black">
+              ARB Bearings is a trusted bearing manufacturer delivering precision-engineered bearings built for performance, durability, and reliability. From industrial to automotive applications, we provide quality bearing solutions you can count on.
             </p>
 
-            <div className="mt-5 space-y-3">
+            <div className="mt-2 grid md:grid-cols-2 space-y-2">
               {features.map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-4"
+                  className="flex items-center gap-2"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white">
-                    <CheckCircle2 size={18} />
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">
+                    <CheckCircle2 size={16} />
                   </div>
 
-                  <span className="text-gray-700">
+                  <span className="text-gray-700 text-sm">
                     {item}
                   </span>
                 </div>
@@ -196,9 +174,7 @@ export default function AboutRussia() {
 
           </div>
 
-          {/* MAP */}
-
-          <div className="relative flex flex-col mr-4">
+          <div className="relative flex flex-col mr-">
             <Image
               src="/map23.png"
               alt="World Map"
@@ -207,7 +183,7 @@ export default function AboutRussia() {
               className="w-full h-full"
             />
 
-        
+
 
             <span className="absolute top-[42%] left-[40%] h-4 w-4 rounded-full border-2 border-white bg-red-600 shadow-lg animate-pulse" />
 
@@ -217,9 +193,8 @@ export default function AboutRussia() {
 
             <span className="absolute top-[74%] left-[82%] h-4 w-4 rounded-full border-2 border-white bg-red-600 shadow-lg animate-pulse" />
 
-           
-          </div>
 
+          </div>
         </div>
       </div>
     </section>

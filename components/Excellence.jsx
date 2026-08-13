@@ -49,7 +49,7 @@ export default function Excellence() {
             </p>
 
             <p className="mt-5 text-lg leading-9 text-black">
-              As a leading bearing supplier, ARB Bearings combines advanced
+              As a leading bearing manufacturer, ARB Bearings combines advanced
               manufacturing technologies with precision engineering to produce
               high-quality bearings that meet global performance standards.
               Every product is manufactured with a focus on accuracy,

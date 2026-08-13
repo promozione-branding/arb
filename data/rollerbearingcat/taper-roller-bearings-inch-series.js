@@ -5,7 +5,7 @@ export default {
 
     pageContent: {
       hero: {
-        title: "Leading Ball Bearings supplier",
+        title: "Leading Ball Bearings manufacturer",
         description:
           "Precision-engineered ball bearings designed for high performance, durability, and reliable operation across automotive and industrial applications.",
         // image: "/ball-bearings.png",
@@ -35,7 +35,7 @@ export default {
         badge: "Engineered Performance",
         title: "Built for Maximum Reliability & Precision ",
         description:
-          "As a leading ball bearings supplier, ARB Bearings designs and manufactures high-performance ball bearings that deliver exceptional precision, durability, and efficiency. Engineered for demanding automotive and industrial applications, our bearings ensure smooth operation, reduced maintenance, and long-lasting reliability.",
+          "As a leading ball bearings manufacturer, ARB Bearings designs and manufactures high-performance ball bearings that deliver exceptional precision, durability, and efficiency. Engineered for demanding automotive and industrial applications, our bearings ensure smooth operation, reduced maintenance, and long-lasting reliability.",
         image: "/ball-bearings.png",
         stats: {
           title: "2x",

@@ -60,35 +60,59 @@ const whyChooseData = [
 
 export default function WhyChooseARB() {
   return (
-    <section className="relative  bg-[#1f0f59] py-20 sm:py-24 lg:py-32">
- 
+    <section className="relative bg-gray-50 py-20 sm:py-24 lg:py-32">
+
+      {/* Background Grid */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] [background-size:70px_70px]" />
+        <div
+          className="
+            absolute
+            inset-0
+            opacity-[0.035]
+            [background-image:linear-gradient(rgba(31,15,89,1)_1px,transparent_1px),linear-gradient(90deg,rgba(31,15,89,1)_1px,transparent_1px)]
+            [background-size:70px_70px]
+          "
+        />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 ">
-      
+      <div className="relative mx-auto max-w-7xl px-5">
         <div className="grid items-start gap-12 lg:grid-cols-[1.28fr_0.72fr] lg:gap-20">
-         <div className="grid border-t border-white/10 sm:grid-cols-2 sm:gap-x-10">
+
+          {/* Features */}
+          <div className="grid border-t border-gray-300 sm:grid-cols-2 sm:gap-x-10">
             {whyChooseData.map((item) => {
               const Icon = item.icon;
 
               return (
                 <article
                   key={item.number}
-                  className="group relative border-b border-white/50 py-8 sm:py-10"
+                  className="
+                    group
+                    relative
+                    border-b
+                    border-gray-300
+                    py-8
+                    sm:py-10
+                  "
                 >
-                
+                  {/* Icon + Number */}
                   <div className="flex items-start justify-between">
                     <div
                       className="
-                        flex h-11 w-11 items-center justify-center
+                        flex
+                        h-11
+                        w-11
+                        items-center
+                        justify-center
                         rounded-xl
-                        border border-white/10
-                        bg-white/[0.04]
-                        text-red-400
-                        transition-all duration-300
-                        group-hover:border-red-500/40
+                        border
+                        border-gray-200
+                        bg-white
+                        text-red-500
+                        shadow-sm
+                        transition-all
+                        duration-300
+                        group-hover:border-red-500
                         group-hover:bg-red-500
                         group-hover:text-white
                       "
@@ -98,10 +122,13 @@ export default function WhyChooseARB() {
 
                     <span
                       className="
-                        text-sm font-semibold tracking-wider
-                        text-white/20
-                        transition-colors duration-300
-                        group-hover:text-red-400
+                        text-sm
+                        font-semibold
+                        tracking-wider
+                        text-gray-400
+                        transition-colors
+                        duration-300
+                        group-hover:text-red-500
                       "
                     >
                       {item.number}
@@ -109,17 +136,17 @@ export default function WhyChooseARB() {
                   </div>
 
                   {/* Label */}
-                  <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-red-400">
+                  <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-red-500">
                     {item.label}
                   </p>
 
                   {/* Title */}
-                  <h3 className="mt-2 text-xl font-bold leading-7 text-white sm:text-[22px]">
+                  <h3 className="mt-2 text-xl font-bold leading-7 text-[#1f0f59] sm:text-[22px]">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-4 text-sm leading-7 text-white">
+                  <p className="mt-4 text-sm leading-7 text-black">
                     {item.description}
                   </p>
 
@@ -130,68 +157,74 @@ export default function WhyChooseARB() {
             })}
           </div>
 
-       
+          {/* Right Content */}
           <div className="lg:sticky lg:top-40 lg:self-start">
+
+            {/* Eyebrow */}
             <div className="flex items-center gap-3">
               <span className="h-px w-10 bg-red-500" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-red-400">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-red-500">
                 Why Choose Us
               </span>
             </div>
 
-            <h2 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl">
+            {/* Main Heading */}
+            <h2 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-[#1f0f59] sm:text-5xl">
               Why Choose ARB Bearings?
             </h2>
 
-            <p className="mt-7 max-w-md text-base leading-8 text-white/80">
+            {/* Paragraph */}
+            <p className="mt-7 max-w-md text-base leading-8 text-black">
               Decades of expertise, advanced manufacturing, and a commitment
               to quality make ARB Bearings a dependable partner for demanding
               bearing applications worldwide.
             </p>
 
             {/* Experience Highlight */}
-           <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-l-2 border-red-500 pl-5">
-  {/* 1 */}
-  <div>
-    <p className="text-3xl font-bold text-white sm:text-4xl">
-      60+
-    </p>
-    <p className="mt-1 text-sm text-white">
-      Years of expertise
-    </p>
-  </div>
+            <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-l-2 border-red-500 pl-5">
 
-  {/* 2 */}
-  <div>
-    <p className="text-3xl font-bold text-white sm:text-4xl">
-      50+
-    </p>
-    <p className="mt-1 text-sm text-white">
-      Countries served
-    </p>
-  </div>
+              {/* 1 */}
+              <div>
+                <p className="text-3xl font-bold text-[#1f0f59] sm:text-4xl">
+                  60+
+                </p>
+                <p className="mt-1 text-sm text-black">
+                  Years of expertise
+                </p>
+              </div>
 
-  {/* 3 */}
-  <div>
-    <p className="text-3xl font-bold text-white sm:text-4xl">
-      2,500+
-    </p>
-    <p className="mt-1 text-sm text-white">
-      Bearing Products
-    </p>
-  </div>
+              {/* 2 */}
+              <div>
+                <p className="text-3xl font-bold text-[#1f0f59] sm:text-4xl">
+                  50+
+                </p>
+                <p className="mt-1 text-sm text-black">
+                  Countries served
+                </p>
+              </div>
 
-  {/* 4 */}
-  <div>
-    <p className="text-3xl font-bold text-white sm:text-4xl">
-      24/7
-    </p>
-    <p className="mt-1 text-sm text-white">
-      Technical Support
-    </p>
-  </div>
-</div>
+              {/* 3 */}
+              <div>
+                <p className="text-3xl font-bold text-[#1f0f59] sm:text-4xl">
+                  2,500+
+                </p>
+                <p className="mt-1 text-sm text-black">
+                  Bearing Products
+                </p>
+              </div>
+
+              {/* 4 */}
+              <div>
+                <p className="text-3xl font-bold text-[#1f0f59] sm:text-4xl">
+                  24/7
+                </p>
+                <p className="mt-1 text-sm text-black">
+                  Technical Support
+                </p>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>

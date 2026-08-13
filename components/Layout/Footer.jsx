@@ -52,7 +52,7 @@ export default function Footer() {
             />
 
             <p className="leading-relaxed text-sm text-white mt-4">
-              As a trusted bearing supplier, ARB Bearings is committed to
+              As a trusted bearing manufacturer, ARB Bearings is committed to
               delivering products that meet the highest standards of quality,
               precision, and reliability. Every bearing undergoes rigorous
               testing and inspection throughout

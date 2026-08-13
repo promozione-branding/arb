@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
+.product-card-swiper .swiper-pagination {
+  bottom: -15px !important;
+}
 
+.product-card-swiper .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #94a3b8;
+  opacity: 1;
+}
 
-
-
+.product-card-swiper .swiper-pagination-bullet-active {
+  background: #1c398e;
+}
 
 
 
@@ -58,6 +68,7 @@
 
 
 @keyframes blink {
+
   0%,
   45% {
     opacity: 1;
@@ -74,6 +85,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -115,7 +127,7 @@
   display: flex;
 }
 
-.testimonialSwiper .swiper-slide > div {
+.testimonialSwiper .swiper-slide>div {
   width: 100%;
 }
 
@@ -130,380 +142,372 @@
 
 
 
-   /* =========================================
+/* =========================================
            HERO ENTRY
         ========================================= */
 
-        .hero-item {
-          opacity: 0;
-          transform: translateY(25px);
-          animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1)
-            forwards;
-        }
+.hero-item {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-        .hero-content > .hero-item {
-          animation-delay: 0.15s;
-        }
+.hero-content>.hero-item {
+  animation-delay: 0.15s;
+}
 
-        .hero-heading {
-          opacity: 0;
-          transform: translateY(30px);
-          animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s
-            forwards;
-        }
+.hero-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+}
 
-        .hero-heading-line {
-          animation: headingReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1)
-            0.25s both;
-        }
+.hero-heading-line {
+  animation: headingReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
 
-        .typewriter-text {
-          animation: typeGlow 3s ease-in-out infinite alternate;
-        }
+.typewriter-text {
+  animation: typeGlow 3s ease-in-out infinite alternate;
+}
 
-        .hero-underline {
-          opacity: 0;
-          transform: scaleX(0);
-          transform-origin: left;
-          animation: underlineReveal 0.8s ease-out 0.9s forwards;
-        }
+.hero-underline {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineReveal 0.8s ease-out 0.9s forwards;
+}
 
-        .hero-buttons {
-          opacity: 0;
-          transform: translateY(25px);
-          animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1s
-            forwards;
-        }
+.hero-buttons {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1s forwards;
+}
 
-        .hero-stats {
-          opacity: 0;
-          transform: translateY(20px);
-          animation: heroFadeUp 0.8s ease-out 0.85s forwards;
-        }
+.hero-stats {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp 0.8s ease-out 0.85s forwards;
+}
 
-        .hero-features {
-          opacity: 0;
-          transform: translateY(25px);
-          animation: heroFadeUp 0.9s ease-out 1.2s forwards;
-        }
+.hero-features {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: heroFadeUp 0.9s ease-out 1.2s forwards;
+}
 
-        /* =========================================
+/* =========================================
            PRODUCT
         ========================================= */
 
-        .hero-product {
-          opacity: 0;
-          transform: translateX(50px) scale(0.96);
-          animation: productReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1)
-            0.3s forwards;
-        }
+.hero-product {
+  opacity: 0;
+  transform: translateX(50px) scale(0.96);
+  animation: productReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
 
-        .bearing-image {
-          animation: bearingFloat 5s ease-in-out infinite;
-        }
+.bearing-image {
+  animation: bearingFloat 5s ease-in-out infinite;
+}
 
-        .product-glow {
-          animation: glowPulse 4s ease-in-out infinite;
-        }
+.product-glow {
+  animation: glowPulse 4s ease-in-out infinite;
+}
 
-        .product-ring {
-          animation: rotateRing 24s linear infinite;
-        }
+.product-ring {
+  animation: rotateRing 24s linear infinite;
+}
 
-        .product-ring-outer {
-          animation: rotateRingReverse 35s linear infinite;
-        }
+.product-ring-outer {
+  animation: rotateRingReverse 35s linear infinite;
+}
 
-        /* =========================================
+/* =========================================
            FLOATING LABELS
         ========================================= */
 
-        .floating-label {
-          animation: floatingOne 4s ease-in-out infinite;
-        }
+.floating-label {
+  animation: floatingOne 4s ease-in-out infinite;
+}
 
-        .floating-label-2 {
-          animation: floatingTwo 5s ease-in-out infinite;
-        }
+.floating-label-2 {
+  animation: floatingTwo 5s ease-in-out infinite;
+}
 
-        .floating-label-3 {
-          animation: floatingThree 4.5s ease-in-out infinite;
-        }
+.floating-label-3 {
+  animation: floatingThree 4.5s ease-in-out infinite;
+}
 
-        /* =========================================
+/* =========================================
            GRID
         ========================================= */
 
-        .hero-grid {
-          background-image:
-            linear-gradient(
-              rgba(37, 99, 235, 0.08) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              90deg,
-              rgba(37, 99, 235, 0.08) 1px,
-              transparent 1px
-            );
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.08) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(37, 99, 235, 0.08) 1px,
+      transparent 1px);
 
-          background-size: 55px 55px;
+  background-size: 55px 55px;
 
-          mask-image: linear-gradient(
-            to bottom,
-            transparent,
-            black 20%,
-            black 80%,
-            transparent
-          );
+  mask-image: linear-gradient(to bottom,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent);
 
-          animation: gridMove 20s linear infinite;
-        }
+  animation: gridMove 20s linear infinite;
+}
 
-        /* =========================================
+/* =========================================
            LIGHT SWEEP
         ========================================= */
 
-        .hero-light {
-          left: -20%;
-          transform: skewX(-20deg);
-          animation: lightSweep 8s ease-in-out infinite;
-        }
+.hero-light {
+  left: -20%;
+  transform: skewX(-20deg);
+  animation: lightSweep 8s ease-in-out infinite;
+}
 
-        /* =========================================
+/* =========================================
            CURSOR
         ========================================= */
 
-        .type-cursor {
-          animation: cursorBlink 0.75s steps(1) infinite;
-        }
+.type-cursor {
+  animation: cursorBlink 0.75s steps(1) infinite;
+}
 
-        /* =========================================
+/* =========================================
            KEYFRAMES
         ========================================= */
 
-        @keyframes heroFadeUp {
-          from {
-            opacity: 0;
-            transform: translateY(25px);
-          }
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
 
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-        @keyframes headingReveal {
-          from {
-            opacity: 0;
-            transform: translateY(35px);
-            filter: blur(8px);
-          }
+@keyframes headingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(8px);
+  }
 
-          to {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-          }
-        }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
 
-        @keyframes productReveal {
-          from {
-            opacity: 0;
-            transform: translateX(80px) scale(0.9);
-            filter: blur(8px);
-          }
+@keyframes productReveal {
+  from {
+    opacity: 0;
+    transform: translateX(80px) scale(0.9);
+    filter: blur(8px);
+  }
 
-          to {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-            filter: blur(0);
-          }
-        }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
 
-        @keyframes bearingFloat {
-          0%,
-          100% {
-            transform: translateY(0) rotate(0deg) scale(1);
-          }
+@keyframes bearingFloat {
 
-          50% {
-            transform: translateY(-12px) rotate(1deg) scale(1.015);
-          }
-        }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
 
-        @keyframes glowPulse {
-          0%,
-          100% {
-            opacity: 0.5;
-            transform: translate(-50%, -50%) scale(0.9);
-          }
+  50% {
+    transform: translateY(-12px) rotate(1deg) scale(1.015);
+  }
+}
 
-          50% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.15);
-          }
-        }
+@keyframes glowPulse {
 
-        @keyframes rotateRing {
-          from {
-            transform: translate(-50%, -50%) rotate(0deg);
-          }
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 
-          to {
-            transform: translate(-50%, -50%) rotate(360deg);
-          }
-        }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
 
-        @keyframes rotateRingReverse {
-          from {
-            transform: translate(-50%, -50%) rotate(360deg);
-          }
+@keyframes rotateRing {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 
-          to {
-            transform: translate(-50%, -50%) rotate(0deg);
-          }
-        }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 
-        @keyframes floatingOne {
-          0%,
-          100% {
-            transform: translateY(0);
-          }
+@keyframes rotateRingReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 
-          50% {
-            transform: translateY(-12px);
-          }
-        }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
 
-        @keyframes floatingTwo {
-          0%,
-          100% {
-            transform: translateY(0) translateX(0);
-          }
+@keyframes floatingOne {
 
-          50% {
-            transform: translateY(10px) translateX(-5px);
-          }
-        }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-        @keyframes floatingThree {
-          0%,
-          100% {
-            transform: translateY(0);
-          }
+  50% {
+    transform: translateY(-12px);
+  }
+}
 
-          50% {
-            transform: translateY(-9px);
-          }
-        }
+@keyframes floatingTwo {
 
-        @keyframes gridMove {
-          from {
-            background-position: 0 0;
-          }
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
 
-          to {
-            background-position: 55px 55px;
-          }
-        }
+  50% {
+    transform: translateY(10px) translateX(-5px);
+  }
+}
 
-        @keyframes lightSweep {
-          0% {
-            left: -30%;
-            opacity: 0;
-          }
+@keyframes floatingThree {
 
-          15% {
-            opacity: 0.8;
-          }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-          45% {
-            opacity: 0.5;
-          }
+  50% {
+    transform: translateY(-9px);
+  }
+}
 
-          70% {
-            opacity: 0;
-          }
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
 
-          100% {
-            left: 130%;
-            opacity: 0;
-          }
-        }
+  to {
+    background-position: 55px 55px;
+  }
+}
 
-        @keyframes typeGlow {
-          from {
-            filter: drop-shadow(
-              0 4px 12px rgba(41, 22, 111, 0.1)
-            );
-          }
+@keyframes lightSweep {
+  0% {
+    left: -30%;
+    opacity: 0;
+  }
 
-          to {
-            filter: drop-shadow(
-              0 5px 22px rgba(37, 99, 235, 0.25)
-            );
-          }
-        }
+  15% {
+    opacity: 0.8;
+  }
 
-        @keyframes underlineReveal {
-          from {
-            transform: scaleX(0);
-          }
+  45% {
+    opacity: 0.5;
+  }
 
-          to {
-            transform: scaleX(1);
-          }
-        }
+  70% {
+    opacity: 0;
+  }
 
-        @keyframes cursorBlink {
-          0%,
-          45% {
-            opacity: 1;
-          }
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
 
-          46%,
-          100% {
-            opacity: 0;
-          }
-        }
+@keyframes typeGlow {
+  from {
+    filter: drop-shadow(0 4px 12px rgba(41, 22, 111, 0.1));
+  }
 
-        /* =========================================
+  to {
+    filter: drop-shadow(0 5px 22px rgba(37, 99, 235, 0.25));
+  }
+}
+
+@keyframes underlineReveal {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes cursorBlink {
+
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================================
            MOBILE
         ========================================= */
 
-        @media (max-width: 768px) {
-          .hero-grid {
-            background-size: 35px 35px;
-            opacity: 0.1;
-          }
+@media (max-width: 768px) {
+  .hero-grid {
+    background-size: 35px 35px;
+    opacity: 0.1;
+  }
 
-          .hero-light {
-            display: none;
-          }
+  .hero-light {
+    display: none;
+  }
 
-          .product-ring {
-            opacity: 0.5;
-          }
+  .product-ring {
+    opacity: 0.5;
+  }
 
-          .product-ring-outer {
-            opacity: 0.3;
-          }
-        }
+  .product-ring-outer {
+    opacity: 0.3;
+  }
+}
 
-        /* =========================================
+/* =========================================
            REDUCED MOTION
         ========================================= */
 
-        @media (prefers-reduced-motion: reduce) {
-          *,
-          *::before,
-          *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            scroll-behavior: auto !important;
-          }
-        }
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 
 
@@ -512,16 +516,16 @@
 
 
 
-            .product-pagination .swiper-pagination-bullet {
-          width: 8px;
-          height: 8px;
-          background: #94a3b8;
-          opacity: 1;
-          transition: all 0.3s ease;
-        }
+.product-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #94a3b8;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 
-        .product-pagination .swiper-pagination-bullet-active {
-          width: 28px;
-          border-radius: 999px;
-          background: #1c398e;
-        }
+.product-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #1c398e;
+}

@@ -10,7 +10,7 @@ import Link from "next/link";
 import "swiper/css";
 
 export default function AboutSection() {
-  const gallery = ["/ab1.webp", "/checkab2.webp", "/abcheck3.webp"];
+  const gallery = ["/about 1.png", "/about 2.png", "/about 3.png"];
 
   const industries = [
     "Earthmover",
@@ -85,7 +85,7 @@ export default function AboutSection() {
                 {gallery.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div
-                      className="
+                      className="flex items-center
                         relative
                         h-[360px]
                         w-full
@@ -97,14 +97,15 @@ export default function AboutSection() {
                       <Image
                         src={image}
                         alt={`ARB Bearings ${index + 1}`}
-                        fill
+                        width={100}
+                        height={100}
                         priority={index === 0}
                         sizes="
                           (max-width: 640px) 100vw,
                           (max-width: 1024px) 80vw,
                           50vw
                         "
-                        className="object-contain"
+                        className="object-contain w-full h-[60%]"
                       />
                     </div>
                   </SwiperSlide>
@@ -204,7 +205,7 @@ export default function AboutSection() {
               sm:leading-7
             "
           >
-         With 60+ years of bearings industry know-how and manufacturing operations since 1990, ARB Bearings is often seen as a trusted manufacturer of top-notch bearings globally. Our precision-engineered bearing solutions are put together for durability, reliability, and those demanding, kind of hard-use applications across various industries.
+            With 60+ years of bearings industry know-how and manufacturing operations since 1990, ARB Bearings is often seen as a trusted manufacturer of top-notch bearings globally. Precision engineered bearings have been designed to be durable, reliable, and suitable for heavy-duty applications in diverse industries.
           </p>
 
           {/* Industries */}

@@ -24,9 +24,11 @@ import "swiper/css/effect-fade";
 
 export default function HeroSection() {
   const bearingImages = [
-    "/bearinghero.png",
-    "/banner/22.png",
-    "/banner/3.png",
+    "/hero/1.png",
+    "/hero/2.png",
+    "/hero/3.png",
+    "/hero/4.png",
+    "/hero/Image 1.png"
   ];
 
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -36,7 +38,7 @@ export default function HeroSection() {
     "DRIVES PROGRESS",
     // "MOVES INDUSTRY",
     "POWERS PERFORMANCE",
-    
+
   ];
 
   const [typedText, setTypedText] = useState("");
@@ -189,11 +191,11 @@ export default function HeroSection() {
           "
         />
 
-     
+
 
         <div className="hero-light pointer-events-none absolute top-0 h-full w-[160px] bg-gradient-to-r from-transparent via-white/30 to-transparent blur-2xl" />
 
-     
+
 
         <div className="pointer-events-none absolute left-[5%] top-[18%] hidden h-px w-32 bg-gradient-to-r from-transparent via-blue-500/40 to-transparent lg:block" />
 
@@ -201,7 +203,7 @@ export default function HeroSection() {
 
         <div className="pointer-events-none absolute bottom-[18%] left-[15%] hidden h-px w-28 bg-gradient-to-r from-transparent via-red-500/30 to-transparent lg:block" />
 
-    
+
 
         <div
           className="
@@ -230,10 +232,10 @@ export default function HeroSection() {
               2xl:gap-16
             "
           >
-      
+
 
             <div className="hero-content w-full text-center lg:text-left">
-        
+
 
               <div
                 className="
@@ -266,7 +268,7 @@ export default function HeroSection() {
                 </p>
               </div>
 
-        
+
 
               <h1
                 className="
@@ -287,7 +289,7 @@ export default function HeroSection() {
                   PRECISION THAT
                 </span>
 
-        
+
 
                 <span
                   className="
@@ -327,7 +329,7 @@ export default function HeroSection() {
                 <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-[#29166F] to-blue-500" />
               </div>
 
-       
+
 
               <p
                 className="
@@ -397,7 +399,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-            
+
 
               <div
                 className="
@@ -588,7 +590,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-         
+
 
             <div
               className="
@@ -601,7 +603,7 @@ export default function HeroSection() {
                 lg:mt-0
               "
             >
-         
+
 
               <div
                 className="
@@ -622,7 +624,7 @@ export default function HeroSection() {
                 "
               />
 
-            
+
 
               <div
                 className="
@@ -646,7 +648,7 @@ export default function HeroSection() {
                 "
               />
 
-      
+
 
               <div
                 className="
@@ -780,7 +782,7 @@ export default function HeroSection() {
                   lg:max-w-[620px]
                   xl:h-[620px]
                   2xl:h-[680px]
-                  2xl:max-w-[700px]
+                  2xl:max-w-[350px]
                 "
               >
                 {bearingImages.map((img, index) => (
@@ -791,8 +793,8 @@ export default function HeroSection() {
                     <Image
                       src={img}
                       alt={`Bearing ${index + 1}`}
-                      width={700}
-                      height={700}
+                      width={500}
+                      height={500}
                       priority={index === 0}
                       sizes="
                         (max-width: 640px) 90vw,
@@ -870,7 +872,7 @@ export default function HeroSection() {
       )}
 
 
-    
+
     </>
   );
 }
