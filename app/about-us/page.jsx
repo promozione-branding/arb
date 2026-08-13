@@ -169,6 +169,8 @@ const [FormOpen, setFormOpen] = useState(false);
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {why.map((i) => (
+
+            
             <div
               key={i}
               className="rounded-2xl border p-6 flex gap-3 items-start shadow-sm"

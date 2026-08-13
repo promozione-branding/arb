@@ -35,8 +35,13 @@ import taperRollerBearingsSpecialSeries from "./rollerbearingcat/taper-roller-be
 import doubleRowTaperedRollerBearings from "./rollerbearingcat/double-row-tapered-roller-bearings";
 import sphericalRollerBearings from "./rollerbearingcat/spherical-roller-bearings";
 import sphericalRollerThrustBearings from "./rollerbearingcat/spherical-roller-thrust-bearings";
-//  When you add a new subcategory file, import it above and add it to this array.
-// That's the only wiring step - navbar, table pages, and product pages update automatically.
+
+
+
+import wheelbearinghub from "./wheelbearinghub/wheelbearinghub";
+
+
+
 const allSubCategories = [
   ballBearing,
   doublerowangularcontactballbearings,
@@ -60,7 +65,14 @@ taperRollerBearingsInchSeries,
 taperRollerBearingsSpecialSeries,
 doubleRowTaperedRollerBearings,
 sphericalRollerBearings,
-sphericalRollerThrustBearings
+sphericalRollerThrustBearings,
+wheelbearinghub
+
+// 
+
+
+
+
 
 ];
 

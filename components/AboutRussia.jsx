@@ -20,6 +20,7 @@ export default function AboutRussia() {
   useEffect(() => {
     const video = videoRef.current;
 
+    
     if (!video) return;
 
     video.muted = true;
@@ -191,6 +192,8 @@ export default function AboutRussia() {
 
             </button>
             */}
+
+
           </div>
 
           {/* MAP */}
