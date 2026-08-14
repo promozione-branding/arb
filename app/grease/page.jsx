@@ -56,7 +56,7 @@ const applications = [
 ];
 
 export default function GreasePage() {
-const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
 
   return (
@@ -71,7 +71,7 @@ const [isFormOpen, setIsFormOpen] = useState(false);
         <div className="relative mx-auto  px-6 py-24 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h1 className="text-4xl font-bold md:text-6xl leading-snug text-center">
-          Grease Supplier in Russia 
+              Grease Manufacturer
             </h1>
           </div>
         </div>
@@ -83,17 +83,17 @@ const [isFormOpen, setIsFormOpen] = useState(false);
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="mb-5 text-4xl font-bold text-gray-900">
-               Grease Supplier in Russia 
+                Grease Manufacturer
               </h2>
 
               <p className="text-lg leading-8 text-black">
-               ARB Bearings is a trusted <strong>grease supplier in Russia.</strong>  We provide high-quality industrial and automotive greases for bearings, gears, bushings, and other moving parts. Basically, this high-performance grease helps reduce friction, reduce abrasion, keep corrosion at bay, and extend equipment service life, even when things get rough under heavy loads and demanding operating conditions.
-ARB Bearings grease is manufactured using quality base oils, advanced thickeners, and performance additives; it helps deliver reliable lubrication, solid water resistance, plus sturdy protection from contaminants. Go with ARB Bearings for <strong>dependable industrial and automotive grease solutions across Russia,</strong>  made to boost equipment performance and reduce maintenance costs- yeah, that simple.
+                ARB Bearings is a trusted <strong>grease manufacturer.</strong>  We provide high-quality industrial and automotive greases for bearings, gears, bushings, and other moving parts. Basically, this high-performance grease helps reduce friction, reduce abrasion, keep corrosion at bay, and extend equipment service life, even when things get rough under heavy loads and demanding operating conditions.
+                ARB Bearings grease is manufactured using quality base oils, advanced thickeners, and performance additives; it helps deliver reliable lubrication, solid water resistance, plus sturdy protection from contaminants. Go with ARB Bearings for <strong>dependable industrial and automotive grease solutions across Russia,</strong>  made to boost equipment performance and reduce maintenance costs- yeah, that simple.
 
-<strong>
-  Looking for a reliable grease supplier in Russia? Contact ARB Bearings for your lubrication requirements.
-  
-  </strong>  
+                <strong>
+                  Looking for a reliable grease manufacturer in Russia? Contact ARB Bearings for your lubrication requirements.
+
+                </strong>
 
               </p>
             </div>
@@ -130,7 +130,7 @@ ARB Bearings grease is manufactured using quality base oils, advanced thickeners
         </div>
       </section>
 
-      
+
 
       {/* Variants */}
       <section className="py-10">
@@ -153,12 +153,12 @@ ARB Bearings grease is manufactured using quality base oils, advanced thickeners
 
               <div>
                 <h3 className="mb-6 text-3xl font-bold text-gray-900">
-                  Crystal Blue Gel Grease
+                  Crystal Red Gel Grease
                 </h3>
 
                 <p className="text-lg leading-8 text-gray-700">
-              <strong>Crystal Blue Gel Grease</strong>    is a high-performance, multi-purpose lubricant made to handle high-speed bearings and industrial machinery. It has really good thermal stability, plus strong bonding, water resistance, and it keeps lubricating for a long time so you get steady protection even when the conditions are tough.
-It’s a great fit for <strong> industrial equipment, bearings, and those high-speed duties</strong> , because Crystal Blue Gel Grease helps lower friction, reduces abrasion, and stretches the life of your components.
+                  <strong>Crystal Red Gel Grease</strong>    is a high-performance, multi-purpose lubricant made to handle high-speed bearings and industrial machinery. It has really good thermal stability, plus strong bonding, water resistance, and it keeps lubricating for a long time so you get steady protection even when the conditions are tough.
+                  It’s a great fit for <strong> industrial equipment, bearings, and those high-speed duties</strong> , because Crystal Red Gel Grease helps lower friction, reduces abrasion, and stretches the life of your components.
 
                 </p>
               </div>
@@ -167,12 +167,12 @@ It’s a great fit for <strong> industrial equipment, bearings, and those high-s
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div className="order-2 lg:order-1">
                 <h3 className="mb-6 text-3xl font-bold text-gray-900">
-                 Red Gel Grease
+                  Blue Gel Grease
                 </h3>
 
                 <p className="text-lg leading-8 text-gray-700">
-                <strong>ARB Red Gel Grease,</strong>   basically a high-performance lubricant meant for the kind of heavy-load work and high-heat situations where regular stuff just gives up. It helps cut down friction, shields parts from rust and corrosion, and keeps things moving in a smoother, more dependable way.
-It’s a good fit for bearings, industrial machinery, and those demanding settings where you really need reliable lubrication. With <strong>ARB Red Gel Grease, you usually get less wear, stronger component performance, and a longer service life than you’d expect.</strong> 
+                  <strong>ARB Blue Gel Grease,</strong>   basically a high-performance lubricant meant for the kind of heavy-load work and high-heat situations where regular stuff just gives up. It helps cut down friction, shields parts from rust and corrosion, and keeps things moving in a smoother, more dependable way.
+                  It’s a good fit for bearings, industrial machinery, and those demanding settings where you really need reliable lubrication. With <strong>ARB Red Gel Grease, you usually get less wear, stronger component performance, and a longer service life than you’d expect.</strong>
 
                 </p>
               </div>
@@ -201,12 +201,12 @@ It’s a good fit for bearings, industrial machinery, and those demanding settin
 
               <div>
                 <h3 className="mb-6 text-3xl font-bold text-gray-900">
-                Lithium Base AP-3 Grease 
+                  Lithium Base AP-3 Grease
                 </h3>
 
                 <p className="text-lg leading-8 text-gray-700">
-            <strong>Lithium Base AP-3 Grease</strong>  is a high-performance lube meant for  <strong>automotive, industrial, and agricultural equipment.</strong>  It provides outstanding resistance to oxidation, solid mechanical stability, and solid load-bearing strength, so it keeps performing when conditions get demanding.
-Great for bearings and other moving parts, it helps cut <strong>down friction, reduce abrasion, and keeps the service life of your equipment longer</strong> . At the same time, it supports a smooth, dependable operation, like really steady and dependable in daily use.
+                  <strong>Lithium Base AP-3 Grease</strong>  is a high-performance lube meant for  <strong>automotive, industrial, and agricultural equipment.</strong>  It provides outstanding resistance to oxidation, solid mechanical stability, and solid load-bearing strength, so it keeps performing when conditions get demanding.
+                  Great for bearings and other moving parts, it helps cut <strong>down friction, reduce abrasion, and keeps the service life of your equipment longer</strong> . At the same time, it supports a smooth, dependable operation, like really steady and dependable in daily use.
 
                 </p>
               </div>
@@ -219,11 +219,11 @@ Great for bearings and other moving parts, it helps cut <strong>down friction, r
 
 
 
-   {/* CTA */}
+      {/* CTA */}
       <section className="bg-gray-900 py-14 text-white">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <h2 className="mb-8 text-4xl font-bold">
-            Looking for a Reliable Grease supplier?
+            Looking for a Reliable Grease manufacturer?
           </h2>
 
           <p className="mx-auto max-w-4xl text-lg leading-8 text-gray-300">
@@ -290,9 +290,9 @@ Great for bearings and other moving parts, it helps cut <strong>down friction, r
         </div>
       </section>
 
-   
 
-    {isFormOpen && (
+
+      {isFormOpen && (
         <Enquiry
           IATFpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
