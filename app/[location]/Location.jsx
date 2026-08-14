@@ -30,9 +30,9 @@ const Location = () => {
 
 const faqs = [
     {
-      question: "Who is a reliable Bearing Manufacturer in {city}?",
+      question: "Who is a reliable Bearings Manufacturer in {city}?",
       answer:
-        "ARB Bearings is an experienced Bearing Manufacturer supplying high-quality, precision-engineered bearing solutions to customers across {city} and international markets.",
+        "ARB Bearings is an experienced Bearings Manufacturer supplying high-quality, precision-engineered bearings solutions to customers across {city} and international markets.",
     },
     {
       question: "What types of bearings does ARB Bearings manufacture?",

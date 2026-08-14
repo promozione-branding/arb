@@ -217,11 +217,11 @@ export default function ClutchBearings() {
                     className="mb-10"
                 >
                     <span className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
-                        Clutch Bearing Solutions
+                        Clutch Bearings Solutions
                     </span>
 
                     <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-                        Clutch Bearing Solutions
+                        Clutch Bearings Solutions
                     </h2>
                 </motion.div>
 

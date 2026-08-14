@@ -13,9 +13,9 @@ export default function AboutPage() {
   const why = [
     "60+ Years of Industry Expertise",
     "Established in 1990",
-    "Leading Bearing manufacturer in India",
+    "Leading Bearings manufacturer in India",
     "Six Advanced Manufacturing Facilities",
-    "2,500+ Bearing Sizes",
+    "2,500+ Bearings Sizes",
     "800+ Dealers & Distribution Network",
     "Presence in 50+ Countries",
     "Trusted Across Six Continents",
@@ -41,7 +41,7 @@ export default function AboutPage() {
             About ARB Bearings
           </p>
           <h2 className="text-5xl md:text-7xl font-bold">
-            Leading Bearing manufacturer Since 1990
+            Leading Bearings Manufacturer Since 1990
           </h2>
         </div>
       </section>
@@ -194,7 +194,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-[#28186E] to-slate-900 text-white py-10">
         <div className="max-w-5xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold mb-5">
-            Ready to Partner with a Trusted Bearing manufacturer?
+            Ready to Partner with a Trusted Bearings manufacturer?
           </h2>
           <p className="text-lg leading-8">
             Whether you're looking for high-quality industrial bearings,

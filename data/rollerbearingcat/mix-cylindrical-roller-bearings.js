@@ -56,7 +56,7 @@ export default {
       "Mix cylindrical roller bearings engineered for high-load applications, delivering smooth operation, enhanced stability, and reliable performance in industrial environments.",
 
     features: [
-      "	Versatile Bearing Design",
+      "	Versatile Bearings Design",
       "	Superior Load Handling",
       "	Enhanced Operational Stability",
       "	Extended Service Life"

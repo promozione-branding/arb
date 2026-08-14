@@ -1,6 +1,6 @@
 export default {
   category: {
-    name: " Wheel Bearing",
+    name: " Wheel Bearings",
     slug: "wheel-bearing",
 
 
@@ -14,7 +14,7 @@ export default {
     },
 
     intro: {
-      title: "Ball Bearing",
+      title: "Ball Bearings",
       description:
         "High-performance wheel bearings engineered for smooth rotation, reduced friction, and long-lasting reliability in automotive applications.",
     },
@@ -67,7 +67,7 @@ export default {
        "Smooth Rotation",
 "	High Load Endurance",
 "Sealed Protection",  
-"	Extended Bearing Life"
+"	Extended Bearings Life"
 
         
       ],

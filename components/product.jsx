@@ -9,7 +9,7 @@ export default function SingleProductHero() {
     "Superior Contamination Protection",
     "Reduced Lubrication Requirements",
     "Excellent Misalignment Capability",
-    "Extended Bearing Service Life",
+    "Extended Bearings Service Life",
 
   ];
 

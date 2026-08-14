@@ -369,7 +369,7 @@ export default function ProductSlider() {
             <div className="grid md:grid-cols-2">
 
               {/* Image */}
-              <div className="flex items-center justify-center bg-blue-50">
+              <div className="flex items-center justify-center bg-blue-50 relative">
                 <Swiper
                   modules={[Autoplay, Navigation, Pagination]}
                   autoplay={{
@@ -414,7 +414,7 @@ export default function ProductSlider() {
               <div className="p-5 md:p-7">
 
                 <span className="text-sm font-semibold uppercase tracking-widest text-red-500">
-                  Bearing Details
+                  Bearings Details
                 </span>
 
                 <h2 className="mt-3 text-3xl font-bold text-[#091A2D]">

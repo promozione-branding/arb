@@ -31,7 +31,7 @@ export default function OurHistory() {
     },
     {
       year: "2000",
-      text: "Acquired New Delhi based NYK Bearing having a capacity of 2 million bearings/annum.",
+      text: "Acquired New Delhi based NYK Bearings having a capacity of 2 million bearings/annum.",
     },
     {
       year: "2003",
@@ -88,7 +88,7 @@ export default function OurHistory() {
 
     {
       year: "2023",
-      text: "Under Installation - One double capacity of Heat Treatment Plant , Two Lines of Ball Bearing - Small and medium Dia and one line for DRACBB- WB.",
+      text: "Under Installation - One double capacity of Heat Treatment Plant , Two Lines of Ball Bearings - Small and medium Dia and one line for DRACBB- WB.",
     },
   ];
 

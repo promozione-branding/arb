@@ -12,7 +12,7 @@ export default {
             },
 
             intro: {
-                title: "Ball Bearing",
+                title: "Ball Bearings",
                 description:
                     "Explore our comprehensive range of ball bearings, engineered for precision, durability, and reliable performance across automotive, industrial, and heavy-duty applications.",
             },
@@ -56,7 +56,7 @@ export default {
             "High-performance needle roller bearings designed for compact, high-load applications, delivering low friction, smooth operation, and reliable performance in demanding industrial environments.",
 
         features: [
-            "Compact Bearing Design",
+            "Compact Bearings Design",
             "High Load Capacity",
             "Low Friction Performance",
             "Extended Service Life"

@@ -113,7 +113,7 @@ const customColumns = {
       "Internal Diameter (mm)",
       "Outer Diameter (mm)",
       "Total Width (mm)",
-      "Bearing Height (mm)",
+      "Bearings Height (mm)",
       "Cup Width (mm)",
       "Mass (Kg)",
     ],

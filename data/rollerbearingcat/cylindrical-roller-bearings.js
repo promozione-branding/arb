@@ -12,7 +12,7 @@ export default {
       },
 
       intro: {
-        title: "Ball Bearing",
+        title: "Ball Bearings",
         description:
           "High-performance roller bearings engineered for smooth rotation, reduced friction.",
       },

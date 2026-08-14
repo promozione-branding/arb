@@ -97,7 +97,8 @@ export default function Footer() {
                 { name: "Ball bearing", link: "/products/ball-bearing" },
                 { name: "Wheel bearing", link: "/products/wheel-bearing" },
                 { name: "Roller bearing", link: "/products/roller-bearings" },
-                { name: "Grease", link: "/grease" },
+                { name: "Wheel bearing Hub", link: "/products/wheel-bearing-hub" },
+                // { name: "Grease", link: "/grease" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link

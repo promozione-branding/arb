@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .product-card-swiper .swiper-pagination {
-  bottom: -15px !important;
+  bottom: -6px !important;
 }
 
 .product-card-swiper .swiper-pagination-bullet {

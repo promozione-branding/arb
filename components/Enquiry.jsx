@@ -151,9 +151,9 @@ Contact: ${values.phone}`;
                   className="w-full md:w-1/2 p-3 rounded-md text-black text-sm border-2 border-white focus:outline-none bg-blue-50"
                 >
                   <option value="">Select Product</option>
-                  <option value="GI Sheet">Ball Bearing</option>
-                  <option value="Mild Steel Pipe">Wheel Bearing</option>
-                  <option value="MS Plates">Roller Bearing</option>
+                  <option value="GI Sheet">Ball Bearings</option>
+                  <option value="Mild Steel Pipe">Wheel Bearings</option>
+                  <option value="MS Plates">Roller Bearings</option>
                 </select>
               </div>
 

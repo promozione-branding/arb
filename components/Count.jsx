@@ -22,7 +22,7 @@ const stats = [
     icon: BadgeCheck,
     value: 2500,
     suffix: "+",
-    title: "Bearing",
+    title: "",
     subtitle: "Products",
   },
   {

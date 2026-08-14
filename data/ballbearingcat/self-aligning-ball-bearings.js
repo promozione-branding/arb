@@ -1,6 +1,6 @@
 export default {
   category: {
-    name: "Ball-Bearing",
+    name: "Ball-Bearings",
     slug: "ball-bearing",
 
     pageContent: {
@@ -12,7 +12,7 @@ export default {
       },
 
       intro: {
-        title: "Ball Bearing",
+        title: "Ball Bearings",
         description:
           "Explore our comprehensive range of ball bearings, engineered for precision, durability, and reliable performance across automotive, industrial, and heavy-duty applications.",
       },

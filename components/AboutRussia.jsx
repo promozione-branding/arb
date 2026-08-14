@@ -132,7 +132,7 @@ export default function AboutRussia() {
 
             <h2 className="mt- text-2xl font-extrabold leading-tight">
               <span className="text-[#29166F]">
-                Trusted Bearing Manufacturer
+                Trusted Bearings Manufacturer
               </span>
 
             </h2>

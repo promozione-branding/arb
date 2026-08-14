@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 
 const products = [
   {
-    title: "Double Row Angular Contact Ball Bearings",
+    title: "Angular Contact Ball Bearings",
     image: "/arb-images/DOUBLE POINT ANGULAR.png",
     desc: "Designed to accommodate combined radial and axial loads in both directions, offering high rigidity and reliable performance for demanding industrial applications.",
     link: "/products/ball-bearing/double-row-angular-contact-bearings",
@@ -24,10 +24,10 @@ const products = [
     link: "/products/ball-bearing/four-point-contact-ball-bearings",
   },
   {
-    title: "Ball Bearings",
+    title: "Deep Groove Ball Bearings",
     image: "/arb-images/BALL BEARING 62208 2RS.png",
     desc: "Precision-engineered ball bearings deliver smooth rotation, low friction, high-speed operation, and extended service life across automotive and industrial applications.",
-    link: "/products/ball-bearing/ball-bearings",
+    link: "/products/ball-bearing/deep-groove-ball-bearing",
   },
   {
     title: "Wheel Bearings",
@@ -42,10 +42,10 @@ const products = [
     link: "/products/roller-bearings/cylindrical-roller-bearings",
   },
   {
-    title: "Mix Cylindrical Roller Bearings",
-    image: "/arb-images/CYLINDRICAL BEARING JC 8003.png",
-    desc: "Manufactured for high load capacity and dependable operation, these bearings offer superior strength and durability for demanding industrial and automotive applications.",
-    link: "/products/roller-bearings/mix-cylindrical-roller-bearings",
+    title: "Tapered Roller Bearings",
+    image: "/arb-images/TAPER ROLLER.webp",
+    desc: "Tapered roller bearings designed to support combined radial and axial loads with exceptional strength, precision, and long-lasting industrial performance.",
+    link: "/products/roller-bearings/tapered-roller-bearings",
   },
 ];
 

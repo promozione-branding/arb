@@ -11,7 +11,7 @@ const whyChooseData = [
   {
     number: "01",
     label: "Experience",
-    title: "60+ Years of Bearing Expertise",
+    title: "60+ Years of Bearings Expertise",
     description:
       "With decades of experience in the bearing industry, ARB Bearings delivers dependable solutions backed by deep technical knowledge and manufacturing expertise.",
     icon: Award,
@@ -210,7 +210,7 @@ export default function WhyChooseARB() {
                   2,500+
                 </p>
                 <p className="mt-1 text-sm text-black">
-                  Bearing Products
+                  Products
                 </p>
               </div>
 
