@@ -5,7 +5,7 @@ import Cta from "@/components/Cta";
 import CursorZoomImage from "@/components/CursorZoomImage";
 export function generateStaticParams() {
   return getCategoryTree().map((category) => ({
-    categorySlug: category.slug,
+    categorySlug: category?.slug,
   }));
 }
 
@@ -13,7 +13,7 @@ export default async function CategoryPage({ params }) {
   const { categorySlug } = await params;
 
   const category = getCategoryTree().find(
-    (item) => item.slug === categorySlug
+    (item) => item?.slug === categorySlug
   );
 
   if (!category) {
@@ -24,7 +24,7 @@ export default async function CategoryPage({ params }) {
     );
   }
 
-  const content = category.pageContent;
+  const content = category?.pageContent;
 
   return (
     <>
@@ -83,7 +83,7 @@ export default async function CategoryPage({ params }) {
                 md:text-5xl
               "
             >
-              {content.hero.title}
+              {content?.hero?.title}
             </h2>
 
             <p

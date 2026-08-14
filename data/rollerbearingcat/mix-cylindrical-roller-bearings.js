@@ -62,7 +62,7 @@ export default {
       "	Extended Service Life"
     ],
 
-   
+
     applications: [
       "Automotive wheel hubs",
       "Industrial gearboxes",

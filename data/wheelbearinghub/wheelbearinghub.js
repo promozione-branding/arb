@@ -59,7 +59,7 @@ export default {
     name: "Wheel Bearings Hub",
     slug: "wheel-bearings-hub",
     heroTitle: "Wheel Bearings",
-    image: "/arb-images/Wheel Bearing.png",
+    image: "/arb-images/Wheel-Bearing.png",
     description:
       "Premium wheel hub bearings designed for smooth wheel rotation, reduced friction, and reliable performance in automotive and heavy-duty applications.",
 
@@ -98,7 +98,7 @@ export default {
         "Outer Ring Width (mm)": 30,
         "Mass (Kg)": 4.56
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/808918a.pdf"
     },
     {
@@ -112,7 +112,7 @@ export default {
         "Outer Ring Width (mm)": 30,
         "Mass (Kg)": 4.56
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/808918c.pdf"
     },
     {
@@ -126,7 +126,7 @@ export default {
         "Outer Ring Width (mm)": 29.5,
         "Mass (Kg)": 2.794
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/800792a.pdf"
     },
     {
@@ -140,7 +140,7 @@ export default {
         "Outer Ring Width (mm)": 29.5,
         "Mass (Kg)": 2.695
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/800792c.pdf"
     },
     {
@@ -154,7 +154,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 1.8
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/t2ee060-568968-with-orslot.pdf"
     },
     {
@@ -168,7 +168,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 2.95
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/21355.pdf"
     },
     {
@@ -182,7 +182,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 2.95
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/21356.pdf"
     },
     {
@@ -196,7 +196,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 1.14
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/4300902.pdf"
     },
     {
@@ -210,7 +210,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 2.65
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/5556503-57518a.pdf"
     },
     {
@@ -224,7 +224,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 2.66
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/5556507-57518a.pdf"
     },
     {
@@ -238,7 +238,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 2.58
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/ca-2892.pdf"
     },
     {
@@ -252,7 +252,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 0.67
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/bt1b328915-vkt-8699.pdf"
     },
     {
@@ -266,7 +266,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 1.02
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/408045-80805.pdf"
     },
     {
@@ -280,7 +280,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.65
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/800308.pdf"
     },
     {
@@ -294,7 +294,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.3
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-805051-with-seal-kit.pdf"
     },
     {
@@ -308,7 +308,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 5.41
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-805052-c-805052-805208-805008-steel-cage-and-fiber-cage.pdf"
     },
     {
@@ -322,7 +322,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 3.45
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/805165-a-c-seal-lock-set-only-fiber-cage.pdf"
     },
     {
@@ -336,7 +336,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 5.42
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-805415-a-c-with-seal-lock-set.pdf"
     },
     {
@@ -350,7 +350,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": null
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/805531-a-c-with-seal-kit.pdf"
     },
     {
@@ -364,7 +364,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 9.35
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/805532-with-hub.pdf"
     },
     {
@@ -378,7 +378,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 0.98
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-1024-bth-1024.pdf"
     },
     {
@@ -392,7 +392,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 1.4
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-3552-bth-1011-vkba-3552.pdf"
     },
     {
@@ -406,7 +406,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.06
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-3553-with-hub-vkba-3553.pdf"
     },
     {
@@ -420,7 +420,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.5
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5314-vkba-5314-scania-steel-fiber-cage.pdf"
     },
     {
@@ -434,7 +434,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 11.22
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5316-arb-5420-with-hub.pdf"
     },
     {
@@ -448,7 +448,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 13
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5377-with-hub-vkba-5377-btf-0110-801974ae-h195.pdf"
     },
     {
@@ -462,7 +462,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 10.24
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5397-bth-0053-vkba-5397-bth-0025.pdf"
     },
     {
@@ -476,7 +476,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 9.3
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5407-with-hub-vkba-5407-btf-0068.pdf"
     },
     {
@@ -490,7 +490,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.89
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5408-803750-b.pdf"
     },
     {
@@ -504,7 +504,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.45
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5409-805011-c.pdf"
     },
     {
@@ -518,7 +518,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.1
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5411-with-hub-vkba-5411-btf-0074a.pdf"
     },
     {
@@ -532,7 +532,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.45
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5412-805003a-h195-vkba5552-steel-fiber-cage.pdf"
     },
     {
@@ -546,7 +546,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 10.26
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5413-201072-vkba-5413.pdf"
     },
     {
@@ -560,7 +560,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.4
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5415-vkba-5415-bth-0010d.pdf"
     },
     {
@@ -574,7 +574,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 8.53
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5416-vkba-5416-804162-a.pdf"
     },
     {
@@ -588,7 +588,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.41
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5418-805092-c-805092-07.pdf"
     },
     {
@@ -602,7 +602,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.25
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5423-with-grease-566425-h195-800792-d.pdf"
     },
     {
@@ -616,7 +616,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 3.7
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5424-with-grease-566427-h195-fiber-cage.pdf"
     },
     {
@@ -630,7 +630,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.49
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5425-with-grease-566426-h195-581079-c.pdf"
     },
     {
@@ -644,7 +644,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 11.97
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5428-with-hub-vkba-5428.pdf"
     },
     {
@@ -658,7 +658,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.36
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5429-with-grease-566834-h195.pdf"
     },
     {
@@ -672,7 +672,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5431-with-grease-566283-01-h195-566283-h195-805008.pdf"
     },
     {
@@ -686,7 +686,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 5.4
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5437-570530-h195-808918.pdf"
     },
     {
@@ -700,7 +700,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5444-grease-fill-569868-h195-stell-fiber-cage.pdf"
     },
     {
@@ -714,7 +714,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 4.86
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5453-with-grease-566074-h195-fiber-cage.pdf"
     },
     {
@@ -728,7 +728,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 2.84
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5454-du60108-8.pdf"
     },
     {
@@ -742,7 +742,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 8.4
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5454-du60108-8-with-hub.pdf"
     },
     {
@@ -756,7 +756,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 9.1
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5455-f-581863.pdf"
     },
     {
@@ -770,7 +770,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 9.38
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5457-with-hub-805531.pdf"
     },
     {
@@ -784,7 +784,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 5
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5458-with-grease-568879-h195-631903-h195.pdf"
     },
     {
@@ -798,7 +798,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 9.1
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5464-with-grease-vkba-5464-581863-h195.pdf"
     },
     {
@@ -812,7 +812,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 15.3
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5549-with-hub-564734-h195-steel-fiber-cage.pdf"
     },
     {
@@ -826,7 +826,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 16.29
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/arb-5932-with-hub-vkhc-5932-bth-0022.pdf"
     },
     {
@@ -840,7 +840,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 6.1
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/f-566193-with-grease-566193-h195.pdf"
     },
     {
@@ -854,7 +854,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 7.2
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/f-566830-with-grease-566830-h1950.pdf"
     },
     {
@@ -868,7 +868,7 @@ export default {
         "Outer Ring Width (mm)": null,
         "Mass (Kg)": 5.7
       },
-      "image": "/wheel-hub-bearing.png",
+      "image": "/arb-images/Wheel-Bearing.png",
       "pdf": "/pdfs/f-566847-with-grease-566847-h195.pdf"
     }
 

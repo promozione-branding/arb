@@ -153,12 +153,12 @@ ARB Bearings grease is manufactured using quality base oils, advanced thickeners
 
               <div>
                 <h3 className="mb-6 text-3xl font-bold text-gray-900">
-                  Crystal Red Gel Grease
+                  Crystal Blue Gel Grease
                 </h3>
 
                 <p className="text-lg leading-8 text-gray-700">
-              <strong>Crystal Red Gel Grease</strong>    is a high-performance, multi-purpose lubricant made to handle high-speed bearings and industrial machinery. It has really good thermal stability, plus strong bonding, water resistance, and it keeps lubricating for a long time so you get steady protection even when the conditions are tough.
-It’s a great fit for <strong> industrial equipment, bearings, and those high-speed duties</strong> , because Crystal Red Gel Grease helps lower friction, reduces abrasion, and stretches the life of your components.
+              <strong>Crystal Blue Gel Grease</strong>    is a high-performance, multi-purpose lubricant made to handle high-speed bearings and industrial machinery. It has really good thermal stability, plus strong bonding, water resistance, and it keeps lubricating for a long time so you get steady protection even when the conditions are tough.
+It’s a great fit for <strong> industrial equipment, bearings, and those high-speed duties</strong> , because Crystal Blue Gel Grease helps lower friction, reduces abrasion, and stretches the life of your components.
 
                 </p>
               </div>

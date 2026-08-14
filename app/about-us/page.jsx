@@ -8,6 +8,7 @@ import Enquiry from "@/components/Enquiry";
 
 import Catpopup from "@/components/Catpopup";
 import { useState } from "react";
+import TwentyFourSevenOutlets from "@/components/Outlet";
 export default function AboutPage() {
   const why = [
     "60+ Years of Industry Expertise",
@@ -129,7 +130,7 @@ export default function AboutPage() {
             loop
             playsInline
             preload="auto" />
-            <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" />
+          <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" />
         </div>
         <div>
           <h2 className="text-4xl font-bold mb-4">Manufacturing Excellence</h2>
@@ -150,6 +151,8 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+
+      <TwentyFourSevenOutlets />
 
       <section className="bg-[#281968] text-white py-10">
         <div className="max-w-6xl mx-auto px-6">
@@ -216,10 +219,10 @@ export default function AboutPage() {
       </section>
 
 
+
       {isFormOpen && (
         <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
       )}
-
 
       {FormOpen && (
         <Catpopup
@@ -227,7 +230,6 @@ export default function AboutPage() {
           onClose={() => setFormOpen(false)}
         />
       )}
-
 
     </main>
   );

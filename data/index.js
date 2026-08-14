@@ -22,12 +22,13 @@ import wheelbearing from "./wheelbearingcat/wheelbearing";
 import cylindricalRollerBearings from "./rollerbearingcat/cylindrical-roller-bearings";
 
 
-import mixCylindricalRollerBearings from "./rollerbearingcat/mix-cylindrical-roller-bearings";
+// import mixCylindricalRollerBearings from "./rollerbearingcat/mix-cylindrical-roller-bearings";
 
 
 import taperedRollerBearings from "./rollerbearingcat/tapered-roller-bearings";
 
 import taperRollerBearingsInchSeries from "./rollerbearingcat/taper-roller-bearings-inch-series";
+import industrialbearings from "./rollerbearingcat/industrial-bearings";
 import taperRollerBearingsSpecialSeries from "./rollerbearingcat/taper-roller-bearings-special-series";
 
 
@@ -46,29 +47,30 @@ const allSubCategories = [
   ballBearing,
   doublerowangularcontactballbearings,
   fourpointcontactballbearings,
-  mixballbearingsmetricseries,
-  singlerowangularcontactballbearings,
+  // mixballbearingsmetricseries,
+  // singlerowangularcontactballbearings,
   selfaligningballbearings,
   singledirectionthrustballbearings,
 
 
-// wheel bearing
-wheelbearing,
+  // wheel bearing
+  wheelbearing,
 
 
-// roller bearing
+  // roller bearing
 
-cylindricalRollerBearings,
-mixCylindricalRollerBearings,
-taperedRollerBearings,
-taperRollerBearingsInchSeries,
-taperRollerBearingsSpecialSeries,
-doubleRowTaperedRollerBearings,
-sphericalRollerBearings,
-sphericalRollerThrustBearings,
-wheelbearinghub
+  cylindricalRollerBearings,
+  // mixCylindricalRollerBearings,
+  taperedRollerBearings,
+  taperRollerBearingsInchSeries,
+  taperRollerBearingsSpecialSeries,
+  doubleRowTaperedRollerBearings,
+  sphericalRollerBearings,
+  sphericalRollerThrustBearings,
+  wheelbearinghub,
+  industrialbearings,
 
-// 
+  // 
 
 
 
@@ -87,7 +89,7 @@ export function getCategoryTree() {
     categoriesBySlug[category.slug].subCategories.push({
       name: subCategory.name,
       slug: subCategory.slug,
-      image: entry.products?.[0]?.image || null,
+      image: entry.products?.[0]?.image || entry?.subCategory?.image,
     });
   }
 

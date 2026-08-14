@@ -26,7 +26,7 @@ export default {
         features: [
           "High Precision Engineering",
           "Low Friction Performance",
-          
+
           "Corrosion Resistant",
           "Heavy-Duty Reliability",
         ],
@@ -46,24 +46,24 @@ export default {
     },
   },
   subCategory: {
-    name: "Single Direction Thrust Ball Bearings",
+    name: "Thrust Ball Bearings",
     slug: "single-direction-thrust-ball-bearings",
-    heroTitle: "Single Direction Thrust Ball Bearings",
+    heroTitle: "Thrust Ball Bearings",
     heroDescription:
       "Versatile, low-friction bearings suited for high-speed operation under radial and moderate axial loads in both directions.",
- image: "/arb-images/THRUST BEARING.png",
+    image: "/arb-images/THRUST BEARING.png",
     description:
-      "Single direction thrust ball bearings engineered to handle axial loads efficiently while delivering stable performance, precision, and long-lasting reliability.",
+      "Thrust ball bearings engineered to handle axial loads efficiently while delivering stable performance, precision, and long-lasting reliability.",
 
     features: [
-     "Optimized Axial Load Support",
-"High Running Accuracy",
-"Robust Construction",
-"Reliable Performance"
+      "Optimized Axial Load Support",
+      "High Running Accuracy",
+      "Robust Construction",
+      "Reliable Performance"
 
     ],
 
-  
+
     applications: ["Agricultural", "Automotive", "Industrial"],
   },
   products: [

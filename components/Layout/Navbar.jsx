@@ -1,17 +1,18 @@
 "use client";
 
-import { useState } from "react";import Image from 'next/image';
+import { useState } from "react"; import Image from 'next/image';
 import Link from "next/link";
 import { ChevronDown, Menu, X, PhoneCall, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Enquiry from "@/components/Enquiry";
 export default function Navbar({ categories }) {
 
- const [isFormOpen, setIsFormOpen] = useState(false);
-  
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const closeMenu = () => {
     setActiveMenu(null);
@@ -23,7 +24,7 @@ export default function Navbar({ categories }) {
       <div className="relative z-[200] backdrop-blur-2xl bg-[#081B2E]/90 border-b border-white/10 shadow-[0_17px_40px_rgba(0,0,0,.18)]">
         <div className="max-w-7xl mx-auto px-3   ">
           <div className="h-18 flex items-center justify-between">
-           <Link
+            <Link
               href="/"
               className="relative flex items-center shrink-0"
             >
@@ -59,11 +60,10 @@ export default function Navbar({ categories }) {
                 </button>
 
                 <div
-                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
-                    aboutOpen
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-3"
-                  }`}
+                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${aboutOpen
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-3"
+                    }`}
                 >
                   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
                     <Link
@@ -119,7 +119,7 @@ export default function Navbar({ categories }) {
                 <div>
                   <p className="text-[11px] text-gray-300">Call Anytime</p>
                   <p className="text-white font-semibold text-sm">
-                   +91-7834872136
+                    +91-7834872136
                   </p>
                 </div>
               </a>
@@ -184,17 +184,80 @@ export default function Navbar({ categories }) {
                 <span>{cat.name}</span>
                 <ChevronDown
                   size={16}
-                  className={`transition-transform duration-300 ${
-                    activeMenu === cat.slug ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-300 ${activeMenu === cat.slug ? "rotate-180" : ""
+                    }`}
                 />
                 <span className="absolute left-0 -bottom-[20px] h-[3px] w-0 rounded-full bg-[#C52C1D] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
 
+            <div
+              className="relative"
+              onMouseEnter={() => setOpen(true)}
+              onMouseLeave={() => setOpen(false)}
+            >
+              <button className="flex items-center gap-2 text-[17px] font-semibold text-gray-800 hover:text-[#C52C1D] transition">
+                Miscellaneous Products
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${aboutOpen ? "rotate-180" : ""}`}
+                />
+              </button>
 
+              <div
+                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${open
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-3"
+                  }`}
+              >
+                <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
+                  <Link href="/grease"
+                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                  >
+                    Grease
+                    <ArrowRight size={16} />
+                  </Link>
 
-        <Link href="/grease" className="group relative flex items-center cursor-pointer  text-[16px] font-semibold text-gray-800 hover:text-[#C52C1D] transition-all"> Grease</Link>    
+                  <Link href="/universal-joints"
+                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                  >
+                    Universal Joints
+                    <ArrowRight size={16} />
+                  </Link>
+
+                  <Link href="/clutch-bearings"
+                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                  >
+                    Clutch Bearings
+                    <ArrowRight size={16} />
+                  </Link>
+
+                  <Link href="/pillow-blocks-units"
+                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                  >
+                    Pillow Blocks Units
+                    <ArrowRight size={16} />
+                  </Link>
+
+                  <Link href="/clutch-plates"
+                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                  >
+                    Clutch Plates
+                    <ArrowRight size={16} />
+                  </Link>
+
+                  <Link href="/brake-lining"
+                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                  >
+                    Brake Lining
+                    <ArrowRight size={16} />
+                  </Link>
+
+                </div>
+              </div>
+            </div>
+
+            {/* <Link href="/grease" className="group relative flex items-center cursor-pointer  text-[16px] font-semibold text-gray-800 hover:text-[#C52C1D] transition-all"> Grease</Link> */}
           </div>
         </div>
 
@@ -203,71 +266,71 @@ export default function Navbar({ categories }) {
 
           <div className="absolute left-0 top-full w-full overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-white shadow-[0_40px_100px_rgba(15,23,42,0.18)] backdrop-blur-xl">
             <div className="w-full  mx-auto px-15 py-5">
-            <div className="mb-3 flex items-center justify-between border-b border-slate-200 pb-3 ">
-  <div>
-   
+              <div className="mb-3 flex items-center justify-between border-b border-slate-200 pb-3 ">
+                <div>
 
-    <h2 className=" text-4xl font-black tracking-tight text-slate-900">
-      {categories.find((c) => c.slug === activeMenu)?.name}
-    </h2>
 
-  </div>
+                  <h2 className=" text-4xl font-black tracking-tight text-slate-900">
+                    {categories.find((c) => c.slug === activeMenu)?.name}
+                  </h2>
 
-  <Link
-      href={`/products/${activeMenu}`}
-    className="group flex items-center gap-3 rounded-full border border-[#C72818] px-7 py-3 font-semibold text-[#C72818] transition-all duration-300 hover:bg-[#C72818] hover:text-white"
-  >
-    View All
-    <ArrowRight
-      size={18}
-      className="transition-transform group-hover:translate-x-1"
-    />
-  </Link>
-</div>
+                </div>
 
-           <div className="max-h-[70vh] pb-20 pt-10 overflow-y-auto pr-2">
-  <div className="grid grid-cols-4 gap-8">
-    {categories
-      .find((c) => c.slug === activeMenu)
-      ?.subCategories?.map((sub) => (
-        <Link
-          key={sub.slug}
-          href={`/products/${activeMenu}/${sub.slug}`}
-          onClick={closeMenu}
-          className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_15px_35px_rgba(15,23,42,.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C72818]/30 hover:shadow-[0_30px_60px_rgba(199,40,24,.18)]"
-        >
-          <div className="relative h-52 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-slate-100">
-            {sub.image ? (
-              <Image
-                src={sub.image}
-                alt={sub.name}
-                width={300}
-                height={300}
-                className="object-contain transition-transform duration-700 group-hover:scale-110"
-              />
-            ) : (
-              <div className="flex h-full items-center justify-center text-sm text-gray-400">
-                No image available
+                <Link
+                  href={`/products/${activeMenu}`}
+                  className="group flex items-center gap-3 rounded-full border border-[#C72818] px-7 py-3 font-semibold text-[#C72818] transition-all duration-300 hover:bg-[#C72818] hover:text-white"
+                >
+                  View All
+                  <ArrowRight
+                    size={18}
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </Link>
               </div>
-            )}
-          </div>
 
-          <div className="p-6">
-            <h3 className="font-bold text-gray-900 text-[17px] leading-6 group-hover:text-[#28186D] transition">
-              {sub.name}
-            </h3>
+              <div className="max-h-[70vh] pb-20 pt-10 overflow-y-auto pr-2">
+                <div className="grid grid-cols-4 gap-8">
+                  {categories
+                    .find((c) => c.slug === activeMenu)
+                    ?.subCategories?.map((sub) => (
+                      <Link
+                        key={sub.slug}
+                        href={`/products/${activeMenu}/${sub.slug}`}
+                        onClick={closeMenu}
+                        className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_15px_35px_rgba(15,23,42,.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C72818]/30 hover:shadow-[0_30px_60px_rgba(199,40,24,.18)]"
+                      >
+                        <div className="relative h-52 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-slate-100">
+                          {sub.image ? (
+                            <Image
+                              src={sub.image}
+                              alt={sub.name}
+                              width={300}
+                              height={300}
+                              className="object-contain transition-transform duration-700 group-hover:scale-110"
+                            />
+                          ) : (
+                            <div className="flex h-full items-center justify-center text-sm text-gray-400">
+                              No image available
+                            </div>
+                          )}
+                        </div>
 
-            <div className="mt-3 flex items-center text-[#C72818] font-semibold text-sm">
-              Explore Products
-              <span className="ml-2 transition-transform duration-300 group-hover:translate-x-2">
-                →
-              </span>
-            </div>
-          </div>
-        </Link>
-      ))}
-  </div>
-</div>
+                        <div className="p-6">
+                          <h3 className="font-bold text-gray-900 text-[17px] leading-6 group-hover:text-[#28186D] transition">
+                            {sub.name}
+                          </h3>
+
+                          <div className="mt-3 flex items-center text-[#C72818] font-semibold text-sm">
+                            Explore Products
+                            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-2">
+                              →
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -382,7 +445,7 @@ export default function Navbar({ categories }) {
 
 
 
-    {isFormOpen && (
+      {isFormOpen && (
         <Enquiry
           IATFpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
