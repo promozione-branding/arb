@@ -48,20 +48,22 @@ export default {
     name: "Self Aligning Ball Bearings",
     slug: "self-aligning-ball-bearings",
     heroTitle: "Self Aligning Ball Bearings",
- image: "/arb-images/SELF ALIGNNING BEARING.png",
+    image: "/arb-images/SELF ALIGNNING BEARING.png",
+    metaTitle: "Self-Aligning Ball Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures self-aligning ball bearings designed to accommodate shaft misalignment while delivering smooth, durable and reliable performance.",
 
     description:
       "Self aligning ball bearings designed to automatically compensate for shaft misalignment, ensuring smooth performance, reduced vibration, and extended equipment life.",
 
     features: [
-  "	Self-Aligning Design",
-"	Reduced Vibration",
-"	Smooth & Quiet Operation",
-"	Enhanced Durability"
+      "	Self-Aligning Design",
+      "	Reduced Vibration",
+      "	Smooth & Quiet Operation",
+      "	Enhanced Durability"
 
     ],
 
-  
+
     applications: ["Agricultural", "Conveyor", "Industrial"],
   },
   products: [

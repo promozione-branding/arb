@@ -70,7 +70,8 @@ export default function Footer() {
                 ["About Us", "/about-us"],
                 ["Articles", "/our-blogs"],
                 ["Contact Us", "/contact-us"],
-               
+                ["Privacy Policy", "/privacy-policy"],
+
                 // ["Shipping Policy", "/shipping-policy"],
                 // ["Return & Refund Policy", "/return-refund-policy"],
                 // ["Sitemap", "/sitemap"],
@@ -123,9 +124,9 @@ export default function Footer() {
               <div className="flex gap-3 items-start">
                 <MapPin className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
                 <p className="leading-relaxed">
-                 26th Bakinskikh Komissarov Street
-House 9, Flat 9
-Moscow 119571, Russia
+                  26th Bakinskikh Komissarov Street
+                  House 9, Flat 9
+                  Moscow 119571, Russia
                 </p>
               </div>
 
@@ -136,17 +137,17 @@ Moscow 119571, Russia
                   href="tel:+917834872136"
                   className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                 >
-                   +91-7834872136
+                  +91-7834872136
                 </a>
               </div>
 
-                 <div className="flex gap-3 items-center">
+              <div className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
                 <a
                   href="tel:+79859834837"
                   className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                 >
-                 +7-9859834837
+                  +7-9859834837
                 </a>
               </div>
 
@@ -158,13 +159,13 @@ Moscow 119571, Russia
                     href="mailto:export@arb-bearings.com"
                     className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                   >
-                export@arb-bearings.com
+                    export@arb-bearings.com
                   </a>
-              
 
-                 
 
-                 
+
+
+
                 </div>
               </div>
             </div>

@@ -2,6 +2,8 @@ export default {
   category: {
     name: "Roller Bearings",
     slug: "roller-bearings",
+    metaTitle: "Premium Roller Bearings Manufacturer | ARB Bearings",
+    metaDescription: "Discover premium roller bearings from ARB Bearings, engineered for high load capacity, smooth operation, durability and reliable performance.",
 
     pageContent: {
       hero: {
@@ -52,6 +54,9 @@ export default {
     heroTitle: "Cylindrical Roller Bearings",
 
     image: "/arb-images/CYLINDRICAL BEARING NU-212 E.png",
+    metaTitle: "Cylindrical Roller Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures high-quality cylindrical roller bearings designed for high radial loads, smooth operation, durability and reliable performance.",
+
     description:
       "Cylindrical roller bearings designed for high radial loads, superior rigidity, and efficient performance in demanding industrial machinery.",
 

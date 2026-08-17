@@ -51,17 +51,18 @@ export default {
     image: "/arb-images/Double Row Tapered Roller Bearings.webp",
     heroDescription:
       "Support combined radial and axial loads and are built for heavy-duty applications where high load capacity is required.",
-
+    metaTitle: "Double Row Tapered Roller Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures double row tapered roller bearings designed for high load capacity, stability, durability and reliable performance.",
     image: "/arb-images/taper-double-row.webp",
     description:
       "Double row tapered roller bearings engineered to handle heavy combined loads with increased rigidity, stability, and reliable performance in demanding industrial applications.",
 
     features: [
       "	Dual Row Strength",
-"	High Combined Load Capacity",
-"Enhanced Structural Rigidity",
-"Long Operational Life"
-,
+      "	High Combined Load Capacity",
+      "Enhanced Structural Rigidity",
+      "Long Operational Life"
+      ,
     ],
 
 

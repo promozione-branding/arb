@@ -49,7 +49,8 @@ export default {
     slug: "double-row-angular-contact-ball-bearings",
     image: "/arb-images/DOUBLE POINT ANGULAR.png",
     heroTitle: "Angular Contact Ball Bearings",
-
+    metaTitle: "Angular Contact Ball Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures precision angular contact ball bearings designed for radial and axial loads with reliable performance and long service life.",
 
     description:
       "High-performance Angular Contact Ball Bearings designed for superior radial and axial load capacity, smooth operation, and long-lasting reliability in demanding industrial applications.",

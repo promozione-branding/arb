@@ -50,7 +50,8 @@ export default {
         heroTitle: "Mix Cylindrical Roller Bearings",
         heroDescription:
             "Support combined radial and axial loads and are built for heavy-duty applications where high load capacity is required.",
-
+        metaTitle: "Needle Roller Bearings Manufacturer | ARB Bearings",
+        metaDescription: "ARB Bearings manufactures precision needle roller bearings designed for compact applications, high load capacity, low friction and long service life.",
         image: "/arb-images/Needle 1.jpg",
         description:
             "High-performance needle roller bearings designed for compact, high-load applications, delivering low friction, smooth operation, and reliable performance in demanding industrial environments.",

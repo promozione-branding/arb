@@ -31,7 +31,7 @@ export default {
         ],
       },
 
-      
+
       section2: {
         badge: "Engineered Performance",
         title: "Built for Maximum Reliability & Precision ",
@@ -51,20 +51,21 @@ export default {
     heroTitle: "Tapered Roller Bearings",
     heroDescription:
       "Support combined radial and axial loads and are built for heavy-duty applications where high load capacity is required.",
-
+    metaTitle: "Tapered Roller Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures precision tapered roller bearings designed to handle radial and axial loads with smooth operation and long service life.",
     image: "/arb-images/TAPER ROLLER.webp",
     description:
       "Tapered roller bearings designed to support combined radial and axial loads with exceptional strength, precision, and long-lasting industrial performance.",
 
     features: [
-    "	Combined Load Capacity",
-"	Precision Load Distribution",
-"Heavy-Duty Construction",
-"Reliable Service Life"
+      "	Combined Load Capacity",
+      "	Precision Load Distribution",
+      "Heavy-Duty Construction",
+      "Reliable Service Life"
 
     ],
 
-  
+
     applications: ["Agricultural", "Automotive", "Earthmovers", "Industrial"],
   },
   products: [

@@ -51,19 +51,22 @@ export default {
     heroDescription:
       "Support combined radial and axial loads and are built for heavy-duty applications where high load capacity is required.",
 
+    metaTitle: "Taper Roller Bearings Inch Series Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures inch series taper roller bearings engineered for reliable load handling, precision, durability and consistent performance.",
+
     image: "/arb-images/taper-inch.webp",
     description:
       "Inch series taper roller bearings engineered for precise fit, high load capacity, and dependable performance in heavy-duty industrial and automotive applications.",
 
     features: [
-  "	Inch Series Precision",
-"	High Combined Load Capacity",
-"	Smooth Rolling Performance",
-"	Long-Lasting Durability"
+      "	Inch Series Precision",
+      "	High Combined Load Capacity",
+      "	Smooth Rolling Performance",
+      "	Long-Lasting Durability"
 
     ],
 
-  
+
     applications: ["Agricultural", "Automotive", "Earthmovers", "Industrial"],
   },
   products: [

@@ -47,11 +47,14 @@ export default {
   },
   subCategory: {
     name: "Thrust Ball Bearings",
-    slug: "single-direction-thrust-ball-bearings",
+    slug: "thrust-ball-bearings",
     heroTitle: "Thrust Ball Bearings",
     heroDescription:
       "Versatile, low-friction bearings suited for high-speed operation under radial and moderate axial loads in both directions.",
     image: "/arb-images/THRUST BEARING.png",
+    metaTitle: "Thrust Ball Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures high-quality thrust ball bearings engineered for axial loads, smooth operation, durability and reliable performance.",
+
     description:
       "Thrust ball bearings engineered to handle axial loads efficiently while delivering stable performance, precision, and long-lasting reliability.",
 

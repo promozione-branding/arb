@@ -49,7 +49,8 @@ export default {
     slug: "four-point-contact-ball-bearings",
     heroTitle: "Four Point Contact Ball Bearings",
     image: "/arb-images/Four Point Angular Contact Final.webp",
-
+    metaTitle: "Four-Point Contact Ball Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures four-point contact ball bearings engineered for combined loads, smooth operation, precision and dependable performance.",
 
     description:
       "High-performance four-point contact ball bearings designed to support combined axial loads, ensure smooth operation, and deliver reliable performance in demanding industrial applications.",

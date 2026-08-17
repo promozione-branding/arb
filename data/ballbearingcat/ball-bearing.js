@@ -2,6 +2,8 @@ export default {
   category: {
     name: " Ball Bearings",
     slug: "ball-bearing",
+    metaTitle: "High-Quality Ball Bearings Manufacturer | ARB Bearings",
+    metaDescription: "Choose ARB Bearings for high-quality ball bearings engineered for smooth operation, low friction, long service life and reliable performance.",
 
     pageContent: {
       hero: {
@@ -50,7 +52,8 @@ export default {
     slug: "deep-groove-ball-bearing",
     heroTitle: "Ball Bearings",
     image: "/arb-images/Ball-Bearing-Final.webp",
-
+    metaTitle: "Deep Groove Ball Bearings Manufacturer | ARB Bearings",
+    metaDescription: "ARB Bearings manufactures high-quality deep groove ball bearings designed for smooth operation, low friction, durability and reliable performance.",
 
     description:
       "High-performance industrial ball bearings designed for smooth rotation, low friction, and reliable operation across automotive and industrial applications.",

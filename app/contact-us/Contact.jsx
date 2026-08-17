@@ -1,0 +1,421 @@
+
+"use client";
+
+import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, Send, ChevronDown } from "lucide-react";
+import axios from "axios";
+import toast from "react-hot-toast";
+import Link from "next/link";
+export default function ContactPage() {
+
+
+
+  const [loading, setLoading] = useState(false);
+
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!form.name || !form.phone) {
+      toast.error("Please fill Name & Phone Number");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+
+      const payload = {
+        platform: "ARB Bearings Contact Form",
+        platformEmail: "arbbearings.com",
+
+        name: form.name,
+        phone: form.phone,
+        email: form.email || "N/A",
+
+        place: form.company || "N/A",
+
+        product: form.subject || "General Inquiry",
+
+        message: `
+Company : ${form.company}
+
+Subject : ${form.subject}
+
+Message :
+${form.message}
+      `,
+      };
+
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        payload
+      );
+
+      if (data.success) {
+        toast.success("Inquiry Submitted Successfully!");
+
+        setForm({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error("Submission Failed");
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error("Server Error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
+
+  const contactCards = [
+    {
+      icon: Phone,
+      title: "Call Us",
+      value: [
+        "+91-7834872136",
+        "+7-9859834837",
+
+      ],
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      value: [
+
+        "export@arb-bearings.com",
+      ],
+    },
+    {
+      icon: MapPin,
+      title: "Address",
+      value: [
+        "26th Bakinskikh Komissarov Street House 9, Flat 9 Moscow 119571, Russia",
+      ],
+    },
+    {
+      icon: Clock,
+      title: "Working Hours",
+      value: [
+        "Monday - Saturday",
+        "9:30 AM - 6:00 PM",
+      ],
+    },
+  ];
+
+
+  const [open, setOpen] = useState(0);
+  const faqs = [
+    ["How quickly do you respond?", "Usually within 24 hours."],
+    ["Do you accept bulk orders?", "Yes, we support OEM and bulk inquiries."],
+    ["Can I request a quotation?", "Absolutely. Use the form below."]
+  ];
+  return (
+
+
+
+    <main className="min-h-screen bg-[#F8FAFC] text-slate-900">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-slate-100">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.12),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.12),transparent_45%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-24">
+          <span className="inline-block rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm">
+            CONTACT US
+          </span>
+
+          <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight text-slate-900">
+            Let's Build Something Great Together
+          </h1>
+
+
+          <p className="mt-6 max-w-2xl text-lg text-slate-600">
+            We're here to help with technical support,
+            quotations and partnerships.
+          </p>
+
+        </div>
+      </section>
+
+      <section className="relative max-w-7xl mx-auto -mt-12 px-6 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+        {contactCards.map((card, index) => {
+          const Icon = card.icon;
+
+          return (
+            <div
+              key={index}
+              className="rounded-3xl border border-slate-200 bg-white p-7 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100">
+                <Icon className="h-7 w-7 text-blue-700" />
+              </div>
+
+              <h3 className="mt-5 text-xl font-bold text-slate-900">
+                {card.title}
+              </h3>
+
+              <div className="mt-3 space-y-1">
+                {card.value.map((item, i) => {
+                  const isEmail = item.includes("@");
+                  const href = isEmail
+                    ? `mailto:${item}`
+                    : `tel:${item.replace(/\s+/g, "")}`;
+
+                  return (
+                    <a
+                      key={i}
+                      href={href}
+                      className="block break-words text-sm leading-7 text-slate-600 transition-colors hover:text-blue-700"
+                    >
+                      {item}
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+
+      </section>
+
+
+
+      <section className="max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-10 items-start">
+        <div className="rounded-[32px] border border-slate-200 bg-white p-8 lg:p-10 shadow-xl">
+
+
+
+          <h2 className=" text-3xl font-bold text-slate-900">
+            Send an Inquiry
+          </h2>
+
+          <p className="mt-3 text-slate-600">
+            Fill out the form below and our team will get back to you .
+          </p>
+
+          <form
+            onSubmit={handleSubmit}
+            className="mt-4 grid md:grid-cols-2 gap-4"
+          >
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name *"
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="h-14 rounded-2xl border border-slate-300 px-5 outline-none transition-all duration-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+
+            <input
+              type="text"
+              name="company"
+              placeholder="Company Name"
+              value={form.company}
+              onChange={handleChange}
+              className="h-14 rounded-2xl border border-slate-300 px-5 outline-none transition-all duration-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={form.email}
+              onChange={handleChange}
+              className="h-14 rounded-2xl border border-slate-300 px-5 outline-none transition-all duration-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              maxLength={10}
+              minLength={10}
+              placeholder="Phone Number *"
+              value={form.phone}
+              onChange={handleChange}
+              required
+              className="h-14 rounded-2xl border border-slate-300 px-5 outline-none transition-all duration-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={form.subject}
+              onChange={handleChange}
+              className="md:col-span-2 h-14 rounded-2xl border border-slate-300 px-5 outline-none transition-all duration-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+
+            <textarea
+              rows={6}
+              name="message"
+              placeholder="Write your message..."
+              value={form.message}
+              onChange={handleChange}
+              className="md:col-span-2 rounded-2xl border border-slate-300 p-5 resize-none outline-none transition-all duration-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="md:col-span-2 flex h-14 items-center justify-center gap-3 rounded-2xl bg-blue-700 text-white font-semibold transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-200 disabled:opacity-60"
+            >
+              {loading ? "Submitting..." : "Send Inquiry"}
+
+              <Send size={18} />
+            </button>
+
+
+            <div>
+
+
+            </div>
+
+          </form>
+
+        </div>
+
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
+          <h3 className="text-2xl font-bold text-slate-900">
+            Office Information
+          </h3>
+
+          <div className="mt-8 space-y-6">
+
+            {/* Address */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+                <MapPin className="h-5 w-5 text-blue-700" />
+              </div>
+
+              <div>
+                <p className="font-semibold text-slate-900">Address</p>
+
+                <div
+
+
+                  className="mt-1 block text-slate-600 transition "
+                >
+                  26th Bakinskikh Komissarov Street
+                  House 9, Flat 9 <br />
+                  Moscow 119571, Russia
+                </div>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+                <Phone className="h-5 w-5 text-blue-700" />
+              </div>
+
+              <div>
+                <p className="font-semibold text-slate-900">Phone</p>
+
+                <a
+                  href="tel:+91-7834872136"
+                  className="mt-1 block text-slate-600 transition hover:text-blue-700"
+                >
+                  +91-7834872136
+                </a>
+
+                <a
+                  href="tel:+7-9859834837"
+                  className="block mt-2 text-slate-600 transition hover:text-blue-700"
+                >
+                  +7-9859834837
+                </a>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+                <Mail className="h-5 w-5 text-blue-700" />
+              </div>
+
+              <div>
+                <p className="font-semibold text-slate-900">Email</p>
+
+                <a
+                  href="mailto:export@arb-bearings.com"
+                  className="mt-1 block text-slate-600 transition hover:text-blue-700"
+                >
+                  export@arb-bearings.com
+                </a>
+
+
+
+
+              </div>
+            </div>
+
+            {/* Working Hours */}
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+                <Clock className="h-5 w-5 text-blue-700" />
+              </div>
+
+              <div>
+                <p className="font-semibold text-slate-900">Working Hours</p>
+
+                <p className="mt-1 text-slate-600">
+                  Monday – Saturday
+                  <br />
+                  9:30 AM – 6:00 PM
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+        <iframe className="w-full h-[420px] rounded-3xl"
+          src="https://www.google.com/maps?q=New+Delhi&output=embed" />
+      </section>
+
+      <section className="max-w-4xl mx-auto px-6 pb-24">
+        <h2 className="text-4xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {faqs.map(([q, a], i) => (
+            <div key={i} className="rounded-2xl border border-white/10 overflow-hidden">
+              <button onClick={() => setOpen(open === i ? -1 : i)} className="w-full flex justify-between p-5 text-left">
+                <span>{q}</span><ChevronDown className={open === i ? "rotate-180 transition" : "transition"} />
+              </button>
+              {open === i && <div className="px-5 pb-5 text-slate-900">{a}</div>}
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}

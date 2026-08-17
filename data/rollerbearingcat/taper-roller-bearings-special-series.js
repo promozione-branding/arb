@@ -51,19 +51,22 @@ export default {
     heroDescription:
       "Support combined radial and axial loads and are built for heavy-duty applications where high load capacity is required.",
 
+    metaTitle: "Special Series Taper Roller Bearings Manufacturer | ARB Bearings",
+    metaDescription: "Explore ARB Bearings special series taper roller bearings, engineered for precision, durability, reliable load handling and demanding applications.",
+
     image: "/arb-images/taper-special.webp",
     description:
       "Special series taper roller bearings designed for customized industrial requirements, offering superior strength, precision, and reliable performance under demanding conditions.",
 
     features: [
-     "	Custom Application Design",
-"Enhanced Load Capacity",
-"Precision Performance",
-"	Superior Durability"
+      "	Custom Application Design",
+      "Enhanced Load Capacity",
+      "Precision Performance",
+      "	Superior Durability"
 
     ],
 
-  
+
     applications: ["Automotive", "Earthmovers"],
   },
   products: [

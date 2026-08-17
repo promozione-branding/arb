@@ -90,6 +90,8 @@ export function getCategoryTree() {
       name: subCategory.name,
       slug: subCategory.slug,
       image: entry.products?.[0]?.image || entry?.subCategory?.image,
+      metaTitle: subCategory?.metaTitle,
+      metaDescription: subCategory?.metaDescription,
     });
   }
 

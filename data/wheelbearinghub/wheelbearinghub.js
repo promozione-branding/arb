@@ -2,7 +2,8 @@ export default {
   category: {
     name: " Wheel Bearings Hub",
     slug: "wheel-bearing-hub",
-
+    metaTitle: "Premium Wheel Hub Bearings Manufacturer | ARB Bearings",
+    metaDescription: "Discover premium wheel hub bearings from ARB Bearings, engineered for smooth rotation, high durability, reduced friction and reliable vehicle performance.",
 
 
     pageContent: {
