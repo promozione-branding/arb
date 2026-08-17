@@ -52,7 +52,7 @@ export default function AboutPage() {
           <p className="text-md leading-relaxed ">
             Established in 1990 and headquartered in Delhi, India, ARB Bearings is a trusted bearing manufacturer with 60+ years of collective industry expertise, delivering reliable bearing solutions to customers worldwide. Built on a foundation
             of engineering excellence, innovation, and customer trust, we
-            specialize in manufacturing high-quality industrial bearings and
+            specialize in manufacturing high-quality bearings and
             precision bearing solutions for customers worldwide. From its
             beginnings as a private enterprise to becoming a public limited
             company, ARB Bearings has grown into a globally recognized bearing
@@ -105,7 +105,7 @@ export default function AboutPage() {
             Engineered to Keep Industries Moving
           </h2>
           <p className="text-lg leading-8">
-            Discover a comprehensive range of precision bearings and industrial
+            Discover a comprehensive range of precision bearings and
             bearing solutions designed to deliver exceptional performance,
             reliability, and long service life across diverse applications.
             Explore our products and find the right bearing solution for your
@@ -197,7 +197,7 @@ export default function AboutPage() {
             Ready to Partner with a Trusted Bearings manufacturer?
           </h2>
           <p className="text-lg leading-8">
-            Whether you're looking for high-quality industrial bearings,
+            Whether you're looking for high-quality bearings,
             customized bearing solutions, or a reliable manufacturing partner,
             ARB Bearings is here to support your business with precision,
             innovation, and engineering excellence. Connect with our experts to

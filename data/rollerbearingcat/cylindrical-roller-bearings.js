@@ -10,7 +10,7 @@ export default {
         title: "Roller Bearings ",
         description:
           "Precision-engineered roller bearings built for high load capacity, durability, and reliable industrial performance.",
-        // image: "/ball-bearings.png",
+        // image: "/3.png",
       },
 
       intro: {
@@ -25,7 +25,7 @@ export default {
         description:
           "ARB roller bearings are precision-engineered to handle heavy radial and axial loads with exceptional durability and efficiency. Manufactured to the highest quality standards, they ensure smooth operation and long service life across demanding industrial applications.",
 
-        image: "/ball-bearings.png",
+        image: "/3.png",
         features: [
           "	High Load Capacity",
           "Precision Engineered",
@@ -40,7 +40,7 @@ export default {
         title: "Built for Maximum Reliability & High Load Performance ",
         description:
           "ARB roller bearings are engineered to deliver exceptional strength, precision, and durability for demanding industrial applications. Manufactured using advanced technology and stringent quality standards, our roller bearings ensure smooth operation, high load capacity, reduced maintenance, and extended service life.",
-        image: "/ball-bearings.png",
+        image: "/3.png",
         stats: {
           title: "100%",
           text: "Industrial Reliability",
@@ -53,7 +53,7 @@ export default {
     slug: "cylindrical-roller-bearings",
     heroTitle: "Cylindrical Roller Bearings",
 
-    image: "/arb-images/CYLINDRICAL BEARING NU-212 E.png",
+    image: "/arb-images/CYLINDRICAL.png",
     metaTitle: "Cylindrical Roller Bearings Manufacturer | ARB Bearings",
     metaDescription: "ARB Bearings manufactures high-quality cylindrical roller bearings designed for high radial loads, smooth operation, durability and reliable performance.",
 
@@ -92,7 +92,7 @@ export default {
         "Bearing Height (mm)": 16,
         "Mass (Kg)": 0.21,
       },
-      image: "/arb-images/CYLINDRICAL BEARING JC 8003.png",
+      image: "/arb-images/CYLINDRICAL.png",
       pdf: "/pdfs/jc-8037.pdf",
     },
     {

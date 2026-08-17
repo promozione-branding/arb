@@ -68,7 +68,7 @@ export default function AboutRussia() {
       </div>
 
       <div className="relative w-full mx-auto px-8">
-        <div className="grid lg:grid-cols-[0.9fr_1fr_0.8fr] gap-5 items-center">
+        <div className="grid md:grid-cols-2 gap-5 items-center">
           <div>
             <div className="relative overflow-hidden rounded-[26px] shadow-2xl group">
               <video
@@ -130,7 +130,7 @@ export default function AboutRussia() {
               ABOUT ARB BEARING
             </span>
 
-            <h2 className="mt- text-2xl font-extrabold leading-tight">
+            <h2 className="mt-2 text-4xl font-extrabold leading-tight">
               <span className="text-[#29166F]">
                 Trusted Bearings Manufacturer
               </span>
@@ -141,17 +141,17 @@ export default function AboutRussia() {
               ARB Bearings is a trusted bearing manufacturer delivering precision-engineered bearings built for performance, durability, and reliability. From industrial to automotive applications, we provide quality bearing solutions you can count on.
             </p>
 
-            <div className="mt-2 grid md:grid-cols-2 space-y-2">
+            <div className="mt-5 grid  space-y-4">
               {features.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-2"
                 >
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">
-                    <CheckCircle2 size={16} />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white">
+                    <CheckCircle2 size={18} />
                   </div>
 
-                  <span className="text-gray-700 text-sm">
+                  <span className="text-gray-700 text-base">
                     {item}
                   </span>
                 </div>
@@ -174,7 +174,7 @@ export default function AboutRussia() {
 
           </div>
 
-          <div className="relative flex flex-col mr-">
+          {/* <div className="relative flex flex-col mr-">
             <Image
               src="/map23.png"
               alt="World Map"
@@ -194,7 +194,7 @@ export default function AboutRussia() {
             <span className="absolute top-[74%] left-[82%] h-4 w-4 rounded-full border-2 border-white bg-red-600 shadow-lg animate-pulse" />
 
 
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

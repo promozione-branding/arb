@@ -120,7 +120,7 @@ export default function SubCategoryPage({ params }) {
 
                         {/* Badge */}
 
-                        <span
+                        {/* <span
                             className="
                 inline-flex
                 rounded-full
@@ -133,7 +133,7 @@ export default function SubCategoryPage({ params }) {
               "
                         >
                             Industrial Bearings
-                        </span>
+                        </span> */}
 
                         {/* Heading */}
 

@@ -11,7 +11,7 @@ export default {
         title: "Wheel Bearings Hub",
         description:
           "Precision-engineered Wheel Bearings Hub designed for smooth rotation, durability, and reliable performance in demanding automotive applications.",
-        // image: "/ball-bearings.png",
+        // image: "/3.png",
       },
 
       intro: {
@@ -26,7 +26,7 @@ export default {
         description:
           "ARB Wheel Hub Bearings are precision-engineered to deliver smooth rotation, reduced friction, and dependable performance for passenger and commercial vehicles. Designed for durability and reliable operation, our wheel hub bearings help support safe, efficient, and long-lasting vehicle performance.",
 
-        image: "/ball-bearings.png",
+        image: "/3.png",
         features: [
           "Precision Engineered — Accurate fit and dependable performance.",
           "Long Service Life — Built for demanding driving conditions.",
@@ -41,7 +41,7 @@ export default {
         title: "Built for Maximum Reliability & Precision ",
         description:
           "ARB Wheel Hub Bearings are engineered for exceptional durability, smooth operation, and reliable performance in demanding automotive applications. Built with precision engineering and stringent quality standards, our wheel hub bearings help reduce friction, enhance safety, and deliver long service life.",
-        image: "/ball-bearings.png",
+        image: "/3.png",
         stats: {
           title: "2x",
           text: "Low Friction Performance",
@@ -62,7 +62,7 @@ export default {
     heroTitle: "Wheel Bearings",
     image: "/arb-images/Wheel-Bearing.png",
     description:
-      "Premium wheel hub bearings designed for smooth wheel rotation, reduced friction, and reliable performance in automotive and heavy-duty applications.",
+      "Premium wheel hub bearings designed for smooth wheel rotation, reduced friction, and reliable performance in automotive heavy-duty applications.",
 
     features: [
       "Smooth Rotation",

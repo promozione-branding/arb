@@ -28,7 +28,7 @@ const Cta = () => {
         <div className="absolute left-0 top-0 h-full w-1.5 bg-[#DA2416]" />
 
         {/* Content */}
-        <div className="relative mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16 lg:px-12">
+        <div className="relative mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-12 lg:px-12">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_280px] lg:gap-16 lg:grid-cols-[1fr_320px]">
 
             {/* Left */}
@@ -37,8 +37,9 @@ const Cta = () => {
                 ENGINEERED SOLUTIONS
               </span>
 
-              <h2 className="mt-4 max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl md:mt-5 md:text-5xl">
-                Your Application. Our Expertise.{" "}
+              <h2 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-[42px] mt-2">
+                Your Application. <br />
+                Our Expertise.{" "} <br />
                 <span className="text-blue-300">
                   The Right Solution
                 </span>
@@ -46,7 +47,7 @@ const Cta = () => {
             </div>
 
             {/* Right */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-center gap-3">
 
               {/* Request Quote */}
               <button

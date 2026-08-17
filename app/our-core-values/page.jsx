@@ -97,7 +97,7 @@ export default function CoreValues() {
               creating long-term value for our customers, partners, and
               stakeholders. Through continuous innovation and a customer-centric
               approach, we aim to strengthen our global presence and remain the
-              preferred choice for industrial bearings across diverse
+              preferred choice for bearings across diverse
               industries.
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function CoreValues() {
 
             <p className="leading-9 text-slate-600 text-lg">
               Our mission is to design, manufacture, and deliver world-class
-              industrial bearings and precision bearing solutions that enhance
+              bearings and precision bearing solutions that enhance
               the performance, efficiency, and reliability of machinery across
               industries. We are committed to investing in advanced
               manufacturing technologies, maintaining stringent quality

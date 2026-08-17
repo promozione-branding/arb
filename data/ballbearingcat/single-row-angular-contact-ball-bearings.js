@@ -8,7 +8,7 @@ export default {
         title: "Leading Ball Bearings manufacturer",
         description:
           "Precision-engineered ball bearings designed for high performance, durability, and reliable operation across automotive and industrial applications.",
-        // image: "/ball-bearings.png",
+        // image: "/3.png",
       },
 
       intro: {
@@ -22,7 +22,7 @@ export default {
         title: "Precision-Engineered for Maximum Performance ",
         description:
           "Designed for demanding industrial applications, ARB ball bearings deliver exceptional reliability, smooth operation, and long service life with precision engineering and superior quality.",
-        image: "/ball-bearings.png",
+        image: "/3.png",
         features: [
           "High Precision Engineering",
           "Low Friction Performance",
@@ -36,7 +36,7 @@ export default {
         title: "Built for Maximum Reliability & Precision ",
         description:
           "As a leading ball bearings manufacturer, ARB Bearings designs and manufactures high-performance ball bearings that deliver exceptional precision, durability, and efficiency. Engineered for demanding automotive and industrial applications, our bearings ensure smooth operation, reduced maintenance, and long-lasting reliability.",
-        image: "/ball-bearings.png",
+        image: "/3.png",
         stats: {
           title: "2x",
           text: "Higher Load Capacity",
@@ -49,19 +49,19 @@ export default {
     slug: "single-row-angular-contact-ball-bearings",
     heroTitle: "Deep Groove Ball Bearings",
 
- image: "/arb-images/ANGULAR BALL BEARING.png",
+    image: "/arb-images/ANGULAR BALL BEARING.png",
     description:
       "High-performance single row angular contact ball bearings designed for high-speed operation, combined radial and axial loads, and reliable industrial performance.",
 
     features: [
-     "	High-Speed Performance",
-"Combined Load Support",
-"Precision Engineering",
-"	Long Service Life"
+      "	High-Speed Performance",
+      "Combined Load Support",
+      "Precision Engineering",
+      "	Long Service Life"
 
     ],
 
- 
+
     applications: ["Industrial"],
   },
   products: [

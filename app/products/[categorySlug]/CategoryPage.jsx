@@ -602,16 +602,16 @@ export default function CategoryPage() {
                 shadow-xl
                 sm:-top-5
                 sm:right-5
-                sm:px-6
-                sm:py-4
+                sm:px-4
+                sm:py-2
               "
                         >
-                            <p className="text-xs opacity-80 sm:text-sm">
-                                Service Life
-                            </p>
+                            {/* <p className="text-xs opacity-80 sm:text-sm">
+                              High RPM
+                            </p> */}
 
-                            <p className="text-2xl font-bold sm:text-3xl">
-                                +35%
+                            <p className="font-bold text-lg">
+                                High RPM
                             </p>
                         </div>
                     </div>
@@ -622,7 +622,7 @@ export default function CategoryPage() {
           SECTION 2
       ========================================================== */}
 
-            <section className="relative overflow-hidden bg-slate-50 py-12 sm:py-14 lg:py-16">
+            <section className="relative hidden overflow-hidden bg-slate-50 py-12 sm:py-14 lg:py-16">
                 {/* Background */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#dbeafe,transparent_45%)]" />
 

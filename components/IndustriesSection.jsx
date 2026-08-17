@@ -41,15 +41,15 @@ const industries = [
     image: "/industry/12.jpg",
     icon: Tractor,
     applications: [
-      { name: "Tractors Bearings", icon: Tractor },
-      { name: "Combine Harvesters Bearings", icon: Combine },
-      { name: "Seeders & Planters Bearings", icon: Sprout },
-      { name: "Rotavators Bearings", icon: Settings2 },
-      { name: "Ploughs & Disc Harrows Bearings", icon: Shovel },
-      { name: "Irrigation Equipment Bearings", icon: Droplets },
-      { name: "Agricultural Trailers & Implements Bearings", icon: Truck },
-      { name: "Agricultural Gearboxes & PTO Systems Bearings", icon: Settings2 },
-      { name: "Balers Bearings", icon: PackageCheck },
+      { name: "Tractors", icon: Tractor },
+      { name: "Combine Harvesters", icon: Combine },
+      { name: "Seeders & Planters", icon: Sprout },
+      { name: "Rotavators", icon: Settings2 },
+      { name: "Ploughs & Disc Harrows", icon: Shovel },
+      { name: "Irrigation Equipment", icon: Droplets },
+      { name: "Agricultural Trailers & Implements", icon: Truck },
+      { name: "Agricultural Gearboxes & PTO Systems", icon: Settings2 },
+      { name: "Balers", icon: PackageCheck },
     ],
   },
 
@@ -58,14 +58,14 @@ const industries = [
     image: "/industry/13.avif",
     icon: Car,
     applications: [
-      { name: "Cars Bearings", icon: Car },
-      { name: "SUVs / MPVs Bearings", icon: Car },
-      { name: "LCV Bearings", icon: Truck },
-      { name: "Trucks Bearings", icon: Truck },
-      { name: "Trailers & Semi Trailers Bearings", icon: Truck },
-      { name: "Buses Bearings", icon: Bus },
-      { name: "Pick up Trucks Bearings", icon: Truck },
-      { name: "Electric Vehicles Bearings", icon: CarFront },
+      { name: "Cars", icon: Car },
+      { name: "SUVs / MPVs", icon: Car },
+      { name: "LCV & HCV", icon: Truck },
+      { name: "Trucks", icon: Truck },
+      { name: "Trailers & Semi Trailers", icon: Truck },
+      { name: "Buses", icon: Bus },
+      { name: "Pick up Trucks", icon: Truck },
+      { name: "Electric Vehicles", icon: CarFront },
     ],
   },
 
@@ -74,19 +74,19 @@ const industries = [
     image: "/const.jpg",
     icon: Building2,
     applications: [
-      { name: "Excavators Bearings", icon: Construction },
-      { name: "Wheel Loaders Bearings", icon: Truck },
-      { name: "Backhoe Loaders Bearings", icon: Construction },
-      { name: "Bulldozers Bearings", icon: Construction },
-      { name: "Motor Graders Bearings", icon: Construction },
-      { name: "Dump Trucks & Haul Trucks Bearings", icon: Truck },
-      { name: "Cranes Bearings", icon: Construction },
-      { name: "Forklifts Bearings", icon: Forklift },
-      { name: "Concrete Mixers Bearings", icon: Construction },
-      { name: "Concrete Pumps Bearings", icon: Construction },
-      { name: "Road Rollers & Compactors Bearings", icon: Construction },
-      { name: "Crushers Bearings", icon: Settings2 },
-      { name: "Mining & Quarry Equipments Bearings", icon: Pickaxe },
+      { name: "Excavators", icon: Construction },
+      { name: "Wheel Loaders", icon: Truck },
+      { name: "Backhoe Loaders", icon: Construction },
+      { name: "Bulldozers", icon: Construction },
+      { name: "Motor Graders", icon: Construction },
+      { name: "Dump Trucks & Haul Trucks", icon: Truck },
+      { name: "Cranes", icon: Construction },
+      { name: "Forklifts", icon: Forklift },
+      { name: "Concrete Mixers", icon: Construction },
+      { name: "Concrete Pumps", icon: Construction },
+      { name: "Road Rollers & Compactors", icon: Construction },
+      { name: "Crushers", icon: Settings2 },
+      { name: "Mining & Quarry Equipments", icon: Pickaxe },
     ],
   },
 
@@ -95,17 +95,17 @@ const industries = [
     image: "/industry/4.jpg",
     icon: Zap,
     applications: [
-      { name: "Industrial Electric Motors Bearings", icon: Zap },
-      { name: "AC Motors Bearings", icon: Zap },
-      { name: "DC Motors Bearings", icon: Zap },
-      { name: "High-Speed Motors Bearings", icon: Gauge },
-      { name: "Gear Motors Bearings", icon: Settings2 },
-      { name: "Servo Motors Bearings", icon: Settings2 },
-      { name: "Traction Motors Bearings", icon: Zap },
-      { name: "Pump Motors Bearings", icon: Fuel },
-      { name: "Fan & Blower Motors Bearings", icon: Wind },
-      { name: "Compressor Motors Bearings", icon: Settings2 },
-      { name: "Generator & Alternator Systems Bearings", icon: Zap },
+      { name: "Industrial Electric Motors", icon: Zap },
+      { name: "AC Motors", icon: Zap },
+      { name: "DC Motors", icon: Zap },
+      { name: "High-Speed Motors", icon: Gauge },
+      { name: "Gear Motors", icon: Settings2 },
+      { name: "Servo Motors", icon: Settings2 },
+      { name: "Traction Motors", icon: Zap },
+      { name: "Pump Motors", icon: Fuel },
+      { name: "Fan & Blower Motors", icon: Wind },
+      { name: "Compressor Motors", icon: Settings2 },
+      { name: "Generator & Alternator Systems", icon: Zap },
     ],
   },
 
@@ -114,18 +114,18 @@ const industries = [
     image: "/industry/5.jpg",
     icon: Settings2,
     applications: [
-      { name: "Belt Conveyors Bearings", icon: Settings2 },
-      { name: "Roller Conveyors Bearings", icon: Settings2 },
-      { name: "Chain Conveyors Bearings", icon: Settings2 },
-      { name: "Mining Conveyors Bearings", icon: Pickaxe },
-      { name: "Overhead Conveyors Bearings", icon: Settings2 },
-      { name: "Slat Conveyors Bearings", icon: Settings2 },
-      { name: "Drag Conveyors Bearings", icon: Settings2 },
-      { name: "Pallet Conveyors Bearings", icon: Settings2 },
-      { name: "Telescopic Conveyors Bearings", icon: Settings2 },
-      { name: "Material Handling Equipment Bearings", icon: PackageCheck },
-      { name: "Cranes & Hoists Bearings", icon: Construction },
-      { name: "Warehouse & Logistics Systems Bearings", icon: Warehouse },
+      { name: "Belt Conveyors", icon: Settings2 },
+      { name: "Roller Conveyors", icon: Settings2 },
+      { name: "Chain Conveyors", icon: Settings2 },
+      { name: "Mining Conveyors", icon: Pickaxe },
+      { name: "Overhead Conveyors", icon: Settings2 },
+      { name: "Slat Conveyors", icon: Settings2 },
+      { name: "Drag Conveyors", icon: Settings2 },
+      { name: "Pallet Conveyors", icon: Settings2 },
+      { name: "Telescopic Conveyors", icon: Settings2 },
+      { name: "Material Handling Equipment", icon: PackageCheck },
+      { name: "Cranes & Hoists", icon: Construction },
+      { name: "Warehouse & Logistics Systems", icon: Warehouse },
     ],
   },
 
@@ -134,13 +134,13 @@ const industries = [
     image: "/industry/2.jpeg",
     icon: Factory,
     applications: [
-      { name: "Rolling Mills Bearings", icon: Factory },
-      { name: "Cement Industry Bearings", icon: Factory },
-      { name: "Paper & Pulp Industry Bearings", icon: Factory },
-      { name: "Sugar Mills Bearings", icon: Factory },
-      { name: "Wind Power Bearings", icon: Wind },
-      { name: "Industrial Gearboxes Bearings", icon: Settings2 },
-      { name: "Heavy Fabrication & Machinery Bearings", icon: Factory },
+      { name: "Rolling Mills", icon: Factory },
+      { name: "Cement Industry", icon: Factory },
+      { name: "Paper & Pulp Industry", icon: Factory },
+      { name: "Sugar Mills", icon: Factory },
+      { name: "Wind Power", icon: Wind },
+      { name: "Industrial Gearboxes", icon: Settings2 },
+      { name: "Heavy Fabrication & Machinery", icon: Factory },
     ],
   },
 
@@ -149,9 +149,9 @@ const industries = [
     image: "/railway.jpg",
     icon: Train,
     applications: [
-      { name: "Engines Bearings", icon: Train },
-      { name: "Wagon Bearings", icon: Train },
-      { name: "Mopeds Bearings", icon: Bike },
+      { name: "Engines", icon: Train },
+      { name: "Wagon", icon: Train },
+      // { name: "Mopeds", icon: Bike },
     ],
   },
 
@@ -160,14 +160,15 @@ const industries = [
     image: "/industry/6.jpg",
     icon: Bike,
     applications: [
-      { name: "Motor Cycles Bearings", icon: Bike },
-      { name: "Scooters Bearings", icon: Bike },
-      { name: "EV 2 Wheelers Bearings", icon: Bike },
-      { name: "3 Wheelers Bearings", icon: Truck },
-      { name: "EV 3 Wheelers Bearings", icon: Truck },
-      { name: "Wheel & Hub Assembly Bearings", icon: CircleDot },
-      { name: "Rolling Mill Gearboxes Bearings", icon: Settings2 },
-      { name: "Cargo 3-Wheelers Bearings", icon: Truck },
+      { name: "Motor Cycles", icon: Bike },
+      { name: "Scooters", icon: Bike },
+      { name: "EV 2 Wheelers", icon: Bike },
+      { name: "3 Wheelers", icon: Truck },
+      { name: "EV 3 Wheelers", icon: Truck },
+      { name: "Wheel & Hub Assembly", icon: CircleDot },
+      { name: "Mopeds", icon: Bike },
+
+      { name: "Cargo 3-Wheelers", icon: Truck },
     ],
   },
 
@@ -176,15 +177,16 @@ const industries = [
     image: "/industry/7.jpg",
     icon: Settings2,
     applications: [
-      { name: "Industrial Gearboxes Bearings", icon: Settings2 },
-      { name: "Automotive Transmissions Bearings", icon: Car },
-      { name: "Agricultural Gearboxes Bearings", icon: Tractor },
-      { name: "Construction Equipment Gearboxes Bearings", icon: Construction },
-      { name: "Mining Gearboxes Bearings", icon: Pickaxe },
-      { name: "Conveyor Drive Systems Bearings", icon: Settings2 },
-      { name: "Planetary Gearboxes Bearings", icon: Settings2 },
-      { name: "Electric Gear Motors Bearings", icon: Zap },
-      { name: "Power Transmission Systems Bearings", icon: Settings2 },
+      { name: "Industrial Gearboxes", icon: Settings2 },
+      { name: "Automotive Transmissions", icon: Car },
+      { name: "Agricultural Gearboxes", icon: Tractor },
+      { name: "Construction Equipment Gearboxes", icon: Construction },
+      { name: "Mining Gearboxes", icon: Pickaxe },
+      { name: "Conveyor Drive Systems", icon: Settings2 },
+      { name: "Planetary Gearboxes", icon: Settings2 },
+      { name: "Electric Gear Motors", icon: Zap },
+      { name: "Power Transmission Systems", icon: Settings2 },
+      { name: "Rolling Mill Gearboxes", icon: Settings2 },
     ],
   },
 
@@ -193,16 +195,16 @@ const industries = [
     image: "/industry/8.jpg",
     icon: Bike,
     applications: [
-      { name: "ATV (All-Terrain Vehicles) Bearings", icon: Bike },
-      { name: "UTV (Utility Task Vehicles) Bearings", icon: Truck },
-      { name: "Sport ATVs Bearings", icon: Bike },
-      { name: "Utility ATVs Bearings", icon: Bike },
-      { name: "Recreational Off-Road Vehicles Bearings", icon: Bike },
-      { name: "Agricultural ATVs / UTVs Bearings", icon: Tractor },
-      { name: "Work & Utility UTVs Bearings", icon: Truck },
-      { name: "Electric ATVs & UTVs Bearings", icon: Zap },
-      { name: "Off-Road Go-Karts & Recreational Vehicles Bearings", icon: Bike },
-      { name: "Dirt Bike Bearings", icon: Bike },
+      { name: "ATV (All-Terrain Vehicles)", icon: Bike },
+      { name: "UTV (Utility Task Vehicles)", icon: Truck },
+      { name: "Sport ATVs", icon: Bike },
+      { name: "Utility ATVs", icon: Bike },
+      { name: "Recreational Off-Road Vehicles", icon: Bike },
+      { name: "Agricultural ATVs / UTVs", icon: Tractor },
+      { name: "Work & Utility UTVs", icon: Truck },
+      { name: "Electric ATVs & UTVs", icon: Zap },
+      { name: "Off-Road Go-Karts & Recreational Vehicles", icon: Bike },
+      { name: "Dirt Bike", icon: Bike },
     ],
   },
 ];
@@ -213,14 +215,14 @@ export default function IndustriesSection() {
   return (
     <>
       <section className="bg-[#EDF4FE] py-10">
-        <div className="mx-auto max-w-7xl px-5 md:px-0">
+        <div className="mx-auto max-w-7xl px-4 md:px-0">
 
           {/* Heading */}
           <span className="text-sm font-semibold uppercase tracking-[4px] text-[#D9251C]">
             Industries We Serve
           </span>
 
-          <h2 className="mb-9 mt-3 text-3xl font-bold text-[#29166F] md:mb-12 md:text-5xl">
+          <h2 className="mb-5 mt-3 text-3xl font-bold text-[#29166F] md:mb-12 md:text-5xl">
             <span className="text-black">Powering Industries</span> Worldwide
           </h2>
 
@@ -229,7 +231,6 @@ export default function IndustriesSection() {
             modules={[Autoplay]}
             loop={true}
             speed={900}
-            spaceBetween={20}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -237,15 +238,19 @@ export default function IndustriesSection() {
             breakpoints={{
               0: {
                 slidesPerView: 2,
+                spaceBetween: 10,
               },
               480: {
                 slidesPerView: 2,
+                spaceBetween: 10,
               },
               768: {
                 slidesPerView: 3,
+                spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 4,
+                spaceBetween: 20,
               },
             }}
           >
@@ -258,7 +263,7 @@ export default function IndustriesSection() {
                     className="
                       group
                       relative
-                      h-[360px]
+                      sm:h-90 h-56
                       cursor-pointer
                       overflow-hidden
                       rounded-xl
@@ -321,13 +326,13 @@ export default function IndustriesSection() {
                     </button>
 
                     {/* Content */}
-                    <div className="absolute bottom-6 left-6 right-6 z-10">
-                      <div className="flex items-center gap-3">
+                    <div className="absolute bottom-2 left-2 md:bottom-6 md:left-6 md:right-6 z-10">
+                      <div className="flex items-center md:gap-3 gap-1">
                         <div
                           className="
                             flex
-                            h-11
-                            w-11
+                            sm:h-11 h-6 w-6
+                            sm:w-11
                             shrink-0
                             items-center
                             justify-center
@@ -341,10 +346,10 @@ export default function IndustriesSection() {
                             group-hover:bg-[#D9251C]
                           "
                         >
-                          <Icon className="h-5 w-5 text-white" />
+                          <Icon className="md:h-5 md:w-5 h-3 w-3 text-white" />
                         </div>
 
-                        <h3 className="text-xl font-semibold text-white">
+                        <h3 className="md:text-xl text-xs text-nowrap line-clamp-1 font-semibold text-white">
                           {item.title}
                         </h3>
                       </div>
@@ -463,12 +468,12 @@ export default function IndustriesSection() {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[3px] text-red-400">
+                    {/* <p className="text-xs font-semibold uppercase tracking-[3px] text-red-400">
                       Industry Applications
-                    </p>
+                    </p> */}
 
                     <h2 className="mt-1 text-2xl font-bold text-white md:text-3xl">
-                      {selectedIndustry.title}
+                      {selectedIndustry.title} Applications
                     </h2>
                   </div>
                 </div>

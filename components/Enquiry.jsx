@@ -168,7 +168,7 @@ Contact: ${values.phone}`;
                   minLength={10}
                   required
                   disabled={loading}
-                  placeholder="8123456789"
+                  placeholder="Phone Number"
                   className="w-full p-3 bg-transparent text-white placeholder-white focus:outline-none"
                 />
               </div>

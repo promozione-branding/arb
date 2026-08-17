@@ -37,7 +37,7 @@ const products = [
   },
   {
     title: "Cylindrical Roller Bearings",
-    image: "/arb-images/CYLINDRICAL BEARING NU-212 E.png",
+    image: "/arb-images/CYLINDRICAL.png",
     desc: "Built to handle heavy radial loads with exceptional rigidity, ensuring efficient performance in electric motors, gearboxes, and heavy industrial equipment.",
     link: "/products/roller-bearings/cylindrical-roller-bearings",
   },
@@ -55,7 +55,7 @@ export default function ProductCategories() {
   return (
     <section className="relative overflow-hidden bg-[#f7f9fc] py-16 ">
 
-    
+
       <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-blue-100/50 blur-[130px]" />
 
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-red-100/40 blur-[130px]" />
@@ -76,15 +76,15 @@ export default function ProductCategories() {
             </div>
 
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-             Bearings We Offer
-              
+              Bearings We Offer
+
             </h2>
 
-          
+
 
           </div>
 
-   
+
 
           <div className="hidden shrink-0 md:block">
             <div className="border-l border-slate-300 pl-5">
@@ -164,7 +164,7 @@ export default function ProductCategories() {
                   "
                 >
 
-               
+
 
                   <div className="absolute left-5 top-5 z-10">
                     <span className="text-xs font-bold tracking-[2px] text-slate-300">
@@ -172,7 +172,7 @@ export default function ProductCategories() {
                     </span>
                   </div>
 
-                 
+
 
                   <div className="absolute right-5 top-5 z-10">
                     <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[9px] font-bold uppercase tracking-[1.5px] text-slate-500 backdrop-blur">
@@ -180,11 +180,11 @@ export default function ProductCategories() {
                     </span>
                   </div>
 
-           
+
 
                   <div className="relative flex h-[250px] items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/50 px-8 pt-8">
 
-                
+
                     <div
                       className="
                         absolute
@@ -199,7 +199,7 @@ export default function ProductCategories() {
                         group-hover:border-blue-200
                       "
                     />
-                    
+
                     <div
                       className="
                         absolute
@@ -215,7 +215,7 @@ export default function ProductCategories() {
                       "
                     />
 
-                  
+
 
                     <Image
                       src={item.image}
@@ -239,13 +239,13 @@ export default function ProductCategories() {
                       "
                     />
 
-                  
+
 
                     <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
                   </div>
 
-               
+
                   <div className="flex flex-1 flex-col p-6">
 
                     <h3 className="min-h-[56px] text-lg font-bold leading-7 text-slate-900 transition-colors duration-300 group-hover:text-[#1D4ED8]">
@@ -256,11 +256,11 @@ export default function ProductCategories() {
                       {item.desc}
                     </p>
 
-              
+
 
                     <div className="my-5 h-px w-full bg-slate-100" />
 
-                
+
 
                     <Link
                       href={item.link}
@@ -333,7 +333,7 @@ export default function ProductCategories() {
 
         </div>
 
-       
+
 
         <div className="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
 

@@ -1,6 +1,6 @@
 export default {
   category: {
-    name: " Wheel Bearings",
+    name: "Wheel Bearings / Wheel Bearings Kit",
     slug: "wheel-bearing",
     metaTitle: "Premium Wheel Bearings Manufacturer | ARB Bearings",
     metaDescription: "Discover premium wheel bearings from ARB Bearings, engineered for smooth rotation, reduced friction, durability and reliable performance in demanding applications.",
@@ -10,7 +10,7 @@ export default {
         title: "Wheel Bearings ",
         description:
           "Precision-engineered wheel bearings designed for smooth operation, durability, and reliable performance across automotive applications.",
-        // image: "/ball-bearings.png",
+        // image: "/3.png",
       },
 
       intro: {
@@ -25,7 +25,7 @@ export default {
         description:
           "ARB wheel bearings are precision-engineered to deliver superior durability, reduced friction, and reliable performance for passenger and commercial vehicles. Manufactured to stringent quality standards, they ensure safe, efficient, and long-lasting operation.",
 
-        image: "/ball-bearings.png",
+        image: "/3.png",
         features: [
           "Precision Engineered",
           "Long Service Life",
@@ -40,7 +40,7 @@ export default {
         title: "Built for Maximum Reliability & Precision ",
         description:
           "ARB wheel bearings are engineered to deliver exceptional durability, smooth operation, and reliable performance in demanding automotive applications. Manufactured with precision engineering and stringent quality standards, our wheel bearings ensure reduced friction, enhanced safety, and long service life.",
-        image: "/ball-bearings.png",
+        image: "/3.png",
         stats: {
           title: "2x",
           text: "Low Friction Performance",
@@ -56,20 +56,20 @@ export default {
   },
 
   subCategory: {
-    name: "Wheel Bearings",
+    name: "Wheel Bearings / Wheel Bearings Kit",
     slug: "wheel-bearings",
     heroTitle: "Wheel Bearings",
     image: "/arb-images/Wheel Bearing.png",
     description:
-      "Premium wheel bearings designed for smooth wheel rotation, reduced friction, and dependable performance in automotive and heavy-duty applications.",
+      "Complete wheel bearing kits for passenger car, Engineered for precise fitment, easy installation and dependable wheel hub performance.",
     metaTitle: "Premium Wheel Bearings Manufacturer | ARB Bearings",
     metaDescription: "Discover premium wheel bearings from ARB Bearings, engineered for smooth rotation, reduced friction, durability and reliable performance in demanding applications.",
 
     features: [
-      "Smooth Rotation",
-      "	High Load Endurance",
-      "Sealed Protection",
-      "	Extended Bearings Life"
+      "Easy Installation",
+      "Durable performance",
+      "High Load Endurance",
+      "Extended life"
 
 
     ],

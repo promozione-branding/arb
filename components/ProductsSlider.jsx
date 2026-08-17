@@ -54,7 +54,9 @@ const products = [
     link: "/products/wheel-bearing",
     desc: "Precision wheel hub bearings, smooth performance, long-lasting reliability",
     image: "/arb-images/wheel.png",
-
+    images: [
+      "/arb-images/123.png",
+    ],
     applications: [
       "Passenger Car",
       "Agricultural",
@@ -84,11 +86,11 @@ export default function ProductSlider() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <section className="relative overflow-hidden bg-blue-50 px-5 py-15">
+    <section className="relative overflow-hidden bg-blue-50 px-4 md:py-15 py-8">
       <div className="mx-auto max-w-7xl">
 
         {/* Heading */}
-        <div className="mb-9 flex items-end justify-between md:mb-10">
+        <div className="mb-5 flex items-end justify-between md:mb-10">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[3px] text-red-600">
               Our Products
@@ -102,7 +104,7 @@ export default function ProductSlider() {
         </div>
 
         {/* Swiper */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 md:gap-5 gap-3">
           {products.map((item, index) => (
             <>
               {/* Card */}
@@ -112,7 +114,7 @@ export default function ProductSlider() {
                     relative
                     h-full
                     overflow-hidden
-                    rounded-3xl
+                    md:rounded-3xl rounded-lg
                     border
                     border-slate-200
                     bg-white
@@ -150,7 +152,7 @@ export default function ProductSlider() {
                   className="
                       relative
                       flex
-                      h-72
+                      md:h-72 h-32
                       items-center
                       justify-center
                       overflow-hidden
@@ -209,7 +211,7 @@ export default function ProductSlider() {
                         alt={item.title}
                         width={450}
                         height={350}
-                        className="h-74 w-74 object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
+                        className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
                       />
                     </SwiperSlide>
 
@@ -235,12 +237,12 @@ export default function ProductSlider() {
                     onClick={() => setSelectedProduct(item)}
                     className="
                         absolute
-                        right-5
-                        top-5
+                        md:right-5 right-2 top-2
+                        md:top-5
                         z-30
                         flex
-                        h-11
-                        w-11
+                        md:h-11 h-8 w-8
+                        md:w-11
                         items-center
                         justify-center
                         rounded-full
@@ -258,13 +260,13 @@ export default function ProductSlider() {
                 </div>
 
                 {/* Content */}
-                <div className="flex h-[200px] flex-col p-4">
+                <div className="flex md:h-[200px] flex-col md:p-4 p-2">
 
-                  <h3 className="line-clamp-2 text-xl font-bold text-slate-900">
+                  <h3 className="line-clamp-2 md:text-xl text-base font-bold text-slate-900">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">
+                  <p className="md:mt-3 mt-1 md:line-clamp-3 line-clamp-2 text-sm leading-6 text-slate-600">
                     {item.desc}
                   </p>
 
@@ -274,7 +276,7 @@ export default function ProductSlider() {
                     <Link
                       href={item.link}
                       className="
-                          text-sm
+                          md:text-sm text-xs
                           font-semibold
                           text-[#1C398E]
                           transition
@@ -287,8 +289,8 @@ export default function ProductSlider() {
                     <div
                       className="
                           flex
-                          h-10
-                          w-10
+                          md:h-10 h-8 w-8
+                          md:w-10
                           items-center
                           justify-center
                           rounded-full
