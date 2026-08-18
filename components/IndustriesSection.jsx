@@ -38,7 +38,7 @@ import { useState } from "react";
 const industries = [
   {
     title: "Agriculture",
-    image: "/industry/12.jpg",
+    image: "/industry/5 Agriculture.webp",
     icon: Tractor,
     applications: [
       { name: "Tractors", icon: Tractor },
@@ -55,7 +55,7 @@ const industries = [
 
   {
     title: "Automotive",
-    image: "/industry/13.avif",
+    image: "/industry/2 Automotive.webp",
     icon: Car,
     applications: [
       { name: "Cars", icon: Car },
@@ -131,7 +131,7 @@ const industries = [
 
   {
     title: "Heavy Industries",
-    image: "/industry/2.jpeg",
+    image: "/industry/1 Heavy Industry Steel Rolling Mills.webp",
     icon: Factory,
     applications: [
       { name: "Rolling Mills", icon: Factory },
@@ -157,7 +157,7 @@ const industries = [
 
   {
     title: "2 & 3 Wheelers",
-    image: "/industry/6.jpg",
+    image: "/industry/2 and 3 Wheeler.webp",
     icon: Bike,
     applications: [
       { name: "Motor Cycles", icon: Bike },
@@ -174,7 +174,7 @@ const industries = [
 
   {
     title: "Gear Box & Power Transmission",
-    image: "/industry/7.jpg",
+    image: "/industry/3 Gear Box.webp",
     icon: Settings2,
     applications: [
       { name: "Industrial Gearboxes", icon: Settings2 },
@@ -192,7 +192,7 @@ const industries = [
 
   {
     title: "ATV / UTV",
-    image: "/industry/8.jpg",
+    image: "/industry/4 ATV and UTV.webp",
     icon: Bike,
     applications: [
       { name: "ATV (All-Terrain Vehicles)", icon: Bike },
@@ -263,7 +263,7 @@ export default function IndustriesSection() {
                     className="
                       group
                       relative
-                      sm:h-90 h-56
+                      sm:h-80 h-56
                       cursor-pointer
                       overflow-hidden
                       rounded-xl
@@ -280,7 +280,7 @@ export default function IndustriesSection() {
                       width={100}
                       height={100}
                       className="w-full h-full
-                        object-cover
+                        object-cove
                         transition
                         duration-700
                         group-hover:scale-110

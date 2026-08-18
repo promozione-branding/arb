@@ -9,6 +9,7 @@ import Enquiry from "@/components/Enquiry";
 import Catpopup from "@/components/Catpopup";
 import { useState } from "react";
 import TwentyFourSevenOutlets from "@/components/Outlet";
+import ManufacturingSection from "@/components/ManufacturingSection";
 export default function AboutPage() {
   const why = [
     "60+ Years of Industry Expertise",
@@ -49,7 +50,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-3 py-10 grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-4xl font-bold mb-5">About ARB Bearings</h2>
-          <p className="text-md leading-relaxed ">
+          <p className="text-sm">
             Established in 1990 and headquartered in Delhi, India, ARB Bearings is a trusted bearing manufacturer with 60+ years of collective industry expertise, delivering reliable bearing solutions to customers worldwide. Built on a foundation
             of engineering excellence, innovation, and customer trust, we
             specialize in manufacturing high-quality bearings and
@@ -72,7 +73,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
-          <Image src="/ab1.webp" alt="" fill className="object-cover" />
+          <Image src="/Untitled design.webp" alt="img" fill className="object-cover" />
         </div>
       </section>
 
@@ -122,7 +123,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* <ManufacturingSection /> */}
+
       <section className="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-2 lg:gap-14 gap-5 items-center">
+
         <div className="relative rounded-3xl overflow-hidden items-center">
           <video src="/aboutVideo.mp4" className="w-full md:h-full h-[35vh] object-fill"
             autoPlay
@@ -132,6 +136,7 @@ export default function AboutPage() {
             preload="auto" />
           <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" />
         </div>
+
         <div>
           <h2 className="text-4xl font-bold mb-4">Manufacturing Excellence</h2>
           <p className="text-base">

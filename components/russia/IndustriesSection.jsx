@@ -37,7 +37,7 @@ import "swiper/css";
 const industries = [
     {
         title: "Сельское хозяйство",
-        image: "/industry/12.jpg",
+        image: "/industry/5 Agriculture.webp",
         icon: Tractor,
         applications: [
             { name: "Тракторы", icon: Tractor },
@@ -57,7 +57,7 @@ const industries = [
 
     {
         title: "Автомобильная промышленность",
-        image: "/industry/13.avif",
+        image: "/industry/2 Automotive.webp",
         icon: Car,
         applications: [
             { name: "Легковые автомобили", icon: Car },
@@ -148,7 +148,7 @@ const industries = [
 
     {
         title: "Тяжёлая промышленность",
-        image: "/industry/2.jpeg",
+        image: "/industry/1 Heavy Industry Steel Rolling Mills.webp",
         icon: Factory,
         applications: [
             { name: "Прокатные станы", icon: Factory },
@@ -179,7 +179,7 @@ const industries = [
 
     {
         title: "2- и 3-колёсная техника",
-        image: "/industry/6.jpg",
+        image: "/industry/2 and 3 Wheeler.webp",
         icon: Bike,
         applications: [
             { name: "Мотоциклы", icon: Bike },
@@ -207,7 +207,7 @@ const industries = [
 
     {
         title: "Редукторы и силовые передачи",
-        image: "/industry/7.jpg",
+        image: "/industry/3 Gear Box.webp",
         icon: Settings2,
         applications: [
             { name: "Промышленные редукторы", icon: Settings2 },
@@ -240,7 +240,7 @@ const industries = [
 
     {
         title: "ATV / UTV",
-        image: "/industry/8.jpg",
+        image: "/industry/4 ATV and UTV.webp",
         icon: Bike,
         applications: [
             {
@@ -332,16 +332,16 @@ export default function IndustriesSection() {
                                 <SwiperSlide key={index}>
                                     <div
                                         className="
-                                        group
-                                        relative
-                                        sm:h-90 h-56
-                                        cursor-pointer
-                                        overflow-hidden
-                                        rounded-xl
-                                        border
-                                        border-white/10
-                                        bg-[#09192d]
-                                      "
+                                                         group
+                                                         relative
+                                                         sm:h-80 h-56
+                                                         cursor-pointer
+                                                         overflow-hidden
+                                                         rounded-xl
+                                                         border
+                                                         border-white/10
+                                                         bg-[#09192d]
+                                                       "
                                     >
                                         {/* Image */}
                                         <Image
@@ -351,11 +351,11 @@ export default function IndustriesSection() {
                                             width={100}
                                             height={100}
                                             className="w-full h-full
-                                          object-cover
-                                          transition
-                                          duration-700
-                                          group-hover:scale-110
-                                        "
+                                                           object-cove
+                                                           transition
+                                                           duration-700
+                                                           group-hover:scale-110
+                                                         "
                                         />
 
                                         {/* Dark Gradient */}
@@ -369,31 +369,31 @@ export default function IndustriesSection() {
                                             onClick={() => setSelectedIndustry(item)}
                                             aria-label={`View ${item.title} applications`}
                                             className="
-                                          absolute
-                                          md:right-4 right-1 top-1
-                                          md:top-4
-                                          z-20
-                                          flex
-                                          h-11
-                                          w-11
-                                          scale-75
-                                          items-center
-                                          justify-center
-                                          rounded-full
-                                          border
-                                          border-white/20
-                                          bg-white/10
-                                          text-white
-                                          lg:opacity-0
-                                          shadow-xl
-                                          backdrop-blur-md
-                                          transition-all
-                                          duration-300
-                                          hover:scale-110
-                                          hover:bg-[#D9251C]
-                                          group-hover:scale-100
-                                          group-hover:opacity-100
-                                        "
+                                                           absolute
+                                                           md:right-4 right-1 top-1
+                                                           md:top-4
+                                                           z-20
+                                                           flex
+                                                           h-11
+                                                           w-11
+                                                           scale-75
+                                                           items-center
+                                                           justify-center
+                                                           rounded-full
+                                                           border
+                                                           border-white/20
+                                                           bg-white/10
+                                                           text-white
+                                                           lg:opacity-0
+                                                           shadow-xl
+                                                           backdrop-blur-md
+                                                           transition-all
+                                                           duration-300
+                                                           hover:scale-110
+                                                           hover:bg-[#D9251C]
+                                                           group-hover:scale-100
+                                                           group-hover:opacity-100
+                                                         "
                                         >
                                             <Eye className="h-5 w-5" />
                                         </button>
@@ -403,21 +403,21 @@ export default function IndustriesSection() {
                                             <div className="flex items-center md:gap-3 gap-1">
                                                 <div
                                                     className="
-                                              flex
-                                              sm:h-11 h-5 w-5
-                                              sm:w-11
-                                              shrink-0
-                                              items-center
-                                              justify-center
-                                              rounded-full
-                                              border
-                                              border-white/20
-                                              bg-white/10
-                                              backdrop-blur
-                                              transition
-                                              duration-300
-                                              group-hover:bg-[#D9251C]
-                                            "
+                                                               flex
+                                                               sm:h-11 h-5 w-5
+                                                               sm:w-11
+                                                               shrink-0
+                                                               items-center
+                                                               justify-center
+                                                               rounded-full
+                                                               border
+                                                               border-white/20
+                                                               bg-white/10
+                                                               backdrop-blur
+                                                               transition
+                                                               duration-300
+                                                               group-hover:bg-[#D9251C]
+                                                             "
                                                 >
                                                     <Icon className="md:h-5 md:w-5 h-3 w-3 text-white" />
                                                 </div>
@@ -431,15 +431,15 @@ export default function IndustriesSection() {
                                         {/* Border */}
                                         <div
                                             className="
-                                          absolute
-                                          inset-0
-                                          rounded-xl
-                                          border
-                                          border-transparent
-                                          transition-all
-                                          duration-500
-                                          group-hover:border-blue-400/60
-                                        "
+                                                           absolute
+                                                           inset-0
+                                                           rounded-xl
+                                                           border
+                                                           border-transparent
+                                                           transition-all
+                                                           duration-500
+                                                           group-hover:border-blue-400/60
+                                                         "
                                         />
                                     </div>
                                 </SwiperSlide>

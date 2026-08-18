@@ -36,8 +36,8 @@ const products = [
     image: "/arb-images/prodtaper.png",
     images: [
       "/arb-images/roller 1.png",
-      "/arb-images/roller 2.png",
-      "/arb-images/roller 3.png",
+      // "/arb-images/roller 2.png",
+      // "/arb-images/roller 3.png",
     ],
     applications: [
       "Automobiles",

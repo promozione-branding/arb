@@ -19,7 +19,7 @@ export default function AboutSection() {
     "Industrial",
     "Railway",
     "Mining",
-    "Power",
+    "ATV/UTV",
     "Construction",
     "Many More",
   ];
