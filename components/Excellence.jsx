@@ -28,11 +28,11 @@ const features = [
 
 export default function Excellence() {
   return (
-    <section className="relative overflow-hidden bg-white py-15">
+    <section className="relative overflow-hidden bg-white md:py-15 py-10">
       {/* Background */}
 
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-20 lg:grid-cols-2">
+      <div className="relative mx-auto max-w-7xl px-4">
+        <div className="grid items-center lg:gap-20 gap-10 lg:grid-cols-2">
           {/* Left Content */}
           <div>
             <span className="inline-flex rounded-full   text-sm font-semibold tracking-[0.3em] text-red-600">
@@ -59,7 +59,7 @@ export default function Excellence() {
           </div>
 
           {/* Right Cards */}
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid sm:gap-6 gap-2 sm:grid-cols-2">
             {features.map((item, index) => {
               const Icon = item.icon;
 

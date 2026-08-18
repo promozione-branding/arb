@@ -28,7 +28,7 @@ export default function AboutPage() {
 
   return (
     <main className="bg-white text-slate-800">
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative md:h-[70vh] h-[50vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/count.avif"
           alt="About ARB Bearings"
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <p className="uppercase tracking-[0.3em] text-red-500 ">
             About ARB Bearings
           </p>
-          <h2 className="text-5xl md:text-7xl font-bold">
+          <h2 className="text-4xl md:text-7xl font-bold">
             Leading Bearings Manufacturer Since 1990
           </h2>
         </div>
@@ -77,9 +77,9 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-blue-50 py-10">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-8">Our Legacy</h2>
-          <div className="bg-white rounded-3xl p-10 shadow-xl">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold md:mb-8 mb-4">Our Legacy</h2>
+          <div className="bg-white rounded-3xl md:p-10 p-3 shadow-xl">
             <p className="text-lg leading-8">
               For more than three decades, ARB Bearings has been committed to
               engineering excellence and continuous innovation. Built on over
@@ -100,8 +100,8 @@ export default function AboutPage() {
       <section className="relative py-10">
         <Image src="/test4.jfif" alt="" fill className="object-cover" />
         <div className="absolute inset-0 bg-blue-950/80" />
-        <div className="relative max-w-5xl mx-auto px-6 text-center text-white">
-          <h2 className="text-5xl font-bold mb-6">
+        <div className="relative max-w-5xl mx-auto px-4 text-center text-white">
+          <h2 className="md:text-5xl text-4xl font-bold md:mb-6 mb-4">
             Engineered to Keep Industries Moving
           </h2>
           <p className="text-lg leading-8">
@@ -111,7 +111,7 @@ export default function AboutPage() {
             Explore our products and find the right bearing solution for your
             business.
           </p>
-          <div className="flex flex-wrap justify-center gap-5 mt-10">
+          <div className="flex flex-wrap justify-center gap-5 md:mt-10 mt-5">
             <Link href="/products/ball-bearing" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold flex items-center gap-2">
               Explore Products <ArrowRight size={18} />
             </Link>
@@ -122,9 +122,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-14 items-center">
+      <section className="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-2 lg:gap-14 gap-5 items-center">
         <div className="relative rounded-3xl overflow-hidden items-center">
-          <video src="/aboutVideo.mp4" className="w-full object-fill"
+          <video src="/aboutVideo.mp4" className="w-full md:h-full h-[35vh] object-fill"
             autoPlay
             muted
             loop
@@ -172,11 +172,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-10">
-        <h2 className="text-4xl font-bold text-center mb-12">
+      <section className="max-w-7xl mx-auto px-4 py-10">
+        <h2 className="text-4xl font-bold text-center md:mb-12 mb-5">
           Why ARB Bearings?
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {why.map((i) => (
 
 
@@ -192,8 +193,8 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-gradient-to-r from-[#28186E] to-slate-900 text-white py-10">
-        <div className="max-w-5xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold mb-5">
+        <div className="max-w-5xl mx-auto text-center px-4">
+          <h2 className="md:text-4xl text-3xl font-bold mb-5">
             Ready to Partner with a Trusted Bearings manufacturer?
           </h2>
           <p className="text-lg leading-8">
@@ -207,7 +208,7 @@ export default function AboutPage() {
           <p className="text-2xl font-semibold mt-5">
             Let's Build the Future of Motion Together.
           </p>
-          <div className="flex justify-center gap-5 mt-6">
+          <div className="flex md:flex-row flex-col justify-center gap-5 mt-6">
             <Link href="/contact-us" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold">
               Contact Us
             </Link>

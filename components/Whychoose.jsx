@@ -60,7 +60,7 @@ const whyChooseData = [
 
 export default function WhyChooseARB() {
   return (
-    <section className="relative bg-gray-50 py-20 sm:py-24 lg:py-32">
+    <section className="relative bg-gray-50 sm:py-24 lg:py-32">
 
       {/* Background Grid */}
       <div className="pointer-events-none absolute inset-0">
@@ -91,7 +91,7 @@ export default function WhyChooseARB() {
                     relative
                     border-b
                     border-gray-300
-                    py-8
+                    py-5
                     sm:py-10
                   "
                 >
@@ -151,7 +151,7 @@ export default function WhyChooseARB() {
                   </p>
 
                   {/* Hover Line */}
-                  <div className="mt-6 h-px w-0 bg-red-500 transition-all duration-500 group-hover:w-12" />
+                  <div className="md:mt-6 h-px w-0 bg-red-500 transition-all duration-500 group-hover:w-12" />
                 </article>
               );
             })}

@@ -413,25 +413,25 @@ export default function ProductSlider() {
               </div>
 
               {/* Content */}
-              <div className="p-5 md:p-7">
+              <div className="p-4 md:p-7">
 
                 <span className="text-sm font-semibold uppercase tracking-widest text-red-500">
                   Bearings Details
                 </span>
 
-                <h2 className="mt-3 text-3xl font-bold text-[#091A2D]">
+                <h2 className="md:mt-3 text-3xl font-bold text-[#091A2D]">
                   {selectedProduct.title}
                 </h2>
 
-                <p className="mt-5 leading-7 text-gray-600">
+                <p className="md:mt-5 leading-7 text-gray-600">
                   {selectedProduct.desc}
                 </p>
 
-                <h3 className="mt-8 text-xl font-semibold text-[#091A2D]">
+                <h3 className="md:mt-8 mt-2 text-xl font-semibold text-[#091A2D]">
                   Applications
                 </h3>
 
-                <ul className="mt-4 space-y-3">
+                <ul className="md:mt-4 mt-1 md:space-y-3">
                   {selectedProduct.applications.map((app, i) => (
                     <li
                       key={i}

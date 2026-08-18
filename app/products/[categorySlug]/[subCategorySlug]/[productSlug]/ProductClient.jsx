@@ -112,12 +112,10 @@ ${message}`;
 
   return (
     <div className="min-h-screen  bg-[#f8fafc]">
-      
 
-      <section className="mx-auto grid w-full grid-cols-1 px-4 sm:px-6 lg:grid-cols-2 lg:px-6">
-       
 
-        <div className="border-r-0 border-slate-200 lg:border-r">
+      <section className="mx-auto grid w-full grid-cols-1 lg:grid-cols-2">
+        <div className="border-r-0 border-slate-200 lg:border-r px-4 sm:px-6 lg:px-6">
           <div
             className="
               sticky
@@ -131,8 +129,8 @@ ${message}`;
               
             "
           >
-          <div
-  className="
+            <div
+              className="
     group
     relative
     mx-auto
@@ -146,11 +144,11 @@ ${message}`;
     md:p-7
     lg:p-8
   "
->
-  {/* Background Glow */}
+            >
+              {/* Background Glow */}
 
-  <div
-    className="
+              <div
+                className="
       pointer-events-none
       absolute
       left-1/2
@@ -168,12 +166,12 @@ ${message}`;
       group-hover:w-72
       group-hover:bg-[#28186C]/15
     "
-  />
+              />
 
-  {/* Decorative Ring */}
+              {/* Decorative Ring */}
 
-  <div
-    className="
+              <div
+                className="
       pointer-events-none
       absolute
       left-1/2
@@ -190,12 +188,12 @@ ${message}`;
       group-hover:scale-110
       group-hover:border-[#28186C]/10
     "
-  />
+              />
 
-  {/* Cursor Zoom */}
+              {/* Cursor Zoom */}
 
-  <div
-    className="
+              <div
+                className="
       relative
       z-10
       h-[360px]
@@ -204,27 +202,27 @@ ${message}`;
       md:h-[520px]
       lg:h-[600px]
     "
-  >
-    <CursorZoomImage
-      src={product.image}
-      alt={product.model}
-      zoom={1.35}
-      className="
+              >
+                <CursorZoomImage
+                  src={product.image}
+                  alt={product.model}
+                  zoom={1.35}
+                  className="
         drop-shadow-[0_25px_35px_rgba(0,0,0,0.12)]
         transition-[filter]
         duration-500
         group-hover:drop-shadow-[0_30px_50px_rgba(40,24,108,0.22)]
       "
-    />
-  </div>
+                />
+              </div>
 
-  {/* Premium Shine */}
+              {/* Premium Shine */}
 
- 
-  {/* Zoom Label */}
 
-  <div
-    className="
+              {/* Zoom Label */}
+
+              <div
+                className="
       pointer-events-none
       absolute
       bottom-5
@@ -250,10 +248,10 @@ ${message}`;
       translate-y-2
       sm:text-xs
     "
-  >
-    MOVE TO EXPLORE
-  </div>
-</div>
+              >
+                MOVE TO EXPLORE
+              </div>
+            </div>
 
             <div
               className="
@@ -286,10 +284,8 @@ ${message}`;
           </div>
         </div>
 
-      
-
         <div className="bg-[#edf6ff] px-4 py-8 sm:px-6 sm:py-10 md:px-8 lg:px-10 lg:py-14">
-         
+
 
           <div
             className="
@@ -399,7 +395,7 @@ ${message}`;
                   {feature}
                 </p>
 
-                
+
               </div>
             ))}
           </div>
@@ -465,7 +461,7 @@ ${message}`;
             </button>
           </div>
 
-       
+
 
           <div
             className="
@@ -490,10 +486,9 @@ ${message}`;
                 transition
                 sm:pb-4
                 sm:text-sm
-                ${
-                  activeTab === "overview"
-                    ? "border-b-2 border-red-600"
-                    : "border-b-2 border-transparent"
+                ${activeTab === "overview"
+                  ? "border-b-2 border-red-600"
+                  : "border-b-2 border-transparent"
                 }
               `}
             >
@@ -510,10 +505,9 @@ ${message}`;
                 transition
                 sm:pb-4
                 sm:text-sm
-                ${
-                  activeTab === "downloads"
-                    ? "border-b-2 border-red-600"
-                    : "border-b-2 border-transparent"
+                ${activeTab === "downloads"
+                  ? "border-b-2 border-red-600"
+                  : "border-b-2 border-transparent"
                 }
               `}
             >
@@ -521,7 +515,7 @@ ${message}`;
             </button>
           </div>
 
-     
+
 
           {activeTab === "overview" && (
             <div className="py-8 sm:py-12">
@@ -605,7 +599,7 @@ ${message}`;
             </div>
           )}
 
-        
+
 
           {activeTab === "downloads" && (
             <div className="py-10 sm:py-14">
@@ -672,7 +666,7 @@ ${message}`;
           </h2>
 
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-5 lg:gap-10">
-           
+
 
             <div className="lg:col-span-3">
               <div

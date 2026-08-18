@@ -276,8 +276,10 @@ export default function IndustriesSection() {
                     <Image
                       src={item.image}
                       alt={item.title}
-                      fill
-                      className="
+                      // fill
+                      width={100}
+                      height={100}
+                      className="w-full h-full
                         object-cover
                         transition
                         duration-700
@@ -297,8 +299,8 @@ export default function IndustriesSection() {
                       aria-label={`View ${item.title} applications`}
                       className="
                         absolute
-                        right-4
-                        top-4
+                        md:right-4 right-1 top-1
+                        md:top-4
                         z-20
                         flex
                         h-11
@@ -311,7 +313,7 @@ export default function IndustriesSection() {
                         border-white/20
                         bg-white/10
                         text-white
-                        opacity-0
+                        lg:opacity-0
                         shadow-xl
                         backdrop-blur-md
                         transition-all
@@ -331,7 +333,7 @@ export default function IndustriesSection() {
                         <div
                           className="
                             flex
-                            sm:h-11 h-6 w-6
+                            sm:h-11 h-5 w-5
                             sm:w-11
                             shrink-0
                             items-center
@@ -349,7 +351,7 @@ export default function IndustriesSection() {
                           <Icon className="md:h-5 md:w-5 h-3 w-3 text-white" />
                         </div>
 
-                        <h3 className="md:text-xl text-xs text-nowrap line-clamp-1 font-semibold text-white">
+                        <h3 className="md:text-xl text-[10px] text- line-clamp-1 font-semibold text-white">
                           {item.title}
                         </h3>
                       </div>

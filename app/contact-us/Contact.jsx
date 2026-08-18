@@ -160,7 +160,7 @@ ${form.message}
         </div>
       </section>
 
-      <section className="relative max-w-7xl mx-auto -mt-12 px-6 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <section className="relative max-w-7xl mx-auto -mt-12 px-4 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
         {contactCards.map((card, index) => {
           const Icon = card.icon;
@@ -204,7 +204,7 @@ ${form.message}
 
 
 
-      <section className="max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-10 items-start">
+      <section className="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-2 gap-10 items-start">
         <div className="rounded-[32px] border border-slate-200 bg-white p-8 lg:p-10 shadow-xl">
 
 
@@ -398,12 +398,12 @@ ${form.message}
 
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-20">
+      <section className="max-w-7xl mx-auto px-4 pb-20">
         <iframe className="w-full h-[420px] rounded-3xl"
           src="https://www.google.com/maps?q=New+Delhi&output=embed" />
       </section>
 
-      <section className="max-w-4xl mx-auto px-6 pb-24">
+      <section className="max-w-4xl mx-auto px-4 pb-24">
         <h2 className="text-4xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map(([q, a], i) => (

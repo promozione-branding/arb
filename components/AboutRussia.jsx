@@ -60,20 +60,20 @@ export default function AboutRussia() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-15">
+    <section className="relative overflow-hidden bg-white md:py-15 py-10">
 
       <div className="absolute inset-0">
         <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[150px]" />
         <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-blue-100 blur-[140px]" />
       </div>
 
-      <div className="relative w-full mx-auto px-8">
+      <div className="relative w-full mx-auto md:px-8 px-4">
         <div className="grid md:grid-cols-2 gap-5 items-center">
           <div>
             <div className="relative overflow-hidden rounded-[26px] shadow-2xl group">
               <video
                 ref={videoRef}
-                className="                  w-full                h-full   object-fill"
+                className="w-full md:h-full h-[35vh] object-fill"
                 autoPlay
                 muted
                 loop

@@ -30,7 +30,7 @@ export default function SubCategoryPage({ params }) {
           HERO
       ========================================================== */}
 
-            <section className="relative overflow-hidden border-b bg-gradient-to-br from-slate-50 via-white to-blue-50/40">
+            <section className="relative overflow-hidden border-b md:pb-0 pb-10 bg-gradient-to-br from-slate-50 via-white to-blue-50/40">
                 {/* Background decoration */}
 
                 <div

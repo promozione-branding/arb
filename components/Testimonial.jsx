@@ -64,7 +64,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative bg-[#edf1f4] py-15 overflow-hidden">
+    <section className="relative bg-[#edf1f4] md:pt-15 pb-5 pt-10 overflow-hidden">
       <div className="absolute inset-0 flex justify-center items-start pointer-events-none ">
         <Image
           src="/imgi_49_bg-map.png"
@@ -83,12 +83,12 @@ export default function Testimonials() {
             </span>
           </div>
 
-          <h2 className="mt-3 text-4xl md:text-5xl  font-black text-[#16110b] tracking-tight">
+          <h2 className="mt-3 text-3xl md:text-5xl  font-black text-[#16110b] tracking-tight">
             Happy With Customers & Clients
           </h2>
         </div>
 
-        <div className="mt-10">
+        <div className="md:mt-10 mt-5">
           <Swiper
             modules={[Autoplay, Pagination]}
             slidesPerView={1}
@@ -108,41 +108,35 @@ export default function Testimonials() {
                 spaceBetween: 30,
               },
             }}
-            className="testimonialSwiper"
+            className="testimonialSwiper pb-12!"
           >
             {testimonials.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="relative bg-white p-11 h-full">
+                <div className="relative flex h-full min-h-60 flex-col overflow-hidden bg-white p-5 sm:p-7 md:p-9 lg:p-11">
                   {/* Quote */}
-
-                  <div className="absolute left-6 top-3 text-[140px] text-[#28186C] leading-none font-serif select-none">
+                  <div className="absolute left-3 top-1 select-none font-serif text-[90px] leading-none text-[#28186C] sm:left-4 sm:top-2 sm:text-[110px] md:left-5 md:text-[125px] lg:left-6 lg:top-3 lg:text-[140px]">
                     “
                   </div>
 
-                  {/* Yellow Line */}
-
-                  <div className="absolute left-12 top-20 w-[5px] h-32 bg-[#DA251C]" />
+                  {/* Red Line */}
+                  <div className="absolute left-5 top-20 h-24 w-[4px] bg-[#DA251C] sm:left-7 sm:top-24 sm:h-28 md:left-9 md:top-28 md:h-32 lg:left-12 lg:top-20 lg:h-32" />
 
                   {/* Text */}
-
-                  <div className="relative pl-12">
-                    <p className="text-[20px] italic leading-[2] text-[#171717]">
+                  <div className="relative flex-1 pl-7 sm:pl-9 md:pl-10 lg:pl-12">
+                    <p className="text-base italic leading-7 text-[#171717] sm:text-lg sm:leading-8 md:text-[19px] md:leading-[1.8] lg:text-[20px] lg:leading-[2]">
                       {item.text}
                     </p>
                   </div>
 
                   {/* Bottom */}
+                  <div className="relative mt-2 border-t border-gray-100 pt-5 sm:mt-10 sm:pt-6 md:mt-12 lg:mt-14 lg:border-0 lg:pt-0">
+                    <h3 className="text-xl font-black leading-tight text-[#28186C] sm:text-2xl md:text-3xl">
+                      {item.name}
+                    </h3>
 
-                  <div className="flex items-center gap-6 mt-14">
-                    <div>
-                      <h3 className="text-3xl  font-black text-[#28186C]">
-                        {item.name}
-                      </h3>
-
-                      <p className="mt-2 text-[#DA251C] text-md font-semibold">
-                        {item.role}
-                      </p>
-                    </div>
+                    <p className="mt-1.5 text-sm font-semibold text-[#DA251C] sm:text-base md:mt-2">
+                      {item.role}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

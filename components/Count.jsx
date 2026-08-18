@@ -1,4 +1,3 @@
-
 "use client";
 
 import CountUp from "react-countup";
@@ -57,24 +56,21 @@ export default function StatsSection() {
         bg-cover
         bg-center
         bg-no-repeat
-        bg-scroll
-        py-12
-        sm:py-16
+        py-10
+        sm:py-14
         lg:bg-fixed
         lg:py-20
       "
     >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#06111f]/40" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#06111f]/50" />
 
-      {/* Content */}
+      {/* Container */}
       <div
         ref={ref}
         className="
           relative
-          mx-auto
-          w-full
-          max-w-6xl
+          mx-4
           overflow-hidden
           rounded-2xl
           border
@@ -82,9 +78,12 @@ export default function StatsSection() {
           bg-[#081829]/95
           shadow-2xl
           backdrop-blur-md
+
+          sm:mx-6
           sm:rounded-3xl
-          mx-4
-          sm:mx-auto
+
+          lg:mx-auto
+          lg:max-w-6xl
         "
       >
         <div className="grid grid-cols-2 lg:grid-cols-4">
@@ -94,50 +93,62 @@ export default function StatsSection() {
             return (
               <div
                 key={index}
-                className={`
+                className="
                   group
                   relative
                   flex
+                  min-w-0
                   items-center
-                  gap-4
-                  px-6
-                  py-7
+                  gap-3
+                  px-4
+                  py-6
                   transition-all
                   duration-300
                   hover:bg-[#0d2238]
 
-                  sm:gap-5
-                  sm:px-7
+                  sm:gap-4
+                  sm:px-6
                   sm:py-8
 
+                  lg:gap-5
                   lg:px-7
                   lg:py-10
-
-                  ${
-                    index !== stats.length - 1
-                      ? "border-b border-[#17314d] sm:border-r"
-                      : ""
-                  }
-
-                  ${
-                    index === 1
-                      ? "sm:border-r-0 lg:border-r"
-                      : ""
-                  }
-
-                  ${
-                    index === 2
-                      ? "sm:border-b-0 lg:border-b-0"
-                      : ""
-                  }
-
-                  ${
-                    index === 3
-                      ? "border-b-0"
-                      : ""
-                  }
-                `}
+                "
               >
+                {/* Responsive borders */}
+                <div
+                  className={`
+                    pointer-events-none
+                    absolute
+                    bg-[#17314d]
+
+                    /* Mobile: vertical divider */
+                    ${index % 2 === 0 ? "right-0 top-0 h-full w-px" : "hidden"}
+
+                    /* Mobile: horizontal divider */
+                    ${index < 2 ? "bottom-0 left-0 h-px w-full" : "hidden"}
+
+                    /* Desktop */
+                    lg:hidden
+                  `}
+                />
+
+                {/* Desktop vertical divider */}
+                {index < stats.length - 1 && (
+                  <div
+                    className="
+                      absolute
+                      right-0
+                      top-0
+                      hidden
+                      h-full
+                      w-px
+                      bg-[#17314d]
+                      lg:block
+                    "
+                  />
+                )}
+
                 {/* Hover Glow */}
                 <div
                   className="
@@ -160,8 +171,8 @@ export default function StatsSection() {
                   className="
                     relative
                     flex
-                    h-14
-                    w-14
+                    h-11
+                    w-11
                     shrink-0
                     items-center
                     justify-center
@@ -174,8 +185,11 @@ export default function StatsSection() {
                     group-hover:border-blue-500/40
                     group-hover:bg-blue-500/10
 
-                    sm:h-16
-                    sm:w-16
+                    sm:h-14
+                    sm:w-14
+
+                    lg:h-16
+                    lg:w-16
                   "
                 >
                   <Icon
@@ -185,26 +199,26 @@ export default function StatsSection() {
                       duration-300
                       group-hover:scale-110
                     "
-                    size={30}
+                    size={24}
                     strokeWidth={1.6}
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative min-w-0">
+                <div className="relative min-w-0 flex-1">
                   <h3
                     className="
                       whitespace-nowrap
-                      text-3xl
+                      text-2xl
                       font-bold
                       leading-none
                       tracking-tight
                       text-white
 
-                      sm:text-4xl
+                      sm:text-3xl
 
                       lg:text-[44px]
-                  "
+                    "
                   >
                     {inView ? (
                       <CountUp
@@ -219,29 +233,36 @@ export default function StatsSection() {
                     {item.suffix}
                   </h3>
 
-                  <p
-                    className="
-                      mt-2
-                      text-sm
-                      font-semibold
-                      leading-tight
-                      text-white
+                  {item.title && (
+                    <p
+                      className="
+                        mt-2
+                        truncate
+                        text-xs
+                        font-semibold
+                        leading-tight
+                        text-white
 
-                      sm:text-base
-                      lg:text-lg
-                    "
-                  >
-                    {item.title}
-                  </p>
+                        sm:text-sm
+
+                        lg:text-lg
+                      "
+                    >
+                      {item.title}
+                    </p>
+                  )}
 
                   <p
                     className="
                       mt-0.5
-                      text-xs
+                      truncate
+                      text-[11px]
                       leading-tight
                       text-gray-400
 
-                      sm:text-sm
+                      sm:text-xs
+
+                      lg:text-sm
                     "
                   >
                     {item.subtitle}
@@ -255,4 +276,3 @@ export default function StatsSection() {
     </section>
   );
 }
-

@@ -10,7 +10,7 @@ export default async function Page({ params }) {
 
   if (russiaLocations.includes(location)) {
     return <RussiaLocation />;
-  }
+  } 
 
   if (uaeLocations.includes(location)) {
     return <UAELocation />;

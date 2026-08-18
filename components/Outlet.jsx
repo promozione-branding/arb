@@ -16,8 +16,8 @@ const outlets = [
         state: "Maharashtra",
         images: [
             "/outlet/1.jpg",
-            "/outlet/2.jpg",
-            "/outlet/3.jpg",
+            // "/outlet/2.jpg",
+            // "/outlet/3.jpg",
         ],
     },
     {
@@ -26,8 +26,8 @@ const outlets = [
         state: "West Bengal",
         images: [
             "/outlet/4.jpg",
-            "/outlet/5.jpg",
-            "/outlet/6.jpg",
+            // "/outlet/5.jpg",
+            // "/outlet/6.jpg",
         ],
     },
     {
@@ -36,8 +36,8 @@ const outlets = [
         state: "Punjab",
         images: [
             "/outlet/7.jpg",
-            "/outlet/8.jpg",
-            "/outlet/9.jpg",
+            // "/outlet/8.jpg",
+            // "/outlet/9.jpg",
         ],
     },
     {
@@ -46,8 +46,8 @@ const outlets = [
         state: "Chhattisgarh",
         images: [
             "/outlet/10.jpg",
-            "/outlet/11.jpg",
-            "/outlet/12.jpg",
+            // "/outlet/11.jpg",
+            // "/outlet/12.jpg",
         ],
     },
     {
@@ -56,8 +56,8 @@ const outlets = [
         state: "Odisha",
         images: [
             "/outlet/13.jpg",
-            "/outlet/14.jpg",
-            "/outlet/15.jpg",
+            // "/outlet/14.jpg",
+            // "/outlet/15.jpg",
         ],
     },
     {
@@ -66,8 +66,8 @@ const outlets = [
         state: "Karnataka",
         images: [
             "/outlet/16.jpg",
-            "/outlet/17.jpg",
-            "/outlet/18.jpg",
+            // "/outlet/17.jpg",
+            // "/outlet/18.jpg",
         ],
     },
     {
@@ -76,8 +76,8 @@ const outlets = [
         state: "Gujarat",
         images: [
             "/outlet/19.jpg",
-            "/outlet/20.jpg",
-            "/outlet/21.jpg",
+            // "/outlet/20.jpg",
+            // "/outlet/21.jpg",
         ],
     },
     {
@@ -86,8 +86,8 @@ const outlets = [
         state: "Maharashtra",
         images: [
             "/outlet/22.jpg",
-            "/outlet/23.jpg",
-            "/outlet/24.jpg",
+            // "/outlet/23.jpg",
+            // "/outlet/24.jpg",
         ],
     },
     {
@@ -96,7 +96,7 @@ const outlets = [
         state: "Rajasthan",
         images: [
             "/outlet/25.jpg",
-            "/outlet/26.jpg",
+            // "/outlet/26.jpg",
         ],
     },
     {
@@ -105,7 +105,7 @@ const outlets = [
         state: "Jharkhand",
         images: [
             "/outlet/27.jpg",
-            "/outlet/28.jpg",
+            // "/outlet/28.jpg",
         ],
     },
     {
@@ -114,7 +114,7 @@ const outlets = [
         state: "Telangana",
         images: [
             "/outlet/29.jpg",
-            "/outlet/30.jpg",
+            // "/outlet/30.jpg",
         ],
     },
 ];

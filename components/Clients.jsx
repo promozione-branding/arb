@@ -6,41 +6,41 @@ import Image from "next/image";
 import "swiper/css";
 
 export default function TrustedBrands() {
-const brands = [
-  "/client/25.png",
-  "/client/2.png",
-  
-  "/client/4.png",
-  "/client/24.png",
-  "/client/7.png",
-  "/client/8.png",
-  "/client/9.png",
+  const brands = [
+    "/client/25.png",
+    "/client/2.png",
+
+    "/client/4.png",
+    "/client/24.png",
+    "/client/7.png",
+    "/client/8.png",
+    "/client/9.png",
     "/client/10.png",
-      "/client/11.png",
-        "/client/12.png",
-"/client/13.png",
-"/client/14.png",
-"/client/15.png",
-"/client/16.png",
-"/client/17.png",
-"/client/18.png",
+    "/client/11.png",
+    "/client/12.png",
+    "/client/13.png",
+    "/client/14.png",
+    "/client/15.png",
+    "/client/16.png",
+    "/client/17.png",
+    "/client/18.png",
 
-"/client/19.png",
-"/client/20.png",
-"/client/22.png",
-"/client/21.png",
-"/client/23.png",
-
-
+    "/client/19.png",
+    "/client/20.png",
+    "/client/22.png",
+    "/client/21.png",
+    "/client/23.png",
 
 
 
 
-];
+
+
+  ];
 
   return (
     <section className="relative py-3 md:py-10 bg-white border-y border-cyan-200 overflow-hidden">
-      <div className="w-full px-10 mx-auto ">
+      <div className="w-full md:px-10 px-4 mx-auto ">
         <h3 className="text-center text-[#D9251C] font-bold tracking-[0.25em] text-sm mb-10">
           TRUSTED BY LEADING INDUSTRIES
         </h3>
@@ -73,10 +73,10 @@ const brands = [
             },
           }}
         >
-       {brands.map((logo, index) => (
-  <SwiperSlide key={index}>
-    <div
-      className="
+          {brands.map((logo, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="
       h-28
       rounded-2xl
       border
@@ -85,34 +85,34 @@ const brands = [
       flex
       items-center
       justify-center
-      px-6
+      md:px-6
       transition-all
       duration-300
       hover:-translate-y-1
       hover:shadow-xl
     "
-    >
-     <Image
-  src={logo}
-  alt=""
-  width={200}
-  height={180}
-  className="
-    h-35
-    w-auto
+              >
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  className="
+    h-full
+    w-full
     object-cover
  
     transition-all
     duration-500
  
   "
-/>
-    </div>
-  </SwiperSlide>
-))}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
-<p className="text-xs text-center mt-7">*The logos used in the creative are properties/copyrights of the respective companies*</p>
+      <p className="text-xs text-center mt-7">*The logos used in the creative are properties/copyrights of the respective companies*</p>
 
     </section>
   );
