@@ -1,18 +1,33 @@
 "use client";
 
-import { useState } from "react"; import Image from 'next/image';
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Image from 'next/image';
 import Link from "next/link";
 import { ChevronDown, Menu, X, PhoneCall, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Enquiry from "@/components/Enquiry";
+import { russiaLocations } from "@/lib/russiaLocations";
+
 export default function Navbar({ categories }) {
-
   const [isFormOpen, setIsFormOpen] = useState(false);
-
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const currentSlug = pathname.split("/").filter(Boolean).pop();
+
+  const isRussiaLocation = russiaLocations.includes(currentSlug);
+
+  const phoneNumber = isRussiaLocation
+    ? "+7-9859834837"
+    : "+91-9968373086";
+
+  const phoneHref = isRussiaLocation
+    ? "tel:+79859834837"
+    : "tel:+919968373086";
 
   const closeMenu = () => {
     setActiveMenu(null);
@@ -110,16 +125,17 @@ export default function Navbar({ categories }) {
 
             <div className="hidden lg:flex items-center gap-4">
               <a
-                href="tel:+917834872136"
+                href={phoneHref}
                 className="flex items-center gap-3 rounded-full border border-white/15 bg-white/5 backdrop-blur-xl px-5 py-3 transition-all duration-300 hover:bg-white/10"
               >
                 <div className="w-10 h-10 rounded-full bg-[#C52C1D] flex items-center justify-center text-white">
                   <PhoneCall size={18} />
                 </div>
+
                 <div>
                   <p className="text-[11px] text-gray-300">Call Anytime</p>
                   <p className="text-white font-semibold text-sm">
-                    +91-7834872136
+                    {phoneNumber}
                   </p>
                 </div>
               </a>
@@ -211,42 +227,42 @@ export default function Navbar({ categories }) {
                   }`}
               >
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
-                  <Link href="/grease"
+                  <Link href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Grease
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href="/universal-joints"
+                  <Link href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Universal Joints
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href="/clutch-bearings"
+                  <Link href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Clutch Bearings
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href="/pillow-blocks-units"
+                  <Link href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Pillow Blocks Units
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href="/clutch-plates"
+                  <Link href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Clutch Plates
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href="/brake-lining"
+                  <Link href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Brake Lining
@@ -441,17 +457,12 @@ export default function Navbar({ categories }) {
         </div>
       )}
 
-
-
-
-
       {isFormOpen && (
         <Enquiry
           IATFpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
         />
       )}
-
     </header>
   );
 }

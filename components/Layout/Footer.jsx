@@ -4,12 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Mail, Facebook, Instagram } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { russiaLocations } from "@/lib/russiaLocations";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
   const adminLayout = pathname.startsWith("/admin");
   if (adminLayout) return null;
+
+  const currentSlug = pathname.split("/").filter(Boolean).pop();
+
+  const isRussiaLocation = russiaLocations.includes(currentSlug);
+
+  const primaryPhone = isRussiaLocation
+    ? "+7-9859834837"
+    : "+91-9968373086";
+
+  const primaryPhoneHref = isRussiaLocation
+    ? "tel:+79859834837"
+    : "tel:+919968373086";
+
+  const whatsappPhone = "+91-7834872136";
 
   return (
     <footer className="relative text-white pt-10 pb-5 overflow-hidden">
@@ -121,33 +137,40 @@ export default function Footer() {
 
             <div className="space-y-4 text-sm">
               {/* ADDRESS */}
+              {/* ADDRESS */}
               <div className="flex gap-3 items-start">
                 <MapPin className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
-                <p className="leading-relaxed">
-                  26th Bakinskikh Komissarov Street
-                  House 9, Flat 9
-                  Moscow 119571, Russia
+
+                <p className="leading-relaxed whitespace-pre-line">
+                  {isRussiaLocation
+                    ? `26th Bakinskikh Komissarov Street House 9, Flat 9 Moscow 119571, Russia`
+                    : `H-22, Udyog Nagar New Delhi 110041, India`}
                 </p>
               </div>
 
               {/* PHONE */}
               <div className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
+
                 <a
-                  href="tel:+917834872136"
+                  href={primaryPhoneHref}
                   className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                 >
-                  +91-7834872136
+                  {primaryPhone}
                 </a>
               </div>
 
+              {/* WHATSAPP / TELEGRAM */}
               <div className="flex gap-3 items-center">
-                <Phone className="w-5 h-5 text-red-600 shrink-0" />
+                <FaWhatsapp className="w-5 h-5 text-red-600 shrink-0" />
+
                 <a
-                  href="tel:+79859834837"
+                  href={`https://wa.me/${whatsappPhone.replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="hover:text-red-600 hover:underline underline-offset-4 decoration-red-600"
                 >
-                  +7-9859834837
+                  {whatsappPhone}
                 </a>
               </div>
 

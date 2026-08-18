@@ -60,7 +60,7 @@ export default {
     name: "Wheel Bearings Hub",
     slug: "wheel-bearings-hub",
     heroTitle: "Wheel Bearings",
-    image: "/arb-images/Wheel-Bearing.png",
+    image: "/arb-images/wheelbearinghub.png",
     description:
       "Premium wheel hub bearings designed for smooth wheel rotation, reduced friction, and reliable performance in automotive heavy-duty applications.",
 
@@ -99,7 +99,7 @@ export default {
         "Outer Ring Width (mm)": 30,
         "Mass (Kg)": 4.56
       },
-      "image": "/arb-images/Wheel-Bearing.png",
+      "image": "/arb-images/wheelbearinghub.png",
       "pdf": "/pdfs/808918a.pdf"
     },
     {

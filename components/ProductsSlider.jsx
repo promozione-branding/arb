@@ -70,7 +70,7 @@ const products = [
     title: "Wheel Hub Bearings",
     link: "/products/wheel-bearing",
     desc: "Engineered for smooth rotation, superior load handling, and long-lasting wheel-end reliability",
-    image: "/arb-images/Wheel Bearing.png",
+    image: "/arb-images/wheelbearinghub.png",
 
     applications: [
       "Trucks",

@@ -13,6 +13,8 @@ import { Pickaxe, Fuel, Building2, Train, Cog } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { Eye, X } from "lucide-react";
+import IndustriesSection from "./russia/IndustriesSection";
+import Popup from "@/components/Popup"
 
 const Location = () => {
   const products = [
@@ -143,7 +145,7 @@ const Location = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-black">
       {/* Hero */}
       <div className="">
         <section
@@ -162,8 +164,8 @@ const Location = () => {
         </section>
       </div>
 
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-15">
-        <div className="mx-auto max-w-7xl  ">
+      <section className="relative bg-gradient-to-b from-white via-slate-50 to-white py-15">
+        <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             {/* Left Content */}
             <div>
@@ -171,15 +173,13 @@ const Location = () => {
                 Доверяют во всем мире
               </span>
 
-              <h2 className="mt-4 text-4xl font-bold leading-tight text-[#1B2A41] ">
+              <h2 className="mt-4 md:text-4xl text-3xl font-bold leading-tight text-[#1B2A41] ">
                 Ведущий поставщик подшипников   {city}
               </h2>
 
-              <p className="mt-3 text-lg  text-slate-900">
+              <p className="mt-3 text-lg text-slate-900">
                 Компания ARB Bearings — признанный во всем мире поставщик подшипников, предлагающий высокоэффективные подшипниковые решения клиентам {city} и на международных рынках. Благодаря многолетнему опыту в области инженерного дела, передовым производственным возможностям и неизменной приверженности качеству, мы производим прецизионные подшипники, отвечающие самым высоким требованиям современных отраслей промышленности. Как опытный поставщик подшипников, мы обслуживаем такие отрасли, как автомобилестроение, горнодобывающая промышленность, строительство, сельское хозяйство, энергетика, металлургия и тяжелое машиностроение. Наши подшипники ценятся за исключительную долговечность, точность, высокую несущую способность и длительный срок службы. Каждый продукт изготавливается с использованием высококачественного сырья и передовых производственных технологий, что обеспечивает стабильную работу даже в самых сложных условиях эксплуатации.
               </p>
-
-
 
               {/* Features */}
               <div className="mt-7 grid gap-5 sm:grid-cols-2">
@@ -218,10 +218,10 @@ const Location = () => {
             {/* Right Side */}
             <div className="relative">
               {/* Background Blur */}
-              <div className="absolute top-10 -left-10 h-48 w-48 rounded-full bg-red-100 blur-3xl"></div>
-              <div className="absolute -bottom-10 -right-10 h-48 w-48 rounded-full bg-blue-100 blur-3xl"></div>
+              {/* <div className="absolute top-10 -left-10 h-48 w-48 rounded-full bg-red-100 blur-3xl"></div> */}
+              {/* <div className="absolute -bottom-10 -right-10 h-48 w-48 rounded-full bg-blue-100 blur-3xl"></div> */}
 
-              <div className="relative overflow-hidden rounded-[30px] border border-slate-200 bg-white p-8 shadow-2xl">
+              <div className="relative overflow-hidden rounded-[30px] border border-slate-200 bg-white md:p-8 p-4 shadow-2xl">
                 <div className="mb-6 inline-flex rounded-full bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
                   Точное машиностроение
                 </div>
@@ -271,11 +271,11 @@ const Location = () => {
               Почему выбирают нас?
             </span>
 
-            <h2 className="mt-6 text-5xl font-bold leading-tight text-[#1B2A41] ">
+            <h2 className="md:mt-6 mt-4 text-3xl md:text-5xl font-bold leading-tight text-[#1B2A41] ">
               Почему подшипники ARB — правильный выбор для ваших потребностей в подшипниках
             </h2>
 
-            <p className="mt-4 text-lg leading-8 text-slate-900">
+            <p className="mt-4 text-lg md:leading-8 text-slate-900">
               Выберите ARB Bearings в качестве вашего надежного поставщика подшипников {city} , предлагающего высокоточные, надежные и высокопроизводительные подшипниковые решения.
             </p>
           </div>
@@ -349,10 +349,9 @@ const Location = () => {
         </div>
       </section>
 
-      <section className="bg-blue-50 py-15 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto ">
+      <section className="bg-blue-50 md:py-15 py-10 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Heading */}
-
           <div className="flex justify-between items-center mb-14">
             <div>
               <p className="text-red-600 uppercase text-sm tracking-[3px] font-semibold">
@@ -379,7 +378,7 @@ const Location = () => {
             <ChevronRight className="text-white" />
           </button> */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  md:gap-7 gap-3">
               {products.map((item, index) => (
                 <div
                   key={index}
@@ -511,8 +510,8 @@ const Location = () => {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:45px_45px]"></div>
         </div>
 
-        <div className="relative mx-auto  px-6 lg:px-8">
-          <div className="rounded-[32px] border border-white/10 bg-white/5 p-10 backdrop-blur-xl shadow-2xl lg:p-10">
+        <div className="relative mx-auto  px-4 lg:px-8">
+          <div className="rounded-[32px] border border-white/10 bg-white/5 p-5 backdrop-blur-xl shadow-2xl lg:p-10">
             <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
               {/* Left Content */}
               <div className="max-w-4xl">
@@ -552,7 +551,7 @@ const Location = () => {
                 </button>
 
                 <a
-                  href="/contact"
+                  href="/contact-us"
                   className="inline-flex items-center justify-center rounded-xl border border-white px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-red-500 hover:bg-red-600"
                 >
                   Связаться с нами
@@ -563,79 +562,10 @@ const Location = () => {
         </div>
       </section>
 
-      <section className="bg-[#EDF4FE] py-10">
-        <div className="max-w-7xl mx-auto ">
+      <IndustriesSection />
 
-          <span className="text-[#D9251C] uppercase tracking-[4px] text-sm font-semibold">
-            Отрасли, которые мы обслуживаем
-          </span>
-
-          <h2 className="text-4xl font-bold text-blue-700 mt-3 mb-12">
-            <span className="text-black">Промышленность</span>  по всему миру
-          </h2>
-
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
-
-            {industries.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={index}
-                  className="group relative h-[360px] overflow-hidden rounded-xl border border-white/10 bg-[#09192d] cursor-pointer"
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-110"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#061322] via-[#061322]/10 to-transparent" />
-
-                  <div className="absolute bottom-6 left-6 right-6">
-
-                    <div className="flex items-center gap-3">
-
-                      <div className="w-11 h-11 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20">
-                        <Icon className="text-white w-5 h-5" />
-                      </div>
-
-                      <h3 className="text-white text-sm font-semibold">
-                        {item.title}
-                      </h3>
-
-                    </div>
-
-                  </div>
-
-                  <div className="absolute inset-0 border border-transparent group-hover:border-blue-500 rounded-xl transition-all duration-500" />
-
-                  <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition duration-500" />
-
-                </div>
-              );
-            })}
-
-          </div>
-
-          <div className="flex justify-center mt-12">
-
-            <button className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-500 px-8 py-4 rounded-md text-white font-semibold hover:shadow-[0_0_30px_rgba(37,99,235,.45)] transition">
-
-              ПОСМОТРЕТЬ ВСЕ ОТРАСЛИ
-
-              <ArrowRight className="group-hover:translate-x-1 transition" />
-
-            </button>
-
-          </div>
-
-        </div>
-      </section>
-
-      <section className="bg-white py-14">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-white md:py-14 py-10">
+        <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-16 lg:grid-cols-2">
 
             {/* Left Content */}
@@ -700,13 +630,13 @@ const Location = () => {
                 <img
                   src="/istockphoto-1203599074-612x612.jpg"
                   alt="Precision Bearing Manufacturing"
-                  className="h-[620px] w-full object-contain"
+                  className="md:h-[620px] h-full w-full object-contain"
                 />
 
                 {/* Floating Stats */}
-                <div className="absolute bottom-8 left-8 rounded-2xl bg-white/95 p-6 shadow-xl backdrop-blur">
-                  <p className="text-4xl font-bold text-red-600">60+</p>
-                  <p className="mt-1 font-medium text-[#1B2A41]">
+                <div className="absolute bottom-8 left-8 rounded-2xl bg-white/95 md:p-6 p-3 shadow-xl backdrop-blur">
+                  <p className="md:text-4xl text-3xl font-bold text-red-600">60+</p>
+                  <p className="mt-1 font-medium text-[#1B2A41] md:text-base text-sm">
                     Годы производственного совершенства
                   </p>
                 </div>
@@ -740,14 +670,11 @@ const Location = () => {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-24">
+      <section className="bg-slate-50 md:py-24 py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
           <div className="grid gap-16 lg:grid-cols-12">
-
             {/* Left Side */}
             <div className="lg:col-span-4 lg:sticky lg:top-35 h-fit">
-
               <span className="rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
                 Часто задаваемые вопросы
               </span>
@@ -756,17 +683,14 @@ const Location = () => {
                 Часто задаваемые вопросы – Поставщик подшипников в {city}
               </h2>
 
-              <p className="mt-8 text-lg leading-8 text-slate-800">
+              <p className="md:mt-8 mt-2 text-lg md:leading-8 text-slate-800">
                 Здесь вы найдете ответы на наиболее часто задаваемые вопросы о подшипниках ARB, наших решениях в области подшипников, производственных возможностях и экспорте.
               </p>
-
-              <div className="mt-10 h-2 w-40 rounded-full bg-gradient-to-r from-red-600 to-[#28186E]"></div>
-
+              <div className="md:mt-10 mt-4 h-2 w-40 rounded-full bg-gradient-to-r from-red-600 to-[#28186E]"></div>
             </div>
 
             {/* Right Side */}
             <div className="space-y-5 lg:col-span-8">
-
               {faqs.map((faq, index) => (
                 <div
                   key={index}
@@ -777,7 +701,7 @@ const Location = () => {
                 >
                   <button
                     onClick={() => setActive(active === index ? -1 : index)}
-                    className="flex w-full items-center justify-between px-8 py-7 text-left"
+                    className="flex w-full items-center justify-between md:px-8 px-4 md:py-7 py-4 text-left"
                   >
                     <div className="flex items-center gap-5">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-lg font-bold text-white">
@@ -820,6 +744,9 @@ const Location = () => {
           onClose={() => setIsFormOpen(false)}
         />
       )}
+
+      <Popup />
+
     </div>
   );
 };

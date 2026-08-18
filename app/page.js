@@ -18,7 +18,7 @@ import Whychoose from "@/components/Whychoose"
 export default function Home() {
   return (
 <div>
-<Popup/>
+{/* <Popup/> */}
 <Hero/>
   <ProductsSlider/>
 <Clients/>

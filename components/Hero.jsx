@@ -99,7 +99,7 @@ export default function HeroSection() {
     },
     {
       icon: Settings,
-      title: "Custom Solutions",
+      title: "Customized Solutions",
       number: "04",
     },
   ];
