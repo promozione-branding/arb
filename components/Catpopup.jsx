@@ -105,7 +105,7 @@ Contact: ${values.phone}`;
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/50 p-4 overflow-y-auto">
       <div
         className="relative border-2 border-white z-[1000] rounded-3xl shadow-2xl p-6 md:p-10 w-full max-w-[570px] text-white bg-blue-800"
-       
+
       >
         {/* OVERLAY */}
         <div className="absolute  inset-0 bg-black/70 rounded-3xl"></div>
@@ -122,7 +122,7 @@ Contact: ${values.phone}`;
 
           {/* HEADING */}
           <h2 className="text-center text-white animate-pulse text-2xl md:text-3xl font-semibold">
-           Request the Product Catalogue
+            Request the Product Catalogue
           </h2>
 
           <div className="w-28 h-[4px] bg-blue-600 mx-auto mt-3 mb-5 rounded-full"></div>
@@ -148,9 +148,9 @@ Contact: ${values.phone}`;
                   className="w-full md:w-1/2 p-3 rounded-md text-black text-sm border-2 border-white focus:outline-none bg-blue-50"
                 >
                   <option value="">Select Product</option>
-                  <option value="GI Sheet">Ball Bearings</option>
-                  <option value="Mild Steel Pipe">Wheel Bearings</option>
-                  <option value="MS Plates">Roller Bearings</option>
+                  <option value="Ball Bearings">Ball Bearings</option>
+                  <option value="Wheel Bearings">Wheel Bearings</option>
+                  <option value="Roller Bearings">Roller Bearings</option>
                 </select>
               </div>
 
