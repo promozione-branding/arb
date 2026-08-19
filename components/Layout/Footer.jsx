@@ -210,7 +210,7 @@ export default function Footer() {
                 src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726401/trustseal_vltgii.webp"
                 alt="Trust Elite"
                 className="w-28 h-28 object-contain cursor-pointer hover:scale-105 transition"
-                onClick={() => setIsModalOpen(true)}
+              // onClick={() => setIsModalOpen(true)}
               />
 
               {isModalOpen && (

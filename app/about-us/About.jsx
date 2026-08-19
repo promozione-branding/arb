@@ -128,13 +128,14 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-2 lg:gap-14 gap-5 items-center">
 
         <div className="relative rounded-3xl overflow-hidden items-center">
-          <video src="/aboutVideo.mp4" className="w-full md:h-full h-[35vh] object-fill"
+          {/* <video src="/aboutVideo.mp4" className="w-full md:h-full h-[35vh] object-fill"
             autoPlay
             muted
             loop
             playsInline
             preload="auto" />
-          <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" />
+          <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" /> */}
+          <img src="/hero/Image 1.png" alt="img" className="w-full h-96 object-cover" />
         </div>
 
         <div>
