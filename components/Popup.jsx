@@ -138,9 +138,9 @@
 //               className="w-1/2 max-md:w-full p-3 rounded-md text-black text-sm border-2 focus:outline-none bg-blue-50"
 //             >
 //               <option value="">Select Product</option>
-//               <option value="GI Sheet">Ball Bearing</option>
-//               <option value="Mild Steel Pipe">Wheel Bearing</option>
-//               <option value="MS Plates">Roller Bearing</option>
+//               <option value="Ball Bearing">Ball Bearing</option>
+//               <option value="Wheel Bearing">Wheel Bearing</option>
+//               <option value="Roller Bearing">Roller Bearing</option>
 //             </select>
 //           </div>
 
