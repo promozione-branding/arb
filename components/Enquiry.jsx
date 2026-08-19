@@ -26,7 +26,7 @@ export default function ContactForm({ IATFpen, onClose }) {
       const { data } = await axios.post("https://brandbnalo.com/api/form/add", {
         platform: "arb website enquiry Form",
 
-        platformEmail: "arb@gmail.com",
+        platformEmail: "export@arb-bearings.com",
 
         name: values.name,
 

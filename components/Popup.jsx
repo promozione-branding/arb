@@ -31,7 +31,7 @@
 
 //       const formData = {
 //         platform: "arb website popup Form",
-//         platformEmail: "arb@gmail.com",
+//         platformEmail: "export@arb-bearings.com",
 //         name,
 //         phone,
 //         email,
