@@ -4,27 +4,29 @@ import Image from "next/image";
 
 export default function TrustedBrands() {
   const brands = [
-    "/client/25.webp",
-    "/client/2.webp",
-    "/client/4.webp",
-    "/client/24.webp",
-    "/client/7.webp",
-    "/client/8.webp",
-    "/client/9.webp",
-    "/client/10.webp",
-    "/client/11.webp",
-    "/client/12.webp",
-    "/client/13.webp",
-    "/client/14.webp",
-    "/client/15.webp",
-    "/client/16.webp",
-    "/client/17.webp",
-    "/client/18.webp",
-    "/client/19.webp",
-    "/client/20.webp",
-    "/client/22.webp",
-    "/client/21.webp",
-    "/client/23.webp",
+    { image: "/client/25.webp", name: "SRMB" },
+    { image: "/client/2.webp", name: "Sail" },
+    { image: "/client/4.webp", name: "Shyam Steel" },
+    { image: "/client/24.webp", name: "APLAPOLLO STEEL PIPE" },
+    { image: "/client/7.webp", name: "Nalwa Steel & Power" },
+    { image: "/client/8.webp", name: "BST Infratech Limited" },
+    { image: "/client/9.webp", name: "Kamdhenu" },
+
+    { image: "/client/10.webp", name: "Rathi" },
+
+    { image: "/client/11.webp", name: "SR Rungta Group" },
+    { image: "/client/12.webp", name: "smc power" },
+    { image: "/client/13.webp", name: "aarti" },
+    { image: "/client/14.webp", name: "Rajuri Steel" },
+    { image: "/client/15.webp", name: "ISMT Limited" },
+    { image: "/client/16.webp", name: "Birla Tmt Steel" },
+    { image: "/client/17.webp", name: "Welspun" },
+    {image:"/client/18.webp",name:"SBF Rapid"},
+    {image:"/client/19.webp",name:"Jindal Saw LTD"},
+    {image :"/client/20.webp",name:"Sree Metaliks"},
+    {image :"/client/22.webp",name:"Maharastra Seamless Limited"},
+    {image :"/client/21.webp",name:"Arcelor Mittal"},
+    {image :"/client/23.webp",name:"Jyoti"}
   ];
 
   const duplicatedBrands = [...brands, ...brands];
@@ -46,8 +48,8 @@ export default function TrustedBrands() {
               >
                 <div className="flex h-[90px]  items-center justify-center rounded-xl border border-slate-200 bg-white p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl  md:h-38 md:rounded-2xl md:p-4">
                   <Image
-                    src={logo}
-                    alt={`Trusted brand ${index + 1}`}
+                    src={logo?.image}
+                    alt={`Trusted brand ${logo?.name}`}
                     width={100}
                     height={100}
                     className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
