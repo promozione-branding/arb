@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Catpopup from "@/components/Catpopup";
 import { useEffect, useState } from "react";
 
 import {
@@ -17,102 +16,105 @@ import {
 } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/effect-fade";
+
+const bearingImages = [
+  "/hero/11.webp",
+  "/hero/22.webp",
+  "/hero/33.webp",
+  "/hero/44.webp",
+  "/hero/Image 11.webp",
+];
+
+const typedTexts = [
+  "DRIVES PROGRESS",
+  "POWERS PERFORMANCE",
+];
+
+const features = [
+  {
+    icon: Award,
+    title: "Made in India",
+    number: "01",
+  },
+  {
+    icon: BadgeCheck,
+    title: "IATF Certified",
+    number: "02",
+  },
+  {
+    icon: Globe2,
+    title: "Global Delivery",
+    number: "03",
+  },
+  {
+    icon: Settings,
+    title: "Customized Solutions",
+    number: "04",
+  },
+];
 
 export default function HeroSection() {
-  const bearingImages = [
-    "/hero/11.webp",
-    "/hero/22.webp",
-    "/hero/33.webp",
-    "/hero/44.webp",
-    "/hero/Image 11.webp"
-  ];
-
   const [isFormOpen, setIsFormOpen] = useState(false);
-
-
-  const typedTexts = [
-    "DRIVES PROGRESS",
-    // "MOVES INDUSTRY",
-    "POWERS PERFORMANCE",
-
-  ];
 
   const [typedText, setTypedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  /*
+   * Typewriter effect
+   *
+   * Delayed slightly so it doesn't compete with initial page rendering.
+   */
   useEffect(() => {
-    const currentText = typedTexts[textIndex];
+    const startDelay = setTimeout(() => {
+      const currentText = typedTexts[textIndex];
 
-    const typingSpeed = isDeleting ? 40 : 85;
+      const typingSpeed = isDeleting ? 40 : 85;
 
-    if (!isDeleting && typedText === currentText) {
+      if (!isDeleting && typedText === currentText) {
+        const timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, 1800);
+
+        return () => clearTimeout(timer);
+      }
+
+      if (isDeleting && typedText === "") {
+        setIsDeleting(false);
+
+        setTextIndex(
+          (prev) => (prev + 1) % typedTexts.length
+        );
+
+        return;
+      }
+
       const timer = setTimeout(() => {
-        setIsDeleting(true);
-      }, 1800);
+        setTypedText(
+          isDeleting
+            ? currentText.substring(
+                0,
+                typedText.length - 1
+              )
+            : currentText.substring(
+                0,
+                typedText.length + 1
+              )
+        );
+      }, typingSpeed);
 
       return () => clearTimeout(timer);
-    }
+    }, 100);
 
-    if (isDeleting && typedText === "") {
-      setIsDeleting(false);
-
-      setTextIndex((prev) => (prev + 1) % typedTexts.length);
-
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      setTypedText(
-        isDeleting
-          ? currentText.substring(0, typedText.length - 1)
-          : currentText.substring(0, typedText.length + 1)
-      );
-    }, typingSpeed);
-
-    return () => clearTimeout(timer);
+    return () => clearTimeout(startDelay);
   }, [typedText, isDeleting, textIndex]);
-
-  // =========================================================
-  // FEATURES
-  // =========================================================
-
-  const features = [
-    {
-      icon: Award,
-      title: "Made in India",
-      number: "01",
-    },
-    {
-      icon: BadgeCheck,
-      title: "IATF Certified",
-      number: "02",
-    },
-    {
-      icon: Globe2,
-      title: "Global Delivery",
-      number: "03",
-    },
-    {
-      icon: Settings,
-      title: "Customized Solutions",
-      number: "04",
-    },
-  ];
 
   return (
     <>
       <section
-        style={{
-          backgroundImage: "url('/banner1.webp')",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
         className="
           hero-section
           relative
@@ -130,21 +132,61 @@ export default function HeroSection() {
         "
       >
         {/* =====================================================
+            LCP HERO BACKGROUND
+        ====================================================== */}
+
+        <Image
+          src="/banner1.webp"
+          alt=""
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={75}
+          className="
+            absolute
+            inset-0
+            -z-20
+            object-cover
+            object-center
+          "
+        />
+
+        {/* =====================================================
             BACKGROUND OVERLAY
         ====================================================== */}
 
-        <div className="pointer-events-none absolute inset-0 bg-white/10" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-white/10" />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-blue-50/20" />
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            -z-10
+            bg-gradient-to-r
+            from-white/30
+            via-transparent
+            to-blue-50/20
+          "
+        />
 
         {/* =====================================================
             ANIMATED GRID
         ====================================================== */}
 
-        <div className="hero-grid pointer-events-none absolute inset-0 opacity-[0.18]" />
+        <div
+          className="
+            hero-grid
+            pointer-events-none
+            absolute
+            inset-0
+            opacity-[0.18]
+          "
+        />
 
         {/* =====================================================
-            LARGE AMBIENT GLOWS
+            AMBIENT GLOWS
         ====================================================== */}
 
         <div
@@ -158,7 +200,7 @@ export default function HeroSection() {
             w-[420px]
             rounded-full
             bg-blue-500/10
-            blur-[130px]
+            blur-[100px]
           "
         />
 
@@ -173,7 +215,7 @@ export default function HeroSection() {
             w-[520px]
             rounded-full
             bg-indigo-500/10
-            blur-[150px]
+            blur-[110px]
           "
         />
 
@@ -187,23 +229,65 @@ export default function HeroSection() {
             w-[180px]
             rounded-full
             bg-cyan-400/5
-            blur-[90px]
+            blur-[70px]
           "
         />
 
+        {/* Light sweep */}
+        <div
+          className="
+            hero-light
+            pointer-events-none
+            absolute
+            top-0
+            h-full
+            w-[160px]
+            bg-gradient-to-r
+            from-transparent
+            via-white/30
+            to-transparent
+            blur-xl
+          "
+        />
 
+        {/* Decorative lines */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[5%]
+            top-[18%]
+            hidden
+            h-px
+            w-32
+            bg-gradient-to-r
+            from-transparent
+            via-blue-500/40
+            to-transparent
+            lg:block
+          "
+        />
 
-        <div className="hero-light pointer-events-none absolute top-0 h-full w-[160px] bg-gradient-to-r from-transparent via-white/30 to-transparent blur-2xl" />
+        <div
+          className="
+            pointer-events-none
+            absolute
+            right-[8%]
+            top-[25%]
+            hidden
+            h-px
+            w-40
+            bg-gradient-to-r
+            from-transparent
+            via-blue-500/40
+            to-transparent
+            lg:block
+          "
+        />
 
-
-
-        <div className="pointer-events-none absolute left-[5%] top-[18%] hidden h-px w-32 bg-gradient-to-r from-transparent via-blue-500/40 to-transparent lg:block" />
-
-        <div className="pointer-events-none absolute right-[8%] top-[25%] hidden h-px w-40 bg-gradient-to-r from-transparent via-blue-500/40 to-transparent lg:block" />
-
-        <div className="pointer-events-none absolute bottom-[18%] left-[15%] hidden h-px w-28 bg-gradient-to-r from-transparent via-red-500/30 to-transparent lg:block" />
-
-
+        {/* =====================================================
+            CONTENT
+        ====================================================== */}
 
         <div
           className="
@@ -232,10 +316,12 @@ export default function HeroSection() {
               2xl:gap-16
             "
           >
-
+            {/* =================================================
+                LEFT CONTENT
+            ================================================== */}
 
             <div className="hero-content w-full text-center lg:text-left">
-
+              {/* Eyebrow */}
 
               <div
                 className="
@@ -247,8 +333,29 @@ export default function HeroSection() {
                 "
               >
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-600" />
+                  <span
+                    className="
+                      absolute
+                      inline-flex
+                      h-full
+                      w-full
+                      animate-ping
+                      rounded-full
+                      bg-red-600
+                      opacity-60
+                    "
+                  />
+
+                  <span
+                    className="
+                      relative
+                      inline-flex
+                      h-2
+                      w-2
+                      rounded-full
+                      bg-red-600
+                    "
+                  />
                 </span>
 
                 <span className="h-[1px] w-8 bg-red-600 sm:w-12" />
@@ -268,7 +375,9 @@ export default function HeroSection() {
                 </p>
               </div>
 
-
+              {/* =================================================
+                  LCP HEADING
+              ================================================== */}
 
               <h1
                 className="
@@ -289,8 +398,6 @@ export default function HeroSection() {
                   PRECISION THAT
                 </span>
 
-
-
                 <span
                   className="
                     typewriter-text
@@ -306,7 +413,7 @@ export default function HeroSection() {
                     text-transparent
                   "
                 >
-                  {typedText}
+                  {typedText || "DRIVES PROGRESS"}
 
                   <span
                     className="
@@ -324,12 +431,34 @@ export default function HeroSection() {
                 </span>
               </h1>
 
+              {/* Underline */}
 
-              <div className="hero-underline mx-auto mt-5 h-[3px] w-20 overflow-hidden rounded-full bg-blue-100 lg:mx-0">
-                <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-[#29166F] to-blue-500" />
+              <div
+                className="
+                  hero-underline
+                  mx-auto
+                  mt-5
+                  h-[3px]
+                  w-20
+                  overflow-hidden
+                  rounded-full
+                  bg-blue-100
+                  lg:mx-0
+                "
+              >
+                <div
+                  className="
+                    h-full
+                    w-1/2
+                    rounded-full
+                    bg-gradient-to-r
+                    from-[#29166F]
+                    to-blue-500
+                  "
+                />
               </div>
 
-
+              {/* Description */}
 
               <p
                 className="
@@ -346,11 +475,13 @@ export default function HeroSection() {
                   lg:mx-0
                 "
               >
-                High-quality ball and roller bearings engineered for demanding
-                industrial and automotive applications, supplied from India to
-                customers worldwide.
+                High-quality ball and roller bearings engineered
+                for demanding industrial and automotive
+                applications, supplied from India to customers
+                worldwide.
               </p>
 
+              {/* Stats */}
 
               <div
                 className="
@@ -371,6 +502,7 @@ export default function HeroSection() {
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
                     60+
                   </p>
+
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
                     Years
                   </p>
@@ -382,6 +514,7 @@ export default function HeroSection() {
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
                     6
                   </p>
+
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
                     continents
                   </p>
@@ -393,13 +526,14 @@ export default function HeroSection() {
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
                     100%
                   </p>
+
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
                     Precision
                   </p>
                 </div>
               </div>
 
-
+              {/* Buttons */}
 
               <div
                 className="
@@ -416,7 +550,10 @@ export default function HeroSection() {
                   lg:justify-start
                 "
               >
-                <Link href="/about-us" className="w-full sm:w-auto">
+                <Link
+                  href="/about-us"
+                  className="w-full sm:w-auto"
+                >
                   <button
                     className="
                       group
@@ -438,17 +575,27 @@ export default function HeroSection() {
                       font-semibold
                       text-white
                       shadow-[0_15px_40px_rgba(38,25,109,0.25)]
-                      transition-all
-                      duration-500
+                      transition-transform
+                      duration-300
                       hover:-translate-y-1
-                      hover:shadow-[0_20px_50px_rgba(38,25,109,0.35)]
                       sm:px-7
                       sm:text-base
                     "
                   >
-                    {/* BUTTON SHINE */}
-
-                    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                    <span
+                      className="
+                        absolute
+                        inset-0
+                        -translate-x-full
+                        bg-gradient-to-r
+                        from-transparent
+                        via-white/20
+                        to-transparent
+                        transition-transform
+                        duration-700
+                        group-hover:translate-x-full
+                      "
+                    />
 
                     <span className="relative">
                       EXPLORE MORE
@@ -456,12 +603,18 @@ export default function HeroSection() {
 
                     <MoveRight
                       size={18}
-                      className="relative transition-transform duration-300 group-hover:translate-x-2"
+                      className="
+                        relative
+                        transition-transform
+                        duration-300
+                        group-hover:translate-x-2
+                      "
                     />
                   </button>
                 </Link>
 
                 <button
+                  type="button"
                   onClick={() => setIsFormOpen(true)}
                   className="
                     group
@@ -482,12 +635,11 @@ export default function HeroSection() {
                     font-semibold
                     text-red-600
                     backdrop-blur-md
-                    transition-all
-                    duration-500
+                    transition-transform
+                    duration-300
                     hover:-translate-y-1
                     hover:bg-red-600
                     hover:text-white
-                    hover:shadow-[0_15px_35px_rgba(204,28,21,0.25)]
                     sm:w-auto
                     sm:px-7
                     sm:text-base
@@ -499,13 +651,17 @@ export default function HeroSection() {
 
                   <ArrowBigRight
                     size={18}
-                    className="transition-transform duration-300 group-hover:translate-x-2"
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-2
+                    "
                   />
                 </button>
               </div>
 
               {/* =================================================
-                  FEATURE CARDS
+                  FEATURES
               ================================================== */}
 
               <div
@@ -524,7 +680,7 @@ export default function HeroSection() {
                 "
               >
                 <div className="grid grid-cols-2 lg:grid-cols-4">
-                  {features.map((feature, index) => {
+                  {features.map((feature) => {
                     const Icon = feature.icon;
 
                     return (
@@ -547,15 +703,21 @@ export default function HeroSection() {
                           lg:py-5
                         "
                       >
-                        {/* Number */}
-
-                        <span className="absolute right-3 top-2 text-[9px] font-bold tracking-widest text-gray-300">
+                        <span
+                          className="
+                            absolute
+                            right-3
+                            top-2
+                            text-[9px]
+                            font-bold
+                            tracking-widest
+                            text-gray-300
+                          "
+                        >
                           {feature.number}
                         </span>
 
                         <div className="relative">
-                          <div className="absolute inset-0 scale-50 rounded-full bg-blue-500/20 opacity-0 blur-xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-100" />
-
                           <Icon
                             className="
                               relative
@@ -564,11 +726,6 @@ export default function HeroSection() {
                               h-8
                               w-8
                               text-[#4B63B8]
-                              transition-all
-                              duration-500
-                              group-hover:-translate-y-1
-                              group-hover:scale-110
-                              group-hover:text-[#29166F]
                               lg:mx-0
                               lg:h-9
                               lg:w-9
@@ -576,13 +733,35 @@ export default function HeroSection() {
                           />
                         </div>
 
-                        <h3 className="text-center text-sm font-semibold text-black transition-colors group-hover:text-[#29166F] lg:text-left lg:text-base">
+                        <h3
+                          className="
+                            text-center
+                            text-sm
+                            font-semibold
+                            text-black
+                            lg:text-left
+                            lg:text-base
+                          "
+                        >
                           {feature.title}
                         </h3>
 
-                        {/* Bottom line */}
-
-                        <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-gradient-to-r from-[#29166F] to-blue-500 transition-all duration-500 group-hover:w-2/3" />
+                        <span
+                          className="
+                            absolute
+                            bottom-0
+                            left-1/2
+                            h-[2px]
+                            w-0
+                            -translate-x-1/2
+                            bg-gradient-to-r
+                            from-[#29166F]
+                            to-blue-500
+                            transition-all
+                            duration-500
+                            group-hover:w-2/3
+                          "
+                        />
                       </div>
                     );
                   })}
@@ -590,7 +769,9 @@ export default function HeroSection() {
               </div>
             </div>
 
-
+            {/* =================================================
+                RIGHT PRODUCT
+            ================================================== */}
 
             <div
               className="
@@ -603,7 +784,7 @@ export default function HeroSection() {
                 lg:mt-0
               "
             >
-
+              {/* Glow */}
 
               <div
                 className="
@@ -618,13 +799,13 @@ export default function HeroSection() {
                   -translate-y-1/2
                   rounded-full
                   bg-blue-500/15
-                  blur-[90px]
+                  blur-[70px]
                   sm:h-[400px]
                   sm:w-[400px]
                 "
               />
 
-
+              {/* Rings */}
 
               <div
                 className="
@@ -648,8 +829,6 @@ export default function HeroSection() {
                 "
               />
 
-
-
               <div
                 className="
                   product-ring-outer
@@ -671,6 +850,7 @@ export default function HeroSection() {
                 "
               />
 
+              {/* Floating labels */}
 
               <div
                 className="
@@ -693,7 +873,11 @@ export default function HeroSection() {
                   lg:gap-2
                 "
               >
-                <ShieldCheck size={15} className="text-blue-600" />
+                <ShieldCheck
+                  size={15}
+                  className="text-blue-600"
+                />
+
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   HIGH PRECISION
                 </span>
@@ -720,7 +904,11 @@ export default function HeroSection() {
                   lg:gap-2
                 "
               >
-                <Globe2 size={15} className="text-blue-600" />
+                <Globe2
+                  size={15}
+                  className="text-blue-600"
+                />
+
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   GLOBAL REACH
                 </span>
@@ -747,26 +935,30 @@ export default function HeroSection() {
                   lg:gap-2
                 "
               >
-                <Sparkles size={15} className="text-red-600" />
+                <Sparkles
+                  size={15}
+                  className="text-red-600"
+                />
+
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   ENGINEERED TO LAST
                 </span>
               </div>
 
-              {/* Swiper */}
+              {/* =================================================
+                  PRODUCT SLIDER
+              ================================================== */}
 
               <Swiper
-                modules={[Autoplay, EffectFade]}
-                effect="fade"
-                fadeEffect={{
-                  crossFade: true,
-                }}
+                modules={[Autoplay]}
                 loop
-                speed={1100}
+                speed={900}
                 autoplay={{
                   delay: 3000,
                   disableOnInteraction: false,
                 }}
+                preloadImages={false}
+                lazyPreloadPrevNext={1}
                 className="
                   product-slider
                   relative
@@ -787,7 +979,7 @@ export default function HeroSection() {
               >
                 {bearingImages.map((img, index) => (
                   <SwiperSlide
-                    key={index}
+                    key={img}
                     className="flex items-center justify-center"
                   >
                     <Image
@@ -796,24 +988,34 @@ export default function HeroSection() {
                       width={500}
                       height={500}
                       priority={index === 0}
+                      loading={
+                        index === 0
+                          ? "eager"
+                          : "lazy"
+                      }
+                      fetchPriority={
+                        index === 0
+                          ? "high"
+                          : "auto"
+                      }
                       sizes="
                         (max-width: 640px) 90vw,
                         (max-width: 1024px) 50vw,
                         45vw
                       "
+                      quality={75}
                       className="
                         bearing-image
                         h-full
                         w-full
                         object-contain
-                       
                       "
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
 
-              {/* Bottom technical badge */}
+              {/* Technical badge */}
 
               <div
                 className="
@@ -845,11 +1047,21 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* =====================================================
-            SCROLL INDICATOR
-        ====================================================== */}
+        {/* Scroll indicator */}
 
-        <div className="absolute bottom-5 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 lg:flex">
+        <div
+          className="
+            absolute
+            bottom-5
+            left-1/2
+            z-20
+            hidden
+            -translate-x-1/2
+            items-center
+            gap-3
+            lg:flex
+          "
+        >
           <span className="h-px w-8 bg-gray-400/60" />
 
           <span className="text-[9px] font-bold uppercase tracking-[3px] text-gray-500">
@@ -865,14 +1077,43 @@ export default function HeroSection() {
       ====================================================== */}
 
       {isFormOpen && (
-        <Catpopup
-          Onpen={isFormOpen}
+        <LazyCataloguePopup
           onClose={() => setIsFormOpen(false)}
         />
       )}
-
-
-
     </>
+  );
+}
+
+/*
+ * Load catalogue popup only when user opens it.
+ * This keeps popup JavaScript out of the initial render.
+ */
+function LazyCataloguePopup({ onClose }) {
+  const [Component, setComponent] = useState(null);
+
+  useEffect(() => {
+    let mounted = true;
+
+    import("@/components/Catpopup").then((mod) => {
+      if (mounted) {
+        setComponent(() => mod.default);
+      }
+    });
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  if (!Component) {
+    return null;
+  }
+
+  return (
+    <Component
+      Onpen={true}
+      onClose={onClose}
+    />
   );
 }
