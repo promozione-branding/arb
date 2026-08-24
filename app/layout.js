@@ -3,32 +3,22 @@ import "./globals.css";
 import Script from "next/script";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import { getCategoryTree } from "@/data"
+import { getCategoryTree } from "@/data";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: [
-    "100",
-    "200",
-    "300",
-    "400",
-    "500",
-    "600",
-    "700",
-    "800",
-    "900",
-  ],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
 export const metadata = {
   title: "Bearing Manufacturer | Precision Bearings | ARB Bearings",
-  description: "ARB Bearings is a trusted bearing manufacturer offering high-quality ball, roller, wheel hub and industrial bearings built for precision, durability and performance.",
+  description:
+    "ARB Bearings is a trusted bearing manufacturer offering high-quality ball, roller, wheel hub and industrial bearings built for precision, durability and performance.",
 };
 
 export default function RootLayout({ children }) {
-
   const categories = getCategoryTree();
   return (
     <html lang="en" className={`${poppins.className} h-full antialiased`}>
@@ -74,6 +64,21 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+
+        <Script id="microsoft-clarity" strategy="beforeInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){
+                    (c[a].q=c[a].q||[]).push(arguments)
+                };
+                t=l.createElement(r);
+                t.async=1;
+                t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "y783t114gh");
+          `}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col">
         <Navbar categories={categories} />
