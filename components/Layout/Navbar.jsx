@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X, PhoneCall, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -21,13 +21,9 @@ export default function Navbar({ categories }) {
 
   const isRussiaLocation = russiaLocations.includes(currentSlug);
 
-  const phoneNumber = isRussiaLocation
-    ? "+7-9859834837"
-    : "+91-9968373086";
+  const phoneNumber = isRussiaLocation ? "+7-9859834837" : "+91-9968373086";
 
-  const phoneHref = isRussiaLocation
-    ? "tel:+79859834837"
-    : "tel:+919968373086";
+  const phoneHref = isRussiaLocation ? "tel:+79859834837" : "tel:+919968373086";
 
   const closeMenu = () => {
     setActiveMenu(null);
@@ -39,10 +35,7 @@ export default function Navbar({ categories }) {
       <div className="relative z-[200] backdrop-blur-2xl bg-[#081B2E]/90 border-b border-white/10 shadow-[0_17px_40px_rgba(0,0,0,.18)]">
         <div className="max-w-7xl mx-auto px-3   ">
           <div className="h-18 flex items-center justify-between">
-            <Link
-              href="/"
-              className="relative flex items-center shrink-0"
-            >
+            <Link href="/" className="relative flex items-center shrink-0">
               <Image
                 src="/logo.png"
                 alt="Logo"
@@ -75,10 +68,11 @@ export default function Navbar({ categories }) {
                 </button>
 
                 <div
-                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${aboutOpen
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible -translate-y-3"
-                    }`}
+                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
+                    aboutOpen
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible -translate-y-3"
+                  }`}
                 >
                   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
                     <Link
@@ -190,7 +184,8 @@ export default function Navbar({ categories }) {
         <div className="w-full mx-auto px-18">
           <div className="h-14 flex items-center justify-center gap-10">
             {categories?.map((cat) => (
-              <Link href={`/products/${cat.slug}`}
+              <Link
+                href={`/products/${cat.slug}`}
                 key={cat.slug}
                 type="button"
                 onMouseEnter={() => setActiveMenu(cat.slug)}
@@ -200,8 +195,9 @@ export default function Navbar({ categories }) {
                 <span>{cat.name}</span>
                 <ChevronDown
                   size={16}
-                  className={`transition-transform duration-300 ${activeMenu === cat.slug ? "rotate-180" : ""
-                    }`}
+                  className={`transition-transform duration-300 ${
+                    activeMenu === cat.slug ? "rotate-180" : ""
+                  }`}
                 />
                 <span className="absolute left-0 -bottom-[20px] h-[3px] w-0 rounded-full bg-[#C52C1D] transition-all duration-300 group-hover:w-full" />
               </Link>
@@ -221,54 +217,60 @@ export default function Navbar({ categories }) {
               </button>
 
               <div
-                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${open
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-3"
-                  }`}
+                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
+                  open
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-3"
+                }`}
               >
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
-                  <Link href=""
+                  <Link
+                    href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Grease
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href=""
+                  <Link
+                    href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Universal Joints
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href=""
+                  <Link
+                    href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Clutch Bearings
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href=""
+                  <Link
+                    href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Pillow Blocks Units
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href=""
+                  <Link
+                    href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Clutch Plates
                     <ArrowRight size={16} />
                   </Link>
 
-                  <Link href=""
+                  <Link
+                    href=""
                     className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
                   >
                     Brake Lining
                     <ArrowRight size={16} />
                   </Link>
-
                 </div>
               </div>
             </div>
@@ -277,19 +279,14 @@ export default function Navbar({ categories }) {
           </div>
         </div>
 
-
         {activeMenu && (
-
           <div className="absolute left-0 top-full w-full overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-white shadow-[0_40px_100px_rgba(15,23,42,0.18)] backdrop-blur-xl">
             <div className="w-full  mx-auto px-15 py-5">
               <div className="mb-3 flex items-center justify-between border-b border-slate-200 pb-3 ">
                 <div>
-
-
                   <h2 className=" text-4xl font-black tracking-tight text-slate-900">
                     {categories.find((c) => c.slug === activeMenu)?.name}
                   </h2>
-
                 </div>
 
                 <Link
@@ -458,10 +455,7 @@ export default function Navbar({ categories }) {
       )}
 
       {isFormOpen && (
-        <Enquiry
-          IATFpen={isFormOpen}
-          onClose={() => setIsFormOpen(false)}
-        />
+        <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
       )}
     </header>
   );

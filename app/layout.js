@@ -18,6 +18,34 @@ export const metadata = {
     "ARB Bearings is a trusted bearing manufacturer offering high-quality ball, roller, wheel hub and industrial bearings built for precision, durability and performance.",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "ARB Bearings",
+  url: "https://www.bearingmanufacturers.com/",
+  logo: "https://www.bearingmanufacturers.com/logo.png",
+  description:
+    "ARB Bearings is a bearing manufacturer based in India and a supplier of bearings and industrial bearing solutions to customers in India, Russia, Ukraine, the United States, and international markets.",
+  areaServed: [
+    {
+      "@type": "Country",
+      name: "India",
+    },
+    {
+      "@type": "Country",
+      name: "Russia",
+    },
+    {
+      "@type": "Country",
+      name: "UAE",
+    },
+    {
+      "@type": "Country",
+      name: "United States",
+    },
+  ],
+};
+
 export default function RootLayout({ children }) {
   const categories = getCategoryTree();
   return (
@@ -65,10 +93,43 @@ export default function RootLayout({ children }) {
           }}
         />
 
-       <Script
-          id="google-tag-manager"
-          strategy="beforeInteractive"
-        >
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "ARB Bearings",
+              url: "https://www.bearingmanufacturers.com/",
+              logo: "https://www.bearingmanufacturers.com/logo.png",
+              description:
+                "ARB Bearings is a bearing manufacturer based in India and a supplier of bearings and industrial bearing solutions to customers in India, Russia, Ukraine, the United States, and international markets.",
+              areaServed: [
+                {
+                  "@type": "Country",
+                  name: "India",
+                },
+                {
+                  "@type": "Country",
+                  name: "Russia",
+                },
+                {
+                  "@type": "Country",
+                  name: "UAE",
+                },
+                {
+                  "@type": "Country",
+                  name: "United States",
+                },
+              ],
+            }),
+          }}
+        />
+
+        <link rel="canonical" href="https://www.bearingmanufacturers.com/" />
+
+        <Script id="google-tag-manager" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){
               w[l]=w[l]||[];
@@ -89,8 +150,7 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className="min-h-full flex flex-col">
-
-         <noscript>
+        <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TDPTJ48F"
             height="0"

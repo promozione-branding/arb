@@ -1,0 +1,47 @@
+# robots.txt for ARB Bearings
+# https://www.bearingmanufacturers.com/
+
+# Default rules for all crawlers
+User-agent: *
+
+Allow: /
+
+# API
+Disallow: /api/
+
+# Temporary/System
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /cache/
+
+
+# AI Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Google Ads
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+
+# Sitemap
+Sitemap: https://www.bearingmanufacturers.com/sitemap.xml
