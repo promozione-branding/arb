@@ -13,31 +13,31 @@ import "swiper/css/navigation";
 const products = [
   {
     title: "Angular Contact Ball Bearings",
-    image: "/arb-images/DOUBLE POINT ANGULAR.png",
+    image: "/arb-images/DOUBLE POINT ANGULAR1.webp",
     desc: "Designed to accommodate combined radial and axial loads in both directions, offering high rigidity and reliable performance for demanding industrial applications.",
     link: "/products/ball-bearing/double-row-angular-contact-bearings",
   },
   {
     title: "Four Point Contact Ball Bearings",
-    image: "/arb-images/FOUR POINT ANGULAR CONTACT.png",
+    image: "/arb-images/FOUR POINT ANGULAR CONTACT1.webp",
     desc: "Engineered to support axial loads in both directions while occupying minimal space, making them ideal for gearboxes, pumps, and industrial machinery.",
     link: "/products/ball-bearing/four-point-contact-ball-bearings",
   },
   {
     title: "Deep Groove Ball Bearings",
-    image: "/arb-images/BALL BEARING 62208 2RS.png",
+    image: "/arb-images/BALL BEARING 62208 2RS1.webp",
     desc: "Precision-engineered ball bearings deliver smooth rotation, low friction, high-speed operation, and extended service life across automotive and industrial applications.",
     link: "/products/ball-bearing/deep-groove-ball-bearing",
   },
   {
     title: "Wheel Bearings",
-    image: "/arb-images/Wheel Bearing.png",
+    image: "/arb-images/Wheel Bearing1.webp",
     desc: "High-performance wheel bearings provide smooth wheel rotation, reduced friction, and enhanced durability for reliable automotive performance and safety.",
     link: "/products/wheel-bearing/wheel-bearings",
   },
   {
     title: "Cylindrical Roller Bearings",
-    image: "/arb-images/CYLINDRICAL.png",
+    image: "/arb-images/CYLINDRICAL1.webp",
     desc: "Built to handle heavy radial loads with exceptional rigidity, ensuring efficient performance in electric motors, gearboxes, and heavy industrial equipment.",
     link: "/products/roller-bearings/cylindrical-roller-bearings",
   },

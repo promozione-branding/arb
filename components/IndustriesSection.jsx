@@ -71,7 +71,7 @@ const industries = [
 
   {
     title: "Construction",
-    image: "/const.jpg",
+    image: "/industry/const1.webp",
     icon: Building2,
     applications: [
       { name: "Excavators", icon: Construction },
@@ -92,7 +92,7 @@ const industries = [
 
   {
     title: "Electric Motors",
-    image: "/industry/4.jpg",
+    image: "/industry/44.webp",
     icon: Zap,
     applications: [
       { name: "Industrial Electric Motors", icon: Zap },
@@ -111,7 +111,7 @@ const industries = [
 
   {
     title: "Conveyor / Material Handling",
-    image: "/industry/5.jpg",
+    image: "/industry/55.webp",
     icon: Settings2,
     applications: [
       { name: "Belt Conveyors", icon: Settings2 },
@@ -146,7 +146,7 @@ const industries = [
 
   {
     title: "Railways",
-    image: "/railway.jpg",
+    image: "/industry/railway1.webp",
     icon: Train,
     applications: [
       { name: "Engines", icon: Train },

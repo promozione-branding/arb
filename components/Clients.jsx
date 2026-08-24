@@ -7,35 +7,29 @@ import "swiper/css";
 
 export default function TrustedBrands() {
   const brands = [
-    "/client/25.png",
-    "/client/2.png",
+    "/client/25.webp",
+    "/client/2.webp",
 
-    "/client/4.png",
-    "/client/24.png",
-    "/client/7.png",
-    "/client/8.png",
-    "/client/9.png",
-    "/client/10.png",
-    "/client/11.png",
-    "/client/12.png",
-    "/client/13.png",
-    "/client/14.png",
-    "/client/15.png",
-    "/client/16.png",
-    "/client/17.png",
-    "/client/18.png",
+    "/client/4.webp",
+    "/client/24.webp",
+    "/client/7.webp",
+    "/client/8.webp",
+    "/client/9.webp",
+    "/client/10.webp",
+    "/client/11.webp",
+    "/client/12.webp",
+    "/client/13.webp",
+    "/client/14.webp",
+    "/client/15.webp",
+    "/client/16.webp",
+    "/client/17.webp",
+    "/client/18.webp",
 
-    "/client/19.png",
-    "/client/20.png",
-    "/client/22.png",
-    "/client/21.png",
-    "/client/23.png",
-
-
-
-
-
-
+    "/client/19.webp",
+    "/client/20.webp",
+    "/client/22.webp",
+    "/client/21.webp",
+    "/client/23.webp",
   ];
 
   return (
@@ -112,8 +106,10 @@ export default function TrustedBrands() {
           ))}
         </Swiper>
       </div>
-      <p className="text-xs text-center mt-7">*The logos used in the creative are properties/copyrights of the respective companies*</p>
-
+      <p className="text-xs text-center mt-7">
+        *The logos used in the creative are properties/copyrights of the
+        respective companies*
+      </p>
     </section>
   );
 }

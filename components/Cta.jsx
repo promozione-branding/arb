@@ -11,7 +11,7 @@ const Cta = () => {
   return (
     <>
       <section
-        style={{ backgroundImage: "url(/ctabg.jpg)" }}
+        style={{ backgroundImage: "url(/ctabg1.webp)" }}
         className="
           relative
           mb-5

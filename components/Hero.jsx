@@ -24,11 +24,11 @@ import "swiper/css/effect-fade";
 
 export default function HeroSection() {
   const bearingImages = [
-    "/hero/1.png",
-    "/hero/2.png",
-    "/hero/3.png",
-    "/hero/4.png",
-    "/hero/Image 1.png"
+    "/hero/11.webp",
+    "/hero/22.webp",
+    "/hero/33.webp",
+    "/hero/44.webp",
+    "/hero/Image 11.webp"
   ];
 
   const [isFormOpen, setIsFormOpen] = useState(false);

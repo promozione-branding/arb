@@ -49,7 +49,7 @@ export default function StatsSection() {
   return (
     <section
       style={{
-        backgroundImage: "url(/count.avif)",
+        backgroundImage: "url(/count22.webp)",
       }}
       className="
         relative

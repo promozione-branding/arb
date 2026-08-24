@@ -12,29 +12,28 @@ import Manufacturing from "@/components/Manufacture";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonial";
 import AboutRussia from "@/components/AboutRussia";
-import Popup from "@/components/Popup"
+import Popup from "@/components/Popup";
 import Cta from "@/components/Cta";
-import Whychoose from "@/components/Whychoose"
+import Whychoose from "@/components/Whychoose";
 export default function Home() {
   return (
-<div>
-{/* <Popup/> */}
-<Hero/>
-  <ProductsSlider/>
-<Clients/>
-  
-  {/* <Process/> */}
-  <IndustriesSection/>
-<AboutRussia/>
-<Cta/>
-  <Category/>
-  <Whychoose/>
-<About/>
-    <Count/>
-  <Excellence/>
-  {/* <Manufacturing/> */}
-  <Testimonials/>
+    <div>
+      {/* <Popup/> */}
+      <Hero />
+      <ProductsSlider />
+      <Clients />
 
-</div>
+      {/* <Process/> */}
+      <IndustriesSection />
+      <AboutRussia />
+      <Cta />
+      <Category />
+      <Whychoose />
+      <About />
+      <Count />
+      <Excellence />
+      {/* <Manufacturing/> */}
+      <Testimonials />
+    </div>
   );
 }

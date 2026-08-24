@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -10,7 +9,7 @@ import Link from "next/link";
 import "swiper/css";
 
 export default function AboutSection() {
-  const gallery = ["/about 1.png", "/about 2.png", "/about 3.png"];
+  const gallery = ["/about 11.webp", "/about 22.webp", "/about 33.webp"];
 
   const industries = [
     "Earthmover",
@@ -205,7 +204,11 @@ export default function AboutSection() {
               sm:leading-7
             "
           >
-            With 60+ years of bearings industry know-how and manufacturing operations since 1990, ARB Bearings is often seen as a trusted manufacturer of top-notch bearings globally. Precision engineered bearings have been designed to be durable, reliable, and suitable for heavy-duty applications in diverse industries.
+            With 60+ years of bearings industry know-how and manufacturing
+            operations since 1990, ARB Bearings is often seen as a trusted
+            manufacturer of top-notch bearings globally. Precision engineered
+            bearings have been designed to be durable, reliable, and suitable
+            for heavy-duty applications in diverse industries.
           </p>
 
           {/* Industries */}
@@ -244,10 +247,7 @@ export default function AboutSection() {
                   sm:p-3
                 "
               >
-                <CheckCircle2
-                  className="shrink-0 text-[#CC1C15]"
-                  size={18}
-                />
+                <CheckCircle2 className="shrink-0 text-[#CC1C15]" size={18} />
 
                 <span className="text-sm font-medium text-black sm:text-[15px]">
                   {item}
@@ -327,7 +327,6 @@ export default function AboutSection() {
               "
             >
               Contact Us
-
               <ArrowRight
                 size={19}
                 className="transition-transform duration-300 group-hover:translate-x-1"
@@ -339,4 +338,3 @@ export default function AboutSection() {
     </section>
   );
 }
-

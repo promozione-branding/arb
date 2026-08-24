@@ -18,7 +18,7 @@ const products = [
     title: "Ball Bearings",
     link: "/products/ball-bearing",
     desc: "Engineered for high speed applications, superior durability, ideal for radial & axial loads",
-    image: "/arb-images/BALL BEARING 62208 2RS.png",
+    image: "/arb-images/BALL BEARING 62208 2RS1.webp",
     applications: [
       "Electric Motors",
       "Automobiles",
@@ -33,7 +33,7 @@ const products = [
     title: "Roller Bearings",
     link: "/products/roller-bearings",
     desc: "Smooth rotation, low friction, reliable performance for versatile applications",
-    image: "/arb-images/prodtaper.png",
+    image: "/arb-images/prodtaper1.webp",
     images: [
       "/arb-images/roller 1.png",
       // "/arb-images/roller 2.png",
@@ -53,14 +53,12 @@ const products = [
     title: "Wheel Bearings / Wheel Bearings Kit",
     link: "/products/wheel-bearing",
     desc: "Precision wheel hub bearings, smooth performance, long-lasting reliability",
-    image: "/arb-images/wheel.png",
-    images: [
-      "/arb-images/123.png",
-    ],
+    image: "/arb-images/wheel1.webp",
+    images: ["/arb-images/123.png"],
     applications: [
       "Passenger Car",
       "Agricultural",
-      "Electric Vehicle",
+      "Electric Vehicle", 
       "ATV/UTV  Vehicles",
       "LCVs",
     ],
@@ -70,15 +68,9 @@ const products = [
     title: "Wheel Hub Bearings",
     link: "/products/wheel-bearing",
     desc: "Engineered for smooth rotation, superior load handling, and long-lasting wheel-end reliability",
-    image: "/arb-images/wheelbearinghub.png",
+    image: "/arb-images/wheelbearinghub1.webp",
 
-    applications: [
-      "Trucks",
-      "Trailers ",
-      "Semi Trailers",
-      "Buses",
-      ,
-    ],
+    applications: ["Trucks", "Trailers ", "Semi Trailers", "Buses", ,],
   },
 ];
 
@@ -88,7 +80,6 @@ export default function ProductSlider() {
   return (
     <section className="relative overflow-hidden bg-blue-50 px-4 md:py-15 py-8">
       <div className="mx-auto max-w-7xl">
-
         {/* Heading */}
         <div className="mb-5 flex items-end justify-between md:mb-10">
           <div>
@@ -125,7 +116,6 @@ export default function ProductSlider() {
                     hover:shadow-2xl
                   "
               >
-
                 {/* Top Accent */}
                 <div
                   className="
@@ -161,7 +151,6 @@ export default function ProductSlider() {
                       to-white
                     "
                 >
-
                   {/* Background Glow */}
                   <div
                     className="
@@ -261,7 +250,6 @@ export default function ProductSlider() {
 
                 {/* Content */}
                 <div className="flex md:h-[200px] flex-col md:p-4 p-2">
-
                   <h3 className="line-clamp-2 md:text-xl text-base font-bold text-slate-900">
                     {item.title}
                   </h3>
@@ -272,7 +260,6 @@ export default function ProductSlider() {
 
                   {/* Bottom CTA */}
                   <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-2">
-
                     <Link
                       href={item.link}
                       className="
@@ -303,7 +290,6 @@ export default function ProductSlider() {
                     >
                       <ArrowRight size={18} />
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -331,7 +317,6 @@ export default function ProductSlider() {
           "
           onClick={() => setSelectedProduct(null)}
         >
-
           <div
             className="
               relative
@@ -344,7 +329,6 @@ export default function ProductSlider() {
             "
             onClick={(e) => e.stopPropagation()}
           >
-
             {/* Close */}
             <button
               onClick={() => setSelectedProduct(null)}
@@ -369,7 +353,6 @@ export default function ProductSlider() {
             </button>
 
             <div className="grid md:grid-cols-2">
-
               {/* Image */}
               <div className="flex items-center justify-center bg-blue-50 relative">
                 <Swiper
@@ -384,7 +367,7 @@ export default function ProductSlider() {
                   className="relative z-10 h-60 w-full product-card-swiper"
                 >
                   {/* Main Image */}
-                  {selectedProduct.images ?
+                  {selectedProduct.images ? (
                     selectedProduct.images?.map((img, imageIndex) => (
                       <SwiperSlide
                         key={imageIndex}
@@ -399,7 +382,7 @@ export default function ProductSlider() {
                         />
                       </SwiperSlide>
                     ))
-                    :
+                  ) : (
                     <SwiperSlide className="flex items-center justify-center">
                       <Image
                         src={selectedProduct.image}
@@ -408,13 +391,13 @@ export default function ProductSlider() {
                         height={350}
                         className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
                       />
-                    </SwiperSlide>}
+                    </SwiperSlide>
+                  )}
                 </Swiper>
               </div>
 
               {/* Content */}
               <div className="p-4 md:p-7">
-
                 <span className="text-sm font-semibold uppercase tracking-widest text-red-500">
                   Bearings Details
                 </span>
@@ -442,14 +425,11 @@ export default function ProductSlider() {
                     </li>
                   ))}
                 </ul>
-
               </div>
             </div>
           </div>
         </div>
       )}
-
-
     </section>
   );
 }
