@@ -1,9 +1,16 @@
+import { russiaLocations } from "@/lib/russiaLocations";
+import { uaeLocations } from "@/lib/uaeLocations";
+
 export const dynamic = "force-dynamic";
 
 export async function GET() {
   const baseUrl = "https://www.bearingmanufacturers.com";
 
   const currentDate = new Date().toISOString();
+
+  // =========================
+  // STATIC PAGES
+  // =========================
 
   const staticPages = [
     {
@@ -36,10 +43,39 @@ export async function GET() {
       priority: 0.8,
       changefreq: "weekly",
     },
+    {
+      loc: `${baseUrl}/brake-lining`,
+      priority: 0.8,
+      changefreq: "weekly",
+    },
+    {
+      loc: `${baseUrl}/clutch-plates`,
+      priority: 0.8,
+      changefreq: "weekly",
+    },
+    {
+      loc: `${baseUrl}/grease`,
+      priority: 0.8,
+      changefreq: "weekly",
+    },
+    {
+      loc: `${baseUrl}/pillow-blocks-units`,
+      priority: 0.8,
+      changefreq: "weekly",
+    },
+    {
+      loc: `${baseUrl}/privacy-policy`,
+      priority: 0.5,
+      changefreq: "yearly",
+    },
+
+    // =========================
+    // BALL BEARINGS
+    // =========================
 
     {
       loc: `${baseUrl}/products/ball-bearing`,
-      priority: 0.8,
+      priority: 0.9,
       changefreq: "weekly",
     },
     {
@@ -68,9 +104,13 @@ export async function GET() {
       changefreq: "weekly",
     },
 
+    // =========================
+    // WHEEL BEARINGS
+    // =========================
+
     {
       loc: `${baseUrl}/products/wheel-bearing`,
-      priority: 0.8,
+      priority: 0.9,
       changefreq: "weekly",
     },
     {
@@ -79,9 +119,13 @@ export async function GET() {
       changefreq: "weekly",
     },
 
+    // =========================
+    // ROLLER BEARINGS
+    // =========================
+
     {
       loc: `${baseUrl}/products/roller-bearings`,
-      priority: 0.8,
+      priority: 0.9,
       changefreq: "weekly",
     },
     {
@@ -115,13 +159,13 @@ export async function GET() {
       changefreq: "weekly",
     },
 
-
-
-
+    // =========================
+    // WHEEL BEARING HUB
+    // =========================
 
     {
       loc: `${baseUrl}/products/wheel-bearing-hub`,
-      priority: 0.8,
+      priority: 0.9,
       changefreq: "weekly",
     },
     {
@@ -129,13 +173,13 @@ export async function GET() {
       priority: 0.8,
       changefreq: "weekly",
     },
-
-
-
-  
   ];
 
-  const urls = staticPages
+  // =========================
+  // STATIC URL XML
+  // =========================
+
+  const staticUrls = staticPages
     .map(
       (page) => `
   <url>
@@ -147,9 +191,51 @@ export async function GET() {
     )
     .join("");
 
+  // =========================
+  // RUSSIA LOCATIONS
+  // =========================
+
+  const russiaUrls = russiaLocations
+    .map(
+      (location) => `
+  <url>
+    <loc>${baseUrl}/${location}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`,
+    )
+    .join("");
+
+  // =========================
+  // UAE LOCATIONS
+  // =========================
+
+  const uaeUrls = uaeLocations
+    .map(
+      (location) => `
+  <url>
+    <loc>${baseUrl}/${location}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`,
+    )
+    .join("");
+
+  // =========================
+  // FINAL SITEMAP
+  // =========================
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
+
+${staticUrls}
+
+${russiaUrls}
+
+${uaeUrls}
+
 </urlset>`;
 
   return new Response(sitemap, {
