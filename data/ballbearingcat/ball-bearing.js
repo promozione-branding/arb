@@ -24,7 +24,7 @@ export default {
         title: "Premium Ball Bearings to EMQ BALL BEARINGS(Electric Motor Quality)",
         description:
           "Designed for demanding industrial applications, EMQ ball bearings deliver exceptional reliability, smooth operation, and long service life with precision engineering and superior quality.",
-        image: "/3.png",
+        image: "/33.webp",
         features: [
           "High Precision Engineering",
           "Low Friction Performance",
@@ -38,7 +38,7 @@ export default {
         title: "Built for Maximum Reliability & Precision ",
         description:
           "As a leading ball bearings manufacturer, ARB Bearings designs and manufactures high-performance ball bearings that deliver exceptional precision, durability, and efficiency. Engineered for demanding automotive and industrial applications, our bearings ensure smooth operation, reduced maintenance, and long-lasting reliability.",
-        image: "/3.png",
+        image: "/33.webp",
         stats: {
           title: "2x",
           text: "Higher Load Capacity",
@@ -83,7 +83,7 @@ export default {
         "Bearing Height (mm)": 5,
         "Mass (Kg)": 0.006,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/625.pdf",
     },
     {
@@ -95,7 +95,7 @@ export default {
         "Bearing Height (mm)": 6,
         "Mass (Kg)": 0.008,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/606.pdf",
     },
     {
@@ -107,7 +107,7 @@ export default {
         "Bearing Height (mm)": 6,
         "Mass (Kg)": 0.009,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/626.pdf",
     },
     {
@@ -119,7 +119,7 @@ export default {
         "Bearing Height (mm)": 6,
         "Mass (Kg)": 0.008,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/607.pdf",
     },
     {
@@ -143,7 +143,7 @@ export default {
         "Bearing Height (mm)": 7,
         "Mass (Kg)": 0.012,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/608.pdf",
     },
     {
@@ -155,7 +155,7 @@ export default {
         "Bearing Height (mm)": 8,
         "Mass (Kg)": 0.02,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/628.pdf",
     },
     {
@@ -167,7 +167,7 @@ export default {
         "Bearing Height (mm)": 7,
         "Mass (Kg)": 0.014,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/609.pdf",
     },
     {
@@ -179,7 +179,7 @@ export default {
         "Bearing Height (mm)": 8,
         "Mass (Kg)": 0.02,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/629.pdf",
     },
     {
@@ -191,7 +191,7 @@ export default {
         "Bearing Height (mm)": 8,
         "Mass (Kg)": 0.019,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/6000.pdf",
     },
     {
@@ -203,7 +203,7 @@ export default {
         "Bearing Height (mm)": 9,
         "Mass (Kg)": 0.032,
       },
-      image: "/arb-images/BALL BEARING 62208 2RS.png",
+      image: "/arb-images/BALL BEARING 62208 2RSs.webp",
       pdf: "/pdfs/6200.pdf",
     },
     {
