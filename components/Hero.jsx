@@ -15,11 +15,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-
-import "swiper/css";
-
 const bearingImages = [
   "/hero/11.webp",
   "/hero/22.webp",
@@ -28,10 +23,7 @@ const bearingImages = [
   "/hero/Image 11.webp",
 ];
 
-const typedTexts = [
-  "DRIVES PROGRESS",
-  "POWERS PERFORMANCE",
-];
+const typedTexts = ["DRIVES PROGRESS", "POWERS PERFORMANCE"];
 
 const features = [
   {
@@ -59,14 +51,27 @@ const features = [
 export default function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
+  /* Product slider */
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  /* Typewriter */
   const [typedText, setTypedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   /*
+   * Product slider autoplay
+   */
+  useEffect(() => {
+    const slider = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % bearingImages.length);
+    }, 3000);
+
+    return () => clearInterval(slider);
+  }, []);
+
+  /*
    * Typewriter effect
-   *
-   * Delayed slightly so it doesn't compete with initial page rendering.
    */
   useEffect(() => {
     const startDelay = setTimeout(() => {
@@ -85,9 +90,7 @@ export default function HeroSection() {
       if (isDeleting && typedText === "") {
         setIsDeleting(false);
 
-        setTextIndex(
-          (prev) => (prev + 1) % typedTexts.length
-        );
+        setTextIndex((prev) => (prev + 1) % typedTexts.length);
 
         return;
       }
@@ -95,14 +98,8 @@ export default function HeroSection() {
       const timer = setTimeout(() => {
         setTypedText(
           isDeleting
-            ? currentText.substring(
-                0,
-                typedText.length - 1
-              )
-            : currentText.substring(
-                0,
-                typedText.length + 1
-              )
+            ? currentText.substring(0, typedText.length - 1)
+            : currentText.substring(0, typedText.length + 1)
         );
       }, typingSpeed);
 
@@ -251,6 +248,7 @@ export default function HeroSection() {
         />
 
         {/* Decorative lines */}
+
         <div
           className="
             pointer-events-none
@@ -475,10 +473,9 @@ export default function HeroSection() {
                   lg:mx-0
                 "
               >
-                High-quality ball and roller bearings engineered
-                for demanding industrial and automotive
-                applications, supplied from India to customers
-                worldwide.
+                High-quality ball and roller bearings engineered for demanding
+                industrial and automotive applications, supplied from India to
+                customers worldwide.
               </p>
 
               {/* Stats */}
@@ -550,10 +547,7 @@ export default function HeroSection() {
                   lg:justify-start
                 "
               >
-                <Link
-                  href="/about-us"
-                  className="w-full sm:w-auto"
-                >
+                <Link href="/about-us" className="w-full sm:w-auto">
                   <button
                     className="
                       group
@@ -597,9 +591,7 @@ export default function HeroSection() {
                       "
                     />
 
-                    <span className="relative">
-                      EXPLORE MORE
-                    </span>
+                    <span className="relative">EXPLORE MORE</span>
 
                     <MoveRight
                       size={18}
@@ -873,10 +865,7 @@ export default function HeroSection() {
                   lg:gap-2
                 "
               >
-                <ShieldCheck
-                  size={15}
-                  className="text-blue-600"
-                />
+                <ShieldCheck size={15} className="text-blue-600" />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   HIGH PRECISION
@@ -904,10 +893,7 @@ export default function HeroSection() {
                   lg:gap-2
                 "
               >
-                <Globe2
-                  size={15}
-                  className="text-blue-600"
-                />
+                <Globe2 size={15} className="text-blue-600" />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   GLOBAL REACH
@@ -935,10 +921,7 @@ export default function HeroSection() {
                   lg:gap-2
                 "
               >
-                <Sparkles
-                  size={15}
-                  className="text-red-600"
-                />
+                <Sparkles size={15} className="text-red-600" />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   ENGINEERED TO LAST
@@ -947,25 +930,18 @@ export default function HeroSection() {
 
               {/* =================================================
                   PRODUCT SLIDER
+                  NO SWIPER
+                  TAILWIND + REACT ONLY
               ================================================== */}
 
-              <Swiper
-                modules={[Autoplay]}
-                loop
-                speed={900}
-                autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false,
-                }}
-                preloadImages={false}
-                lazyPreloadPrevNext={1}
+              <div
                 className="
-                  product-slider
                   relative
                   z-10
                   h-[280px]
                   w-full
                   max-w-[420px]
+                  overflow-hidden
                   sm:h-[360px]
                   sm:max-w-[500px]
                   md:h-[460px]
@@ -977,43 +953,95 @@ export default function HeroSection() {
                   2xl:max-w-[350px]
                 "
               >
-                {bearingImages.map((img, index) => (
-                  <SwiperSlide
-                    key={img}
-                    className="flex items-center justify-center"
-                  >
-                    <Image
-                      src={img}
-                      alt={`Bearing ${index + 1}`}
-                      width={500}
-                      height={500}
-                      priority={index === 0}
-                      loading={
-                        index === 0
-                          ? "eager"
-                          : "lazy"
+                {bearingImages.map((img, index) => {
+                  const isActive = index === currentSlide;
+
+                  const isPrevious =
+                    index < currentSlide ||
+                    (currentSlide === 0 &&
+                      index === bearingImages.length - 1);
+
+                  return (
+                    <div
+                      key={img}
+                      className={`
+                        absolute
+                        inset-0
+                        flex
+                        items-center
+                        justify-center
+                        transition-all
+                        duration-700
+                        ease-in-out
+                        ${
+                          isActive
+                            ? "translate-x-0 opacity-100"
+                            : isPrevious
+                              ? "-translate-x-full opacity-0"
+                              : "translate-x-full opacity-0"
+                        }
+                      `}
+                    >
+                      <Image
+                        src={img}
+                        alt={`Bearing ${index + 1}`}
+                        width={500}
+                        height={500}
+                        priority={index === 0}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                        sizes="
+                          (max-width: 640px) 90vw,
+                          (max-width: 1024px) 50vw,
+                          45vw
+                        "
+                        quality={75}
+                        className="
+                          bearing-image
+                          h-full
+                          w-full
+                          object-contain
+                        "
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Slider dots */}
+
+              <div
+                className="
+                  absolute
+                  bottom-[8%]
+                  left-1/2
+                  z-30
+                  flex
+                  -translate-x-1/2
+                  items-center
+                  gap-2
+                "
+              >
+                {bearingImages.map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    aria-label={`Go to bearing ${index + 1}`}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`
+                      h-1.5
+                      rounded-full
+                      transition-all
+                      duration-300
+                      ${
+                        currentSlide === index
+                          ? "w-8 bg-[#29166F]"
+                          : "w-1.5 bg-gray-400/60"
                       }
-                      fetchPriority={
-                        index === 0
-                          ? "high"
-                          : "auto"
-                      }
-                      sizes="
-                        (max-width: 640px) 90vw,
-                        (max-width: 1024px) 50vw,
-                        45vw
-                      "
-                      quality={75}
-                      className="
-                        bearing-image
-                        h-full
-                        w-full
-                        object-contain
-                      "
-                    />
-                  </SwiperSlide>
+                    `}
+                  />
                 ))}
-              </Swiper>
+              </div>
 
               {/* Technical badge */}
 
