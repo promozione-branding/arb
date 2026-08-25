@@ -52,6 +52,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.className} h-full antialiased`}>
       <head>
         {/* Yandex.Metrika */}
+        <meta name="yandex-verification" content="5fdaf2cd9bb84918" />
         <Script
           id="yandex-metrika"
           strategy="beforeInteractive"
