@@ -68,11 +68,10 @@ export default function Navbar({ categories }) {
                 </button>
 
                 <div
-                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
-                    aboutOpen
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-3"
-                  }`}
+                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${aboutOpen
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-3"
+                    }`}
                 >
                   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
                     <Link
@@ -177,8 +176,7 @@ export default function Navbar({ categories }) {
         </div>
       </div>
 
-      <div
-        className="hidden lg:block bg-white border-b border-gray-200 relative shadow-sm"
+      <div className="hidden lg:block bg-white border-b border-gray-200 relative shadow-sm"
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="w-full mx-auto px-18">
@@ -195,9 +193,8 @@ export default function Navbar({ categories }) {
                 <span>{cat.name}</span>
                 <ChevronDown
                   size={16}
-                  className={`transition-transform duration-300 ${
-                    activeMenu === cat.slug ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-300 ${activeMenu === cat.slug ? "rotate-180" : ""
+                    }`}
                 />
                 <span className="absolute left-0 -bottom-[20px] h-[3px] w-0 rounded-full bg-[#C52C1D] transition-all duration-300 group-hover:w-full" />
               </Link>
@@ -217,11 +214,10 @@ export default function Navbar({ categories }) {
               </button>
 
               <div
-                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
-                  open
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible -translate-y-3"
-                }`}
+                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${open
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-3"
+                  }`}
               >
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
                   <Link
@@ -280,29 +276,29 @@ export default function Navbar({ categories }) {
         </div>
 
         {activeMenu && (
-          <div className="absolute left-0 top-full w-full overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-white shadow-[0_40px_100px_rgba(15,23,42,0.18)] backdrop-blur-xl">
-            <div className="w-full  mx-auto px-15 py-5">
-              <div className="mb-3 flex items-center justify-between border-b border-slate-200 pb-3 ">
-                <div>
-                  <h2 className=" text-4xl font-black tracking-tight text-slate-900">
-                    {categories.find((c) => c.slug === activeMenu)?.name}
-                  </h2>
-                </div>
+          <div className="absolute left-0 top-full w-full overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-white shadow-[0_25px_60px_rgba(15,23,42,0.15)] backdrop-blur-xl">
+            <div className="mx-auto w-full px-10 py-4">
+              {/* Header */}
+              <div className="mb-2 flex items-center justify-between border-b border-slate-200 pb-3">
+                <h2 className="text-2xl font-black tracking-tight text-slate-900">
+                  {categories.find((c) => c.slug === activeMenu)?.name}
+                </h2>
 
                 <Link
                   href={`/products/${activeMenu}`}
-                  className="group flex items-center gap-3 rounded-full border border-[#C72818] px-7 py-3 font-semibold text-[#C72818] transition-all duration-300 hover:bg-[#C72818] hover:text-white"
+                  className="group flex items-center gap-2 rounded-full border border-[#C72818] px-5 py-2 text-sm font-semibold text-[#C72818] transition-all duration-300 hover:bg-[#C72818] hover:text-white"
                 >
                   View All
                   <ArrowRight
-                    size={18}
+                    size={16}
                     className="transition-transform group-hover:translate-x-1"
                   />
                 </Link>
               </div>
 
-              <div className="max-h-[70vh] pb-20 pt-10 overflow-y-auto pr-2">
-                <div className="grid grid-cols-4 gap-8">
+              {/* Products */}
+              <div className="max-h-[55vh] overflow-y-auto py-5 pr-2">
+                <div className="grid grid-cols-4 gap-5">
                   {categories
                     .find((c) => c.slug === activeMenu)
                     ?.subCategories?.map((sub) => (
@@ -310,32 +306,34 @@ export default function Navbar({ categories }) {
                         key={sub.slug}
                         href={`/products/${activeMenu}/${sub.slug}`}
                         onClick={closeMenu}
-                        className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_15px_35px_rgba(15,23,42,.08)] transition-all duration-500 hover:-translate-y-2 hover:border-[#C72818]/30 hover:shadow-[0_30px_60px_rgba(199,40,24,.18)]"
+                        className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_10px_25px_rgba(15,23,42,.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C72818]/30 hover:shadow-[0_20px_40px_rgba(199,40,24,.15)]"
                       >
-                        <div className="relative h-52 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-slate-100">
+                        {/* Image */}
+                        <div className="relative h-36 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-slate-100">
                           {sub.image ? (
                             <Image
                               src={sub.image}
                               alt={sub.name}
-                              width={300}
-                              height={300}
-                              className="object-contain transition-transform duration-700 group-hover:scale-110"
+                              width={220}
+                              height={180}
+                              className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                             />
                           ) : (
-                            <div className="flex h-full items-center justify-center text-sm text-gray-400">
+                            <div className="flex h-full items-center justify-center text-xs text-gray-400">
                               No image available
                             </div>
                           )}
                         </div>
 
-                        <div className="p-6">
-                          <h3 className="font-bold text-gray-900 text-[17px] leading-6 group-hover:text-[#28186D] transition">
+                        {/* Content */}
+                        <div className="p-4">
+                          <h3 className="text-[15px] font-bold leading-5 text-gray-900 transition group-hover:text-[#28186D]">
                             {sub.name}
                           </h3>
 
-                          <div className="mt-3 flex items-center text-[#C72818] font-semibold text-sm">
+                          <div className="mt-2 flex items-center text-xs font-semibold text-[#C72818]">
                             Explore Products
-                            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-2">
+                            <span className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1">
                               →
                             </span>
                           </div>

@@ -15,7 +15,7 @@ const products = [
     title: "Angular Contact Ball Bearings",
     image: "/arb-images/DOUBLE POINT ANGULAR1.webp",
     desc: "Designed to accommodate combined radial and axial loads in both directions, offering high rigidity and reliable performance for demanding industrial applications.",
-    link: "/products/ball-bearing/double-row-angular-contact-bearings",
+    link: "/products/ball-bearing/angular-contact-ball-bearings",
   },
   {
     title: "Four Point Contact Ball Bearings",
