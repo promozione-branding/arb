@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import {
   MoveRight,
-  ArrowBigRight,
   BadgeCheck,
   Award,
   Globe2,
@@ -14,6 +12,7 @@ import {
   Sparkles,
   ShieldCheck,
 } from "lucide-react";
+import EnquiryR from "./EnquiryR";
 
 const bearingImages = [
   "/hero/11.webp",
@@ -23,32 +22,35 @@ const bearingImages = [
   "/hero/Image 11.webp",
 ];
 
-const typedTexts = ["DRIVES PROGRESS", "POWERS PERFORMANCE"];
+const typedTexts = [
+  "ДВИГАЕТ ПРОГРЕСС",
+  "ПОВЫШАЕТ ПРОИЗВОДИТЕЛЬНОСТЬ",
+];
 
 const features = [
   {
     icon: Award,
-    title: "Made in India",
+    title: "Сделано в Индии",
     number: "01",
   },
   {
     icon: BadgeCheck,
-    title: "IATF Certified",
+    title: "Сертификация IATF",
     number: "02",
   },
   {
     icon: Globe2,
-    title: "Global Delivery",
+    title: "Глобальная доставка",
     number: "03",
   },
   {
     icon: Settings,
-    title: "Customized Solutions",
+    title: "Индивидуальные решения",
     number: "04",
   },
 ];
 
-export default function HeroSection() {
+export default function HeroR() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   /* Product slider */
@@ -112,7 +114,6 @@ export default function HeroSection() {
   return (
     <>
       <section
-      id="home"
         className="
           hero-section
           relative
@@ -125,7 +126,7 @@ export default function HeroSection() {
           sm:min-h-[760px]
           md:min-h-[800px]
           lg:min-h-[700px]
-          lg:py-0
+          lg:py-5
           xl:min-h-[760px]
         "
       >
@@ -319,7 +320,7 @@ export default function HeroSection() {
                 LEFT CONTENT
             ================================================== */}
 
-            <div className="hero-content w-full text-center lg:text-left">
+            <div className="hero-content order-2 w-full text-center lg:order-1 lg:text-left">
               {/* Eyebrow */}
 
               <div
@@ -370,7 +371,7 @@ export default function HeroSection() {
                     md:text-sm
                   "
                 >
-                  PRECISION ENGINEERED. GLOBALLY TRUSTED.
+                  ВЫСОКАЯ ТОЧНОСТЬ. ДОВЕРИЕ ВО ВСЁМ МИРЕ.
                 </p>
               </div>
 
@@ -394,7 +395,7 @@ export default function HeroSection() {
                 "
               >
                 <span className="hero-heading-line block">
-                  PRECISION THAT
+                  ТОЧНОСТЬ, КОТОРАЯ
                 </span>
 
                 <span
@@ -412,7 +413,7 @@ export default function HeroSection() {
                     text-transparent
                   "
                 >
-                  {typedText || "DRIVES PROGRESS"}
+                  {typedText || "ДВИГАЕТ ПРОГРЕСС"}
 
                   <span
                     className="
@@ -474,9 +475,10 @@ export default function HeroSection() {
                   lg:mx-0
                 "
               >
-                High-quality ball and roller bearings engineered for demanding
-                industrial and automotive applications, supplied from India to
-                customers worldwide.
+                Высококачественные шариковые и роликовые подшипники,
+                разработанные для требовательных промышленных и
+                автомобильных применений и поставляемые из Индии
+                клиентам по всему миру.
               </p>
 
               {/* Stats */}
@@ -502,7 +504,7 @@ export default function HeroSection() {
                   </p>
 
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
-                    Years
+                    Лет
                   </p>
                 </div>
 
@@ -514,7 +516,7 @@ export default function HeroSection() {
                   </p>
 
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
-                    continents
+                    Континентов
                   </p>
                 </div>
 
@@ -526,7 +528,7 @@ export default function HeroSection() {
                   </p>
 
                   <p className="text-[10px] uppercase tracking-[1.5px] text-gray-500 sm:text-xs">
-                    Precision
+                    Точность
                   </p>
                 </div>
               </div>
@@ -548,67 +550,69 @@ export default function HeroSection() {
                   lg:justify-start
                 "
               >
-                <Link href="/about-us" className="w-full sm:w-auto">
-                  <button
-                    className="
-                      group
-                      relative
-                      flex
-                      w-full
-                      items-center
-                      justify-center
-                      gap-3
-                      overflow-hidden
-                      rounded-xl
-                      bg-gradient-to-r
-                      from-[#26196D]
-                      via-[#35258B]
-                      to-blue-600
-                      px-6
-                      py-3.5
-                      text-sm
-                      font-semibold
-                      text-white
-                      shadow-[0_15px_40px_rgba(38,25,109,0.25)]
-                      transition-transform
-                      duration-300
-                      hover:-translate-y-1
-                      sm:px-7
-                      sm:text-base
-                    "
-                  >
-                    <span
-                      className="
-                        absolute
-                        inset-0
-                        -translate-x-full
-                        bg-gradient-to-r
-                        from-transparent
-                        via-white/20
-                        to-transparent
-                        transition-transform
-                        duration-700
-                        group-hover:translate-x-full
-                      "
-                    />
-
-                    <span className="relative">EXPLORE MORE</span>
-
-                    <MoveRight
-                      size={18}
-                      className="
-                        relative
-                        transition-transform
-                        duration-300
-                        group-hover:translate-x-2
-                      "
-                    />
-                  </button>
-                </Link>
-
                 <button
                   type="button"
                   onClick={() => setIsFormOpen(true)}
+                  className="
+                    group
+                    relative
+                    flex
+                    w-full
+                    items-center
+                    justify-center
+                    gap-3
+                    overflow-hidden
+                    rounded-xl
+                    bg-gradient-to-r
+                    from-[#26196D]
+                    via-[#35258B]
+                    to-blue-600
+                    px-6
+                    py-3.5
+                    text-sm
+                    font-semibold
+                    text-white
+                    shadow-[0_15px_40px_rgba(38,25,109,0.25)]
+                    transition-transform
+                    duration-300
+                    hover:-translate-y-1
+                    sm:w-auto
+                    sm:px-7
+                    sm:text-base
+                  "
+                >
+                  <span
+                    className="
+                      absolute
+                      inset-0
+                      -translate-x-full
+                      bg-gradient-to-r
+                      from-transparent
+                      via-white/20
+                      to-transparent
+                      transition-transform
+                      duration-700
+                      group-hover:translate-x-full
+                    "
+                  />
+
+                  <span className="relative">
+                    Получить предложение
+                  </span>
+
+                  <MoveRight
+                    size={18}
+                    className="
+                      relative
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-2
+                    "
+                  />
+                </button>
+
+                <a
+                  href="tel:+79859834837"
                   className="
                     group
                     relative
@@ -635,22 +639,28 @@ export default function HeroSection() {
                     hover:text-white
                     sm:w-auto
                     sm:px-7
-                    sm:text-base
+                    sm:text-lg
                   "
                 >
                   <span className="relative">
-                    DOWNLOAD CATALOGUE
+                    ПОЗВОНИТЬ
                   </span>
 
-                  <ArrowBigRight
-                    size={18}
-                    className="
-                      transition-transform
-                      duration-300
-                      group-hover:translate-x-2
-                    "
-                  />
-                </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="relative"
+                  >
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                  </svg>
+                </a>
               </div>
 
               {/* =================================================
@@ -769,11 +779,13 @@ export default function HeroSection() {
             <div
               className="
                 hero-product
+                order-1
                 relative
                 flex
                 w-full
                 items-center
                 justify-center
+                lg:order-2
                 lg:mt-0
               "
             >
@@ -843,7 +855,7 @@ export default function HeroSection() {
                 "
               />
 
-              {/* Floating labels */}
+              {/* Floating Labels */}
 
               <div
                 className="
@@ -869,7 +881,7 @@ export default function HeroSection() {
                 <ShieldCheck size={15} className="text-blue-600" />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
-                  HIGH PRECISION
+                  ВЫСОКАЯ ТОЧНОСТЬ
                 </span>
               </div>
 
@@ -897,7 +909,7 @@ export default function HeroSection() {
                 <Globe2 size={15} className="text-blue-600" />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
-                  GLOBAL REACH
+                  ГЛОБАЛЬНЫЙ ОХВАТ
                 </span>
               </div>
 
@@ -925,7 +937,7 @@ export default function HeroSection() {
                 <Sparkles size={15} className="text-red-600" />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
-                  ENGINEERED TO LAST
+                  СОЗДАНО НА ДОЛГИЕ ГОДЫ
                 </span>
               </div>
 
@@ -985,7 +997,7 @@ export default function HeroSection() {
                     >
                       <Image
                         src={img}
-                        alt={`Bearing ${index + 1}`}
+                        alt={`Подшипник ${index + 1}`}
                         width={500}
                         height={500}
                         priority={index === 0}
@@ -1009,7 +1021,7 @@ export default function HeroSection() {
                 })}
               </div>
 
-              {/* Slider dots */}
+              {/* Slider Dots */}
 
               <div
                 className="
@@ -1027,7 +1039,7 @@ export default function HeroSection() {
                   <button
                     key={index}
                     type="button"
-                    aria-label={`Go to bearing ${index + 1}`}
+                    aria-label={`Перейти к подшипнику ${index + 1}`}
                     onClick={() => setCurrentSlide(index)}
                     className={`
                       h-1.5
@@ -1044,7 +1056,7 @@ export default function HeroSection() {
                 ))}
               </div>
 
-              {/* Technical badge */}
+              {/* Technical Badge */}
 
               <div
                 className="
@@ -1065,11 +1077,11 @@ export default function HeroSection() {
                 "
               >
                 <p className="text-[9px] font-bold uppercase tracking-[2px] text-gray-400">
-                  ENGINEERING
+                  ИНЖЕНЕРИЯ
                 </p>
 
                 <p className="mt-1 text-sm font-bold text-[#29166F]">
-                  PRECISION • PERFORMANCE
+                  ТОЧНОСТЬ • ПРОИЗВОДИТЕЛЬНОСТЬ
                 </p>
               </div>
             </div>
@@ -1094,7 +1106,7 @@ export default function HeroSection() {
           <span className="h-px w-8 bg-gray-400/60" />
 
           <span className="text-[9px] font-bold uppercase tracking-[3px] text-gray-500">
-            SCROLL TO EXPLORE
+            ПРОКРУТИТЕ, ЧТОБЫ УЗНАТЬ БОЛЬШЕ
           </span>
 
           <span className="h-px w-8 bg-gray-400/60" />
@@ -1106,7 +1118,8 @@ export default function HeroSection() {
       ====================================================== */}
 
       {isFormOpen && (
-        <LazyCataloguePopup
+        <EnquiryR
+          IATFpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
         />
       )}

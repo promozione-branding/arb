@@ -6,6 +6,7 @@ import Footer from "@/components/Layout/Footer";
 import { getCategoryTree } from "@/data";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import LayoutWrapper from "@/components/Layout/LayoutWrapper";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -161,10 +162,10 @@ export default function RootLayout({ children }) {
             }}
           />
         </noscript>
-        <Navbar categories={categories} />
+        <LayoutWrapper>
         {children}
         <ToastContainer position="top-right" />
-        <Footer />
+       </LayoutWrapper>
         {/* Yandex.Metrika fallback for users without JavaScript */}
         {/* <noscript>
           <div>

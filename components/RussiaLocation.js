@@ -7,14 +7,24 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ProductsSlider from "@/components/ProductsSlider";
-import { Factory, Store, Hotel, Home, Leaf, Warehouse, Truck, Tags, Handshake } from "lucide-react";
+import {
+  Factory,
+  Store,
+  Hotel,
+  Home,
+  Leaf,
+  Warehouse,
+  Truck,
+  Tags,
+  Handshake,
+} from "lucide-react";
 import Enquiry from "@/components/Enquiry";
 import { Pickaxe, Fuel, Building2, Train, Cog } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { Eye, X } from "lucide-react";
-import IndustriesSection from "./russia/IndustriesSection";
-import Popup from "@/components/Popup"
+import IndustriesSection from "./Russia-ads/IndustriesSectionR";
+import Popup from "@/components/Popup";
 
 const Location = () => {
   const products = [
@@ -41,12 +51,8 @@ const Location = () => {
         "Стальные заводы",
         "Бумажные фабрики",
         "Цементная промышленность",
-
       ],
     },
-
-
-
 
     {
       title: "Роликовые подшипники",
@@ -81,8 +87,11 @@ const Location = () => {
   const [active, setActive] = useState(0);
   const params = useParams();
   const city = params?.location?.includes("-in-")
-    ? params.location.split("-in-")[1].split("-")
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+    ? params.location
+        .split("-in-")[1]
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
     : "India";
 
   const faqs = [
@@ -141,7 +150,6 @@ const Location = () => {
       image: "/railway.jpg",
       icon: Train,
     },
-
   ];
 
   return (
@@ -174,11 +182,26 @@ const Location = () => {
               </span>
 
               <h2 className="mt-4 md:text-4xl text-3xl font-bold leading-tight text-[#1B2A41] ">
-                Ведущий поставщик подшипников   {city}
+                Ведущий поставщик подшипников {city}
               </h2>
 
               <p className="mt-3 text-lg text-slate-900">
-                Компания ARB Bearings — признанный во всем мире поставщик подшипников, предлагающий высокоэффективные подшипниковые решения клиентам {city} и на международных рынках. Благодаря многолетнему опыту в области инженерного дела, передовым производственным возможностям и неизменной приверженности качеству, мы производим прецизионные подшипники, отвечающие самым высоким требованиям современных отраслей промышленности. Как опытный поставщик подшипников, мы обслуживаем такие отрасли, как автомобилестроение, горнодобывающая промышленность, строительство, сельское хозяйство, энергетика, металлургия и тяжелое машиностроение. Наши подшипники ценятся за исключительную долговечность, точность, высокую несущую способность и длительный срок службы. Каждый продукт изготавливается с использованием высококачественного сырья и передовых производственных технологий, что обеспечивает стабильную работу даже в самых сложных условиях эксплуатации.
+                Компания ARB Bearings — признанный во всем мире поставщик
+                подшипников, предлагающий высокоэффективные подшипниковые
+                решения клиентам {city} и на международных рынках. Благодаря
+                многолетнему опыту в области инженерного дела, передовым
+                производственным возможностям и неизменной приверженности
+                качеству, мы производим прецизионные подшипники, отвечающие
+                самым высоким требованиям современных отраслей промышленности.
+                Как опытный поставщик подшипников, мы обслуживаем такие отрасли,
+                как автомобилестроение, горнодобывающая промышленность,
+                строительство, сельское хозяйство, энергетика, металлургия и
+                тяжелое машиностроение. Наши подшипники ценятся за
+                исключительную долговечность, точность, высокую несущую
+                способность и длительный срок службы. Каждый продукт
+                изготавливается с использованием высококачественного сырья и
+                передовых производственных технологий, что обеспечивает
+                стабильную работу даже в самых сложных условиях эксплуатации.
               </p>
 
               {/* Features */}
@@ -186,7 +209,6 @@ const Location = () => {
                 {[
                   "Широкий ассортимент продукции",
                   "Собственное производство",
-
                 ].map((item) => (
                   <div
                     key={item}
@@ -231,10 +253,16 @@ const Location = () => {
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  От стандартных применений до сложных промышленных задач, компания ARB Bearings предлагает высокоточные подшипниковые решения, разработанные для обеспечения производительности, долговечности и надежности.
+                  От стандартных применений до сложных промышленных задач,
+                  компания ARB Bearings предлагает высокоточные подшипниковые
+                  решения, разработанные для обеспечения производительности,
+                  долговечности и надежности.
                 </p>
 
-                <button onClick={() => setIsFormOpen(true)} className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-red-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#1B2A41]">
+                <button
+                  onClick={() => setIsFormOpen(true)}
+                  className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-red-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#1B2A41]"
+                >
                   Найдите решение по подшипникам.
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -272,11 +300,14 @@ const Location = () => {
             </span>
 
             <h2 className="md:mt-6 mt-4 text-3xl md:text-5xl font-bold leading-tight text-[#1B2A41] ">
-              Почему подшипники ARB — правильный выбор для ваших потребностей в подшипниках
+              Почему подшипники ARB — правильный выбор для ваших потребностей в
+              подшипниках
             </h2>
 
             <p className="mt-4 text-lg md:leading-8 text-slate-900">
-              Выберите ARB Bearings в качестве вашего надежного поставщика подшипников {city} , предлагающего высокоточные, надежные и высокопроизводительные подшипниковые решения.
+              Выберите ARB Bearings в качестве вашего надежного поставщика
+              подшипников {city} , предлагающего высокоточные, надежные и
+              высокопроизводительные подшипниковые решения.
             </p>
           </div>
 
@@ -303,7 +334,6 @@ const Location = () => {
                 description:
                   "Как опытный поставщик подшипников, мы предлагаем качественные подшипниковые решения для мировых рынков.",
               },
-
             ].map((item, index) => (
               <div
                 key={index}
@@ -363,7 +393,10 @@ const Location = () => {
               </h2>
             </div>
 
-            <Link href={"/products/ball-bearing"} className="hidden md:flex items-center gap-3 border border-red-500 text-red-400 px-7 py-3 rounded-md hover:bg-red-600 hover:text-white transition">
+            <Link
+              href={"/products/ball-bearing"}
+              className="hidden md:flex items-center gap-3 border border-red-500 text-red-400 px-7 py-3 rounded-md hover:bg-red-600 hover:text-white transition"
+            >
               ПОСМОТРЕТЬ ВСЕ ТОВАРЫ
               <ArrowRight size={18} />
             </Link>
@@ -524,13 +557,18 @@ const Location = () => {
                 </h2>
 
                 <p className="mt-3 text-lg leading-8 text-slate-200">
-                  Приобретайте высококачественные подшипники точной конструкции от ARB Bearings. Независимо от того, нужны ли вам стандартные подшипники, специализированные решения или оптовые партии, наша команда готова помочь вам подобрать подходящий подшипник для вашего применения.
+                  Приобретайте высококачественные подшипники точной конструкции
+                  от ARB Bearings. Независимо от того, нужны ли вам стандартные
+                  подшипники, специализированные решения или оптовые партии,
+                  наша команда готова помочь вам подобрать подходящий подшипник
+                  для вашего применения.
                 </p>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-5 sm:flex-row lg:flex-col">
-                <button onClick={() => setIsFormOpen(true)}
+                <button
+                  onClick={() => setIsFormOpen(true)}
                   className="group inline-flex items-center justify-center gap-3 rounded-xl bg-red-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#1B2A41]"
                 >
                   Запросить ценовое предложение
@@ -567,7 +605,6 @@ const Location = () => {
       <section className="bg-white md:py-14 py-10">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-16 lg:grid-cols-2">
-
             {/* Left Content */}
             <div>
               <span className="inline-flex rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
@@ -579,7 +616,12 @@ const Location = () => {
               </h2>
 
               <p className="mt-3 text-lg leading-8 text-slate-600">
-                Компания ARB Bearings, являясь надежным поставщиком подшипников в {city} , использует высокоточный производственный процесс для создания надежных, долговечных и высокопроизводительных подшипниковых решений. От высококачественного сырья до окончательной проверки и упаковки — каждый этап тщательно контролируется для обеспечения стабильного качества.
+                Компания ARB Bearings, являясь надежным поставщиком подшипников
+                в {city} , использует высокоточный производственный процесс для
+                создания надежных, долговечных и высокопроизводительных
+                подшипниковых решений. От высококачественного сырья до
+                окончательной проверки и упаковки — каждый этап тщательно
+                контролируется для обеспечения стабильного качества.
               </p>
 
               <div className="mt-4 space-y-3">
@@ -596,7 +638,6 @@ const Location = () => {
                     title: "Контролируемая термообработка",
                     desc: "Специализированные процессы термообработки повышают прочность, долговечность и устойчивость подшипников к сложным условиям эксплуатации.",
                   },
-
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -622,7 +663,6 @@ const Location = () => {
 
             {/* Right Image */}
             <div className="relative">
-
               {/* Decorative Border */}
               <div className="absolute -left-6 -top-6 h-full w-full rounded-[32px] border-2 border-red-200"></div>
 
@@ -635,13 +675,14 @@ const Location = () => {
 
                 {/* Floating Stats */}
                 <div className="absolute bottom-8 left-8 rounded-2xl bg-white/95 md:p-6 p-3 shadow-xl backdrop-blur">
-                  <p className="md:text-4xl text-3xl font-bold text-red-600">60+</p>
+                  <p className="md:text-4xl text-3xl font-bold text-red-600">
+                    60+
+                  </p>
                   <p className="mt-1 font-medium text-[#1B2A41] md:text-base text-sm">
                     Годы производственного совершенства
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -658,12 +699,16 @@ const Location = () => {
               +91-9968373086
             </p>
             <p className="text-lg text-white">
-              Для получения более подробной информации свяжитесь с нами прямо сейчас!
+              Для получения более подробной информации свяжитесь с нами прямо
+              сейчас!
             </p>
           </div>
 
           <div>
-            <a href="tel:+919968373086" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <a
+              href="tel:+919968373086"
+              className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+            >
               Подключиться сейчас
             </a>
           </div>
@@ -684,7 +729,9 @@ const Location = () => {
               </h2>
 
               <p className="md:mt-8 mt-2 text-lg md:leading-8 text-slate-800">
-                Здесь вы найдете ответы на наиболее часто задаваемые вопросы о подшипниках ARB, наших решениях в области подшипников, производственных возможностях и экспорте.
+                Здесь вы найдете ответы на наиболее часто задаваемые вопросы о
+                подшипниках ARB, наших решениях в области подшипников,
+                производственных возможностях и экспорте.
               </p>
               <div className="md:mt-10 mt-4 h-2 w-40 rounded-full bg-gradient-to-r from-red-600 to-[#28186E]"></div>
             </div>
@@ -694,10 +741,11 @@ const Location = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`overflow-hidden rounded-3xl border transition-all duration-300 ${active === index
-                    ? "border-red-500 bg-white shadow-xl"
-                    : "border-slate-200 bg-white"
-                    }`}
+                  className={`overflow-hidden rounded-3xl border transition-all duration-300 ${
+                    active === index
+                      ? "border-red-500 bg-white shadow-xl"
+                      : "border-slate-200 bg-white"
+                  }`}
                 >
                   <button
                     onClick={() => setActive(active === index ? -1 : index)}
@@ -714,14 +762,16 @@ const Location = () => {
                     </div>
 
                     <ChevronDown
-                      className={`transition duration-300 ${active === index ? "rotate-180 text-red-600" : ""
-                        }`}
+                      className={`transition duration-300 ${
+                        active === index ? "rotate-180 text-red-600" : ""
+                      }`}
                     />
                   </button>
 
                   <div
-                    className={`grid transition-all duration-500 ${active === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                      }`}
+                    className={`grid transition-all duration-500 ${
+                      active === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
                   >
                     <div className="overflow-hidden">
                       <div className="border-t border-slate-100 px-8 py-6 pl-[92px] text-slate-600 leading-8">
@@ -732,21 +782,15 @@ const Location = () => {
                 </div>
               ))}
             </div>
-
           </div>
-
         </div>
       </section>
 
       {isFormOpen && (
-        <Enquiry
-          IATFpen={isFormOpen}
-          onClose={() => setIsFormOpen(false)}
-        />
+        <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
       )}
 
       <Popup />
-
     </div>
   );
 };
