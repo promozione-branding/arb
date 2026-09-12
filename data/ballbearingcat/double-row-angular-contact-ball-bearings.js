@@ -46,7 +46,7 @@ export default {
   },
   subCategory: {
     name: "Angular Contact Ball Bearings",
-    slug: "double-row-angular-contact-ball-bearings",
+    slug: "angular-contact-ball-bearings",
     image: "/arb-images/DOUBLE POINT ANGULAR.png",
     heroTitle: "Angular Contact Ball Bearings",
     metaTitle: "Angular Contact Ball Bearings Manufacturer | ARB Bearings",

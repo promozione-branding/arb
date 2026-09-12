@@ -58,7 +58,7 @@ export default function ProductClient({ result }) {
 
       const formData = {
         platform: "ARB Bearings Product Enquiry",
-        platformEmail: "yourcompany@email.com",
+        platformEmail: "export@arb-bearings.com",
         name,
         phone,
         email,

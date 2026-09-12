@@ -485,7 +485,7 @@ export default function CategoryPage() {
                 sm:gap-5
               "
                         >
-                            <button
+                            <Link href={"/contact-us"}
                                 className="
                   w-full
                   rounded-xl
@@ -500,10 +500,10 @@ export default function CategoryPage() {
                   sm:py-4
                 "
                             >
-                                Explore Product
-                            </button>
+                                Contact Us
+                            </Link>
 
-                            <button
+                            <a href="tel:919968373086"
                                 className="
                   w-full
                   rounded-xl
@@ -519,8 +519,8 @@ export default function CategoryPage() {
                   sm:py-4
                 "
                             >
-                                Download Brochure
-                            </button>
+                                Enquiry Now
+                            </a>
                         </div>
                     </div>
 

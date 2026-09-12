@@ -58,7 +58,7 @@ const products = [
     applications: [
       "Passenger Car",
       "Agricultural",
-      "Electric Vehicle", 
+      "Electric Vehicle",
       "ATV/UTV  Vehicles",
       "LCVs",
     ],
@@ -66,7 +66,7 @@ const products = [
 
   {
     title: "Wheel Hub Bearings",
-    link: "/products/wheel-bearing",
+    link: "/products/wheel-bearing-hub",
     desc: "Engineered for smooth rotation, superior load handling, and long-lasting wheel-end reliability",
     image: "/arb-images/wheelbearinghub1.webp",
 
