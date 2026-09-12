@@ -12,7 +12,7 @@ export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
   // Routes where Navbar + Footer should be hidden
-  const hideLayoutRoutes = ["/ball-bearing-in-russia", "/ball-bearing-in-latin-america"];
+  const hideLayoutRoutes = ["/ball-bearing-in-russia", "/ball-bearing-in-latin-america","/ball-bearing-in-uae"];
 
   const shouldHideLayout = hideLayoutRoutes.some(
     (route) => pathname === route || pathname.startsWith(`${route}/`),
