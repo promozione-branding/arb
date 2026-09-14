@@ -18,12 +18,12 @@ export default function NavbarR() {
 
 
 
-  const phoneNumber = 
-     "+7-9859834837";
+  const phoneNumber =
+    "+7-9859834837";
 
   const phoneHref = "tel:+79859834837";
 
- 
+
 
   return (
     <header className="sticky top-0 z-[999] h-[110px]  w-full">
@@ -59,17 +59,17 @@ export default function NavbarR() {
 
               {/* About Us Dropdown */}
               <Link
-              href="#about"
+                href="#about"
                 className="relative"
 
               >
                 <button className="flex items-center gap-2 text-[17px] font-semibold text-white transition hover:text-[#ff6a2b]">
                   О компании
 
-                 
+
                 </button>
 
-               
+
               </Link>
 
               {/* News & Events */}
@@ -103,7 +103,7 @@ export default function NavbarR() {
                 </div>
 
                 <div>
-                  
+
 
                   <p className="text-white font-semibold text-sm">
                     {phoneNumber}
@@ -140,9 +140,9 @@ export default function NavbarR() {
               </button>
             </div>
 
-           
 
-            <div className="px-2 flex justify-center items-center gap-2"><button  onClick={() => setIsFormOpen(true)} className="text-white md:hidden"><FileText size={35} /></button> <Translator /></div>
+
+            <div className="px-2 flex justify-center items-center gap-2"><button onClick={() => setIsFormOpen(true)} className="text-white md:hidden"><FileText size={35} /></button> <Translator /></div>
 
           </div>
         </div>

@@ -7,20 +7,22 @@ import HeroA from '@/components/LatinAmerica-ads/HeroA'
 import IndustryA from '@/components/LatinAmerica-ads/IndustryA'
 import NavbarA from '@/components/LatinAmerica-ads/NavbarA'
 import ProductsA from '@/components/LatinAmerica-ads/ProductsA'
+import StickyFooter from '@/components/StickyFooter'
 import React from 'react'
 
 export default function LatinAmerica() {
   return (
     <>
-    <NavbarA/>
-    <HeroA/>
-    <CategoryA/>
-    <ABoutA/>
-    <ProductsA/>
-    <CTAA/>
-    <IndustryA/>
-    <FormSectionA/>
-    <FooterA/>
+      <NavbarA />
+      <HeroA />
+      <CategoryA />
+      <ABoutA />
+      <ProductsA />
+      <CTAA />
+      <IndustryA />
+      <FormSectionA />
+      <FooterA />
+      <StickyFooter whatsappNumber={"9968373086"} phoneNumber={"9968373086"} />
     </>
   )
 }

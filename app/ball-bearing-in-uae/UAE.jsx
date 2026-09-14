@@ -1,3 +1,4 @@
+import StickyFooter from '@/components/StickyFooter'
 import ABoutU from '@/components/UAE-ads/AboutU'
 import CategoryU from '@/components/UAE-ads/CategoryU'
 import CTAU from '@/components/UAE-ads/CTAU'
@@ -12,15 +13,16 @@ import React from 'react'
 export default function UAE() {
   return (
     <>
-    <NavbarA/>
-    <HeroU/>
-    <CategoryU/>
-    <ABoutU/>
-    <ProductsU/>
-    <CTAU/>
-    <IndustryU/>
-    <FormSectionU/>
-    <FooterU/>
+      <NavbarA />
+      <HeroU />
+      <CategoryU />
+      <ABoutU />
+      <ProductsU />
+      <CTAU />
+      <IndustryU />
+      <FormSectionU />
+      <FooterU />
+      <StickyFooter whatsappNumber={"9968373086"} phoneNumber={"9968373086"} />
     </>
   )
 }
