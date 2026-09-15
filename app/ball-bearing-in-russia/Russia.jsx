@@ -8,6 +8,7 @@ import IndustriesSection from "@/components/Russia-ads/IndustriesSectionR";
 import React from "react";
 import FooterR from "@/components/Russia-ads/FooterR";
 import FormSectionR from "@/components/Russia-ads/FormSectionR";
+import StickyFooter from "@/components/StickyFooter";
 
 export default function Russia() {
   return (
@@ -19,9 +20,10 @@ export default function Russia() {
       <Products />
       <CTAR />
       <IndustriesSection />
-      <FormSectionR/>
+      <FormSectionR />
 
-      <FooterR/>
+      <FooterR />
+      <StickyFooter whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
     </>
   );
 }

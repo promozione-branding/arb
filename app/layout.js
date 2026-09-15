@@ -129,6 +129,21 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-V99G44GJH0"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V99G44GJH0');
+  `}
+        </Script>
+
         <link rel="canonical" href="https://www.bearingmanufacturers.com/" />
 
         <Script id="google-tag-manager" strategy="beforeInteractive">
@@ -164,9 +179,9 @@ export default function RootLayout({ children }) {
           />
         </noscript>
         <LayoutWrapper>
-        {children}
-        <ToastContainer position="top-right" />
-       </LayoutWrapper>
+          {children}
+          <ToastContainer position="top-right" />
+        </LayoutWrapper>
         {/* Yandex.Metrika fallback for users without JavaScript */}
         {/* <noscript>
           <div>
