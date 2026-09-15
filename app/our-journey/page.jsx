@@ -19,7 +19,7 @@ export default function OurHistory() {
     },
     {
       year: "1997",
-      text: "Product range expanded by the government of Spherical & Cylindrical Roller Bearings & Ball Bearings. ARB was awarded IATF-9002 certified by KPMG (Peat Marvick - USA)",
+      text: "Product range expanded by the Commencement of Spherical & Cylindrical Roller Bearings & Ball Bearings. ARB was awarded IATF-9002 certified by KPMG (Peat Marvick - USA)",
     },
     {
       year: "1998",

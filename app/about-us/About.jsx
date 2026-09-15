@@ -23,7 +23,6 @@ export default function AboutPage() {
     "Precision-Engineered Industrial Bearings",
   ];
 
-
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [FormOpen, setFormOpen] = useState(false);
 
@@ -47,33 +46,49 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-3 py-10 grid lg:grid-cols-2 gap-10 items-center">
+      <section className="max-w-7xl mx-auto px-3 py-10 grid lg:grid-cols-2 gap-10 items-start">
+        {/* CONTENT */}
         <div>
           <h2 className="text-4xl font-bold mb-5">About ARB Bearings</h2>
-          <p className="text-sm">
-            Established in 1990 and headquartered in Delhi, India, ARB Bearings is a trusted bearing manufacturer with 60+ years of collective industry expertise, delivering reliable bearing solutions to customers worldwide. Built on a foundation
-            of engineering excellence, innovation, and customer trust, we
-            specialize in manufacturing high-quality bearings and
-            precision bearing solutions for customers worldwide. From its
-            beginnings as a private enterprise to becoming a public limited
-            company, ARB Bearings has grown into a globally recognized bearing
-            company, serving 50+ countries across six continents through a
-            strong network of 800+ dealers, distributors, and OEM partners. With
-            six state-of-the-art manufacturing facilities and a portfolio of
-            2,500+ bearing sizes, ARB Bearings manufactures a comprehensive
-            range of ball bearings, roller bearings, taper roller bearings,
-            spherical roller bearings, needle roller bearings, and customized
-            bearing solutions for industries including automotive, agriculture,
-            construction, mining, railways, steel, cement, paper, textile, power
-            generation, and industrial machinery. Driven by continuous
-            innovation, advanced manufacturing technologies, and stringent
-            quality standards, we remain committed to delivering reliable,
-            high-performance bearings that enhance operational efficiency and
-            reinforce our position as a trusted global bearing manufacturer.
+
+          <p className="text-lg leading-8">
+            Established in 1990 and headquartered in Delhi, India, ARB Bearings
+            is a trusted bearing manufacturer with 60+ years of collective
+            industry expertise, delivering reliable bearing solutions to
+            customers worldwide. Built on a foundation of engineering
+            excellence, innovation, and customer trust, we specialize in
+            manufacturing high-quality bearings and precision bearing solutions
+            for customers worldwide. From its beginnings as a private enterprise
+            to becoming a public limited company, ARB Bearings has grown into a
+            globally recognized bearing company, serving 50+ countries across
+            six continents through a strong network of 800+ dealers,
+            distributors, and OEM partners. With six state-of-the-art
+            manufacturing facilities and a portfolio of 2,500+ bearing sizes,
+            ARB Bearings manufactures a comprehensive range of ball bearings,
+            roller bearings, taper roller bearings, spherical roller bearings,
+            needle roller bearings, and customized bearing solutions for
+            industries including automotive, agriculture, construction, mining,
+            railways, steel, cement, paper, textile, power generation, and
+            industrial machinery. Driven by continuous innovation, advanced
+            manufacturing technologies, and stringent quality standards, we
+            remain committed to delivering reliable, high-performance bearings
+            that enhance operational efficiency and reinforce our position as a
+            trusted global bearing manufacturer.
           </p>
         </div>
-        <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
-          <Image src="/Untitled design.webp" alt="img" fill className="object-cover" />
+
+        {/* IMAGE */}
+        <div className="lg:sticky lg:top-24">
+          <div className="relative w-full h-[250px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl">
+            <Image
+              src="/Untitled design.webp"
+              alt="ARB Bearings"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -106,17 +121,22 @@ export default function AboutPage() {
             Engineered to Keep Industries Moving
           </h2>
           <p className="text-lg leading-8">
-            Discover a comprehensive range of precision bearings and
-            bearing solutions designed to deliver exceptional performance,
-            reliability, and long service life across diverse applications.
-            Explore our products and find the right bearing solution for your
-            business.
+            Discover a comprehensive range of precision bearings and bearing
+            solutions designed to deliver exceptional performance, reliability,
+            and long service life across diverse applications. Explore our
+            products and find the right bearing solution for your business.
           </p>
           <div className="flex flex-wrap justify-center gap-5 md:mt-10 mt-5">
-            <Link href="/products/ball-bearing" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold flex items-center gap-2">
+            <Link
+              href="/products/ball-bearing"
+              className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold flex items-center gap-2"
+            >
               Explore Products <ArrowRight size={18} />
             </Link>
-            <button onClick={() => setFormOpen(true)} className="border border-white px-7 py-4 rounded-full font-semibold flex items-center gap-2">
+            <button
+              onClick={() => setFormOpen(true)}
+              className="border border-white px-7 py-4 rounded-full font-semibold flex items-center gap-2"
+            >
               Download Catalogue <Download size={18} />
             </button>
           </div>
@@ -126,7 +146,6 @@ export default function AboutPage() {
       {/* <ManufacturingSection /> */}
 
       <section className="max-w-7xl mx-auto px-4 py-10 grid lg:grid-cols-2 lg:gap-14 gap-5 items-center">
-
         <div className="relative rounded-3xl overflow-hidden items-center">
           {/* <video src="/aboutVideo.mp4" className="w-full md:h-full h-[35vh] object-fill"
             autoPlay
@@ -135,7 +154,11 @@ export default function AboutPage() {
             playsInline
             preload="auto" />
           <img src="/logo1.png" alt="logo" className="absolute bottom-5 right-4 w-20 h-auto" /> */}
-          <img src="/hero/Image 1.png" alt="img" className="w-full h-96 object-cover" />
+          <img
+            src="/hero/Image 1.png"
+            alt="img"
+            className="w-full h-96 object-cover"
+          />
         </div>
 
         <div>
@@ -185,8 +208,6 @@ export default function AboutPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {why.map((i) => (
-
-
             <div
               key={i}
               className="rounded-2xl border p-6 flex gap-3 items-start shadow-sm"
@@ -204,40 +225,39 @@ export default function AboutPage() {
             Ready to Partner with a Trusted Bearings manufacturer?
           </h2>
           <p className="text-lg leading-8">
-            Whether you're looking for high-quality bearings,
-            customized bearing solutions, or a reliable manufacturing partner,
-            ARB Bearings is here to support your business with precision,
-            innovation, and engineering excellence. Connect with our experts to
-            discuss your requirements and discover how we can help keep your
-            operations running smoothly.
+            Whether you're looking for high-quality bearings, customized bearing
+            solutions, or a reliable manufacturing partner, ARB Bearings is here
+            to support your business with precision, innovation, and engineering
+            excellence. Connect with our experts to discuss your requirements
+            and discover how we can help keep your operations running smoothly.
           </p>
           <p className="text-2xl font-semibold mt-5">
             Let's Build the Future of Motion Together.
           </p>
           <div className="flex md:flex-row flex-col justify-center gap-5 mt-6">
-            <Link href="/contact-us" className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold">
+            <Link
+              href="/contact-us"
+              className="bg-white text-slate-900 px-7 py-4 rounded-full font-semibold"
+            >
               Contact Us
             </Link>
-            <button onClick={() => setIsFormOpen(true)} className="border border-white px-7 py-4 rounded-full font-semibold">
+            <button
+              onClick={() => setIsFormOpen(true)}
+              className="border border-white px-7 py-4 rounded-full font-semibold"
+            >
               Request a Quote
             </button>
           </div>
         </div>
       </section>
 
-
-
       {isFormOpen && (
         <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
       )}
 
       {FormOpen && (
-        <Catpopup
-          Onpen={FormOpen}
-          onClose={() => setFormOpen(false)}
-        />
+        <Catpopup Onpen={FormOpen} onClose={() => setFormOpen(false)} />
       )}
-
     </main>
   );
 }
