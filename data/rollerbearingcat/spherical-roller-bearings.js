@@ -65,6 +65,8 @@ export default {
       "Extended Service Life"
     ],
 
+    smallDesc:"( Available in different clearance C3/C4 )",
+
 
     applications: ["Automotive", "Industrial"],
   },

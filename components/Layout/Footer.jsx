@@ -25,7 +25,7 @@ export default function Footer() {
     ? "tel:+79859834837"
     : "tel:+919968373086";
 
-  const whatsappPhone = "+91-7834872136";
+  const whatsappPhone = "+91-9968373086";
 
   return (
     <footer className="relative text-white pt-10 pb-5 overflow-hidden">

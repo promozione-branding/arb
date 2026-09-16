@@ -1,8 +1,49 @@
 "use client";
 
-import { CalendarDays } from "lucide-react";
+import {
+  CalendarDays,
+} from "lucide-react";
+
+import {
+  motion,
+  useScroll,
+  useMotionValue,
+  useMotionValueEvent,
+  animate,
+} from "framer-motion";
+
+import {
+  useEffect,
+  useRef,
+} from "react";
 
 export default function OurHistory() {
+  const sectionRef = useRef(null);
+  const timelineRef = useRef(null);
+
+  const dotRefs = useRef([]);
+  const dotPositions = useRef([]);
+
+  const stopTimer = useRef(null);
+
+  /*
+   * Bearing vertical position
+   */
+  const bearingY = useMotionValue(0);
+
+  /*
+   * Bearing rotation
+   */
+  const bearingRotation = useMotionValue(0);
+
+  /*
+   * Scroll progress of the complete history section
+   */
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 20%", "end 80%"],
+  });
+
   const history = [
     {
       year: "1990",
@@ -12,7 +53,6 @@ export default function OurHistory() {
       year: "1991",
       text: "Imported equipped Machinery & Precision testing equipment from Europe.",
     },
-
     {
       year: "1996",
       text: "Ventured into export Market",
@@ -85,78 +125,602 @@ export default function OurHistory() {
       year: "2022",
       text: "Added one more TRB Line to increase plant capacity to 3.5 million bearings per annum.",
     },
-
     {
       year: "2023",
       text: "Under Installation - One double capacity of Heat Treatment Plant , Two Lines of Ball Bearings - Small and medium Dia and one line for DRACBB- WB.",
     },
   ];
 
+  /*
+   * -----------------------------------------
+   * CALCULATE DOT POSITIONS
+   * -----------------------------------------
+   */
+
+  const calculateDotPositions = () => {
+    if (!timelineRef.current) return;
+
+    const timelineRect =
+      timelineRef.current.getBoundingClientRect();
+
+    const positions = dotRefs.current
+      .filter(Boolean)
+      .map((dot) => {
+        const rect = dot.getBoundingClientRect();
+
+        return (
+          rect.top -
+          timelineRect.top +
+          rect.height / 2
+        );
+      });
+
+    dotPositions.current = positions;
+
+    /*
+     * Initially place bearing on first dot
+     */
+    if (positions.length > 0) {
+      bearingY.set(positions[0]);
+    }
+  };
+
+  /*
+   * -----------------------------------------
+   * INITIAL MEASUREMENT
+   * -----------------------------------------
+   */
+
+  useEffect(() => {
+    calculateDotPositions();
+
+    /*
+     * Recalculate when window changes
+     */
+    const handleResize = () => {
+      calculateDotPositions();
+    };
+
+    window.addEventListener(
+      "resize",
+      handleResize
+    );
+
+    /*
+     * Observe timeline size changes.
+     *
+     * Important because cards can change height
+     * depending on screen size/content.
+     */
+    let resizeObserver;
+
+    if (timelineRef.current) {
+      resizeObserver = new ResizeObserver(() => {
+        calculateDotPositions();
+      });
+
+      resizeObserver.observe(
+        timelineRef.current
+      );
+    }
+
+    return () => {
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
+
+      resizeObserver?.disconnect();
+
+      if (stopTimer.current) {
+        clearTimeout(stopTimer.current);
+      }
+    };
+  }, []);
+
+  /*
+   * -----------------------------------------
+   * SCROLL → BEARING
+   * -----------------------------------------
+   */
+
+  useMotionValueEvent(
+    scrollYProgress,
+    "change",
+    (progress) => {
+      const positions =
+        dotPositions.current;
+
+      if (positions.length < 2) return;
+
+      /*
+       * Prevent values outside 0 → 1
+       */
+      const safeProgress = Math.max(
+        0,
+        Math.min(1, progress)
+      );
+
+      /*
+       * Example:
+       *
+       * 20 dots
+       *
+       * progress 0
+       * = dot 0
+       *
+       * progress 0.5
+       * = around dot 10
+       *
+       * progress 1
+       * = final dot
+       */
+      const maxIndex =
+        positions.length - 1;
+
+      const exactIndex =
+        safeProgress * maxIndex;
+
+      const lowerIndex =
+        Math.floor(exactIndex);
+
+      const upperIndex =
+        Math.min(
+          lowerIndex + 1,
+          maxIndex
+        );
+
+      const localProgress =
+        exactIndex - lowerIndex;
+
+      const startY =
+        positions[lowerIndex];
+
+      const endY =
+        positions[upperIndex];
+
+      /*
+       * Smooth interpolation between dots
+       */
+      const currentY =
+        startY +
+        (endY - startY) *
+          localProgress;
+
+      /*
+       * Immediately follow scroll
+       *
+       * No spring here because we want
+       * the bearing to stay connected
+       * to the user's scroll.
+       */
+      bearingY.set(currentY);
+
+      /*
+       * Rotate bearing.
+       *
+       * More rotations = more premium
+       * industrial feel.
+       */
+      const rotation =
+        safeProgress *
+        360 *
+        positions.length *
+        1.5;
+
+      bearingRotation.set(rotation);
+
+      /*
+       * -----------------------------------
+       * SCROLL STOP DETECTION
+       * -----------------------------------
+       */
+
+      if (stopTimer.current) {
+        clearTimeout(stopTimer.current);
+      }
+
+      stopTimer.current = setTimeout(() => {
+        /*
+         * Find nearest dot
+         */
+        const nearestIndex =
+          Math.round(exactIndex);
+
+        const safeIndex =
+          Math.max(
+            0,
+            Math.min(
+              nearestIndex,
+              positions.length - 1
+            )
+          );
+
+        const targetY =
+          positions[safeIndex];
+
+        /*
+         * Snap bearing to nearest dot
+         */
+        animate(
+          bearingY,
+          targetY,
+          {
+            duration: 0.45,
+            ease: [0.22, 1, 0.36, 1],
+          }
+        );
+
+        /*
+         * Keep a nice final bearing rotation
+         */
+        animate(
+          bearingRotation,
+          safeIndex * 360 * 1.5,
+          {
+            duration: 0.45,
+            ease: [0.22, 1, 0.36, 1],
+          }
+        );
+      }, 120);
+    }
+  );
+
   return (
-    <section className="relative py-15 bg-gradient-to-b from-slate-50 via-white to-slate-100 overflow-hidden">
-      {/* Background */}
+    <section
+      ref={sectionRef}
+      className="
+        relative
+        py-15
+        bg-gradient-to-b
+        from-slate-50
+        via-white
+        to-slate-100
+        overflow-hidden
+      "
+    >
+      {/* ============================== */}
+      {/* BACKGROUND */}
+      {/* ============================== */}
+
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-100 blur-[140px] opacity-50" />
-        <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-indigo-100 blur-[140px] opacity-50" />
+        <div
+          className="
+            absolute
+            left-0
+            top-0
+            h-96
+            w-96
+            rounded-full
+            bg-blue-100
+            blur-[140px]
+            opacity-50
+          "
+        />
+
+        <div
+          className="
+            absolute
+            right-0
+            bottom-0
+            h-96
+            w-96
+            rounded-full
+            bg-indigo-100
+            blur-[140px]
+            opacity-50
+          "
+        />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        {/* Heading */}
-        <div className="max-w-3xl mx-auto text-center mb-15">
-          <span className="inline-block px-5 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm tracking-wide">
+      <div
+        className="
+          relative
+          max-w-7xl
+          mx-auto
+          px-6
+        "
+      >
+        {/* ============================== */}
+        {/* HEADING */}
+        {/* ============================== */}
+
+        <div
+          className="
+            max-w-3xl
+            mx-auto
+            text-center
+            mb-15
+          "
+        >
+          <span
+            className="
+              inline-block
+              px-5
+              py-2
+              rounded-full
+              bg-red-100
+              text-red-700
+              font-semibold
+              text-sm
+              tracking-wide
+            "
+          >
             OUR HISTORY
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">
+          <h2
+            className="
+              mt-6
+              text-4xl
+              md:text-5xl
+              font-bold
+              text-slate-900
+            "
+          >
             Our Journey Through the Years
           </h2>
 
-          <div className="w-24 h-1 bg-red-600 rounded-full mx-auto mt-6"></div>
+          <div
+            className="
+              w-24
+              h-1
+              bg-red-600
+              rounded-full
+              mx-auto
+              mt-6
+            "
+          />
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Center Line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-[3px] -translate-x-1/2 bg-[#D72412] rounded-full"></div>
+        {/* ============================== */}
+        {/* TIMELINE */}
+        {/* ============================== */}
+
+        <div
+          ref={timelineRef}
+          className="relative"
+        >
+          {/* ============================== */}
+          {/* CENTER LINE */}
+          {/* ============================== */}
+
+          <div
+            className="
+              hidden
+              lg:block
+              absolute
+              left-1/2
+              top-0
+              bottom-0
+              w-[3px]
+              -translate-x-1/2
+              bg-[#D72412]
+              rounded-full
+            "
+          />
+
+          {/* ============================== */}
+          {/* BALL BEARING */}
+          {/* ============================== */}
+
+          <motion.div
+            className="
+              hidden
+              lg:flex
+              absolute
+              left-1/2
+              -translate-x-1/2
+              -translate-y-1/2
+              w-[92px]
+              h-[92px]
+              items-center
+              justify-center
+              z-50
+              pointer-events-none
+            "
+            style={{
+              y: bearingY,
+              rotate: bearingRotation,
+            }}
+          >
+            {/* Soft glow behind bearing */}
+
+            <div
+              className="
+                absolute
+                inset-2
+                rounded-full
+                bg-red-500/20
+                blur-xl
+              "
+            />
+
+            {/* White circular backdrop */}
+
+            <div
+              className="
+                absolute
+                inset-[7px]
+                rounded-full
+                
+                
+              "
+            />
+
+            {/* Bearing */}
+
+            <img
+              src="/1.webp"
+              alt="Ball Bearing"
+              draggable="false"
+              className="
+                relative
+                z-10
+                w-[272px]
+                h-[272px]
+                object-contain
+                drop-shadow-[0_8px_10px_rgba(0,0,0,0.30)]
+              "
+            />
+          </motion.div>
+
+          {/* ============================== */}
+          {/* HISTORY CARDS */}
+          {/* ============================== */}
 
           <div className="space-y-7">
             {history.map((item, index) => (
               <div
                 key={item.year}
-                className={`relative flex flex-col lg:flex-row items-center ${
-                  index % 2 === 0 ? "" : "lg:flex-row-reverse"
-                }`}
+                className={`
+                  relative
+                  flex
+                  flex-col
+                  lg:flex-row
+                  items-center
+                  ${
+                    index % 2 === 0
+                      ? ""
+                      : "lg:flex-row-reverse"
+                  }
+                `}
               >
-                {/* Content */}
-                <div className="w-full lg:w-1/2 px-0 lg:px-10">
-                  <div className="bg-white rounded-3xl shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-500 p-8">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-[#D72412] to-[#28186E] text-white flex items-center justify-center">
-                        <CalendarDays size={26} />
+                {/* ============================== */}
+                {/* CONTENT CARD */}
+                {/* ============================== */}
+
+                <div
+                  className="
+                    w-full
+                    lg:w-1/2
+                    px-0
+                    lg:px-10
+                  "
+                >
+                  <div
+                    className="
+                      bg-white
+                      rounded-3xl
+                      shadow-xl
+                      border
+                      border-slate-200
+                      hover:shadow-2xl
+                      transition-all
+                      duration-500
+                      p-8
+                    "
+                  >
+                    <div
+                      className="
+                        flex
+                        items-center
+                        gap-4
+                        mb-6
+                      "
+                    >
+                      <div
+                        className="
+                          w-14
+                          h-14
+                          rounded-2xl
+                          bg-gradient-to-r
+                          from-[#D72412]
+                          to-[#28186E]
+                          text-white
+                          flex
+                          items-center
+                          justify-center
+                        "
+                      >
+                        <CalendarDays
+                          size={26}
+                        />
                       </div>
 
                       <div>
-                        <span className="text-sm uppercase tracking-widest text-slate-500">
+                        <span
+                          className="
+                            text-sm
+                            uppercase
+                            tracking-widest
+                            text-slate-500
+                          "
+                        >
                           Year
                         </span>
 
-                        <h3 className="text-3xl font-bold text-slate-900">
+                        <h3
+                          className="
+                            text-3xl
+                            font-bold
+                            text-slate-900
+                          "
+                        >
                           {item.year}
                         </h3>
                       </div>
                     </div>
 
-                    <p className="text-slate-600 leading-8 text-lg">
+                    <p
+                      className="
+                        text-slate-600
+                        leading-8
+                        text-lg
+                      "
+                    >
                       {item.text}
                     </p>
                   </div>
                 </div>
 
-                {/* Center Dot */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white border-[6px] border-[#28186E] shadow-xl z-20"></div>
+                {/* ============================== */}
+                {/* CENTER DOT */}
+                {/* ============================== */}
 
-                {/* Spacer */}
-                <div className="hidden lg:block w-1/2"></div>
+                <div
+                  ref={(el) => {
+                    dotRefs.current[index] = el;
+                  }}
+                  className="
+                    hidden
+                    lg:flex
+                    absolute
+                    left-1/2
+                    -translate-x-1/2
+                    w-7
+                    h-7
+                    rounded-full
+                    bg-white
+                    border-[6px]
+                    border-[#28186E]
+                    shadow-xl
+                    z-20
+                    items-center
+                    justify-center
+                  "
+                >
+                  <span
+                    className="
+                      w-2
+                      h-2
+                      rounded-full
+                      bg-[#D72412]
+                    "
+                  />
+                </div>
+
+                {/* ============================== */}
+                {/* SPACER */}
+                {/* ============================== */}
+
+                <div
+                  className="
+                    hidden
+                    lg:block
+                    w-1/2
+                  "
+                />
               </div>
             ))}
           </div>

@@ -160,11 +160,11 @@ export default function ProductCategories() {
         "
                 >
                   {/* Number */}
-                  <div className="absolute left-4 top-4 z-10 sm:left-5 sm:top-5">
+                  {/* <div className="absolute left-4 top-4 z-10 sm:left-5 sm:top-5">
                     <span className="text-[10px] font-bold tracking-[2px] text-slate-300 sm:text-xs">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Badge */}
                   <div className="absolute right-4 top-4 z-10 sm:right-5 sm:top-5">

@@ -59,7 +59,7 @@ export default {
     name: "Wheel Bearings / Wheel Bearings Kit",
     slug: "wheel-bearings",
     heroTitle: "Wheel Bearings",
-    image: "/arb-images/Wheel Bearing.png",
+    image: "/arb-images/123.png",
     description:
       "Complete wheel bearing kits for passenger car, Engineered for precise fitment, easy installation and dependable wheel hub performance.",
     metaTitle: "Premium Wheel Bearings Manufacturer | ARB Bearings",

@@ -97,8 +97,8 @@ ${form.message}
       icon: Phone,
       title: "Call Us",
       value: [
-        "+91-7834872136",
-        "+7-9859834837",
+        "+91-9968373086",
+
 
       ],
     },
@@ -114,7 +114,7 @@ ${form.message}
       icon: MapPin,
       title: "Address",
       value: [
-        "26th Bakinskikh Komissarov Street House 9, Flat 9 Moscow 119571, Russia",
+        "H-22, Udyog Nagar New Delhi 110041, India",
       ],
     },
     {
@@ -321,9 +321,7 @@ ${form.message}
 
                   className="mt-1 block text-slate-600 transition "
                 >
-                  26th Bakinskikh Komissarov Street
-                  House 9, Flat 9 <br />
-                  Moscow 119571, Russia
+                 H-22, Udyog Nagar New Delhi 110041, <br />India
                 </div>
               </div>
             </div>
@@ -341,15 +339,15 @@ ${form.message}
                   href="tel:+91-7834872136"
                   className="mt-1 block text-slate-600 transition hover:text-blue-700"
                 >
-                  +91-7834872136
+                  +91-9968373086
                 </a>
 
-                <a
+                {/* <a
                   href="tel:+7-9859834837"
                   className="block mt-2 text-slate-600 transition hover:text-blue-700"
                 >
                   +7-9859834837
-                </a>
+                </a> */}
               </div>
             </div>
 

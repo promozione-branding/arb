@@ -696,7 +696,7 @@ export default function HeroSection() {
                           lg:py-5
                         "
                       >
-                        <span
+                        {/* <span
                           className="
                             absolute
                             right-3
@@ -708,7 +708,7 @@ export default function HeroSection() {
                           "
                         >
                           {feature.number}
-                        </span>
+                        </span> */}
 
                         <div className="relative">
                           <Icon

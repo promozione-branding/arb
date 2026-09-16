@@ -29,7 +29,7 @@ export default function CoreValues() {
       icon: Boxes,
       title: "Comprehensive Product Portfolio",
       description:
-        "With 2,500+ bearing sizes, we offer an extensive range of ball bearings, roller bearings, taper roller bearings, spherical roller bearings, needle roller bearings, and customized bearing solutions for diverse industrial applications.",
+        "With 2,500+ bearing sizes, we offer an extensive range of ball bearings, roller bearings, taper roller bearings, spherical roller bearings, needle roller bearings, cylindrical roller bearings, and customized bearing solutions for diverse industrial applications.",
     },
     {
       icon: Globe2,

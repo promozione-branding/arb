@@ -120,7 +120,7 @@ export default function WhyChooseARB() {
                       <Icon className="h-5 w-5" />
                     </div>
 
-                    <span
+                    {/* <span
                       className="
                         text-sm
                         font-semibold
@@ -132,7 +132,7 @@ export default function WhyChooseARB() {
                       "
                     >
                       {item.number}
-                    </span>
+                    </span> */}
                   </div>
 
                   {/* Label */}

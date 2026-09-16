@@ -150,10 +150,10 @@ const OutletCard = ({ outlet, onOpen }) => {
                 </div>
 
                 {/* Image count */}
-                <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-md">
+                {/* <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-md">
                     <Maximize2 size={13} />
                     {outlet.images.length} Photos
-                </div>
+                </div> */}
 
                 {/* Location */}
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
