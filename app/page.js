@@ -15,6 +15,7 @@ import AboutRussia from "@/components/AboutRussia";
 // import Popup from "@/components/Popup";
 import Cta from "@/components/Cta";
 import Whychoose from "@/components/Whychoose";
+import Network from "@/components/Network";
 export default function Home() {
   return (
     <>
@@ -33,6 +34,7 @@ export default function Home() {
       <Count />
       <Excellence />
       {/* <Manufacturing/> */}
+      <Network/>
       <Testimonials />
 </>  );
 }
