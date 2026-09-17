@@ -144,10 +144,10 @@ const OutletCard = ({ outlet, onOpen }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
                 {/* 24/7 Badge */}
-                <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 shadow-lg">
+                {/* <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 shadow-lg">
                     <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
                     OPEN 24/7
-                </div>
+                </div> */}
 
                 {/* Image count */}
                 {/* <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-md">
@@ -291,10 +291,7 @@ export default function TwentyFourSevenOutlets() {
                     transition={{ duration: 0.5 }}
                     className="mb-12 text-center"
                 >
-                    <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-white">
-                        <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
-                        24/7 Available
-                    </div>
+                  
 
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                         Our 24/7 Outlets
