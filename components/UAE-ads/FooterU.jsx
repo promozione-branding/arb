@@ -1,10 +1,9 @@
-
 "use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { russiaLocations } from "@/lib/russiaLocations";
 import { FaWhatsapp } from "react-icons/fa";
@@ -104,9 +103,7 @@ export default function FooterU() {
 
           {/* PRODUCTS */}
           <div>
-            <h3 className="mb-4 font-serif text-xl font-semibold">
-              منتجاتنا
-            </h3>
+            <h3 className="mb-4 font-serif text-xl font-semibold">منتجاتنا</h3>
 
             <ul className="space-y-3 text-sm tracking-wider">
               {[
@@ -129,9 +126,18 @@ export default function FooterU() {
 
           {/* CONTACT */}
           <div id="contact-us">
-            <h3 className="mb-4 font-serif text-xl font-semibold">
-              اتصل بنا
-            </h3>
+            <h3 className="mb-4 font-serif text-xl font-semibold">اتصل بنا</h3>
+
+            <div className="space-y-4 text-sm">
+              {/* DIRECCIÓN */}
+              <div className="flex pb-3 gap-3 items-start">
+                <MapPin className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+
+                <p className="leading-relaxed whitespace-pre-line">
+                  إتش-22، أوديوغ ناجار، نيودلهي 110041، الهند
+                </p>
+              </div>
+            </div>
 
             <div className="space-y-4 text-sm">
               {/* WHATSAPP */}
@@ -235,4 +241,3 @@ export default function FooterU() {
     </footer>
   );
 }
-
