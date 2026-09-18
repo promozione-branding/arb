@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { russiaLocations } from "@/lib/russiaLocations";
 import { FaWhatsapp } from "react-icons/fa";
@@ -137,12 +137,23 @@ export default function FooterA() {
 
             <div className="space-y-4 text-sm">
   {/* DIRECCIÓN */}
-  <div className="flex pb-3 gap-3 items-start">
+  <div className="flex gap-3 items-start">
     <MapPin className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
 
     <p className="leading-relaxed whitespace-pre-line">
       H-22, Udyog Nagar, Nueva Delhi 110041, India
     </p>
+  </div>
+
+   <div className="flex  pb-3 gap-3 items-center">
+    <Phone className="w-5 h-5 text-red-600 shrink-0" />
+
+    <a
+      href="tel:+919968373086"
+      className="hover:text-red-600 transition-colors"
+    >
+      +91-9968373086
+    </a>
   </div>
 </div>
 
