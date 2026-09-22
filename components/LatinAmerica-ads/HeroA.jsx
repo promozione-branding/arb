@@ -20,7 +20,7 @@ const bearingImages = [
   "/hero/22.webp",
   "/hero/33.webp",
   "/hero/44.webp",
-  "/hero/Image 11.webp",
+  // "/hero/Image 11.webp",
 ];
 
 const typedTexts = [
