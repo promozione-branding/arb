@@ -152,13 +152,13 @@ export default async function BlogDetail(ctx) {
     <>
       <section
         style={{ backgroundImage: "url('/ctabg.jfif')" }}
-        className="relative h-[50vh] md:h-[80vh] bg-center bg-cover overflow-hidden"
+        className="relative h-[50vh] md:h-[70vh] bg-center bg-cover overflow-hidden"
       >
         <div className="absolute inset-0 bg-black/40 z-[1]"></div>
 
         <div className="relative  z-10 flex h-full items-center justify-center max-w-6xl mx-auto px-6">
           <div className="text-blue-900 max-w-2xl bg-white p-2 rounded">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight text-center ">
+            <h1 className="text-xl md:text-5xl font-bold leading-tight text-center ">
               {blog.title}
             </h1>
           </div>
