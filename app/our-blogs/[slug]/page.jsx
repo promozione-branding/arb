@@ -157,8 +157,8 @@ export default async function BlogDetail(ctx) {
         <div className="absolute inset-0 bg-black/40 z-[1]"></div>
 
         <div className="relative  z-10 flex h-full items-center justify-center max-w-6xl mx-auto px-6">
-          <div className="text-blue-900 max-w-2xl bg-white p-2 rounded">
-            <h1 className="text-xl md:text-5xl font-bold leading-tight text-center ">
+          <div className="text-blue-900 max-w-6xl bg-white p-2 rounded">
+            <h1 className="text-xl md:text-4xl font-bold leading-tight text-center ">
               {blog.title}
             </h1>
           </div>
