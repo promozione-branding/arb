@@ -1,8 +1,8 @@
+
 "use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
 import {
   MoveRight,
   BadgeCheck,
@@ -13,6 +13,10 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import EnquiryR from "./EnquiryR";
+
+/* =========================================================
+   STATIC DATA
+========================================================= */
 
 const bearingImages = [
   "/hero/11.webp",
@@ -50,66 +54,159 @@ const features = [
   },
 ];
 
-export default function HeroR() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+/* =========================================================
+   TYPEWRITER
+   Lightweight CSS-driven version
+========================================================= */
 
-  /* Product slider */
-  const [currentSlide, setCurrentSlide] = useState(0);
+function TypewriterText() {
+  return (
+    <span
+      className="
+        relative
+        mt-2
+        block
+        min-h-[1.12em]
+        overflow-hidden
+        bg-gradient-to-r
+        from-[#241260]
+        via-[#3C2A9E]
+        to-[#2563EB]
+        bg-clip-text
+        text-transparent
+      "
+    >
+      <span className="hero-typewriter">
+        {typedTexts[0]}
+      </span>
 
-  /* Typewriter */
-  const [typedText, setTypedText] = useState("");
-  const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+      <span
+        aria-hidden="true"
+        className="
+          ml-1
+          inline-block
+          h-[0.78em]
+          w-[3px]
+          translate-y-[2px]
+          rounded-full
+          bg-[#29166F]
+          align-middle
+        "
+      />
+    </span>
+  );
+}
 
-  /*
-   * Product slider autoplay
-   */
+/* =========================================================
+   PRODUCT SLIDER
+   Only one Image component is rendered.
+========================================================= */
+
+function ProductSlider({ currentSlide, setCurrentSlide }) {
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % bearingImages.length);
+  };
+
   useEffect(() => {
-    const slider = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bearingImages.length);
+    const interval = setInterval(() => {
+      if (document.visibilityState === "visible") {
+        setCurrentSlide((prev) => (prev + 1) % bearingImages.length);
+      }
     }, 3000);
 
-    return () => clearInterval(slider);
-  }, []);
+    return () => clearInterval(interval);
+  }, [setCurrentSlide]);
 
-  /*
-   * Typewriter effect
-   */
-  useEffect(() => {
-    const startDelay = setTimeout(() => {
-      const currentText = typedTexts[textIndex];
+  return (
+    <>
+      <div
+        className="
+          relative
+          z-10
+          h-[280px]
+          w-full
+          max-w-[420px]
+          overflow-hidden
+          sm:h-[360px]
+          sm:max-w-[500px]
+          md:h-[460px]
+          md:max-w-[580px]
+          lg:h-[560px]
+          lg:max-w-[620px]
+          xl:h-[620px]
+          2xl:h-[680px]
+          2xl:max-w-[620px]
+        "
+      >
+        <Image
+          key={bearingImages[currentSlide]}
+          src={bearingImages[currentSlide]}
+          alt={`Подшипник ${currentSlide + 1}`}
+          width={600}
+          height={600}
+          priority={currentSlide === 0}
+          loading={currentSlide === 0 ? "eager" : "lazy"}
+          sizes="
+            (max-width: 640px) 90vw,
+            (max-width: 1024px) 50vw,
+            45vw
+          "
+          quality={70}
+          className="
+            h-full
+            w-full
+            object-contain
+            animate-product-fade
+          "
+        />
+      </div>
 
-      const typingSpeed = isDeleting ? 40 : 85;
+      {/* Slider dots */}
 
-      if (!isDeleting && typedText === currentText) {
-        const timer = setTimeout(() => {
-          setIsDeleting(true);
-        }, 1800);
+      <div
+        className="
+          absolute
+          bottom-[8%]
+          left-1/2
+          z-30
+          flex
+          -translate-x-1/2
+          items-center
+          gap-2
+        "
+      >
+        {bearingImages.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            aria-label={`Перейти к подшипнику ${index + 1}`}
+            aria-current={currentSlide === index}
+            onClick={() => setCurrentSlide(index)}
+            className={`
+              h-1.5
+              rounded-full
+              transition-[width,background-color]
+              duration-300
+              ${
+                currentSlide === index
+                  ? "w-8 bg-[#29166F]"
+                  : "w-1.5 bg-gray-400/60"
+              }
+            `}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
 
-        return () => clearTimeout(timer);
-      }
+/* =========================================================
+   MAIN HERO
+========================================================= */
 
-      if (isDeleting && typedText === "") {
-        setIsDeleting(false);
-
-        setTextIndex((prev) => (prev + 1) % typedTexts.length);
-
-        return;
-      }
-
-      const timer = setTimeout(() => {
-        setTypedText(
-          isDeleting
-            ? currentText.substring(0, typedText.length - 1)
-            : currentText.substring(0, typedText.length + 1)
-        );
-      }, typingSpeed);
-
-      return () => clearTimeout(timer);
-    }, 100);
-
-    return () => clearTimeout(startDelay);
-  }, [typedText, isDeleting, textIndex]);
+export default function HeroR() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <>
@@ -128,10 +225,11 @@ export default function HeroR() {
           lg:min-h-[700px]
           lg:py-5
           xl:min-h-[760px]
+          [contain:layout_paint]
         "
       >
         {/* =====================================================
-            LCP HERO BACKGROUND
+            HERO BACKGROUND
         ====================================================== */}
 
         <Image
@@ -139,9 +237,8 @@ export default function HeroR() {
           alt=""
           fill
           priority
-          fetchPriority="high"
           sizes="100vw"
-          quality={75}
+          quality={70}
           className="
             absolute
             inset-0
@@ -152,12 +249,11 @@ export default function HeroR() {
         />
 
         {/* =====================================================
-            BACKGROUND OVERLAY
+            LIGHT OVERLAY
         ====================================================== */}
 
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-white/10" />
-
         <div
+          aria-hidden="true"
           className="
             pointer-events-none
             absolute
@@ -171,87 +267,66 @@ export default function HeroR() {
         />
 
         {/* =====================================================
-            ANIMATED GRID
+            GRID
         ====================================================== */}
 
         <div
+          aria-hidden="true"
           className="
             hero-grid
             pointer-events-none
             absolute
             inset-0
-            opacity-[0.18]
+            hidden
+            opacity-[0.14]
+            lg:block
           "
         />
 
         {/* =====================================================
-            AMBIENT GLOWS
+            DESKTOP AMBIENT GLOW
         ====================================================== */}
 
         <div
+          aria-hidden="true"
           className="
-            hero-orb
             pointer-events-none
             absolute
             -left-40
             top-[15%]
-            h-[420px]
-            w-[420px]
+            hidden
+            h-[360px]
+            w-[360px]
             rounded-full
             bg-blue-500/10
-            blur-[100px]
+            blur-[80px]
+            lg:block
           "
         />
 
         <div
+          aria-hidden="true"
           className="
-            hero-orb-reverse
             pointer-events-none
             absolute
             -right-40
             bottom-[-10%]
-            h-[520px]
-            w-[520px]
+            hidden
+            h-[420px]
+            w-[420px]
             rounded-full
             bg-indigo-500/10
-            blur-[110px]
+            blur-[90px]
+            lg:block
           "
         />
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            right-[30%]
-            top-[10%]
-            h-[180px]
-            w-[180px]
-            rounded-full
-            bg-cyan-400/5
-            blur-[70px]
-          "
-        />
-
-        {/* Light sweep */}
-        <div
-          className="
-            hero-light
-            pointer-events-none
-            absolute
-            top-0
-            h-full
-            w-[160px]
-            bg-gradient-to-r
-            from-transparent
-            via-white/30
-            to-transparent
-            blur-xl
-          "
-        />
-
-        {/* Decorative lines */}
+        {/* =====================================================
+            DECORATIVE LINES
+        ====================================================== */}
 
         <div
+          aria-hidden="true"
           className="
             pointer-events-none
             absolute
@@ -269,6 +344,7 @@ export default function HeroR() {
         />
 
         <div
+          aria-hidden="true"
           className="
             pointer-events-none
             absolute
@@ -320,26 +396,38 @@ export default function HeroR() {
                 LEFT CONTENT
             ================================================== */}
 
-            <div className="hero-content order-2 w-full text-center lg:order-1 lg:text-left">
+            <div
+              className="
+                order-2
+                w-full
+                text-center
+                lg:order-1
+                lg:text-left
+              "
+            >
               {/* Eyebrow */}
 
               <div
                 className="
-                  hero-item
                   mb-5
                   inline-flex
                   items-center
                   gap-3
                 "
               >
-                <span className="relative flex h-2 w-2">
+                <span
+                  aria-hidden="true"
+                  className="
+                    relative
+                    flex
+                    h-2
+                    w-2
+                  "
+                >
                   <span
                     className="
                       absolute
-                      inline-flex
-                      h-full
-                      w-full
-                      animate-ping
+                      inset-0
                       rounded-full
                       bg-red-600
                       opacity-60
@@ -349,7 +437,6 @@ export default function HeroR() {
                   <span
                     className="
                       relative
-                      inline-flex
                       h-2
                       w-2
                       rounded-full
@@ -358,7 +445,7 @@ export default function HeroR() {
                   />
                 </span>
 
-                <span className="h-[1px] w-8 bg-red-600 sm:w-12" />
+                <span className="h-px w-8 bg-red-600 sm:w-12" />
 
                 <p
                   className="
@@ -376,12 +463,11 @@ export default function HeroR() {
               </div>
 
               {/* =================================================
-                  LCP HEADING
+                  HEADING
               ================================================== */}
 
               <h1
                 className="
-                  hero-heading
                   text-3xl
                   font-bold
                   leading-[1.05]
@@ -394,48 +480,18 @@ export default function HeroR() {
                   2xl:text-[64px]
                 "
               >
-                <span className="hero-heading-line block">
+                <span className="block">
                   ТОЧНОСТЬ, КОТОРАЯ
                 </span>
 
-                <span
-                  className="
-                    typewriter-text
-                    relative
-                    mt-2
-                    block
-                    min-h-[1.12em]
-                    bg-gradient-to-r
-                    from-[#241260]
-                    via-[#3C2A9E]
-                    to-[#2563EB]
-                    bg-clip-text
-                    text-transparent
-                  "
-                >
-                  {typedText || "ДВИГАЕТ ПРОГРЕСС"}
-
-                  <span
-                    className="
-                      type-cursor
-                      ml-1
-                      inline-block
-                      h-[0.78em]
-                      w-[3px]
-                      translate-y-[2px]
-                      rounded-full
-                      bg-[#29166F]
-                      align-middle
-                    "
-                  />
-                </span>
+                <TypewriterText />
               </h1>
 
               {/* Underline */}
 
               <div
+                aria-hidden="true"
                 className="
-                  hero-underline
                   mx-auto
                   mt-5
                   h-[3px]
@@ -462,7 +518,6 @@ export default function HeroR() {
 
               <p
                 className="
-                  hero-item
                   mx-auto
                   mt-5
                   max-w-xl
@@ -481,11 +536,12 @@ export default function HeroR() {
                 клиентам по всему миру.
               </p>
 
-              {/* Stats */}
+              {/* =================================================
+                  STATS
+              ================================================== */}
 
               <div
                 className="
-                  hero-stats
                   mx-auto
                   mt-6
                   flex
@@ -498,7 +554,7 @@ export default function HeroR() {
                   lg:justify-start
                 "
               >
-                <div className="text-left">
+                <div>
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
                     60+
                   </p>
@@ -508,9 +564,12 @@ export default function HeroR() {
                   </p>
                 </div>
 
-                <div className="h-9 w-px bg-gray-300" />
+                <div
+                  aria-hidden="true"
+                  className="h-9 w-px bg-gray-300"
+                />
 
-                <div className="text-left">
+                <div>
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
                     6
                   </p>
@@ -520,9 +579,12 @@ export default function HeroR() {
                   </p>
                 </div>
 
-                <div className="h-9 w-px bg-gray-300" />
+                <div
+                  aria-hidden="true"
+                  className="h-9 w-px bg-gray-300"
+                />
 
-                <div className="text-left">
+                <div>
                   <p className="text-xl font-bold text-[#29166F] sm:text-2xl">
                     100%
                   </p>
@@ -533,11 +595,12 @@ export default function HeroR() {
                 </div>
               </div>
 
-              {/* Buttons */}
+              {/* =================================================
+                  BUTTONS
+              ================================================== */}
 
               <div
                 className="
-                  hero-buttons
                   mt-7
                   flex
                   w-full
@@ -550,6 +613,8 @@ export default function HeroR() {
                   lg:justify-start
                 "
               >
+                {/* Quote */}
+
                 <button
                   type="button"
                   onClick={() => setIsFormOpen(true)}
@@ -582,6 +647,7 @@ export default function HeroR() {
                   "
                 >
                   <span
+                    aria-hidden="true"
                     className="
                       absolute
                       inset-0
@@ -602,6 +668,7 @@ export default function HeroR() {
 
                   <MoveRight
                     size={18}
+                    aria-hidden="true"
                     className="
                       relative
                       transition-transform
@@ -611,17 +678,17 @@ export default function HeroR() {
                   />
                 </button>
 
+                {/* Call */}
+
                 <a
                   href="tel:+79859834837"
                   className="
                     group
-                    relative
                     flex
                     w-full
                     items-center
                     justify-center
                     gap-3
-                    overflow-hidden
                     rounded-xl
                     border
                     border-[#CC1C15]
@@ -631,7 +698,6 @@ export default function HeroR() {
                     text-sm
                     font-semibold
                     text-red-600
-                    backdrop-blur-md
                     transition-transform
                     duration-300
                     hover:-translate-y-1
@@ -642,9 +708,7 @@ export default function HeroR() {
                     sm:text-lg
                   "
                 >
-                  <span className="relative">
-                    ПОЗВОНИТЬ
-                  </span>
+                  <span>ПОЗВОНИТЬ</span>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -656,7 +720,7 @@ export default function HeroR() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="relative"
+                    aria-hidden="true"
                   >
                     <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                   </svg>
@@ -669,7 +733,6 @@ export default function HeroR() {
 
               <div
                 className="
-                  hero-features
                   mt-9
                   hidden
                   overflow-hidden
@@ -677,20 +740,16 @@ export default function HeroR() {
                   border
                   border-black/5
                   bg-white/30
-                  backdrop-blur-md
                   md:block
                   lg:mt-10
                 "
               >
                 <div className="grid grid-cols-2 lg:grid-cols-4">
-                  {features.map((feature) => {
-                    const Icon = feature.icon;
-
-                    return (
+                  {features.map(
+                    ({ icon: Icon, title, number }) => (
                       <div
-                        key={feature.title}
+                        key={title}
                         className="
-                          feature-card
                           group
                           relative
                           flex
@@ -703,10 +762,10 @@ export default function HeroR() {
                           lg:items-start
                           lg:border-r
                           lg:px-4
-                          lg:py-5
                         "
                       >
                         <span
+                          aria-hidden="true"
                           className="
                             absolute
                             right-3
@@ -717,24 +776,20 @@ export default function HeroR() {
                             text-gray-300
                           "
                         >
-                          {feature.number}
+                          {number}
                         </span>
 
-                        <div className="relative">
-                          <Icon
-                            className="
-                              relative
-                              mx-auto
-                              mb-2
-                              h-8
-                              w-8
-                              text-[#4B63B8]
-                              lg:mx-0
-                              lg:h-9
-                              lg:w-9
-                            "
-                          />
-                        </div>
+                        <Icon
+                          aria-hidden="true"
+                          className="
+                            mb-2
+                            h-8
+                            w-8
+                            text-[#4B63B8]
+                            lg:h-9
+                            lg:w-9
+                          "
+                        />
 
                         <h3
                           className="
@@ -746,10 +801,11 @@ export default function HeroR() {
                             lg:text-base
                           "
                         >
-                          {feature.title}
+                          {title}
                         </h3>
 
                         <span
+                          aria-hidden="true"
                           className="
                             absolute
                             bottom-0
@@ -766,8 +822,8 @@ export default function HeroR() {
                           "
                         />
                       </div>
-                    );
-                  })}
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -778,7 +834,6 @@ export default function HeroR() {
 
             <div
               className="
-                hero-product
                 order-1
                 relative
                 flex
@@ -786,35 +841,36 @@ export default function HeroR() {
                 items-center
                 justify-center
                 lg:order-2
-                lg:mt-0
               "
             >
-              {/* Glow */}
+              {/* Product glow */}
 
               <div
+                aria-hidden="true"
                 className="
-                  product-glow
                   pointer-events-none
                   absolute
                   left-1/2
                   top-1/2
-                  h-[280px]
-                  w-[280px]
+                  h-[260px]
+                  w-[260px]
                   -translate-x-1/2
                   -translate-y-1/2
                   rounded-full
-                  bg-blue-500/15
-                  blur-[70px]
-                  sm:h-[400px]
-                  sm:w-[400px]
+                  bg-blue-500/10
+                  blur-[60px]
+                  sm:h-[380px]
+                  sm:w-[380px]
+                  lg:h-[450px]
+                  lg:w-[450px]
                 "
               />
 
-              {/* Rings */}
+              {/* Ring */}
 
               <div
+                aria-hidden="true"
                 className="
-                  product-ring
                   pointer-events-none
                   absolute
                   left-1/2
@@ -826,7 +882,7 @@ export default function HeroR() {
                   rounded-full
                   border
                   border-dashed
-                  border-blue-500/20
+                  border-blue-500/15
                   sm:h-[450px]
                   sm:w-[450px]
                   lg:h-[520px]
@@ -835,36 +891,37 @@ export default function HeroR() {
               />
 
               <div
+                aria-hidden="true"
                 className="
-                  product-ring-outer
                   pointer-events-none
                   absolute
                   left-1/2
                   top-1/2
-                  h-[360px]
-                  w-[360px]
+                  hidden
+                  h-[620px]
+                  w-[620px]
                   -translate-x-1/2
                   -translate-y-1/2
                   rounded-full
                   border
                   border-blue-500/10
-                  sm:h-[520px]
-                  sm:w-[520px]
-                  lg:h-[620px]
-                  lg:w-[620px]
+                  lg:block
                 "
               />
 
-              {/* Floating Labels */}
+              {/* =================================================
+                  FLOATING LABELS
+              ================================================== */}
 
               <div
                 className="
-                  floating-label
                   absolute
                   left-[3%]
                   top-[18%]
                   z-30
                   hidden
+                  items-center
+                  gap-2
                   rounded-full
                   border
                   border-white/80
@@ -872,13 +929,14 @@ export default function HeroR() {
                   px-4
                   py-2
                   shadow-lg
-                  backdrop-blur-xl
                   lg:flex
-                  lg:items-center
-                  lg:gap-2
                 "
               >
-                <ShieldCheck size={15} className="text-blue-600" />
+                <ShieldCheck
+                  size={15}
+                  className="text-blue-600"
+                  aria-hidden="true"
+                />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   ВЫСОКАЯ ТОЧНОСТЬ
@@ -887,12 +945,13 @@ export default function HeroR() {
 
               <div
                 className="
-                  floating-label-2
                   absolute
                   right-[2%]
                   top-[28%]
                   z-30
                   hidden
+                  items-center
+                  gap-2
                   rounded-full
                   border
                   border-white/80
@@ -900,13 +959,14 @@ export default function HeroR() {
                   px-4
                   py-2
                   shadow-lg
-                  backdrop-blur-xl
                   lg:flex
-                  lg:items-center
-                  lg:gap-2
                 "
               >
-                <Globe2 size={15} className="text-blue-600" />
+                <Globe2
+                  size={15}
+                  className="text-blue-600"
+                  aria-hidden="true"
+                />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   ГЛОБАЛЬНЫЙ ОХВАТ
@@ -915,12 +975,13 @@ export default function HeroR() {
 
               <div
                 className="
-                  floating-label-3
                   absolute
                   bottom-[17%]
                   left-[8%]
                   z-30
                   hidden
+                  items-center
+                  gap-2
                   rounded-full
                   border
                   border-white/80
@@ -928,135 +989,30 @@ export default function HeroR() {
                   px-4
                   py-2
                   shadow-lg
-                  backdrop-blur-xl
                   lg:flex
-                  lg:items-center
-                  lg:gap-2
                 "
               >
-                <Sparkles size={15} className="text-red-600" />
+                <Sparkles
+                  size={15}
+                  className="text-red-600"
+                  aria-hidden="true"
+                />
 
                 <span className="text-[10px] font-bold tracking-[1.5px] text-gray-700">
                   СОЗДАНО НА ДОЛГИЕ ГОДЫ
                 </span>
               </div>
 
+              {/* Product */}
+
+              <ProductSlider
+                currentSlide={currentSlide}
+                setCurrentSlide={setCurrentSlide}
+              />
+
               {/* =================================================
-                  PRODUCT SLIDER
-                  NO SWIPER
-                  TAILWIND + REACT ONLY
+                  TECHNICAL BADGE
               ================================================== */}
-
-              <div
-                className="
-                  relative
-                  z-10
-                  h-[280px]
-                  w-full
-                  max-w-[420px]
-                  overflow-hidden
-                  sm:h-[360px]
-                  sm:max-w-[500px]
-                  md:h-[460px]
-                  md:max-w-[580px]
-                  lg:h-[560px]
-                  lg:max-w-[620px]
-                  xl:h-[620px]
-                  2xl:h-[680px]
-                  2xl:max-w-[350px]
-                "
-              >
-                {bearingImages.map((img, index) => {
-                  const isActive = index === currentSlide;
-
-                  const isPrevious =
-                    index < currentSlide ||
-                    (currentSlide === 0 &&
-                      index === bearingImages.length - 1);
-
-                  return (
-                    <div
-                      key={img}
-                      className={`
-                        absolute
-                        inset-0
-                        flex
-                        items-center
-                        justify-center
-                        transition-all
-                        duration-700
-                        ease-in-out
-                        ${
-                          isActive
-                            ? "translate-x-0 opacity-100"
-                            : isPrevious
-                              ? "-translate-x-full opacity-0"
-                              : "translate-x-full opacity-0"
-                        }
-                      `}
-                    >
-                      <Image
-                        src={img}
-                        alt={`Подшипник ${index + 1}`}
-                        width={500}
-                        height={500}
-                        priority={index === 0}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        fetchPriority={index === 0 ? "high" : "auto"}
-                        sizes="
-                          (max-width: 640px) 90vw,
-                          (max-width: 1024px) 50vw,
-                          45vw
-                        "
-                        quality={75}
-                        className="
-                          bearing-image
-                          h-full
-                          w-full
-                          object-contain
-                        "
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Slider Dots */}
-
-              <div
-                className="
-                  absolute
-                  bottom-[8%]
-                  left-1/2
-                  z-30
-                  flex
-                  -translate-x-1/2
-                  items-center
-                  gap-2
-                "
-              >
-                {bearingImages.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    aria-label={`Перейти к подшипнику ${index + 1}`}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`
-                      h-1.5
-                      rounded-full
-                      transition-all
-                      duration-300
-                      ${
-                        currentSlide === index
-                          ? "w-8 bg-[#29166F]"
-                          : "w-1.5 bg-gray-400/60"
-                      }
-                    `}
-                  />
-                ))}
-              </div>
-
-              {/* Technical Badge */}
 
               <div
                 className="
@@ -1072,7 +1028,6 @@ export default function HeroR() {
                   px-5
                   py-3
                   shadow-xl
-                  backdrop-blur-xl
                   lg:block
                 "
               >
@@ -1088,7 +1043,9 @@ export default function HeroR() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* =====================================================
+            SCROLL INDICATOR
+        ====================================================== */}
 
         <div
           className="
@@ -1103,59 +1060,32 @@ export default function HeroR() {
             lg:flex
           "
         >
-          <span className="h-px w-8 bg-gray-400/60" />
+          <span
+            aria-hidden="true"
+            className="h-px w-8 bg-gray-400/60"
+          />
 
           <span className="text-[9px] font-bold uppercase tracking-[3px] text-gray-500">
             ПРОКРУТИТЕ, ЧТОБЫ УЗНАТЬ БОЛЬШЕ
           </span>
 
-          <span className="h-px w-8 bg-gray-400/60" />
+          <span
+            aria-hidden="true"
+            className="h-px w-8 bg-gray-400/60"
+          />
         </div>
       </section>
 
       {/* =====================================================
-          CATALOGUE POPUP
+          ENQUIRY POPUP
       ====================================================== */}
 
       {isFormOpen && (
         <EnquiryR
-          IATFpen={isFormOpen}
+          IATFpen={true}
           onClose={() => setIsFormOpen(false)}
         />
       )}
     </>
-  );
-}
-
-/*
- * Load catalogue popup only when user opens it.
- * This keeps popup JavaScript out of the initial render.
- */
-function LazyCataloguePopup({ onClose }) {
-  const [Component, setComponent] = useState(null);
-
-  useEffect(() => {
-    let mounted = true;
-
-    import("@/components/Catpopup").then((mod) => {
-      if (mounted) {
-        setComponent(() => mod.default);
-      }
-    });
-
-    return () => {
-      mounted = false;
-    };
-  }, []);
-
-  if (!Component) {
-    return null;
-  }
-
-  return (
-    <Component
-      Onpen={true}
-      onClose={onClose}
-    />
   );
 }
