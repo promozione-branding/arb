@@ -34,6 +34,113 @@
   filter: drop-shadow(0 25px 45px rgba(0, 140, 255, .35));
 }
 
+
+.hero-grid {
+  background-image:
+    linear-gradient(
+      rgba(37, 99, 235, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+}
+
+.hero-light {
+  left: -200px;
+  animation: heroLight 8s linear infinite;
+}
+
+.hero-orb {
+  animation: heroOrb 8s ease-in-out infinite alternate;
+}
+
+.hero-orb-reverse {
+  animation: heroOrbReverse 10s ease-in-out infinite alternate;
+}
+
+.product-ring {
+  animation: productRing 25s linear infinite;
+}
+
+.product-ring-outer {
+  animation: productRingReverse 35s linear infinite;
+}
+
+@keyframes heroLight {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(120vw);
+    opacity: 0;
+  }
+}
+
+@keyframes heroOrb {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(40px, -25px, 0);
+  }
+}
+
+@keyframes heroOrbReverse {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-35px, 25px, 0);
+  }
+}
+
+@keyframes productRing {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes productRingReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-light,
+  .hero-orb,
+  .hero-orb-reverse,
+  .product-ring,
+  .product-ring-outer {
+    animation: none;
+  }
+}
+
 @keyframes bearing3d {
   0% {
     transform: rotateY(0deg) rotateX(0deg) translateY(0px) scale(1);
