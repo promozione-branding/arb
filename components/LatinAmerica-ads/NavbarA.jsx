@@ -47,7 +47,7 @@ export default function NavbarA() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center px-5 gap-10">
+            <div className="hidden md:flex items-center px-2 gap-5">
               {/* Inicio */}
               <Link
                 href="#home"
