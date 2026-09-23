@@ -24,7 +24,7 @@ export default {
         title: "Premium Ball Bearings to EMQ BALL BEARINGS(Electric Motor Quality)",
         description:
           "Designed for demanding industrial applications, EMQ ball bearings deliver exceptional reliability, smooth operation, and long service life with precision engineering and superior quality.",
-        image: "/33.webp",
+        image: "/newbear.webp",
         features: [
           "High Precision Engineering",
           "Low Friction Performance",
