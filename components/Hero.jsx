@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
 import {
@@ -52,68 +53,10 @@ const features = [
 export default function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  /* Product slider */
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* Typewriter */
-  const [typedText, setTypedText] = useState("");
-  const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  /*
-   * Product slider autoplay
-   */
-  useEffect(() => {
-    const slider = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bearingImages.length);
-    }, 3000);
-
-    return () => clearInterval(slider);
-  }, []);
-
-  /*
-   * Typewriter effect
-   */
-  useEffect(() => {
-    const startDelay = setTimeout(() => {
-      const currentText = typedTexts[textIndex];
-
-      const typingSpeed = isDeleting ? 40 : 85;
-
-      if (!isDeleting && typedText === currentText) {
-        const timer = setTimeout(() => {
-          setIsDeleting(true);
-        }, 1800);
-
-        return () => clearTimeout(timer);
-      }
-
-      if (isDeleting && typedText === "") {
-        setIsDeleting(false);
-
-        setTextIndex((prev) => (prev + 1) % typedTexts.length);
-
-        return;
-      }
-
-      const timer = setTimeout(() => {
-        setTypedText(
-          isDeleting
-            ? currentText.substring(0, typedText.length - 1)
-            : currentText.substring(0, typedText.length + 1)
-        );
-      }, typingSpeed);
-
-      return () => clearTimeout(timer);
-    }, 100);
-
-    return () => clearTimeout(startDelay);
-  }, [typedText, isDeleting, textIndex]);
-
   return (
     <>
       <section
-      id="home"
+        id="home"
         className="
           hero-section
           relative
@@ -136,10 +79,9 @@ export default function HeroSection() {
 
         <Image
           src="/banner1.webp"
-          alt=""
+          alt="ball bearing manufacturer"
           fill
-          priority
-          fetchPriority="high"
+          preload
           sizes="100vw"
           quality={75}
           className="
@@ -394,9 +336,7 @@ export default function HeroSection() {
                   2xl:text-[64px]
                 "
               >
-                <span className="hero-heading-line block">
-                  PRECISION THAT
-                </span>
+                <span className="hero-heading-line block">PRECISION THAT</span>
 
                 <span
                   className="
@@ -413,7 +353,7 @@ export default function HeroSection() {
                     text-transparent
                   "
                 >
-                  {typedText || "DRIVES PROGRESS"}
+                  <TypewriterText />
 
                   <span
                     className="
@@ -639,9 +579,7 @@ export default function HeroSection() {
                     sm:text-base
                   "
                 >
-                  <span className="relative">
-                    DOWNLOAD CATALOGUE
-                  </span>
+                  <span className="relative">DOWNLOAD CATALOGUE</span>
 
                   <ArrowBigRight
                     size={18}
@@ -936,114 +874,7 @@ export default function HeroSection() {
                   TAILWIND + REACT ONLY
               ================================================== */}
 
-              <div
-                className="
-                  relative
-                  z-10
-                  h-[280px]
-                  w-full
-                  max-w-[420px]
-                  overflow-hidden
-                  sm:h-[360px]
-                  sm:max-w-[500px]
-                  md:h-[460px]
-                  md:max-w-[580px]
-                  lg:h-[560px]
-                  lg:max-w-[620px]
-                  xl:h-[620px]
-                  2xl:h-[680px]
-                  2xl:max-w-[350px]
-                "
-              >
-                {bearingImages.map((img, index) => {
-                  const isActive = index === currentSlide;
-
-                  const isPrevious =
-                    index < currentSlide ||
-                    (currentSlide === 0 &&
-                      index === bearingImages.length - 1);
-
-                  return (
-                    <div
-                      key={img}
-                      className={`
-                        absolute
-                        inset-0
-                        flex
-                        items-center
-                        justify-center
-                        transition-all
-                        duration-700
-                        ease-in-out
-                        ${
-                          isActive
-                            ? "translate-x-0 opacity-100"
-                            : isPrevious
-                              ? "-translate-x-full opacity-0"
-                              : "translate-x-full opacity-0"
-                        }
-                      `}
-                    >
-                      <Image
-                        src={img}
-                        alt={`Bearing ${index + 1}`}
-                        width={500}
-                        height={500}
-                        priority={index === 0}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        fetchPriority={index === 0 ? "high" : "auto"}
-                        sizes="
-                          (max-width: 640px) 90vw,
-                          (max-width: 1024px) 50vw,
-                          45vw
-                        "
-                        quality={75}
-                        className="
-                          bearing-image
-                          h-full
-                          w-full
-                          object-contain
-                        "
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Slider dots */}
-
-              <div
-                className="
-                  absolute
-                  bottom-[8%]
-                  left-1/2
-                  z-30
-                  flex
-                  -translate-x-1/2
-                  items-center
-                  gap-2
-                "
-              >
-                {bearingImages.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    aria-label={`Go to bearing ${index + 1}`}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`
-                      h-1.5
-                      rounded-full
-                      transition-all
-                      duration-300
-                      ${
-                        currentSlide === index
-                          ? "w-8 bg-[#29166F]"
-                          : "w-1.5 bg-gray-400/60"
-                      }
-                    `}
-                  />
-                ))}
-              </div>
+              <ProductCarousel />
 
               {/* Technical badge */}
 
@@ -1107,10 +938,155 @@ export default function HeroSection() {
       ====================================================== */}
 
       {isFormOpen && (
-        <LazyCataloguePopup
-          onClose={() => setIsFormOpen(false)}
-        />
+        <LazyCataloguePopup onClose={() => setIsFormOpen(false)} />
       )}
+    </>
+  );
+}
+
+function TypewriterText() {
+  const [typedText, setTypedText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentText = typedTexts[textIndex];
+    const typingSpeed = isDeleting ? 40 : 85;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && typedText === currentText) {
+        setIsDeleting(true);
+      } else if (isDeleting && typedText === "") {
+        setIsDeleting(false);
+        setTextIndex((index) => (index + 1) % typedTexts.length);
+      } else {
+        setTypedText(
+          isDeleting
+            ? currentText.substring(0, typedText.length - 1)
+            : currentText.substring(0, typedText.length + 1),
+        );
+      }
+    }, !isDeleting && typedText === currentText ? 1800 : typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [typedText, isDeleting, textIndex]);
+
+  return typedText || "DRIVES PROGRESS";
+}
+
+function ProductCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const slider = setInterval(() => {
+      setCurrentSlide((slide) => (slide + 1) % bearingImages.length);
+    }, 3000);
+
+    return () => clearInterval(slider);
+  }, []);
+
+  return (
+    <>
+      <div
+        className="
+          relative
+          z-10
+          h-[280px]
+          w-full
+          max-w-[420px]
+          overflow-hidden
+          sm:h-[360px]
+          sm:max-w-[500px]
+          md:h-[460px]
+          md:max-w-[580px]
+          lg:h-[560px]
+          lg:max-w-[620px]
+          xl:h-[620px]
+          2xl:h-[680px]
+          2xl:max-w-[350px]
+        "
+      >
+        {bearingImages.map((img, index) => {
+          const isActive = index === currentSlide;
+
+          const isPrevious =
+            index < currentSlide ||
+            (currentSlide === 0 && index === bearingImages.length - 1);
+
+          return (
+            <div
+              key={img}
+              className={`
+                absolute
+                inset-0
+                flex
+                items-center
+                justify-center
+                transition-all
+                duration-700
+                ease-in-out
+                ${
+                  isActive
+                    ? "translate-x-0 opacity-100"
+                    : isPrevious
+                      ? "-translate-x-full opacity-0"
+                      : "translate-x-full opacity-0"
+                }
+              `}
+            >
+              <Image
+                src={img}
+                alt={`Bearing ${index + 1}`}
+                width={500}
+                height={500}
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes="
+                  (max-width: 640px) 90vw,
+                  (max-width: 1024px) 50vw,
+                  45vw
+                "
+                quality={75}
+                className={`h-full w-full object-contain ${
+                  isActive ? "bearing-image" : ""
+                }`}
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      <div
+        className="
+          absolute
+          bottom-[8%]
+          left-1/2
+          z-30
+          flex
+          -translate-x-1/2
+          items-center
+          gap-2
+        "
+      >
+        {bearingImages.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            aria-label={`Go to bearing ${index + 1}`}
+            onClick={() => setCurrentSlide(index)}
+            className={`
+              h-1.5
+              rounded-full
+              transition-all
+              duration-300
+              ${
+                currentSlide === index
+                  ? "w-8 bg-[#29166F]"
+                  : "w-1.5 bg-gray-400/60"
+              }
+            `}
+          />
+        ))}
+      </div>
     </>
   );
 }
@@ -1119,31 +1095,7 @@ export default function HeroSection() {
  * Load catalogue popup only when user opens it.
  * This keeps popup JavaScript out of the initial render.
  */
-function LazyCataloguePopup({ onClose }) {
-  const [Component, setComponent] = useState(null);
-
-  useEffect(() => {
-    let mounted = true;
-
-    import("@/components/Catpopup").then((mod) => {
-      if (mounted) {
-        setComponent(() => mod.default);
-      }
-    });
-
-    return () => {
-      mounted = false;
-    };
-  }, []);
-
-  if (!Component) {
-    return null;
-  }
-
-  return (
-    <Component
-      Onpen={true}
-      onClose={onClose}
-    />
-  );
-}
+const LazyCataloguePopup = dynamic(() => import("@/components/Catpopup"), {
+  loading: () => null,
+});
+ 
