@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Clock, Send, ChevronDown } from "lucide-react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import { handleCallClick } from "@/lib/tracking";
 export default function ContactPage() {
 
 
@@ -338,6 +339,7 @@ ${form.message}
                 <a
                   href="tel:+91-7834872136"
                   className="mt-1 block text-slate-600 transition hover:text-blue-700"
+                  onClick={() => handleCallClick({ source: 'Website' })}
                 >
                   +91-9968373086
                 </a>

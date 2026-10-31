@@ -9,6 +9,7 @@ import { ArrowUpRight, Phone } from "lucide-react";
 import "swiper/css";
 import EnquiryR from "./EnquiryR";
 import { useState } from "react";
+import { handleCallClick } from "@/lib/tracking";
 
 // Ball bearing products
 const ballBearingProducts = [
@@ -583,6 +584,7 @@ export default function ProductsSection() {
                 hover:-translate-y-1
                 hover:bg-[#a81712]
               "
+              onClick={() => handleCallClick({ source: 'Website' })}
             >
               <Phone size={16} />
               Позвонить сейчас

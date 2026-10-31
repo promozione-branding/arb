@@ -11,6 +11,7 @@ import Link from "next/link";
 import "swiper/css";
 import { useState } from "react";
 import EnquiryU from "./EnquiryU";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 export default function ABoutU() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -337,6 +338,7 @@ export default function ABoutU() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="تواصل معنا عبر واتساب"
+              onClick={() => handleWhatsappClick({ source: 'Website' })}
               className="
                 group
                 inline-flex

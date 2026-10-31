@@ -21,6 +21,7 @@ import {
 import IndustriesSection from "@/components/IndustriesSection";
 
 import { ChevronDown } from "lucide-react";
+import { handleCallClick } from "@/lib/tracking";
 
 const Location = () => {
   const [active, setActive] = useState(0);
@@ -455,6 +456,7 @@ const Location = () => {
             <a
               href="tel:+918810422935"
               className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+              onClick={() => handleCallClick({ source: 'Website' })}
             >
               Connect Now
             </a>

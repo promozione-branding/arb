@@ -3,6 +3,7 @@
 
 import React from "react";
 import { MessageCircle, Send, Phone } from "lucide-react";
+import { handleCallClick, handleWhatsappClick } from "@/lib/tracking";
 
 export default function StickyFooter({ whatsappNumber, phoneNumber }) {
 
@@ -15,6 +16,7 @@ export default function StickyFooter({ whatsappNumber, phoneNumber }) {
                     href={`https://wa.me/${whatsappNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => handleWhatsappClick({ source: 'Website' })}
                     className="flex flex-1 flex-col items-center justify-center gap-1 border-r border-gray-200 text-green-600 active:bg-green-50"
                 >
                     <MessageCircle size={21} strokeWidth={2.2} />
@@ -38,6 +40,7 @@ export default function StickyFooter({ whatsappNumber, phoneNumber }) {
                 < a
                     href={`tel:${phoneNumber}`}
                     className="flex flex-1 flex-col items-center justify-center gap-1 border-l border-gray-200 text-[#071a3d] active:bg-gray-50"
+                onClick={() => handleCallClick({ source: 'Website' })}
                 >
                     <Phone size={20} strokeWidth={2.2} />
                     <span className="text-[11px] font-semibold">

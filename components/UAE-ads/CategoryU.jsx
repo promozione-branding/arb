@@ -10,6 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "swiper/css";
 import { useState } from "react";
 import EnquiryU from "./EnquiryU";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 const products = [
   {
@@ -376,6 +377,7 @@ export default function CategoryU() {
                             sm:py-3
                             sm:text-xs
                           "
+                          onClick={() => handleWhatsappClick({ source: 'Website' })}
                         >
                           <FaWhatsapp size={15} />
                           واتساب
@@ -415,6 +417,7 @@ export default function CategoryU() {
 
           <Link
             href={whatsappHref}
+            onClick={() => handleWhatsappClick({ source: 'Website' })}
             className="group inline-flex items-center gap-2 text-sm font-bold text-[#1D4ED8]"
           >
             واتساب

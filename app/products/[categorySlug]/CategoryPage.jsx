@@ -4,6 +4,7 @@ import { getCategoryTree } from "../../../data";
 import Cta from "@/components/Cta";
 import CursorZoomImage from "@/components/CursorZoomImage";
 import { useParams } from "next/navigation";
+import { handleCallClick } from "@/lib/tracking";
 
 export default function CategoryPage() {
     const { categorySlug } = useParams();
@@ -499,6 +500,7 @@ export default function CategoryPage() {
                   sm:w-auto
                   sm:py-4
                 "
+                onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 Contact Us
                             </Link>
@@ -518,6 +520,7 @@ export default function CategoryPage() {
                   sm:w-auto
                   sm:py-4
                 "
+                onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 Enquiry Now
                             </a>

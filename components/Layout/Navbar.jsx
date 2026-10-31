@@ -8,6 +8,7 @@ import { ChevronDown, Menu, X, PhoneCall, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Enquiry from "@/components/Enquiry";
 import { russiaLocations } from "@/lib/russiaLocations";
+import { handleCallClick, handleWhatsappClick } from "@/lib/tracking";
 
 export default function Navbar({ categories }) {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -119,6 +120,7 @@ export default function Navbar({ categories }) {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href={phoneHref}
+                onClick={() => handleCallClick({ source: 'Website' })}
                 className="flex items-center gap-3 rounded-full border border-white/15 bg-white/5 backdrop-blur-xl px-5 py-3 transition-all duration-300 hover:bg-white/10"
               >
                 <div className="w-10 h-10 rounded-full bg-[#C52C1D] flex items-center justify-center text-white">
@@ -137,6 +139,7 @@ export default function Navbar({ categories }) {
                 href="https://wa.me/917834872136"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => handleWhatsappClick({ source: 'Website' })}
                 className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-6"
               >
                 <FaWhatsapp size={20} />
@@ -161,6 +164,7 @@ export default function Navbar({ categories }) {
               <a
                 href="https://wa.me/+91-7834872136"
                 className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white"
+              onClick={() => handleWhatsappClick({ source: 'Website' })}
               >
                 <FaWhatsapp size={18} />
               </a>
@@ -435,6 +439,7 @@ export default function Navbar({ categories }) {
               <a
                 href="tel:+919999402424"
                 className="flex items-center justify-center gap-3 rounded-2xl border-2 border-[#081B2E] py-4 font-semibold text-[#081B2E] transition hover:bg-[#081B2E] hover:text-white"
+              onClick={() => handleCallClick({ source: 'Website' })}
               >
                 <PhoneCall size={20} />
                 Call Now

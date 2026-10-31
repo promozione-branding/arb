@@ -13,6 +13,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import EnquiryU from "./EnquiryU";
 import TranslatorU from "./TranslatorU";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 export default function NavbarA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -97,6 +98,7 @@ export default function NavbarA() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="تواصل معنا عبر واتساب"
+                onClick={() => handleWhatsappClick({ source: 'Website' })}
                 className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-6"
               >
                 <FaWhatsapp size={22} />

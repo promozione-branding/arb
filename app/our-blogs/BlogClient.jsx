@@ -28,7 +28,7 @@ export default function BlogsPage() {
       console.log(data , "correct")
     }
     fetchBlogs();
-    console.log(getBlogs , "correct")
+    console.log(getBlogs , "correct2")
   }, []);
 
   return (

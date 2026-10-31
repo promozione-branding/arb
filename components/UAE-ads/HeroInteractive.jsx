@@ -1,5 +1,6 @@
 "use client";
 
+import { handleWhatsappClick } from "@/lib/tracking";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -263,6 +264,7 @@ export default function HeroInteractive({
               sm:px-7
               sm:text-base
             "
+            onClick={() => handleWhatsappClick({ source: 'Website' })}
           >
             <span className="relative">
               WhatsApp

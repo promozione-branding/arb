@@ -12,6 +12,7 @@ import Link from "next/link";
 import "swiper/css";
 import { useState } from "react";
 import EnquiryA from "./EnquiryA";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 export default function ABoutA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -364,6 +365,7 @@ export default function ABoutA() {
                 sm:py-4
                 sm:text-base
               "
+              onClick={() => handleWhatsappClick({ source: 'Website' })}
             >
               <FaWhatsapp size={19} />
               Escríbanos

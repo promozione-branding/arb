@@ -8,6 +8,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { russiaLocations } from "@/lib/russiaLocations";
 import { FaWhatsapp } from "react-icons/fa";
+import { handleCallClick, handleWhatsappClick } from "@/lib/tracking";
 
 export default function FooterA() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -151,6 +152,7 @@ export default function FooterA() {
     <a
       href="tel:+919968373086"
       className="hover:text-red-600 transition-colors"
+      onClick={() => handleCallClick({ source: 'Website' })}
     >
       +91-9968373086
     </a>
@@ -166,6 +168,7 @@ export default function FooterA() {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleWhatsappClick({ source: 'Website' })}
                   className="transition-colors hover:text-red-600 hover:underline hover:decoration-red-600 hover:underline-offset-4"
                 >
                   Escríbanos

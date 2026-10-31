@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import EnquiryA from "./EnquiryA";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 const bearingImages = [
   "/hero/11.webp",
@@ -618,6 +619,7 @@ export default function HeroA() {
                   href="https://wa.me/9968373086"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleWhatsappClick({ source: 'Website' })}
                   className="
                     group
                     relative

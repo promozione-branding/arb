@@ -15,6 +15,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "swiper/css";
 import { useState } from "react";
 import EnquiryA from "./EnquiryA";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 const products = [
   {
@@ -379,6 +380,7 @@ export default function CategoryA() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Contactar por WhatsApp"
+                          onClick={() => handleWhatsappClick({ source: 'Website' })}
                           className="
                             flex
                             items-center

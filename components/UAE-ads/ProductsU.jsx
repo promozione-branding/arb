@@ -11,6 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "swiper/css";
 import { useState } from "react";
 import EnquiryU from "./EnquiryU";
+import { handleWhatsappClick } from "@/lib/tracking";
 
 // Ball bearing products
 const ballBearingProducts = [
@@ -138,6 +139,7 @@ function ProductSlider({ title, subtitle, products }) {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => handleWhatsappClick({ source: 'Website' })}
           aria-label="تواصل معنا عبر واتساب"
           className="
             group
@@ -434,6 +436,7 @@ function ProductSlider({ title, subtitle, products }) {
                         sm:py-3
                         sm:text-xs
                       "
+                      onClick={() => handleWhatsappClick({ source: 'Website' })}
                     >
                       <FaWhatsapp size={13} />
                       واتساب
@@ -583,6 +586,7 @@ export default function ProductsU() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="تواصل معنا عبر واتساب"
+              onClick={() => handleWhatsappClick({ source: 'Website' })}
               className="
                 inline-flex
                 items-center

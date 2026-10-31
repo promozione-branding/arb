@@ -15,6 +15,7 @@ import {
     Truck,
     Wrench,
 } from "lucide-react";
+import { handleCallClick } from "@/lib/tracking";
 
 const widelyUsed = [
     { title: "Passenger Vehicles", icon: CarFront },
@@ -347,6 +348,7 @@ export default function ClutchPlates() {
 
                         <a href="tel:+917834872136"
                             className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 font-semibold text-slate-900 transition hover:bg-slate-200"
+                        onClick={() => handleCallClick({ source: 'Website' })}
                         >
                             Enquire Now
                             <ArrowRight size={18} />
