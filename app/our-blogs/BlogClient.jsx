@@ -13,7 +13,11 @@ async function getBlogs() {
       date,
       excerpt,
       "imageUrl": image.asset->url
-    }`
+    }`,
+    {},
+    {
+      cache: "no-store",
+    }
   );
 }
 
