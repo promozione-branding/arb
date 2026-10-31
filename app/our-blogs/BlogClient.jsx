@@ -25,8 +25,10 @@ export default function BlogsPage() {
     async function fetchBlogs() {
       const data = await getBlogs();
       setBlogs(data);
+      console.log(data , "correct")
     }
     fetchBlogs();
+    console.log(data , "correct 2")
   }, []);
 
   return (
