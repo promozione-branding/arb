@@ -1,14 +1,24 @@
+
 "use client";
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Menu, X, PhoneCall, ArrowRight } from "lucide-react";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  PhoneCall,
+  ArrowRight,
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Enquiry from "@/components/Enquiry";
 import { russiaLocations } from "@/lib/russiaLocations";
-import { handleCallClick, handleWhatsappClick } from "@/lib/tracking";
+import {
+  handleCallClick,
+  handleWhatsappClick,
+} from "@/lib/tracking";
 
 export default function Navbar({ categories }) {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -16,15 +26,19 @@ export default function Navbar({ categories }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [open, setOpen] = useState(false);
+
   const pathname = usePathname();
 
   const currentSlug = pathname.split("/").filter(Boolean).pop();
-
   const isRussiaLocation = russiaLocations.includes(currentSlug);
 
-  const phoneNumber = isRussiaLocation ? "+7-9859834837" : "+91-9968373086";
+  const phoneNumber = isRussiaLocation
+    ? "+7-9859834837"
+    : "+91-9968373086";
 
-  const phoneHref = isRussiaLocation ? "tel:+79859834837" : "tel:+919968373086";
+  const phoneHref = isRussiaLocation
+    ? "tel:+79859834837"
+    : "tel:+919968373086";
 
   const closeMenu = () => {
     setActiveMenu(null);
@@ -33,9 +47,12 @@ export default function Navbar({ categories }) {
 
   return (
     <header className="sticky top-0 z-[999] w-full">
+
+      {/* TOP NAVBAR */}
       <div className="relative z-[200] backdrop-blur-2xl bg-[#081B2E]/90 border-b border-white/10 shadow-[0_17px_40px_rgba(0,0,0,.18)]">
-        <div className="max-w-7xl mx-auto px-3   ">
+        <div className="max-w-7xl mx-auto px-3">
           <div className="h-18 flex items-center justify-between">
+
             <Link href="/" className="relative flex items-center shrink-0">
               <Image
                 src="/logo.png"
@@ -47,7 +64,9 @@ export default function Navbar({ categories }) {
               />
             </Link>
 
+            {/* DESKTOP NAVIGATION */}
             <div className="hidden lg:flex items-center gap-10">
+
               <Link
                 href="/"
                 className="relative text-[17px] font-semibold text-white transition hover:text-[#ff6a2b]"
@@ -55,6 +74,7 @@ export default function Navbar({ categories }) {
                 Home
               </Link>
 
+              {/* ABOUT US */}
               <div
                 className="relative"
                 onMouseEnter={() => setAboutOpen(true)}
@@ -64,40 +84,36 @@ export default function Navbar({ categories }) {
                   About Us
                   <ChevronDown
                     size={16}
-                    className={`transition-transform duration-300 ${aboutOpen ? "rotate-180" : ""}`}
+                    className={`transition-transform duration-300 ${
+                      aboutOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
                 <div
-                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${aboutOpen
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible -translate-y-3"
-                    }`}
+                  className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
+                    aboutOpen
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible -translate-y-3"
+                  }`}
                 >
                   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
-                    <Link
-                      href="/about-us"
-                      className="flex items-center justify-between px-6 py-4 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                    >
-                      About ARB Bearings
-                      <ArrowRight size={16} />
-                    </Link>
 
-                    <Link
-                      href="/our-journey"
-                      className="flex items-center justify-between px-6 py-4 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                    >
-                      Our Journey
-                      <ArrowRight size={16} />
-                    </Link>
+                    {[
+                      { name: "About ARB Bearings", href: "/about-us" },
+                      { name: "Our Journey", href: "/our-journey" },
+                      { name: "Our Core Values", href: "/our-core-values" },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="flex items-center justify-between px-6 py-4 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                      >
+                        {item.name}
+                        <ArrowRight size={16} />
+                      </Link>
+                    ))}
 
-                    <Link
-                      href="/our-core-values"
-                      className="flex items-center justify-between px-6 py-4 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                    >
-                      Our Core Values
-                      <ArrowRight size={16} />
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -117,10 +133,12 @@ export default function Navbar({ categories }) {
               </Link>
             </div>
 
+            {/* DESKTOP CONTACT BUTTONS */}
             <div className="hidden lg:flex items-center gap-4">
+
               <a
                 href={phoneHref}
-                onClick={() => handleCallClick({ source: 'Website' })}
+                onClick={() => handleCallClick({ source: "Website" })}
                 className="flex items-center gap-3 rounded-full border border-white/15 bg-white/5 backdrop-blur-xl px-5 py-3 transition-all duration-300 hover:bg-white/10"
               >
                 <div className="w-10 h-10 rounded-full bg-[#C52C1D] flex items-center justify-center text-white">
@@ -139,7 +157,7 @@ export default function Navbar({ categories }) {
                 href="https://wa.me/917834872136"
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => handleWhatsappClick({ source: 'Website' })}
+                onClick={() => handleWhatsappClick({ source: "Website" })}
                 className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-6"
               >
                 <FaWhatsapp size={20} />
@@ -158,13 +176,18 @@ export default function Navbar({ categories }) {
                 </span>
                 <span className="absolute inset-0 bg-white/20 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700 skew-x-12" />
               </button>
+
             </div>
 
+            {/* MOBILE BUTTONS */}
             <div className="flex lg:hidden items-center gap-3">
+
               <a
-                href="https://wa.me/+91-7834872136"
+                href="https://wa.me/917834872136"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => handleWhatsappClick({ source: "Website" })}
                 className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white"
-              onClick={() => handleWhatsappClick({ source: 'Website' })}
               >
                 <FaWhatsapp size={18} />
               </a>
@@ -175,35 +198,42 @@ export default function Navbar({ categories }) {
               >
                 {mobileOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
+
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hidden lg:block bg-white border-b border-gray-200 relative shadow-sm"
+      {/* DESKTOP PRODUCT NAVIGATION */}
+      <div
+        className="hidden lg:block bg-white border-b border-gray-200 relative shadow-sm"
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="w-full mx-auto px-18">
           <div className="h-14 flex items-center justify-center gap-10">
+
             {categories?.map((cat) => (
               <Link
                 href={`/products/${cat.slug}`}
                 key={cat.slug}
-                type="button"
                 onMouseEnter={() => setActiveMenu(cat.slug)}
                 onClick={() => setActiveMenu(cat.slug)}
                 className="group relative flex items-center gap-1 text-[16px] font-semibold text-gray-800 hover:text-[#C52C1D] transition-all"
               >
                 <span>{cat.name}</span>
+
                 <ChevronDown
                   size={16}
-                  className={`transition-transform duration-300 ${activeMenu === cat.slug ? "rotate-180" : ""
-                    }`}
+                  className={`transition-transform duration-300 ${
+                    activeMenu === cat.slug ? "rotate-180" : ""
+                  }`}
                 />
+
                 <span className="absolute left-0 -bottom-[20px] h-[3px] w-0 rounded-full bg-[#C52C1D] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
 
+            {/* MISCELLANEOUS PRODUCTS */}
             <div
               className="relative"
               onMouseEnter={() => setOpen(true)}
@@ -213,79 +243,56 @@ export default function Navbar({ categories }) {
                 Miscellaneous Products
                 <ChevronDown
                   size={16}
-                  className={`transition-transform duration-300 ${aboutOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-300 ${
+                    open ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               <div
-                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${open
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-3"
-                  }`}
+                className={`absolute left-1/2 top-full z-[300] mt-5 w-72 -translate-x-1/2 transition-all duration-300 ${
+                  open
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-3"
+                }`}
               >
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
-                  <Link
-                    href=""
-                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                  >
-                    Grease
-                    <ArrowRight size={16} />
-                  </Link>
 
-                  <Link
-                    href=""
-                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                  >
-                    Universal Joints
-                    <ArrowRight size={16} />
-                  </Link>
+                  {[
+                    "Grease",
+                    "Universal Joints",
+                    "Clutch Bearings",
+                    "Pillow Blocks Units",
+                    "Clutch Plates",
+                    "Brake Lining",
+                  ].map((item) => (
+                    <Link
+                      key={item}
+                      href=""
+                      className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
+                    >
+                      {item}
+                      <ArrowRight size={16} />
+                    </Link>
+                  ))}
 
-                  <Link
-                    href=""
-                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                  >
-                    Clutch Bearings
-                    <ArrowRight size={16} />
-                  </Link>
-
-                  <Link
-                    href=""
-                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                  >
-                    Pillow Blocks Units
-                    <ArrowRight size={16} />
-                  </Link>
-
-                  <Link
-                    href=""
-                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                  >
-                    Clutch Plates
-                    <ArrowRight size={16} />
-                  </Link>
-
-                  <Link
-                    href=""
-                    className="flex items-center justify-between px-6 py-2 text-[#081B2E] transition hover:bg-gray-50 hover:text-[#ff6a2b]"
-                  >
-                    Brake Lining
-                    <ArrowRight size={16} />
-                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* <Link href="/grease" className="group relative flex items-center cursor-pointer  text-[16px] font-semibold text-gray-800 hover:text-[#C52C1D] transition-all"> Grease</Link> */}
           </div>
         </div>
 
+        {/* MEGA MENU */}
         {activeMenu && (
-          <div className="absolute left-0 top-full w-full overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-white shadow-[0_25px_60px_rgba(15,23,42,0.15)] backdrop-blur-xl">
+          <div
+            className="absolute left-0 top-full w-full z-[500] overflow-hidden overscroll-contain border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-white shadow-[0_25px_60px_rgba(15,23,42,0.15)] backdrop-blur-xl"
+          >
             <div className="mx-auto w-full px-10 py-4">
-              {/* Header */}
+
               <div className="mb-2 flex items-center justify-between border-b border-slate-200 pb-3">
                 <h2 className="text-2xl font-black tracking-tight text-slate-900">
-                  {categories.find((c) => c.slug === activeMenu)?.name}
+                  {categories?.find((c) => c.slug === activeMenu)?.name}
                 </h2>
 
                 <Link
@@ -300,11 +307,12 @@ export default function Navbar({ categories }) {
                 </Link>
               </div>
 
-              {/* Products */}
-              <div className="max-h-[55vh] overflow-y-auto py-5 pr-2">
+              {/* SCROLLABLE PRODUCT LIST */}
+              <div className="max-h-[55vh] overflow-y-auto overscroll-contain py-5 pr-2">
                 <div className="grid grid-cols-4 gap-5">
+
                   {categories
-                    .find((c) => c.slug === activeMenu)
+                    ?.find((c) => c.slug === activeMenu)
                     ?.subCategories?.map((sub) => (
                       <Link
                         key={sub.slug}
@@ -312,7 +320,7 @@ export default function Navbar({ categories }) {
                         onClick={closeMenu}
                         className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_10px_25px_rgba(15,23,42,.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C72818]/30 hover:shadow-[0_20px_40px_rgba(199,40,24,.15)]"
                       >
-                        {/* Image */}
+
                         <div className="relative h-36 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-slate-100">
                           {sub.image ? (
                             <Image
@@ -329,7 +337,6 @@ export default function Navbar({ categories }) {
                           )}
                         </div>
 
-                        {/* Content */}
                         <div className="p-4">
                           <h3 className="text-[15px] font-bold leading-5 text-gray-900 transition group-hover:text-[#28186D]">
                             {sub.name}
@@ -342,18 +349,23 @@ export default function Navbar({ categories }) {
                             </span>
                           </div>
                         </div>
+
                       </Link>
                     ))}
+
                 </div>
               </div>
+
             </div>
           </div>
         )}
       </div>
 
+      {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[80px] bottom-0 bg-white z-[999] overflow-y-auto transition-all duration-300">
+        <div className="lg:hidden fixed inset-x-0 top-[80px] bottom-0 bg-white z-[999] overflow-y-auto overscroll-contain transition-all duration-300">
           <div className="px-6 py-8">
+
             <div className="space-y-2">
               {[
                 { name: "Home", href: "/" },
@@ -377,6 +389,7 @@ export default function Navbar({ categories }) {
               <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-gray-500 mb-5">
                 Product Categories
               </h4>
+
               <div className="space-y-3">
                 {categories?.map((cat) => (
                   <details
@@ -390,6 +403,7 @@ export default function Navbar({ categories }) {
                         className="transition-transform group-open:rotate-180"
                       />
                     </summary>
+
                     <div className="border-t bg-gray-50">
                       {cat.subCategories?.map((sub) => (
                         <Link
@@ -411,10 +425,12 @@ export default function Navbar({ categories }) {
               <h3 className="text-white text-2xl font-bold">
                 Need Industrial Solutions?
               </h3>
+
               <p className="mt-3 text-white/70 text-sm leading-6">
                 Speak with our experts and receive the best quotation for your
                 industrial requirements.
               </p>
+
               <Link
                 href="/contact-us"
                 onClick={closeMenu}
@@ -426,10 +442,12 @@ export default function Navbar({ categories }) {
             </div>
 
             <div className="mt-8 space-y-4">
+
               <a
                 href="https://wa.me/9999402424"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => handleWhatsappClick({ source: "Website" })}
                 className="flex items-center justify-center gap-3 rounded-2xl bg-green-500 py-4 text-white font-semibold shadow-lg transition hover:bg-green-600"
               >
                 <FaWhatsapp size={22} />
@@ -438,12 +456,13 @@ export default function Navbar({ categories }) {
 
               <a
                 href="tel:+919999402424"
+                onClick={() => handleCallClick({ source: "Website" })}
                 className="flex items-center justify-center gap-3 rounded-2xl border-2 border-[#081B2E] py-4 font-semibold text-[#081B2E] transition hover:bg-[#081B2E] hover:text-white"
-              onClick={() => handleCallClick({ source: 'Website' })}
               >
                 <PhoneCall size={20} />
                 Call Now
               </a>
+
             </div>
 
             <div className="mt-10 border-t pt-6 text-center">
@@ -453,13 +472,19 @@ export default function Navbar({ categories }) {
                 Premium Industrial Solutions • Trusted Across India
               </p>
             </div>
+
           </div>
         </div>
       )}
 
+      {/* ENQUIRY MODAL */}
       {isFormOpen && (
-        <Enquiry IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+        <Enquiry
+          IATFpen={isFormOpen}
+          onClose={() => setIsFormOpen(false)}
+        />
       )}
+
     </header>
   );
 }
