@@ -135,7 +135,7 @@ export default function FooterU() {
                 <MapPin className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
 
                 <p className="leading-relaxed whitespace-pre-line">
-                  إتش-22، أوديوغ ناجار، نيودلهي 110041، الهند
+                 H-22, UDYOG NAGAR, NANGLOI, West Delhi, Delhi, 110041
                 </p>
               </div>
 
