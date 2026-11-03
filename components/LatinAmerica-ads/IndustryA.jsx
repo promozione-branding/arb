@@ -226,6 +226,7 @@ export default function IndustryA() {
 
           {/* Industries Slider */}
           <Swiper
+            translate="no"
             modules={[Autoplay]}
             loop={true}
             speed={900}
@@ -488,4 +489,3 @@ export default function IndustryA() {
     </>
   );
 }
-

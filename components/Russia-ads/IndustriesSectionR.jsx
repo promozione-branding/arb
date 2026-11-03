@@ -299,6 +299,7 @@ export default function IndustriesSection() {
 
                     {/* Industries Slider */}
                     <Swiper
+                        translate="no"
                         modules={[Autoplay]}
                         loop={true}
                         speed={900}

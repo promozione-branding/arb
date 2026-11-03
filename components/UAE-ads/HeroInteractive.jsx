@@ -109,6 +109,7 @@ export default function HeroInteractive({
   if (typewriterOnly) {
     return (
       <span
+        translate="no"
         className="
           typewriter-text
           relative

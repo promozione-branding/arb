@@ -162,6 +162,7 @@ function ProductSlider({ title, subtitle, products }) {
 
       {/* Product Slider */}
       <Swiper
+        translate="no"
         modules={[Autoplay]}
         autoplay={{
           delay: 3500,

@@ -86,6 +86,7 @@ export default function ABoutA() {
               "
             >
               <Swiper
+                translate="no"
                 modules={[Autoplay]}
                 loop
                 speed={1000}
@@ -387,4 +388,3 @@ export default function ABoutA() {
     </section>
   );
 }
-

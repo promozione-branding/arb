@@ -205,6 +205,7 @@ export default function CTAU() {
                 {/* Content */}
                 <div className="relative min-w-0 flex-1">
                   <h3
+                    translate="no"
                     className="
                       whitespace-nowrap
                       text-2xl

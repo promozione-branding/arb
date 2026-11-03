@@ -76,6 +76,7 @@ export default function AboutSection() {
               "
             >
               <Swiper
+                translate="no"
                 modules={[Autoplay]}
                 loop
                 speed={1000}

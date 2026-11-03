@@ -402,6 +402,7 @@ export default function HeroA() {
                 </span>
 
                 <span
+                  translate="no"
                   className="
                     typewriter-text
                     relative
@@ -1161,4 +1162,3 @@ function LazyCataloguePopup({ onClose }) {
     />
   );
 }
-
