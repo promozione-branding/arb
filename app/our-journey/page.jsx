@@ -16,6 +16,7 @@ import {
   useEffect,
   useRef,
 } from "react";
+import LookingAhead from "@/components/LookingAhead";
 
 export default function OurHistory() {
   const sectionRef = useRef(null);
@@ -44,104 +45,237 @@ export default function OurHistory() {
     offset: ["start 20%", "end 80%"],
   });
 
+
+
   const history = [
     {
-      year: "1990",
-      text: "Founded by Goel Family with a Small Corporate Office in New Delhi & Started Production of Taper Roller Bearings.",
+      year: "2026",
+      title: "Accelerating Growth & Global Expansion",
+      points: [
+        "Expanded Plant-II through additional land acquisition and construction of a new 115,000+ sq. ft. production area, scheduled for operationalization by December 2026.",
+        "Added one more Bearing Life Testing facility.",
+        "Expanded ARB's international presence with the opening of a new International Office in the UAE.",
+        "Continued investment in manufacturing capacity, technology, testing and global market development.",
+      ],
     },
     {
-      year: "1991",
-      text: "Imported equipped Machinery & Precision testing equipment from Europe.",
+      year: "2025",
+      title: "Advancing Testing & Quality Assurance",
+      points: [
+        "Added advanced Grease Leakage Testing facilities.",
+        "Added Torque Testing capabilities for enhanced product validation.",
+        "Added one more Bearing Life Testing facility.",
+      ],
     },
     {
-      year: "1996",
-      text: "Ventured into export Market",
-    },
-    {
-      year: "1997",
-      text: "Product range expanded by the Commencement of Spherical & Cylindrical Roller Bearings & Ball Bearings. ARB was awarded IATF-9002 certified by KPMG (Peat Marvick - USA)",
-    },
-    {
-      year: "1998",
-      text: "Commencement of Ball Bearings production at a new plant in ARB units – Badli.",
-    },
-    {
-      year: "1999",
-      text: "Added Pillow Block Bearings & Angular Contact Ball Bearings to the product range.",
-    },
-    {
-      year: "2000",
-      text: "Acquired New Delhi based NYK Bearings having a capacity of 2 million bearings/annum.",
-    },
-    {
-      year: "2003",
-      text: "Established a new plant for manufacturing Big-Dia Bearings for Heavy Industries.",
-    },
-    {
-      year: "2005",
-      text: "Received “Star Export House” from Ministry of Commerce.",
-    },
-    {
-      year: "2007",
-      text: "A new plant started in Himachal Pradesh",
-    },
-    {
-      year: "2009",
-      text: "Earned Quality Management System IATF TS 16949:2009 certification and implemented it on company-wide scale. Launched Multi – Purpose Grease for Automotive and Industrial application and shifted ARB Plant – II to Kundli.",
-    },
-    {
-      year: "2010",
-      text: "Launched Universal Joints Cross for Automotive & Agriculture applications.",
-    },
-    {
-      year: "2011",
-      text: "Started a new plant in Kundli (Sonipat) exclusively for Taper Roller Bearings with a capacity of 2.5 million per annum.",
-    },
-    {
-      year: "2012",
-      text: "Awarded IMS (QMS, OHSAS & EMS) for health & safety management system. Started atmospheric controlled H.T. Furnace to enchane the quality of bearings.",
-    },
-    {
-      year: "2014",
-      text: "Introduced PRO clutch in Indian Market.",
-    },
-    {
-      year: "2015",
-      text: "The Company achieved the milestone of 25 years (Silver Julbilee) Installation of automatic transfer line for TRB.",
-    },
-    {
-      year: "2017",
-      text: "Company upgraded its QMS & received IATF 16949:2016 Certification.",
-    },
-    {
-      year: "2018",
-      text: "Added one more TRB line to increase plant capacity to 3 million bearings per annum.",
-    },
-    {
-      year: "2021",
-      text: "Added products for Electrical Vehicles.",
-    },
-    {
-      year: "2022",
-      text: "Added one more TRB Line to increase plant capacity to 3.5 million bearings per annum.",
+      year: "2024",
+      title: "Strengthening Heat Treatment & Metallurgical Capabilities",
+      points: [
+        "Commissioned a dedicated Heat Treatment Plant at Jhundpur, Haryana.",
+        "Added new heat treatment production lines.",
+        "Developed approximately 40,000 sq. ft. of advanced metallurgical infrastructure.",
+        "Strengthened laboratory capabilities with advanced equipment, including a spectrometer.",
+      ],
     },
     {
       year: "2023",
-      text: "Under Installation - One double capacity of Heat Treatment Plant , Two Lines of Ball Bearings - Small and medium Dia and one line for DRACBB- WB.",
+      title: "Meeting Growing Market Demand",
+      points: [
+        "Added four new Automatic Ball Bearing production lines.",
+      ],
+    },
+    {
+      year: "2022",
+      title: "Scaling Manufacturing & Customer Service",
+      points: [
+        "Added another Taper Roller Bearing production line.",
+        "Increased TRB capacity to 3.5 million bearings per annum.",
+        "Expanded customer support with 24×7 company-owned outlets in major industrial cities for emergency industrial requirements.",
+      ],
+    },
+    {
+      year: "2021",
+      title: "Preparing for the Future of Mobility",
+      points: [
+        "Expanded the product portfolio with bearings for Electric Vehicle (EV) applications.",
+        "Began supporting the evolving requirements of the next generation of mobility.",
+      ],
+    },
+    {
+      year: "2020",
+      title: "Expanding Manufacturing Infrastructure",
+      points: [
+        "Expanded ARB Plant-II with approximately 42,000 sq. ft. of new built-up area.",
+        "Added a new workshop to strengthen manufacturing infrastructure.",
+      ],
+    },
+    {
+      year: "2018",
+      title: "Expanding Capacity & Process Control",
+      points: [
+        "Added 1 fully automatic Taper Roller Bearing production line.",
+        "Introduced high-performance Red Gel Grease.",
+        "Implemented 100% Magnetic Particle Inspection (MPI).",
+        "Added 2 Automatic Ball Bearing production lines.",
+      ],
+    },
+    {
+      year: "2017",
+      title: "Advancing Quality Standards",
+      points: [
+        "Upgraded the Quality Management System.",
+        "Achieved IATF 16949:2016 certification.",
+      ],
+    },
+    {
+      year: "2015",
+      title: "25 Years of ARB",
+      points: [
+        "Celebrated 25 years of ARB — Silver Jubilee.",
+        "Installed automatic transfer lines for Taper Roller Bearings.",
+        "Added three fully automatic TRB production lines to enhance manufacturing efficiency and capacity.",
+      ],
+    },
+    {
+      year: "2014",
+      title: "Product Innovation",
+      points: [
+        "Introduced PRO Clutch to the Indian market.",
+        "Expanded capabilities into automotive clutch applications.",
+      ],
+    },
+    {
+      year: "2013",
+      title: "Investing in R&D",
+      points: [
+        "Strengthened R&D capabilities with Bearing Life Testing equipment.",
+        "Introduced Romax software for advanced bearing analysis, design and customer-specific engineering solutions.",
+      ],
+    },
+    {
+      year: "2012",
+      title: "Strengthening Quality & Process Technology",
+      points: [
+        "Achieved Integrated Management System (IMS) covering Quality, Occupational Health & Safety and Environmental Management.",
+        "Introduced a fully automatic, continuous mesh-belt type atmospheric-controlled heat treatment furnace.",
+      ],
+    },
+    {
+      year: "2011",
+      title: "Dedicated Taper Roller Bearing Facility",
+      points: [
+        "Established a dedicated Taper Roller Bearing manufacturing facility in 75,000 sq. ft. at Kundli, Haryana.",
+        "Installed fully automatic TRB production lines.",
+        "Achieved a capacity of 2.5 million bearings per annum.",
+      ],
+    },
+    {
+      year: "2010",
+      title: "Expanding Beyond Bearings",
+      points: [
+        "Launched Universal Joint Crosses for automotive and agricultural applications.",
+        "Expanded ARB's product portfolio beyond bearings.",
+      ],
+    },
+    {
+      year: "2009",
+      title: "Advancing Quality & Process Technology",
+      points: [
+        "Achieved IATF / ISO TS 16949:2009 certification.",
+        "Established an in-house metallurgical laboratory.",
+        "Introduced Multi-Purpose Grease for automotive and industrial applications.",
+        "Expanded and relocated the ARB Badli Plant to Kundli, Haryana, increasing the manufacturing footprint from 2,000 sq. ft. to 40,000 sq. ft.",
+        "Established in-house salt-bath heat treatment capability.",
+      ],
+    },
+    {
+      year: "2007",
+      title: "Expanding Manufacturing Footprint",
+      points: [
+        "Established a new manufacturing plant in Himachal Pradesh.",
+      ],
+    },
+    {
+      year: "2005",
+      title: "Recognition in International Trade",
+      points: [
+        "Received Star Export House recognition from the Ministry of Commerce, Government of India.",
+      ],
+    },
+    {
+      year: "2003",
+      title: "Entering Heavy-Duty Applications",
+      points: [
+        "Established a dedicated manufacturing facility for large-diameter bearings serving heavy industrial applications.",
+      ],
+    },
+    {
+      year: "2000",
+      title: "Strategic Expansion",
+      points: [
+        "Acquired NYK Bearings, New Delhi, significantly enhancing manufacturing capacity.",
+        "Commenced production of Self-Aligning Ball Bearings.",
+      ],
+    },
+    {
+      year: "1999",
+      title: "Strengthening the Product Range",
+      points: [
+        "Added Pillow Block Bearings and Double Row Angular Contact Ball Bearings to the product portfolio.",
+      ],
+    },
+    {
+      year: "1998",
+      title: "Expanding Manufacturing & Exports",
+      points: [
+        "Commenced Ball Bearing production at ARB Badli.",
+        "Expanded exports to international markets, including the USA and Sri Lanka.",
+      ],
+    },
+    {
+      year: "1997",
+      title: "Expanding Our Product Portfolio",
+      points: [
+        "Expanded manufacturing into Spherical Roller, Cylindrical Roller and Ball Bearings.",
+        "Achieved ISO 9002 certification, awarded by KPMG.",
+      ],
+    },
+    {
+      year: "1996",
+      title: "Entering Global Markets",
+      points: [
+        "Entered the export market, marking the beginning of ARB's international journey.",
+      ],
+    },
+    {
+      year: "1991",
+      title: "Building Technological Capability",
+      points: [
+        "Imported advanced machinery and precision testing equipment from Europe.",
+        "Established a strong foundation for precision manufacturing and quality.",
+      ],
+    },
+    {
+      year: "1990",
+      title: "The Beginning",
+      points: [
+        "Founded by the Goel family, with the corporate office in New Delhi.",
+        "Commenced manufacturing operations with Taper Roller Bearings (TRBs).",
+      ],
     },
   ];
+
+
 
   /*
    * -----------------------------------------
    * CALCULATE DOT POSITIONS
    * -----------------------------------------
    */
-
   const calculateDotPositions = () => {
     if (!timelineRef.current) return;
 
-    const timelineRect =
-      timelineRef.current.getBoundingClientRect();
+    const timelineRect = timelineRef.current.getBoundingClientRect();
 
     const positions = dotRefs.current
       .filter(Boolean)
@@ -151,15 +285,13 @@ export default function OurHistory() {
         return (
           rect.top -
           timelineRect.top +
-          rect.height / 2
+          rect.height / 2 -
+          46 // Half of bearing height (92px)
         );
       });
 
     dotPositions.current = positions;
 
-    /*
-     * Initially place bearing on first dot
-     */
     if (positions.length > 0) {
       bearingY.set(positions[0]);
     }
@@ -223,150 +355,54 @@ export default function OurHistory() {
    * SCROLL → BEARING
    * -----------------------------------------
    */
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    const positions = dotPositions.current;
 
-  useMotionValueEvent(
-    scrollYProgress,
-    "change",
-    (progress) => {
-      const positions =
-        dotPositions.current;
+    if (positions.length < 2) return;
 
-      if (positions.length < 2) return;
+    const safeProgress = Math.max(0, Math.min(1, progress));
 
-      /*
-       * Prevent values outside 0 → 1
-       */
-      const safeProgress = Math.max(
-        0,
-        Math.min(1, progress)
-      );
+    const firstY = positions[0];
+    const lastY = positions[positions.length - 1];
 
-      /*
-       * Example:
-       *
-       * 20 dots
-       *
-       * progress 0
-       * = dot 0
-       *
-       * progress 0.5
-       * = around dot 10
-       *
-       * progress 1
-       * = final dot
-       */
-      const maxIndex =
-        positions.length - 1;
+    // Move along the actual timeline height
+    const currentY = firstY + (lastY - firstY) * safeProgress;
 
-      const exactIndex =
-        safeProgress * maxIndex;
+    // Keep the bearing within the first and last dots
+    const clampedY = Math.max(firstY, Math.min(lastY, currentY));
 
-      const lowerIndex =
-        Math.floor(exactIndex);
+    bearingY.set(clampedY);
 
-      const upperIndex =
-        Math.min(
-          lowerIndex + 1,
-          maxIndex
-        );
+    // Rotate proportionally to scroll distance
+    bearingRotation.set(safeProgress * 360 * 12);
 
-      const localProgress =
-        exactIndex - lowerIndex;
-
-      const startY =
-        positions[lowerIndex];
-
-      const endY =
-        positions[upperIndex];
-
-      /*
-       * Smooth interpolation between dots
-       */
-      const currentY =
-        startY +
-        (endY - startY) *
-          localProgress;
-
-      /*
-       * Immediately follow scroll
-       *
-       * No spring here because we want
-       * the bearing to stay connected
-       * to the user's scroll.
-       */
-      bearingY.set(currentY);
-
-      /*
-       * Rotate bearing.
-       *
-       * More rotations = more premium
-       * industrial feel.
-       */
-      const rotation =
-        safeProgress *
-        360 *
-        positions.length *
-        1.5;
-
-      bearingRotation.set(rotation);
-
-      /*
-       * -----------------------------------
-       * SCROLL STOP DETECTION
-       * -----------------------------------
-       */
-
-      if (stopTimer.current) {
-        clearTimeout(stopTimer.current);
-      }
-
-      stopTimer.current = setTimeout(() => {
-        /*
-         * Find nearest dot
-         */
-        const nearestIndex =
-          Math.round(exactIndex);
-
-        const safeIndex =
-          Math.max(
-            0,
-            Math.min(
-              nearestIndex,
-              positions.length - 1
-            )
-          );
-
-        const targetY =
-          positions[safeIndex];
-
-        /*
-         * Snap bearing to nearest dot
-         */
-        animate(
-          bearingY,
-          targetY,
-          {
-            duration: 0.45,
-            ease: [0.22, 1, 0.36, 1],
-          }
-        );
-
-        /*
-         * Keep a nice final bearing rotation
-         */
-        animate(
-          bearingRotation,
-          safeIndex * 360 * 1.5,
-          {
-            duration: 0.45,
-            ease: [0.22, 1, 0.36, 1],
-          }
-        );
-      }, 120);
+    if (stopTimer.current) {
+      clearTimeout(stopTimer.current);
     }
-  );
 
-  return (
+    stopTimer.current = setTimeout(() => {
+      // Find the nearest actual dot
+      let nearestIndex = 0;
+      let nearestDistance = Infinity;
+
+      positions.forEach((position, index) => {
+        const distance = Math.abs(position - clampedY);
+
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      animate(bearingY, positions[nearestIndex], {
+        duration: 0.35,
+        ease: [0.22, 1, 0.36, 1],
+      });
+    }, 180);
+  });
+
+
+  return (<>
     <section
       ref={sectionRef}
       className="
@@ -503,67 +539,47 @@ export default function OurHistory() {
           {/* ============================== */}
           {/* BALL BEARING */}
           {/* ============================== */}
-
           <motion.div
             className="
-              hidden
-              lg:flex
-              absolute
-              left-1/2
-              -translate-x-1/2
-              -translate-y-1/2
-              w-[92px]
-              h-[92px]
-              items-center
-              justify-center
-              z-50
-              pointer-events-none
-            "
+    hidden lg:flex
+    absolute
+    left-1/2
+    top-0
+    w-[92px]
+    h-[92px]
+    items-center
+    justify-center
+    z-50
+    pointer-events-none
+  "
             style={{
+              x: "-50%",
               y: bearingY,
-              rotate: bearingRotation,
             }}
           >
-            {/* Soft glow behind bearing */}
+            <motion.div
+              className="relative flex h-full w-full items-center justify-center"
+              style={{ rotate: bearingRotation }}
+            >
+              {/* Soft glow */}
+              <div className="absolute inset-0 rounded-full bg-red-500/20 blur-xl" />
 
-            <div
-              className="
-                absolute
-                inset-2
-                rounded-full
-                bg-red-500/20
-                blur-xl
-              "
-            />
-
-            {/* White circular backdrop */}
-
-            <div
-              className="
-                absolute
-                inset-[7px]
-                rounded-full
-                
-                
-              "
-            />
-
-            {/* Bearing */}
-
-            <img
-              src="/1.webp"
-              alt="Ball Bearing"
-              draggable="false"
-              className="
-                relative
-                z-10
-                w-[272px]
-                h-[272px]
-                object-contain
-                drop-shadow-[0_8px_10px_rgba(0,0,0,0.30)]
-              "
-            />
+              {/* Bearing image */}
+              <img
+                src="/1.webp"
+                alt="ARB Ball Bearing"
+                draggable={false}
+                className="
+        relative z-10
+        w-[92px]
+        h-[92px]
+        object-contain
+        drop-shadow-[0_8px_10px_rgba(0,0,0,0.30)]
+      "
+              />
+            </motion.div>
           </motion.div>
+
 
           {/* ============================== */}
           {/* HISTORY CARDS */}
@@ -572,17 +588,16 @@ export default function OurHistory() {
           <div className="space-y-7">
             {history.map((item, index) => (
               <div
-                key={item.year}
+                key={`${item.year}-${index}`}
                 className={`
                   relative
                   flex
                   flex-col
                   lg:flex-row
                   items-center
-                  ${
-                    index % 2 === 0
-                      ? ""
-                      : "lg:flex-row-reverse"
+                  ${index % 2 === 0
+                    ? ""
+                    : "lg:flex-row-reverse"
                   }
                 `}
               >
@@ -608,7 +623,7 @@ export default function OurHistory() {
                       hover:shadow-2xl
                       transition-all
                       duration-500
-                      p-8
+                      p-4
                     "
                   >
                     <div
@@ -616,7 +631,7 @@ export default function OurHistory() {
                         flex
                         items-center
                         gap-4
-                        mb-6
+                        mb-2
                       "
                     >
                       <div
@@ -662,15 +677,24 @@ export default function OurHistory() {
                       </div>
                     </div>
 
-                    <p
-                      className="
-                        text-slate-600
-                        leading-8
-                        text-lg
-                      "
-                    >
-                      {item.text}
-                    </p>
+                    <div>
+                      <h4 className="text-xl md:text-2xl font-bold text-[#28186E] mb-2 leading-snug">
+                        {item.title}
+                      </h4>
+
+                      <ul className="space-y-2">
+                        {item.points.map((point, pointIndex) => (
+                          <li
+                            key={pointIndex}
+                            className="flex items-start gap-3 text-slate-700 text-sm leading-7"
+                          >
+                            <span className="mt-[10px] h-2 w-2 shrink-0 rounded-full bg-[#D72412]" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
                   </div>
                 </div>
 
@@ -713,7 +737,6 @@ export default function OurHistory() {
                 {/* ============================== */}
                 {/* SPACER */}
                 {/* ============================== */}
-
                 <div
                   className="
                     hidden
@@ -727,5 +750,8 @@ export default function OurHistory() {
         </div>
       </div>
     </section>
+
+    <LookingAhead />
+  </>
   );
 }
