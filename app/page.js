@@ -1,17 +1,9 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import ProductsSlider from "@/components/ProductsSlider";
-// import Image from "next/image";
-// import Process from "@/components/Process";
 import IndustriesSection from "@/components/IndustriesSection";
 import Count from "@/components/Count";
-// import About from "@/components/About";
-// import Category from "@/components/Category";
-// import Timeline from "@/components/Timeline";-
 import Excellence from "@/components/Excellence";
-// import Manufacturing from "@/components/Manufacture";
-// import Clients from "@/components/Clients";
-// import Testimonials from "@/components/Testimonial";
 const About = dynamic(() => import("@/components/About"));// import Popup from "@/components/Popup";
 const Category = dynamic(() => import("@/components/Category"));// import Popup from "@/components/Popup";
 const AboutRussia = dynamic(() => import("@/components/AboutRussia"));// import Popup from "@/components/Popup";
