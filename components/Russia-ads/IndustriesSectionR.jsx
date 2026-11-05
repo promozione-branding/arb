@@ -240,7 +240,7 @@ const industries = [
 
     {
         title: "ATV / UTV",
-        image: "/industry/4 ATV and UTV.webp",
+        image: "/industry/4-ATV-and-UTV.webp",
         icon: Bike,
         applications: [
             {

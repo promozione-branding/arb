@@ -9,6 +9,7 @@ import React from "react";
 import FooterR from "@/components/Russia-ads/FooterR";
 import FormSectionR from "@/components/Russia-ads/FormSectionR";
 import StickyFooter from "@/components/StickyFooter";
+import WhatsApp from "@/components/Russia-ads/WhatsApp";
 
 export default function Russia() {
   return (
@@ -16,14 +17,15 @@ export default function Russia() {
       <NavbarR />
       <HeroR />
       <CaetgoryR />
-      <AboutSection />
       <Products />
+      <AboutSection />
       <CTAR />
       <IndustriesSection />
       <FormSectionR />
 
       <FooterR />
       <StickyFooter whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
+      <WhatsApp whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
     </>
   );
 }

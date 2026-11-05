@@ -438,14 +438,14 @@ ${formData.message}
                 border
                 border-slate-200
                 bg-white
-                p-5
+                p-3
                 shadow-[0_25px_80px_rgba(15,23,42,0.10)]
                 sm:p-7
                 lg:p-8
               "
             >
               {/* Form Header */}
-              <div className="mb-7">
+              <div className="mb-3 md:mb-7">
                 <span className="text-xs font-bold uppercase tracking-[2px] text-blue-600">
                   Форма запроса
                 </span>
@@ -454,12 +454,12 @@ ${formData.message}
                   Получить предложение
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-slate-500">
+                <p className="mt-2 text-sm leading-5 md:leading-6 text-slate-500">
                   Оставьте свои требования, и наша команда свяжется с вами.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-5">
                 {/* Name */}
                 <div>
                   <label
@@ -489,7 +489,8 @@ ${formData.message}
                       onChange={handleChange}
                       placeholder="Введите ваше имя"
                       className="
-                        h-12
+                      h-8
+                        md:h-12
                         w-full
                         rounded-xl
                         border
@@ -539,7 +540,8 @@ ${formData.message}
                       onChange={handleChange}
                       placeholder="Введите номер телефона"
                       className="
-                        h-12
+                        h-8
+                        md:h-12
                         w-full
                         rounded-xl
                         border
@@ -592,7 +594,8 @@ ${formData.message}
                       onChange={handleChange}
                       placeholder="Введите ваш email"
                       className="
-                        h-12
+                        h-8
+                        md:h-12
                         w-full
                         rounded-xl
                         border
@@ -629,7 +632,8 @@ ${formData.message}
                       value={formData.product}
                       onChange={handleChange}
                       className="
-                        h-12
+                        h-8
+                        md:h-12
                         w-full
                         appearance-none
                         rounded-xl
@@ -696,7 +700,7 @@ ${formData.message}
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      rows={5}
+                      rows={3}
                       placeholder="Расскажите о ваших требованиях..."
                       className="
                         w-full
