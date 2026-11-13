@@ -195,7 +195,7 @@ export default function FooterR() {
               />
 
               {/* Certificate Modal */}
-              {isModalOpen && (
+              {/* {isModalOpen && (
                 <div
                   className="fixed inset-0 z-[9999999] mt-20 flex items-center justify-center bg-white/10 p-4 backdrop-blur-md"
                   onClick={() => setIsModalOpen(false)}
@@ -218,7 +218,7 @@ export default function FooterR() {
                     />
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
