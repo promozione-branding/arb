@@ -11,56 +11,68 @@ import ProductsSlider from "@/components/ProductsSlider";
 import IndustriesSection from "@/components/IndustriesSection";
 
 import { ChevronDown } from "lucide-react";
+import NavbarA from "./UAE-ads/NavbarU";
+import FooterU from "./UAE-ads/FooterU";
 
+
+const cityNames = {
+  dubai: "دبي",
+  "abu-dhabi": "أبوظبي",
+  sharjah: "الشارقة",
+  ajman: "عجمان",
+  uae: "الإمارات العربية المتحدة",
+};
 
 const Location = () => {
-      const [active, setActive] = useState(0);
-    const params = useParams();
-
-    const city = params?.location?.includes("-in-")
-        ? params.location.split("-in-")[1].split("-")
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
-        : "India";
+  const [active, setActive] = useState(0);
+  const params = useParams();
+  const citySlug = params?.location?.includes("-in-")
+    ? params.location.split("-in-")[1]
+    : "uae";
+  const city = cityNames[citySlug] ?? "الإمارات العربية المتحدة";
 
 
 
 const faqs = [
     {
-      question: "Who is a reliable Bearings Supplier in {city}?",
+      question: "من هو مورد المحامل الموثوق في {city}؟",
       answer:
-        "ARB Bearings is an experienced Bearings Supplier supplying high-quality, precision-engineered bearing solutions to customers across {city} and international markets.",
+        "تُعد ARB Bearings موردًا ذا خبرة، وتوفر محامل عالية الجودة ومصممة بدقة للعملاء في {city} والأسواق الدولية.",
     },
     {
-      question: "What types of bearings does ARB Bearings supply?",
+      question: "ما أنواع المحامل التي توفرها ARB Bearings؟",
       answer:
-        "ARB Bearings supplies a wide range of high-quality ball and roller bearings, including deep groove ball, tapered roller, cylindrical roller, spherical roller, needle, and thrust bearings for industrial, automotive, agricultural, railway, mining, and other demanding applications.",
+        "توفر ARB Bearings مجموعة واسعة من المحامل الكروية والأسطوانية عالية الجودة، بما في ذلك المحامل الكروية ذات الأخدود العميق، والمحامل الأسطوانية المخروطية والأسطوانية، ومحامل البكرات الكروية والإبرية ومحامل الدفع، للاستخدامات الصناعية والسيارات والزراعة والسكك الحديدية والتعدين وغيرها من التطبيقات الشاقة.",
     },
     {
-      question: "Does ARB Bearings export bearings to {city}?",
+      question: "هل تصدّر ARB Bearings المحامل إلى {city}؟",
       answer:
-        "Yes, ARB Bearings supplies and exports bearing solutions to customers in {city}, with secure packaging and reliable international delivery support.",
-    },
-    {
-      question:
-        "Can ARB Bearings provide bearings for specific industrial applications?",
-      answer:
-        "Yes. Our bearing solutions are suitable for automotive, mining, agriculture, construction, power generation, steel, and various industrial machinery applications.",
+        "نعم، توفر ARB Bearings حلول المحامل للعملاء في {city} وتصدّرها إليهم، مع تغليف آمن ودعم موثوق للتوصيل الدولي.",
     },
     {
       question:
-        "How can I request a bearing quotation from ARB Bearings?",
+        "هل توفر ARB Bearings محامل لتطبيقات صناعية محددة؟",
       answer:
-        "You can contact the ARB Bearings team with your required bearing type, size, quantity, and application details to receive product information and a quotation.",
+        "نعم. تناسب حلول المحامل لدينا تطبيقات السيارات والتعدين والزراعة والبناء وتوليد الطاقة وصناعة الصلب ومختلف أنواع الآلات الصناعية.",
+    },
+    {
+      question:
+        "كيف يمكنني طلب عرض سعر للمحامل من ARB Bearings؟",
+      answer:
+        "يمكنك التواصل مع فريق ARB Bearings وتزويده بنوع المحمل المطلوب ومقاسه وكميته وتفاصيل الاستخدام للحصول على معلومات المنتج وعرض سعر.",
     },
   ];
 
 
     return (
-        <>
+        <div dir="rtl" lang="ar">
+
+           <NavbarA />
         
   
-            <div className="">
+            <div>
                 <section
+                    id="home"
                     style={{
                         backgroundImage: "url('/ctabg.jpg')",
                         backgroundSize: "cover",
@@ -71,7 +83,7 @@ const faqs = [
                     <div className="absolute inset-0 bg-gray-900/60" />
 
                     <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-20 capitalize md:text-6xl">
-                       Bearings supplier in  {city}
+                       مورد المحامل في {city}
                     </h1>
                 </section>
             </div>
@@ -80,33 +92,29 @@ const faqs = [
 
 
 
-         <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-15">
+         <section id="about" className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-15">
   <div className="mx-auto max-w-7xl  ">
     <div className="grid items-center gap-16 lg:grid-cols-2">
      
       <div>
         <span className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-1 text-sm font-semibold tracking-wide text-red-600">
-          Trusted Worldwide
+          موثوقون حول العالم
         </span>
 
         <h2 className="mt-4 text-4xl font-bold leading-tight text-[#1B2A41] ">
-          Leading Bearings Supplier in {city}
+          مورد رائد للمحامل في {city}
         </h2>
 
         <p className="mt-3 text-lg  text-slate-900">
-          ARB Bearings is a globally recognized Bearings Supplier delivering
-          high-performance bearing solutions to customers across {city} and
-          international markets. With decades of engineering excellence,
-          advanced manufacturing capabilities, and an unwavering commitment to
-          quality, we manufacture precision-engineered bearings that meet the
-          demanding requirements of modern industries.  As an experienced Bearings Supplier, we serve industries including
-          automotive, mining, construction, agriculture, power generation,
-          steel, and heavy engineering. Our bearings are trusted for their
-          exceptional durability, precision, high load-carrying capacity, and
-          long service life. Every product is manufactured using premium-grade
-          raw materials and advanced production technologies, ensuring
-          consistent performance even in the most demanding operating
-          environments.
+          تُعد ARB Bearings موردًا معروفًا للمحامل على مستوى العالم، وتقدم حلولًا
+          عالية الأداء للعملاء في {city} والأسواق الدولية. وبفضل عقود من الخبرة
+          الهندسية وإمكانات التصنيع المتقدمة والالتزام الراسخ بالجودة، نصنع
+          محامل مصممة بدقة لتلبي المتطلبات الصارمة للصناعات الحديثة. ونخدم
+          قطاعات السيارات والتعدين والبناء والزراعة وتوليد الطاقة والصلب
+          والهندسة الثقيلة. وتحظى محاملنا بالثقة لما تتميز به من متانة استثنائية
+          ودقة وقدرة عالية على تحمل الأحمال وعمر تشغيلي طويل. يُصنع كل منتج من
+          مواد خام ممتازة وباستخدام تقنيات إنتاج متقدمة لضمان أداء ثابت حتى في
+          أقسى ظروف التشغيل.
         </p>
 
     
@@ -114,8 +122,8 @@ const faqs = [
        
         <div className="mt-7 grid gap-5 sm:grid-cols-2">
           {[
-            "Extensive Product Range",
-            "In-House Manufacturing",
+            "تشكيلة واسعة من المنتجات",
+            "تصنيع داخلي",
           
           ].map((item) => (
             <div
@@ -153,21 +161,20 @@ const faqs = [
 
         <div className="relative overflow-hidden rounded-[30px] border border-slate-200 bg-white p-8 shadow-2xl">
           <div className="mb-6 inline-flex rounded-full bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-            Precision Engineered
+            مصممة بدقة هندسية
           </div>
 
           <h2 className="text-3xl font-bold leading-tight text-[#1B2A41]">
-            Powering Performance with the Right Bearings
+            أداء متميز بفضل المحامل المناسبة
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            From standard applications to demanding industrial requirements, ARB
-            Bearings delivers precision-engineered bearing solutions built for
-            performance, durability, and reliability.
+            من الاستخدامات القياسية إلى المتطلبات الصناعية الشاقة، تقدم ARB
+            Bearings حلول محامل مصممة بدقة لتوفر الأداء والمتانة والموثوقية.
           </p>
 
           <button className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-red-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#1B2A41]">
-            Get a Bearings Solution
+            احصل على حل للمحامل
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -200,17 +207,16 @@ const faqs = [
 
     <div className="mx-auto max-w-5xl text-center">
       <span className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold tracking-wide text-red-600">
-        Why Choose Us
+        لماذا تختارنا
       </span>
 
       <h2 className="mt-6 text-5xl font-bold leading-tight text-[#1B2A41] ">
-        Why ARB Bearings Is the Right Choice for Your Bearings Needs
+        لماذا تُعد ARB Bearings الخيار المناسب لاحتياجاتك من المحامل؟
       </h2>
 
       <p className="mt-4 text-lg leading-8 text-slate-900">
-        Choose ARB Bearings as your trusted Bearings Supplier in {city},
-        delivering precision-engineered, reliable, and high-performance bearing
-        solutions.
+        اختر ARB Bearings موردًا موثوقًا للمحامل في {city}، مع حلول مصممة بدقة
+        وموثوقة وعالية الأداء.
       </p>
     </div>
 
@@ -218,24 +224,24 @@ const faqs = [
     <div className="mt-10 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
       {[
         {
-          title: "Superior Quality Materials",
+          title: "مواد عالية الجودة",
           description:
-            "Premium materials deliver durability, strength, and long-lasting bearing performance.",
+            "توفر المواد الممتازة المتانة والقوة والأداء طويل الأمد للمحامل.",
         },
         {
-          title: "Precision Engineering",
+          title: "هندسة دقيقة",
           description:
-            "Precisely engineered bearings ensure smooth operation, reduced friction, and reliability.",
+            "تضمن المحامل المصممة بدقة تشغيلًا سلسًا واحتكاكًا أقل وموثوقية عالية.",
         },
         {
-          title: "Rigorous Quality Control",
+          title: "رقابة صارمة على الجودة",
           description:
-            "Every bearing is thoroughly inspected to maintain consistent quality and performance.",
+            "يُفحص كل محمل بعناية للحفاظ على جودة وأداء متسقين.",
         },
         {
-          title: "Global Export Expertise",
+          title: "خبرة عالمية في التصدير",
           description:
-            "As an experienced Bearings Supplier, we supply quality bearing solutions to global markets.",
+            "بصفتنا موردًا ذا خبرة للمحامل، نقدم حلولًا عالية الجودة للأسواق العالمية.",
         },
      
       ].map((item, index) => (
@@ -244,9 +250,7 @@ const faqs = [
           className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-red-500 hover:shadow-2xl"
         >
       
-          <div className="absolute right-6 top-5 text-5xl font-black text-slate-100 transition-all duration-300 group-hover:text-red-100">
-            {`0${index + 1}`}
-          </div>
+          
 
          
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-600 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
@@ -285,9 +289,11 @@ const faqs = [
 
 
 
- <ProductsSlider/>
+ <div id="product">
+   <ProductsSlider isArabic />
+ </div>
 
-<section className="relative overflow-hidden bg-gradient-to-r from-[#1B2A41] via-[#23384D] to-[#1B2A41] py-5">
+<section id="contact" className="relative overflow-hidden bg-gradient-to-r from-[#1B2A41] via-[#23384D] to-[#1B2A41] py-5">
   {/* Background Effects */}
   <div className="absolute inset-0">
     <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-red-600/20 blur-3xl"></div>
@@ -302,18 +308,17 @@ const faqs = [
         {/* Left Content */}
         <div className="max-w-4xl">
           <span className="inline-flex rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-400">
-            Get Started Today
+            ابدأ اليوم
           </span>
 
           <h2 className="mt-6 text-4xl font-bold leading-tight text-white ">
-            Looking for a Reliable Bearings Supplier in {city}?
+            هل تبحث عن مورد موثوق للمحامل في {city}؟
           </h2>
 
           <p className="mt-3 text-lg leading-8 text-slate-200">
-            Get high-quality, precision-engineered bearings from ARB Bearings.
-            Whether you need standard bearings, specialized solutions, or bulk
-            requirements, our team is ready to help you find the right bearing
-            for your application.
+            احصل على محامل عالية الجودة ومصممة بدقة من ARB Bearings. سواء كنت
+            بحاجة إلى محامل قياسية أو حلول متخصصة أو كميات كبيرة، فإن فريقنا
+            مستعد لمساعدتك في اختيار المحمل المناسب لتطبيقك.
           </p>
         </div>
 
@@ -323,7 +328,7 @@ const faqs = [
             href="/contact"
             className="group inline-flex items-center justify-center gap-3 rounded-xl bg-red-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#1B2A41]"
           >
-            Request a Quote
+            اطلب عرض سعر
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -344,7 +349,7 @@ const faqs = [
             href="/contact"
             className="inline-flex items-center justify-center rounded-xl border border-white px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-red-500 hover:bg-red-600"
           >
-            Contact Us
+            تواصل معنا
           </a>
         </div>
       </div>
@@ -352,7 +357,7 @@ const faqs = [
   </div>
 </section>
 
-            <IndustriesSection/>
+            <IndustriesSection isArabic />
 
           <section className="bg-white py-14">
   <div className="mx-auto max-w-7xl">
@@ -361,34 +366,33 @@ const faqs = [
    
       <div>
         <span className="inline-flex rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-          Manufacturing Excellence
+          تميز في التصنيع
         </span>
 
         <h2 className="mt-4 text-4xl font-bold leading-tight text-[#1B2A41] ">
-          Precision Manufacturing. Proven Quality.
+          تصنيع دقيق. جودة موثوقة.
         </h2>
 
         <p className="mt-3 text-lg leading-8 text-slate-600">
-          As a trusted Bearings Supplier in {city}, ARB Bearings follows a
-          precision-focused manufacturing process to deliver reliable, durable,
-          and high-performance bearing solutions. From premium raw materials to
-          final inspection and packaging, every stage is carefully controlled to
-          ensure consistent quality.
+          بصفتها موردًا موثوقًا للمحامل في {city}، تتبع ARB Bearings عملية
+          تصنيع دقيقة لتقديم حلول محامل موثوقة ومتينة وعالية الأداء. من المواد
+          الخام الممتازة إلى الفحص النهائي والتغليف، تخضع كل مرحلة لرقابة دقيقة
+          لضمان جودة متسقة.
         </p>
 
         <div className="mt-4 space-y-3">
           {[
             {
-              title: "Premium Raw Materials",
-              desc: "We use carefully selected raw materials to ensure strength, durability, and consistent bearing performance.",
+              title: "مواد خام ممتازة",
+              desc: "نستخدم مواد خام مختارة بعناية لضمان القوة والمتانة وثبات أداء المحامل.",
             },
             {
-              title: "Precision Manufacturing",
-              desc: "As an experienced Bearings Supplier, we use advanced machinery and modern manufacturing processes to achieve dimensional accuracy and consistent production quality.",
+              title: "تصنيع دقيق",
+              desc: "بصفتنا موردًا ذا خبرة للمحامل، نستخدم آلات متقدمة وعمليات تصنيع حديثة لتحقيق دقة الأبعاد وثبات جودة الإنتاج.",
             },
             {
-              title: "Controlled Heat Treatment",
-              desc: "Specialized heat treatment processes enhance bearing strength, durability, and resistance to demanding operating conditions.",
+              title: "معالجة حرارية مضبوطة",
+              desc: "تعزز عمليات المعالجة الحرارية المتخصصة قوة المحامل ومتانتها وقدرتها على تحمل ظروف التشغيل الشاقة.",
             },
            
           ].map((item, index) => (
@@ -423,7 +427,7 @@ const faqs = [
         <div className="relative overflow-hidden rounded-[32px] shadow-2xl">
           <img
             src="/istockphoto-1203599074-612x612.jpg"
-            alt="Precision Bearing Manufacturing"
+            alt="تصنيع محامل بدقة عالية"
             className="h-[620px] w-full object-contain"
           />
 
@@ -431,7 +435,7 @@ const faqs = [
           <div className="absolute bottom-8 left-8 rounded-2xl bg-white/95 p-6 shadow-xl backdrop-blur">
             <p className="text-4xl font-bold text-red-600">60+</p>
             <p className="mt-1 font-medium text-[#1B2A41]">
-              Years of Manufacturing Excellence
+              عامًا من التميز في التصنيع
             </p>
           </div>
         </div>
@@ -447,23 +451,23 @@ const faqs = [
 
 
        
-            <section className="w-full bg-[#28186E] text-white py-5">
+            <section className="w-full bg-[#28186E] py-5 text-white">
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div className="md:text-left text-center">
+                    <div className="text-center md:text-right">
                         <Link href={"/"} className="text-2xl font-semibold">
-                          Bearings Supplier in  {city}
+                          مورد المحامل في {city}
                         </Link>
                         <p className="text-2xl md:text-[42px] font-semibold">
                           +91-7834872136
                         </p>
                         <p className="text-lg text-white">
-                            For More Details Contact Us Now!
+                            لمزيد من التفاصيل، تواصل معنا الآن!
                         </p>
                     </div>
 
                     <div>
                         <a href="tel:+917834872136" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                            Connect Now
+                            اتصل الآن
                         </a>
                     </div>
                 </div>
@@ -480,16 +484,16 @@ const faqs = [
           <div className="lg:col-span-4 lg:sticky lg:top-35 h-fit">
 
             <span className="rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-              FAQs
+              الأسئلة الشائعة
             </span>
 
             <h2 className="mt-6 text-3xl font-bold leading-tight text-[#1B2A41]">
-              Frequently Asked Questions – Bearings Supplier in {city}
+              الأسئلة الشائعة – مورد المحامل في {city}
             </h2>
 
             <p className="mt-8 text-lg leading-8 text-slate-800">
-              Find answers to the most commonly asked questions about ARB Bearings,
-              our bearing solutions, manufacturing capabilities, and exports.
+              اعثر على إجابات للأسئلة الأكثر شيوعًا حول ARB Bearings وحلول
+              المحامل وإمكانات التصنيع والتصدير لدينا.
             </p>
 
             <div className="mt-10 h-2 w-40 rounded-full bg-gradient-to-r from-red-600 to-[#28186E]"></div>
@@ -510,7 +514,7 @@ const faqs = [
   >
     <button
       onClick={() => setActive(active === index ? -1 : index)}
-      className="flex w-full items-center justify-between px-8 py-7 text-left"
+      className="flex w-full items-center justify-between px-8 py-7 text-right"
     >
       <div className="flex items-center gap-5">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-lg font-bold text-white">
@@ -535,7 +539,7 @@ const faqs = [
       }`}
     >
       <div className="overflow-hidden">
-        <div className="border-t border-slate-100 px-8 py-6 pl-[92px] text-slate-600 leading-8">
+        <div className="border-t border-slate-100 px-8 py-6 pr-[92px] text-slate-600 leading-8">
           {faq.answer.replaceAll("{city}", city)}
         </div>
       </div>
@@ -551,9 +555,9 @@ const faqs = [
 
           
     
+ <FooterU />
 
-
-        </>
+        </div>
     );
 };
 

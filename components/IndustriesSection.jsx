@@ -209,21 +209,130 @@ const industries = [
   },
 ];
 
-export default function IndustriesSection() {
+const arabicIndustryText = {
+  Agriculture: "الزراعة",
+  Tractors: "الجرارات",
+  "Combine Harvesters": "الحصادات",
+  "Seeders & Planters": "آلات نثر البذور وزراعتها",
+  Rotavators: "العازقات الدوارة",
+  "Ploughs & Disc Harrows": "المحاريث والأمشاط القرصية",
+  "Irrigation Equipment": "معدات الري",
+  "Agricultural Trailers & Implements": "المقطورات والمعدات الزراعية",
+  "Agricultural Gearboxes & PTO Systems": "علب التروس وأنظمة نقل الحركة الزراعية",
+  Balers: "آلات كبس المحاصيل",
+  Automotive: "صناعة السيارات",
+  Cars: "السيارات",
+  "SUVs / MPVs": "سيارات الدفع الرباعي ومتعددة الأغراض",
+  "LCV & HCV": "المركبات التجارية الخفيفة والثقيلة",
+  Trucks: "الشاحنات",
+  "Trailers & Semi Trailers": "المقطورات ونصف المقطورات",
+  Buses: "الحافلات",
+  "Pick up Trucks": "شاحنات البيك أب",
+  "Electric Vehicles": "المركبات الكهربائية",
+  Construction: "البناء",
+  Excavators: "الحفارات",
+  "Wheel Loaders": "اللوادر ذات العجلات",
+  "Backhoe Loaders": "الحفارات واللوادر الخلفية",
+  Bulldozers: "الجرافات",
+  "Motor Graders": "ممهدات الطرق",
+  "Dump Trucks & Haul Trucks": "الشاحنات القلابة وشاحنات النقل",
+  Cranes: "الرافعات",
+  Forklifts: "الرافعات الشوكية",
+  "Concrete Mixers": "خلاطات الخرسانة",
+  "Concrete Pumps": "مضخات الخرسانة",
+  "Road Rollers & Compactors": "مداحل الطرق وآلات الضغط",
+  Crushers: "الكسارات",
+  "Mining & Quarry Equipments": "معدات التعدين والمحاجر",
+  "Electric Motors": "المحركات الكهربائية",
+  "Industrial Electric Motors": "المحركات الكهربائية الصناعية",
+  "AC Motors": "محركات التيار المتردد",
+  "DC Motors": "محركات التيار المستمر",
+  "High-Speed Motors": "المحركات عالية السرعة",
+  "Gear Motors": "محركات التروس",
+  "Servo Motors": "محركات السيرفو",
+  "Traction Motors": "محركات الجر",
+  "Pump Motors": "محركات المضخات",
+  "Fan & Blower Motors": "محركات المراوح ومنفاخات الهواء",
+  "Compressor Motors": "محركات الضواغط",
+  "Generator & Alternator Systems": "أنظمة المولدات والمولدات المتناوبة",
+  "Conveyor / Material Handling": "الناقلات ومناولة المواد",
+  "Belt Conveyors": "الناقلات الحزامية",
+  "Roller Conveyors": "الناقلات الأسطوانية",
+  "Chain Conveyors": "الناقلات السلسلية",
+  "Mining Conveyors": "ناقلات التعدين",
+  "Overhead Conveyors": "الناقلات العلوية",
+  "Slat Conveyors": "الناقلات ذات الشرائح",
+  "Drag Conveyors": "الناقلات الكاشطة",
+  "Pallet Conveyors": "ناقلات المنصات",
+  "Telescopic Conveyors": "الناقلات التلسكوبية",
+  "Material Handling Equipment": "معدات مناولة المواد",
+  "Cranes & Hoists": "الرافعات وأجهزة الرفع",
+  "Warehouse & Logistics Systems": "أنظمة المستودعات والخدمات اللوجستية",
+  "Heavy Industries": "الصناعات الثقيلة",
+  "Rolling Mills": "مصانع الدرفلة",
+  "Cement Industry": "صناعة الأسمنت",
+  "Paper & Pulp Industry": "صناعة الورق واللب",
+  "Sugar Mills": "مصانع السكر",
+  "Wind Power": "طاقة الرياح",
+  "Industrial Gearboxes": "علب التروس الصناعية",
+  "Heavy Fabrication & Machinery": "التصنيع الثقيل والآلات",
+  Railways: "السكك الحديدية",
+  Engines: "المحركات",
+  Wagon: "عربات القطارات",
+  "2 & 3 Wheelers": "المركبات ذات العجلتين والثلاث عجلات",
+  "Motor Cycles": "الدراجات النارية",
+  Scooters: "الدراجات البخارية",
+  "EV 2 Wheelers": "المركبات الكهربائية ذات العجلتين",
+  "3 Wheelers": "المركبات ذات الثلاث عجلات",
+  "EV 3 Wheelers": "المركبات الكهربائية ذات الثلاث عجلات",
+  "Wheel & Hub Assembly": "مجموعة العجلة والمحور",
+  Mopeds: "الدراجات الصغيرة",
+  "Cargo 3-Wheelers": "مركبات الشحن ذات الثلاث عجلات",
+  "Gear Box & Power Transmission": "علب التروس ونقل الطاقة",
+  "Automotive Transmissions": "ناقلات الحركة للسيارات",
+  "Agricultural Gearboxes": "علب التروس الزراعية",
+  "Construction Equipment Gearboxes": "علب تروس معدات البناء",
+  "Mining Gearboxes": "علب تروس التعدين",
+  "Conveyor Drive Systems": "أنظمة تشغيل الناقلات",
+  "Planetary Gearboxes": "علب التروس الكوكبية",
+  "Electric Gear Motors": "محركات التروس الكهربائية",
+  "Power Transmission Systems": "أنظمة نقل الطاقة",
+  "Rolling Mill Gearboxes": "علب تروس مصانع الدرفلة",
+  "ATV / UTV": "مركبات ATV/UTV",
+  "ATV (All-Terrain Vehicles)": "مركبات ATV لجميع التضاريس",
+  "UTV (Utility Task Vehicles)": "مركبات UTV متعددة الاستخدامات",
+  "Sport ATVs": "مركبات ATV رياضية",
+  "Utility ATVs": "مركبات ATV متعددة الاستخدامات",
+  "Recreational Off-Road Vehicles": "مركبات الطرق الوعرة الترفيهية",
+  "Agricultural ATVs / UTVs": "مركبات ATV/UTV الزراعية",
+  "Work & Utility UTVs": "مركبات UTV للعمل والاستخدامات المتعددة",
+  "Electric ATVs & UTVs": "مركبات ATV/UTV الكهربائية",
+  "Off-Road Go-Karts & Recreational Vehicles": "عربات الطرق الوعرة والمركبات الترفيهية",
+  "Dirt Bike": "دراجات الطرق الوعرة",
+  "Industries We Serve": "القطاعات التي نخدمها",
+  "Powering Industries": "نُشغّل قطاعات الصناعة",
+  Worldwide: "حول العالم",
+  Applications: "التطبيقات",
+};
+
+export default function IndustriesSection({ isArabic = false }) {
   const [selectedIndustry, setSelectedIndustry] = useState(null);
+  const translate = (text) =>
+    isArabic ? arabicIndustryText[text] ?? text : text;
 
   return (
     <>
-      <section className="bg-[#EDF4FE] py-10">
+      <section dir={isArabic ? "rtl" : undefined} className="bg-[#EDF4FE] py-10">
         <div className="mx-auto max-w-7xl px-4 md:px-0">
 
           {/* Heading */}
           <span className="text-sm font-semibold uppercase tracking-[4px] text-[#D9251C]">
-            Industries We Serve
+            {translate("Industries We Serve")}
           </span>
 
           <h2 className="mb-5 mt-3 text-3xl font-bold text-[#29166F] md:mb-12 md:text-5xl">
-            <span className="text-black">Powering Industries</span> Worldwide
+            <span className="text-black">{translate("Powering Industries")}</span>{" "}
+            {translate("Worldwide")}
           </h2>
 
           {/* Slider */}
@@ -275,7 +384,7 @@ export default function IndustriesSection() {
                     {/* Image */}
                     <Image
                       src={item.image}
-                      alt={item.title}
+                      alt={translate(item.title)}
                       // fill
                       width={100}
                       height={100}
@@ -296,7 +405,11 @@ export default function IndustriesSection() {
                     {/* Eye Button */}
                     <button
                       onClick={() => setSelectedIndustry(item)}
-                      aria-label={`View ${item.title} applications`}
+                      aria-label={
+                        isArabic
+                          ? `عرض تطبيقات ${translate(item.title)}`
+                          : `View ${item.title} applications`
+                      }
                       className="
                         absolute
                         md:right-4 right-1 top-1
@@ -352,7 +465,7 @@ export default function IndustriesSection() {
                         </div>
 
                         <h3 className="md:text-xl text-[10px] text- line-clamp-1 font-semibold text-white">
-                          {item.title}
+                          {translate(item.title)}
                         </h3>
                       </div>
                     </div>
@@ -475,7 +588,7 @@ export default function IndustriesSection() {
                     </p> */}
 
                     <h2 className="mt-1 text-2xl font-bold text-white md:text-3xl">
-                      {selectedIndustry.title} Applications
+                      {translate(selectedIndustry.title)} {translate("Applications")}
                     </h2>
                   </div>
                 </div>
@@ -539,7 +652,7 @@ export default function IndustriesSection() {
                         </div>
 
                         <span className="text-sm font-semibold text-gray-800 md:text-base">
-                          {application.name}
+                          {translate(application.name)}
                         </span>
                       </motion.div>
                     );

@@ -74,22 +74,63 @@ const products = [
   },
 ];
 
-export default function ProductSlider() {
+const arabicProductText = {
+  "Ball Bearings": "محامل كروية",
+  "Engineered for high speed applications, superior durability, ideal for radial & axial loads":
+    "مصممة للتطبيقات عالية السرعة، وتتميز بمتانة فائقة وتناسب الأحمال الشعاعية والمحورية.",
+  "Electric Motors": "المحركات الكهربائية",
+  Automobiles: "السيارات",
+  "Agricultural Machinery": "الآلات الزراعية",
+  "Industrial Pumps": "المضخات الصناعية",
+  "Fans & Blowers": "المراوح ومنفاخات الهواء",
+  Gearboxes: "علب التروس",
+  "Roller Bearings": "محامل أسطوانية",
+  "Smooth rotation, low friction, reliable performance for versatile applications":
+    "دوران سلس واحتكاك منخفض وأداء موثوق لمجموعة متنوعة من الاستخدامات.",
+  "Wheel Bearings / Wheel Bearings Kit": "محامل العجلات / طقم محامل العجلات",
+  "Precision wheel hub bearings, smooth performance, long-lasting reliability":
+    "محامل دقيقة لمحاور العجلات، بأداء سلس وموثوقية تدوم طويلًا.",
+  "Passenger Car": "سيارات الركاب",
+  Agricultural: "الزراعة",
+  "Electric Vehicle": "المركبات الكهربائية",
+  "ATV/UTV  Vehicles": "مركبات ATV/UTV",
+  LCVs: "المركبات التجارية الخفيفة",
+  "Wheel Hub Bearings": "محامل محور العجلة",
+  "Engineered for smooth rotation, superior load handling, and long-lasting wheel-end reliability":
+    "مصممة لدوران سلس وتحمل فائق للأحمال وموثوقية طويلة الأمد عند العجلات.",
+  Trucks: "الشاحنات",
+  "Trailers ": "المقطورات",
+  "Semi Trailers": "نصف المقطورات",
+  Buses: "الحافلات",
+  "Our Products": "منتجاتنا",
+  "Precision in ": "دقة في ",
+  "Every Rotation": "كل دورة",
+  "View Details": "عرض التفاصيل",
+  "Bearings Details": "تفاصيل المحامل",
+  Applications: "الاستخدامات",
+};
+
+export default function ProductSlider({ isArabic = false }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const translate = (text) =>
+    isArabic ? arabicProductText[text] ?? text : text;
 
   return (
-    <section className="relative overflow-hidden bg-blue-50 px-4 md:py-15 py-8">
+    <section
+      dir={isArabic ? "rtl" : undefined}
+      className="relative overflow-hidden bg-blue-50 px-4 md:py-15 py-8"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mb-5 flex items-end justify-between md:mb-10">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[3px] text-red-600">
-              Our Products
+              {translate("Our Products")}
             </p>
 
             <h2 className="mt-2 text-3xl font-bold text-[#29166F] md:text-5xl">
-              <span className="text-black">Precision in </span>
-              Every Rotation
+              <span className="text-black">{translate("Precision in ")}</span>
+              {translate("Every Rotation")}
             </h2>
           </div>
         </div>
@@ -197,7 +238,7 @@ export default function ProductSlider() {
                     <SwiperSlide className="flex items-center justify-center">
                       <Image
                         src={item.image}
-                        alt={item.title}
+                        alt={translate(item.title)}
                         width={450}
                         height={350}
                         className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
@@ -251,11 +292,11 @@ export default function ProductSlider() {
                 {/* Content */}
                 <div className="flex md:h-[200px] flex-col md:p-4 p-2">
                   <h3 className="line-clamp-2 md:text-xl text-base font-bold text-slate-900">
-                    {item.title}
+                    {translate(item.title)}
                   </h3>
 
                   <p className="md:mt-3 mt-1 md:line-clamp-3 line-clamp-2 text-sm leading-6 text-slate-600">
-                    {item.desc}
+                    {translate(item.desc)}
                   </p>
 
                   {/* Bottom CTA */}
@@ -270,7 +311,7 @@ export default function ProductSlider() {
                           group-hover:translate-x-1
                         "
                     >
-                      View Details
+                      {translate("View Details")}
                     </Link>
 
                     <div
@@ -375,7 +416,7 @@ export default function ProductSlider() {
                       >
                         <Image
                           src={img}
-                          alt={`${selectedProduct.title} ${imageIndex + 1}`}
+                          alt={`${translate(selectedProduct.title)} ${imageIndex + 1}`}
                           width={450}
                           height={350}
                           className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
@@ -386,7 +427,7 @@ export default function ProductSlider() {
                     <SwiperSlide className="flex items-center justify-center">
                       <Image
                         src={selectedProduct.image}
-                        alt={selectedProduct.title}
+                        alt={translate(selectedProduct.title)}
                         width={450}
                         height={350}
                         className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-2"
@@ -399,19 +440,19 @@ export default function ProductSlider() {
               {/* Content */}
               <div className="p-4 md:p-7">
                 <span className="text-sm font-semibold uppercase tracking-widest text-red-500">
-                  Bearings Details
+                  {translate("Bearings Details")}
                 </span>
 
                 <h2 className="md:mt-3 text-3xl font-bold text-[#091A2D]">
-                  {selectedProduct.title}
+                  {translate(selectedProduct.title)}
                 </h2>
 
                 <p className="md:mt-5 leading-7 text-gray-600">
-                  {selectedProduct.desc}
+                  {translate(selectedProduct.desc)}
                 </p>
 
                 <h3 className="md:mt-8 mt-2 text-xl font-semibold text-[#091A2D]">
-                  Applications
+                  {translate("Applications")}
                 </h3>
 
                 <ul className="md:mt-4 mt-1 md:space-y-3">
@@ -421,7 +462,7 @@ export default function ProductSlider() {
                       className="flex items-center gap-3 text-gray-700"
                     >
                       <div className="h-2 w-2 rounded-full bg-red-500" />
-                      {app}
+                      {translate(app)}
                     </li>
                   ))}
                 </ul>
