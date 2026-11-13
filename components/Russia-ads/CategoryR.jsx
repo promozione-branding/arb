@@ -28,12 +28,7 @@ const products = [
     desc: "Рассчитаны на осевые нагрузки в обоих направлениях при компактных размерах. Идеальны для редукторов, насосов и промышленного оборудования.",
     link: "/products/ball-bearing/four-point-contact-ball-bearings",
   },
-  {
-    title: "Радиальные шарикоподшипники",
-    image: "/arb-images/BALL BEARING 62208 2RS1.webp",
-    desc: "Высокоточные подшипники обеспечивают плавное вращение, низкое трение, высокую скорость работы и длительный срок службы.",
-    link: "/products/ball-bearing/deep-groove-ball-bearing",
-  },
+ 
   {
     title: "Подшипники ступиц колёс",
     image: "/arb-images/Wheel Bearing1.webp",

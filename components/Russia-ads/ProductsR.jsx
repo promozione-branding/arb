@@ -86,6 +86,11 @@ const mixedBearingProducts = [
     image: "/russia/self.webp",
     link: "/products/ball-bearing/self-aligning-ball-bearing",
   },
+    {
+    name: "Игольчатый роликоподшипник",
+    image: "/russia/needle.webp",
+    link: "/products/roller-bearings/needle-roller-bearings",
+  },
   {
     name: "Упорный шарикоподшипник",
     image: "/russia/thrust.webp",
@@ -96,11 +101,11 @@ const mixedBearingProducts = [
     image: "/russia/angular.webp",
     link: "/products/ball-bearing/angular-contact-ball-bearing",
   },
-  {
-    name: "Радиальный шарикоподшипник",
-    image: "/arb-images/Ball-Bearing-Final.webp",
-    link: "/products/ball-bearing/deep-groove-ball-bearing",
-  },
+  // {
+  //   name: "Радиальный шарикоподшипник",
+  //   image: "/arb-images/Ball-Bearing-Final.webp",
+  //   link: "/products/ball-bearing/deep-groove-ball-bearing",
+  // },
 ];
 
 const phoneNumber = "+79859834837";

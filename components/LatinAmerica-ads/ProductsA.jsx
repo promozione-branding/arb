@@ -29,6 +29,11 @@ const ballBearingProducts = [
     image: "/russia/four.webp",
     link: "/products/ball-bearing/four-point-contact-ball-bearings",
   },
+    {
+    name: "Rodamiento de rodillos cónicos",
+    image: "/russia/taper.webp",
+    link: "/products/roller-bearings/tapered-roller-bearings",
+  },
   {
     name: "Rodamiento de buje de rueda",
     image: "/russia/wheel.webp",
@@ -39,11 +44,7 @@ const ballBearingProducts = [
     image: "/russia/thrust.webp",
     link: "/products/ball-bearing/thrust-ball-bearing",
   },
-  {
-    name: "Rodamiento de bolas autoalineable",
-    image: "/russia/self.webp",
-    link: "/products/ball-bearing/self-aligning-ball-bearing",
-  },
+ 
 ];
 
 // Roller bearing products
@@ -63,16 +64,21 @@ const rollerBearingProducts = [
     image: "/russia/spherical.webp",
     link: "/products/roller-bearings/spherical-roller-bearings",
   },
+    {
+    name: "Rodamiento de buje de rueda",
+    image: "/russia/wheel.webp",
+    link: "/products/wheel-bearing/wheel-bearings",
+  },
   {
     name: "Rodamiento de agujas",
     image: "/russia/needle.webp",
     link: "/products/roller-bearings/needle-roller-bearings",
   },
-  {
-    name: "Rodamiento axial de rodillos",
-    image: "/russia/thrust.webp",
-    link: "/products/roller-bearings/thrust-roller-bearings",
-  },
+  // {
+  //   name: "Rodamiento axial de rodillos",
+  //   image: "/russia/thrust.webp",
+  //   link: "/products/roller-bearings/thrust-roller-bearings",
+  // },
 ];
 
 // Mixed bearing products
@@ -87,11 +93,11 @@ const mixedBearingProducts = [
     image: "/russia/self.webp",
     link: "/products/ball-bearing/self-aligning-ball-bearing",
   },
-  {
-    name: "Rodamiento axial de bolas",
-    image: "/russia/thrust.webp",
-    link: "/products/ball-bearing/thrust-ball-bearing",
-  },
+  // {
+  //   name: "Rodamiento axial de bolas",
+  //   image: "/russia/thrust.webp",
+  //   link: "/products/ball-bearing/thrust-ball-bearing",
+  // },
   {
     name: "Rodamiento de bolas de contacto angular",
     image: "/russia/angular.webp",
@@ -101,6 +107,11 @@ const mixedBearingProducts = [
     name: "Rodamiento rígido de bolas",
     image: "/arb-images/Ball-Bearing-Final.webp",
     link: "/products/ball-bearing/deep-groove-ball-bearing",
+  },
+   {
+    name: "Rodamiento de rodillos cónicos",
+    image: "/russia/taper.webp",
+    link: "/products/roller-bearings/tapered-roller-bearings",
   },
 ];
 
@@ -162,7 +173,7 @@ function ProductSlider({ title, subtitle, products }) {
 
       {/* Product Slider */}
       <Swiper
-        translate="no"
+       
         modules={[Autoplay]}
         autoplay={{
           delay: 3500,

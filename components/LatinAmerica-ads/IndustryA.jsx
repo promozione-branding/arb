@@ -110,25 +110,25 @@ const industries = [
     ],
   },
 
-  {
-    title: "Transportadores y manipulación de materiales",
-    image: "/industry/5.jpg",
-    icon: Settings2,
-    applications: [
-      { name: "Transportadores de banda", icon: Settings2 },
-      { name: "Transportadores de rodillos", icon: Settings2 },
-      { name: "Transportadores de cadena", icon: Settings2 },
-      { name: "Transportadores para minería", icon: Pickaxe },
-      { name: "Transportadores aéreos", icon: Settings2 },
-      { name: "Transportadores de placas", icon: Settings2 },
-      { name: "Transportadores de rasquetas", icon: Settings2 },
-      { name: "Transportadores de palés", icon: Settings2 },
-      { name: "Transportadores telescópicos", icon: Settings2 },
-      { name: "Equipos de manipulación de materiales", icon: PackageCheck },
-      { name: "Grúas y polipastos", icon: Construction },
-      { name: "Sistemas de almacenamiento y logística", icon: Warehouse },
-    ],
-  },
+  // {
+  //   title: "Transportadores y manipulación de materiales",
+  //   image: "/industry/5.jpg",
+  //   icon: Settings2,
+  //   applications: [
+  //     { name: "Transportadores de banda", icon: Settings2 },
+  //     { name: "Transportadores de rodillos", icon: Settings2 },
+  //     { name: "Transportadores de cadena", icon: Settings2 },
+  //     { name: "Transportadores para minería", icon: Pickaxe },
+  //     { name: "Transportadores aéreos", icon: Settings2 },
+  //     { name: "Transportadores de placas", icon: Settings2 },
+  //     { name: "Transportadores de rasquetas", icon: Settings2 },
+  //     { name: "Transportadores de palés", icon: Settings2 },
+  //     { name: "Transportadores telescópicos", icon: Settings2 },
+  //     { name: "Equipos de manipulación de materiales", icon: PackageCheck },
+  //     { name: "Grúas y polipastos", icon: Construction },
+  //     { name: "Sistemas de almacenamiento y logística", icon: Warehouse },
+  //   ],
+  // },
 
   {
     title: "Industria pesada",
@@ -189,23 +189,23 @@ const industries = [
     ],
   },
 
-  {
-    title: "ATV / UTV",
-    image: "/industry/4 ATV and UTV.webp",
-    icon: Bike,
-    applications: [
-      { name: "ATV (vehículos todoterreno)", icon: Bike },
-      { name: "UTV (vehículos utilitarios multifunción)", icon: Truck },
-      { name: "ATV deportivos", icon: Bike },
-      { name: "ATV utilitarios", icon: Bike },
-      { name: "Vehículos recreativos todoterreno", icon: Bike },
-      { name: "ATV / UTV agrícolas", icon: Tractor },
-      { name: "UTV de trabajo y utilitarios", icon: Truck },
-      { name: "ATV y UTV eléctricos", icon: Zap },
-      { name: "Karts todoterreno y vehículos recreativos", icon: Bike },
-      { name: "Motocicletas de motocross", icon: Bike },
-    ],
-  },
+  // {
+  //   title: "ATV / UTV",
+  //   image: "/industry/4 ATV and UTV.webp",
+  //   icon: Bike,
+  //   applications: [
+  //     { name: "ATV (vehículos todoterreno)", icon: Bike },
+  //     { name: "UTV (vehículos utilitarios multifunción)", icon: Truck },
+  //     { name: "ATV deportivos", icon: Bike },
+  //     { name: "ATV utilitarios", icon: Bike },
+  //     { name: "Vehículos recreativos todoterreno", icon: Bike },
+  //     { name: "ATV / UTV agrícolas", icon: Tractor },
+  //     { name: "UTV de trabajo y utilitarios", icon: Truck },
+  //     { name: "ATV y UTV eléctricos", icon: Zap },
+  //     { name: "Karts todoterreno y vehículos recreativos", icon: Bike },
+  //     { name: "Motocicletas de motocross", icon: Bike },
+  //   ],
+  // },
 ];
 
 export default function IndustryA() {

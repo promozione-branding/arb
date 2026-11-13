@@ -120,31 +120,31 @@ const industries = [
         ],
     },
 
-    {
-        title: "Конвейеры / грузоперемещение",
-        image: "/industry/5.jpg",
-        icon: Settings2,
-        applications: [
-            { name: "Ленточные конвейеры", icon: Settings2 },
-            { name: "Роликовые конвейеры", icon: Settings2 },
-            { name: "Цепные конвейеры", icon: Settings2 },
-            { name: "Горнодобывающие конвейеры", icon: Pickaxe },
-            { name: "Подвесные конвейеры", icon: Settings2 },
-            { name: "Пластинчатые конвейеры", icon: Settings2 },
-            { name: "Скребковые конвейеры", icon: Settings2 },
-            { name: "Паллетные конвейеры", icon: Settings2 },
-            { name: "Телескопические конвейеры", icon: Settings2 },
-            {
-                name: "Оборудование для перемещения грузов",
-                icon: PackageCheck,
-            },
-            { name: "Краны и тали", icon: Construction },
-            {
-                name: "Складские и логистические системы",
-                icon: Warehouse,
-            },
-        ],
-    },
+    // {
+    //     title: "Конвейеры / грузоперемещение",
+    //     image: "/industry/5.jpg",
+    //     icon: Settings2,
+    //     applications: [
+    //         { name: "Ленточные конвейеры", icon: Settings2 },
+    //         { name: "Роликовые конвейеры", icon: Settings2 },
+    //         { name: "Цепные конвейеры", icon: Settings2 },
+    //         { name: "Горнодобывающие конвейеры", icon: Pickaxe },
+    //         { name: "Подвесные конвейеры", icon: Settings2 },
+    //         { name: "Пластинчатые конвейеры", icon: Settings2 },
+    //         { name: "Скребковые конвейеры", icon: Settings2 },
+    //         { name: "Паллетные конвейеры", icon: Settings2 },
+    //         { name: "Телескопические конвейеры", icon: Settings2 },
+    //         {
+    //             name: "Оборудование для перемещения грузов",
+    //             icon: PackageCheck,
+    //         },
+    //         { name: "Краны и тали", icon: Construction },
+    //         {
+    //             name: "Складские и логистические системы",
+    //             icon: Warehouse,
+    //         },
+    //     ],
+    // },
 
     {
         title: "Тяжёлая промышленность",

@@ -116,25 +116,25 @@ const industries = [
     ],
   },
 
-  {
-    title: "الناقلات ومناولة المواد",
-    image: "/industry/5.jpg",
-    icon: Settings2,
-    applications: [
-      { name: "الناقلات الحزامية", icon: Settings2 },
-      { name: "الناقلات الأسطوانية", icon: Settings2 },
-      { name: "ناقلات السلسلة", icon: Settings2 },
-      { name: "ناقلات التعدين", icon: Pickaxe },
-      { name: "الناقلات العلوية", icon: Settings2 },
-      { name: "الناقلات اللوحية", icon: Settings2 },
-      { name: "الناقلات ذات الكاشطات", icon: Settings2 },
-      { name: "ناقلات المنصات", icon: Settings2 },
-      { name: "الناقلات التلسكوبية", icon: Settings2 },
-      { name: "معدات مناولة المواد", icon: PackageCheck },
-      { name: "الرافعات والونشات", icon: Construction },
-      { name: "أنظمة التخزين والخدمات اللوجستية", icon: Warehouse },
-    ],
-  },
+  // {
+  //   title: "الناقلات ومناولة المواد",
+  //   image: "/industry/5.jpg",
+  //   icon: Settings2,
+  //   applications: [
+  //     { name: "الناقلات الحزامية", icon: Settings2 },
+  //     { name: "الناقلات الأسطوانية", icon: Settings2 },
+  //     { name: "ناقلات السلسلة", icon: Settings2 },
+  //     { name: "ناقلات التعدين", icon: Pickaxe },
+  //     { name: "الناقلات العلوية", icon: Settings2 },
+  //     { name: "الناقلات اللوحية", icon: Settings2 },
+  //     { name: "الناقلات ذات الكاشطات", icon: Settings2 },
+  //     { name: "ناقلات المنصات", icon: Settings2 },
+  //     { name: "الناقلات التلسكوبية", icon: Settings2 },
+  //     { name: "معدات مناولة المواد", icon: PackageCheck },
+  //     { name: "الرافعات والونشات", icon: Construction },
+  //     { name: "أنظمة التخزين والخدمات اللوجستية", icon: Warehouse },
+  //   ],
+  // },
 
   {
     title: "الصناعة الثقيلة",
@@ -195,29 +195,29 @@ const industries = [
     ],
   },
 
-  {
-    title: "ATV / UTV",
-    image: "/industry/4 ATV and UTV.webp",
-    icon: Bike,
-    applications: [
-      { name: "ATV (مركبات لجميع التضاريس)", icon: Bike },
-      {
-        name: "UTV (مركبات متعددة الاستخدامات)",
-        icon: Truck,
-      },
-      { name: "مركبات ATV الرياضية", icon: Bike },
-      { name: "مركبات ATV متعددة الاستخدامات", icon: Bike },
-      { name: "مركبات الطرق الوعرة الترفيهية", icon: Bike },
-      { name: "مركبات ATV / UTV الزراعية", icon: Tractor },
-      { name: "مركبات UTV للعمل والاستخدامات المتعددة", icon: Truck },
-      { name: "مركبات ATV وUTV الكهربائية", icon: Zap },
-      {
-        name: "عربات الطرق الوعرة والمركبات الترفيهية",
-        icon: Bike,
-      },
-      { name: "دراجات الموتوكروس", icon: Bike },
-    ],
-  },
+  // {
+  //   title: "ATV / UTV",
+  //   image: "/industry/4 ATV and UTV.webp",
+  //   icon: Bike,
+  //   applications: [
+  //     { name: "ATV (مركبات لجميع التضاريس)", icon: Bike },
+  //     {
+  //       name: "UTV (مركبات متعددة الاستخدامات)",
+  //       icon: Truck,
+  //     },
+  //     { name: "مركبات ATV الرياضية", icon: Bike },
+  //     { name: "مركبات ATV متعددة الاستخدامات", icon: Bike },
+  //     { name: "مركبات الطرق الوعرة الترفيهية", icon: Bike },
+  //     { name: "مركبات ATV / UTV الزراعية", icon: Tractor },
+  //     { name: "مركبات UTV للعمل والاستخدامات المتعددة", icon: Truck },
+  //     { name: "مركبات ATV وUTV الكهربائية", icon: Zap },
+  //     {
+  //       name: "عربات الطرق الوعرة والمركبات الترفيهية",
+  //       icon: Bike,
+  //     },
+  //     { name: "دراجات الموتوكروس", icon: Bike },
+  //   ],
+  // },
 ];
 
 export default function IndustryU() {
@@ -238,7 +238,7 @@ export default function IndustryU() {
 
           {/* Industries Slider */}
           <Swiper
-            translate="no"
+           
             modules={[Autoplay]}
             loop={true}
             speed={900}

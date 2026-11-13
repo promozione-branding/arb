@@ -35,11 +35,11 @@ const ballBearingProducts = [
     image: "/russia/wheel.webp",
     link: "/products/wheel-bearing/wheel-bearings",
   },
-  {
-    name: "محمل كروي محوري",
-    image: "/russia/thrust.webp",
-    link: "/products/ball-bearing/thrust-ball-bearing",
-  },
+  // {
+  //   name: "محمل كروي محوري",
+  //   image: "/russia/thrust.webp",
+  //   link: "/products/ball-bearing/thrust-ball-bearing",
+  // },
   {
     name: "محمل كروي ذاتي المحاذاة",
     image: "/russia/self.webp",
@@ -69,11 +69,17 @@ const rollerBearingProducts = [
     image: "/russia/needle.webp",
     link: "/products/roller-bearings/needle-roller-bearings",
   },
+
   {
-    name: "محمل أسطواني محوري",
-    image: "/russia/thrust.webp",
-    link: "/products/roller-bearings/thrust-roller-bearings",
+    name: "محمل كروي ذاتي المحاذاة",
+    image: "/russia/self.webp",
+    link: "/products/ball-bearing/self-aligning-ball-bearing",
   },
+  // {
+  //   name: "محمل أسطواني محوري",
+  //   image: "/russia/thrust.webp",
+  //   link: "/products/roller-bearings/thrust-roller-bearings",
+  // },
 ];
 
 // Mixed bearing products
@@ -88,15 +94,20 @@ const mixedBearingProducts = [
     image: "/russia/self.webp",
     link: "/products/ball-bearing/self-aligning-ball-bearing",
   },
-  {
-    name: "محمل كروي محوري",
-    image: "/russia/thrust.webp",
-    link: "/products/ball-bearing/thrust-ball-bearing",
-  },
+  // {
+  //   name: "محمل كروي محوري",
+  //   image: "/russia/thrust.webp",
+  //   link: "/products/ball-bearing/thrust-ball-bearing",
+  // },
   {
     name: "محمل كروي ذو تلامس زاوي",
     image: "/russia/angular.webp",
     link: "/products/ball-bearing/angular-contact-ball-bearing",
+  },
+  {
+    name: "محمل إبر",
+    image: "/russia/needle.webp",
+    link: "/products/roller-bearings/needle-roller-bearings",
   },
   {
     name: "محمل كروي ذو أخدود عميق",
@@ -164,7 +175,7 @@ function ProductSlider({ title, subtitle, products }) {
 
       {/* Product Slider */}
       <Swiper
-        translate="no"
+       
         modules={[Autoplay]}
         autoplay={{
           delay: 3500,
