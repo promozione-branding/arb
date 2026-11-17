@@ -433,7 +433,7 @@ function ProductSlider({ title, subtitle, products }) {
                         justify-center
                         gap-1.5
                         rounded-xl
-                        bg-[#CC1C15]
+                       bg-green-500
                         px-2
                         py-2.5
                         text-[10px]
@@ -442,7 +442,7 @@ function ProductSlider({ title, subtitle, products }) {
                         transition-all
                         duration-300
                         hover:-translate-y-0.5
-                        hover:bg-[#a81712]
+                        hover:bg-green-600
                         sm:gap-2
                         sm:px-3
                         sm:py-3
@@ -605,7 +605,7 @@ export default function ProductsU() {
                 justify-center
                 gap-2
                 rounded-xl
-                bg-[#CC1C15]
+                bg-green-500
                 px-7
                 py-3.5
                 text-sm
@@ -614,7 +614,7 @@ export default function ProductsU() {
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#a81712]
+                hover:bg-green-600
               "
             >
               <FaWhatsapp size={16} />

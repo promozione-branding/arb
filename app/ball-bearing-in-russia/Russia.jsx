@@ -67,7 +67,7 @@ export default function Russia() {
 
       <FooterR />
       <StickyFooter whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
-      <WhatsApp whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
+      <WhatsApp  phoneNumber={"+79859834837"} />
     </>
   );
 }

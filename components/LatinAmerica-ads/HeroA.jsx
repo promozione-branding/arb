@@ -59,7 +59,7 @@ export default function HeroA() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   /* Typewriter */
-  const [typedText, setTypedText] = useState("");
+  const [typedLength, setTypedLength] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -81,9 +81,7 @@ export default function HeroA() {
     const startDelay = setTimeout(() => {
       const currentText = typedTexts[textIndex];
 
-      const typingSpeed = isDeleting ? 40 : 85;
-
-      if (!isDeleting && typedText === currentText) {
+      if (!isDeleting && typedLength === currentText.length) {
         const timer = setTimeout(() => {
           setIsDeleting(true);
         }, 1800);
@@ -91,7 +89,7 @@ export default function HeroA() {
         return () => clearTimeout(timer);
       }
 
-      if (isDeleting && typedText === "") {
+      if (isDeleting && typedLength === 0) {
         setIsDeleting(false);
 
         setTextIndex((prev) => (prev + 1) % typedTexts.length);
@@ -100,18 +98,14 @@ export default function HeroA() {
       }
 
       const timer = setTimeout(() => {
-        setTypedText(
-          isDeleting
-            ? currentText.substring(0, typedText.length - 1)
-            : currentText.substring(0, typedText.length + 1)
-        );
-      }, typingSpeed);
+        setTypedLength((length) => length + (isDeleting ? -1 : 1));
+      }, isDeleting ? 40 : 85);
 
       return () => clearTimeout(timer);
     }, 100);
 
     return () => clearTimeout(startDelay);
-  }, [typedText, isDeleting, textIndex]);
+  }, [typedLength, isDeleting, textIndex]);
 
   return (
     <>
@@ -402,22 +396,46 @@ export default function HeroA() {
                 </span>
 
                 <span
-                  translate="no"
                   className="
                     typewriter-text
                     relative
                     mt-2
                     block
                     min-h-[1.12em]
-                    bg-gradient-to-r
-                    from-[#241260]
-                    via-[#3C2A9E]
-                    to-[#2563EB]
-                    bg-clip-text
-                    text-transparent
                   "
                 >
-                  {typedText || "IMPULSA EL PROGRESO"}
+                  {typedTexts.map((text, index) => {
+                    const isActive = index === textIndex;
+                    const visiblePercent = isActive
+                      ? (typedLength / text.length) * 100
+                      : 0;
+
+                    return (
+                      <span
+                        key={text}
+                        aria-hidden={!isActive}
+                        className="
+                          inline-block
+                          bg-gradient-to-r
+                          from-[#241260]
+                          via-[#3C2A9E]
+                          to-[#2563EB]
+                          bg-clip-text
+                          text-transparent
+                        "
+                        style={{
+                          clipPath: `inset(0 ${100 - visiblePercent}% 0 0)`,
+                          left: isActive ? undefined : 0,
+                          opacity: isActive ? 1 : 0,
+                          pointerEvents: isActive ? undefined : "none",
+                          position: isActive ? "relative" : "absolute",
+                          top: isActive ? undefined : 0,
+                        }}
+                      >
+                        {text}
+                      </span>
+                    );
+                  })}
 
                   <span
                     className="

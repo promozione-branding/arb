@@ -369,7 +369,7 @@ export default function CaetgoryR() {
                             justify-center
                             gap-1.5
                             rounded-xl
-                            bg-red-500
+                            bg-green-500
                             px-2
                             py-2.5
                             text-[10px]
@@ -378,7 +378,7 @@ export default function CaetgoryR() {
                             transition-all
                             duration-300
                             hover:-translate-y-0.5
-                            hover:bg-red-600
+                            hover:bg-green-600
                             sm:gap-2
                             sm:px-3
                             sm:py-3

@@ -76,7 +76,7 @@ function TypewriterText() {
         text-transparent
       "
     >
-      <span className="hero-typewriter">
+      <span lang="ru" translate="yes" className="hero-typewriter">
         {typedTexts[0]}
       </span>
 

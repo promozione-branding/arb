@@ -7,6 +7,7 @@ import HeroA from '@/components/LatinAmerica-ads/HeroA'
 import IndustryA from '@/components/LatinAmerica-ads/IndustryA'
 import NavbarA from '@/components/LatinAmerica-ads/NavbarA'
 import ProductsA from '@/components/LatinAmerica-ads/ProductsA'
+import WhatsApp from '@/components/Russia-ads/WhatsApp'
 import StickyFooter from '@/components/StickyFooter'
 import React from 'react'
 
@@ -23,6 +24,7 @@ export default function LatinAmerica() {
       <FormSectionA />
       <FooterA />
       <StickyFooter whatsappNumber={"9968373086"} phoneNumber={"9968373086"} />
+      <WhatsApp whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
     </>
   )
 }

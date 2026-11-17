@@ -579,7 +579,7 @@ export default function ProductsSection() {
                 justify-center
                 gap-2
                 rounded-xl
-                bg-[#CC1C15]
+              bg-green-500
                 px-7
                 py-3.5
                 text-sm
@@ -588,7 +588,7 @@ export default function ProductsSection() {
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#a81712]
+                hover:bg-green-600
               "
               onClick={() => handleCallClick({ source: 'Website' })}
             >

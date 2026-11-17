@@ -33,7 +33,7 @@ export default function NavbarA() {
               <Image
                 src="/logo.png"
                 alt="الشعار"
-                width={210}
+                width={150}
                 height={80}
                 priority
                 className="object-contain"
