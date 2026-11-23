@@ -66,7 +66,7 @@ export default function Russia() {
       <FormSectionR />
 
       <FooterR />
-      <StickyFooter whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
+      <StickyFooter email={"export@arb-bearings.com"} phoneNumber={"+79859834837"} />
       <WhatsApp  phoneNumber={"+79859834837"} />
     </>
   );

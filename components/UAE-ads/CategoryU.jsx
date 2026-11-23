@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { ArrowUpRight, ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, ArrowRight, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 import "swiper/css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EnquiryU from "./EnquiryU";
 import { handleWhatsappClick } from "@/lib/tracking";
 
@@ -53,6 +53,18 @@ const products = [
 
 export default function CategoryU() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  useEffect(() => {
+    if (!selectedProduct) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setSelectedProduct(null);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedProduct]);
 
   const whatsappNumber = "9968373086";
   const whatsappHref = `https://wa.me/${whatsappNumber}`;
@@ -269,30 +281,32 @@ export default function CategoryU() {
                       "
                     />
 
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={600}
-                      height={600}
-                      sizes="
-                        (max-width: 640px) 42vw,
-                        (max-width: 1024px) 30vw,
-                        22vw
-                      "
-                      className="
-                        relative
-                        z-10
-                        h-[135px]
-                        w-full
-                        object-contain
-                        transition-transform
-                        duration-700
-                        group-hover:scale-110
-                        sm:h-[160px]
-                        md:h-[175px]
-                        lg:h-[185px]
-                      "
-                    />
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProduct(item)}
+                      aria-label={`عرض صورة ${item.title}`}
+                      className="relative z-10 h-[135px] w-full cursor-zoom-in border-0 bg-transparent p-0 sm:h-[160px] md:h-[175px] lg:h-[185px]"
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={600}
+                        height={600}
+                        sizes="
+                          (max-width: 640px) 42vw,
+                          (max-width: 1024px) 30vw,
+                          22vw
+                        "
+                        className="
+                          h-full
+                          w-full
+                          object-contain
+                          transition-transform
+                          duration-700
+                          group-hover:scale-110
+                        "
+                      />
+                    </button>
 
                     {/* Bottom shine */}
                     <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent" />
@@ -428,6 +442,61 @@ export default function CategoryU() {
           </Link>
         </div>
       </div>
+
+      {selectedProduct && (
+        <div
+          className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedProduct(null)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="category-product-image-title"
+            className="relative w-full max-w-3xl overflow-hidden rounded-2xl bg-white p-5 shadow-2xl sm:p-8"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedProduct(null)}
+              aria-label="إغلاق"
+              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-700 shadow transition hover:bg-slate-100"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="flex max-h-[65vh] min-h-[240px] items-center justify-center bg-white">
+              <Image
+                src={selectedProduct.image}
+                alt={selectedProduct.title}
+                width={1000}
+                height={800}
+                sizes="(max-width: 768px) 90vw, 700px"
+                className="max-h-[65vh] w-full object-contain"
+              />
+            </div>
+
+            <h3
+              id="category-product-image-title"
+              className="mt-4 text-center text-lg font-bold text-slate-900"
+            >
+              {selectedProduct.title}
+            </h3>
+
+            <div className="mt-5 flex justify-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedProduct(null);
+                  setIsFormOpen(true);
+                }}
+                className="rounded-xl bg-[#29166F] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#211157]"
+              >
+                طلب عرض سعر
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {isFormOpen && (
         <EnquiryU IATFpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
