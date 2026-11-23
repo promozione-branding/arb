@@ -52,6 +52,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.className} h-full antialiased`}>
       <head>
+
+        <Script
+  src="https://www.googletagmanager.com/gtm.js?id=GTM-NCQQHNH5"
+  strategy="afterInteractive"
+/>
+
+<Script id="gtm-init" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+  `}
+</Script>
+
+
         {/* Yandex.Metrika */}
         <meta name="yandex-verification" content="5fdaf2cd9bb84918" />
           {/* Yandex.Metrika */}

@@ -65,7 +65,7 @@ export default function UAE() {
       <FormSectionU />
       <FooterU />
       <StickyFooter whatsappNumber={"9968373086"} phoneNumber={"9968373086"} />
-      <WhatsApp whatsappNumber={"79859834837"} phoneNumber={"+79859834837"} />
+      <WhatsApp whatsappNumber={"9968373086"} phoneNumber={"9968373086"} />
     </>
   )
 }
