@@ -87,9 +87,9 @@ export default function Footer() {
                 ["Articles", "/our-blogs"],
                 ["Contact Us", "/contact-us"],
                 ["Privacy Policy", "/privacy-policy"],
-
-                // ["Shipping Policy", "/shipping-policy"],
-                // ["Return & Refund Policy", "/return-refund-policy"],
+                ["Shipping Policy", "/shipping-policy"],
+                ["Return & Refund Policy", "/return-refund"],
+                ["Terms & Conditions", "/terms-conditions"],
                 // ["Sitemap", "/sitemap"],
               ].map(([label, href]) => (
                 <li key={label}>
