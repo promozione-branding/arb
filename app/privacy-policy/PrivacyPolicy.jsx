@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
                 <div className="relative mx-auto flex min-h-[280px] max-w-7xl items-center px-6 py-16 sm:px-8 lg:px-12">
                     <div>
                         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">
-                            JNJ Aqua
+                            ARB Bearings
                         </p>
 
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
                         </h1>
 
                         <p className="mt-5 max-w-2xl text-base leading-7 text-blue-100 sm:text-lg">
-                            Learn how JNJ Aqua collects, uses, protects, and manages your
+                            Learn how ARB Bearings collects, uses, protects, and manages your
                             personal information.
                         </p>
                     </div>
@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
             <main className="mx-auto max-w-5xl px-6 py-12 sm:px-8 lg:px-12 lg:py-16">
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-10">
                     <p className="mb-8 text-base leading-8 text-gray-600">
-                        JNJ Aqua values your privacy and is committed to handling your
+                        ARB Bearings values your privacy and is committed to handling your
                         personal information responsibly with the utmost care. This Data
                         Protection Policy outlines our practices for collecting, using,
                         disclosing, and securing your data when you visit our website or
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
                             response to valid legal requests, such as subpoenas or court
                             orders. Additionally, we may disclose your information if we
                             believe that such action is necessary to protect the rights,
-                            property, or safety of JNJ Aqua, our users, or others. This
+                            property, or safety of ARB Bearings, our users, or others. This
                             may include sharing information with law enforcement, legal
                             advisors, or other third parties as needed.
                         </p>
@@ -133,10 +133,10 @@ const PrivacyPolicy = () => {
                         <p className="mt-6 text-base leading-8 text-gray-600">
                             To exercise these rights, please contact us at{" "}
                             <a
-                                href="mailto:jnjaquadelhi@gmail.com"
+                                href="mailto:export@arb-bearings.com"
                                 className="font-semibold text-blue-700 hover:text-blue-900 hover:underline"
                             >
-                                jnjaquadelhi@gmail.com
+                                export@arb-bearings.com
                             </a>
                             . We will respond to your request in accordance with applicable
                             laws. For users in international jurisdictions, please refer to
@@ -174,10 +174,10 @@ const PrivacyPolicy = () => {
                             <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:gap-4">
                                 <span className="font-semibold text-gray-900">Email:</span>
                                 <a
-                                    href="mailto:jnjaquadelhi@gmail.com"
+                                    href="mailto:export@arb-bearings.com"
                                     className="text-blue-700 hover:underline"
                                 >
-                                    jnjaquadelhi@gmail.com
+                                    export@arb-bearings.com
                                 </a>
                             </div>
 
