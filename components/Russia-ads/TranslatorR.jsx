@@ -87,7 +87,7 @@ export default function Translator() {
       <button
         type="button"
         onClick={translateToEnglish}
-        disabled={!loaded}
+       
         className="
           rounded-full
           bg-black
