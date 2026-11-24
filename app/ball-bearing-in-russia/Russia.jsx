@@ -13,8 +13,20 @@ import WhatsApp from "@/components/Russia-ads/WhatsApp";
 
 const supplyCities = [
   { name: "Moscow", href: "/ball-bearing-in-moscow" },
-  { name: "St. Petersburg", href: "/ball-bearing-in-st-petersburg" },
+  { name: "Saint Petersburg", href: "/ball-bearing-in-st-petersburg" },
+  { name: "Krasnodar", href: "/ball-bearing-in-krasnodar" },
+  { name: "Yekaterinburg", href: "/ball-bearing-in-yekaterinburg" },
+  { name: "Nizhny Novgorod", href: "/ball-bearing-in-nizhny-novgorod" },
   { name: "Kazan", href: "/ball-bearing-in-kazan" },
+  { name: "Novosibirsk", href: "/ball-bearing-in-novosibirsk" },
+  { name: "Ufa", href: "/ball-bearing-in-ufa" },
+  { name: "Vladivostok", href: "/ball-bearing-in-vladivostok" },
+  { name: "Rostov-on-Don", href: "/ball-bearing-in-rostov-on-don" },
+  { name: "Perm", href: "/ball-bearing-in-perm" },
+  { name: "Krasnoyarsk", href: "/ball-bearing-in-krasnoyarsk" },
+  { name: "Samara", href: "/ball-bearing-in-samara" },
+  { name: "Voronezh", href: "/ball-bearing-in-voronezh" },
+  { name: "Khimki", href: "/ball-bearing-in-khimki" },
 ];
 
 export default function Russia() {
@@ -43,7 +55,7 @@ export default function Russia() {
       <span className="text-black">Наша сеть</span> поставок
     </h2>
 
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-5">
       {supplyCities.map((city) => (
         <a
           key={city.href}
