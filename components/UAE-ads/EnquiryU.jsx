@@ -106,8 +106,8 @@ export default function EnquiryU({ IATFpen, onClose }) {
 
   return (
     <div
-      dir="rtl"
-      className="fixed inset-0 z-[99999] flex items-center justify-center overflow-y-auto bg-black/50 p-4"
+      
+      className="fixed inset-0 z-[999999] flex items-center justify-center overflow-y-auto bg-black/50 p-4"
     >
       <div
         className="
@@ -141,7 +141,7 @@ export default function EnquiryU({ IATFpen, onClose }) {
             type="button"
             className="
               absolute
-              left-0
+              right-0
               top-0
               cursor-pointer
               text-2xl
