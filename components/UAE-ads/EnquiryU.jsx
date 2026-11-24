@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -24,7 +25,7 @@ export default function EnquiryU({ IATFpen, onClose }) {
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  if (!IATFpen) return null;
+  if (!IATFpen || typeof document === "undefined") return null;
 
   const handleClose = () => {
     onClose();
@@ -104,9 +105,8 @@ export default function EnquiryU({ IATFpen, onClose }) {
     await submitForm(values);
   };
 
-  return (
+  return createPortal(
     <div
-      
       className="fixed inset-0 z-[999999] flex items-center justify-center overflow-y-auto bg-black/50 p-4"
     >
       <div
@@ -313,7 +313,8 @@ export default function EnquiryU({ IATFpen, onClose }) {
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
