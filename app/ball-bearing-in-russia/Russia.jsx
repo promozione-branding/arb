@@ -12,21 +12,21 @@ import StickyFooter from "@/components/StickyFooter";
 import WhatsApp from "@/components/Russia-ads/WhatsApp";
 
 const supplyCities = [
-  { name: "Moscow", href: "/ball-bearing-in-moscow" },
-  { name: "Saint Petersburg", href: "/ball-bearing-in-st-petersburg" },
-  { name: "Krasnodar", href: "/ball-bearing-in-krasnodar" },
-  { name: "Yekaterinburg", href: "/ball-bearing-in-yekaterinburg" },
-  { name: "Nizhny Novgorod", href: "/ball-bearing-in-nizhny-novgorod" },
-  { name: "Kazan", href: "/ball-bearing-in-kazan" },
-  { name: "Novosibirsk", href: "/ball-bearing-in-novosibirsk" },
-  { name: "Ufa", href: "/ball-bearing-in-ufa" },
-  { name: "Vladivostok", href: "/ball-bearing-in-vladivostok" },
-  { name: "Rostov-on-Don", href: "/ball-bearing-in-rostov-on-don" },
-  { name: "Perm", href: "/ball-bearing-in-perm" },
-  { name: "Krasnoyarsk", href: "/ball-bearing-in-krasnoyarsk" },
-  { name: "Samara", href: "/ball-bearing-in-samara" },
-  { name: "Voronezh", href: "/ball-bearing-in-voronezh" },
-  { name: "Khimki", href: "/ball-bearing-in-khimki" },
+  { name: "Москва", href: "/ball-bearing-in-moscow" },
+  { name: "Санкт-Петербург", href: "/ball-bearing-in-st-petersburg" },
+  { name: "Краснодар", href: "/ball-bearing-in-krasnodar" },
+  { name: "Екатеринбург", href: "/ball-bearing-in-yekaterinburg" },
+  { name: "Нижний Новгород", href: "/ball-bearing-in-nizhny-novgorod" },
+  { name: "Казань", href: "/ball-bearing-in-kazan" },
+  { name: "Новосибирск", href: "/ball-bearing-in-novosibirsk" },
+  { name: "Уфа", href: "/ball-bearing-in-ufa" },
+  { name: "Владивосток", href: "/ball-bearing-in-vladivostok" },
+  { name: "Ростов-на-Дону", href: "/ball-bearing-in-rostov-on-don" },
+  { name: "Пермь", href: "/ball-bearing-in-perm" },
+  { name: "Красноярск", href: "/ball-bearing-in-krasnoyarsk" },
+  { name: "Самара", href: "/ball-bearing-in-samara" },
+  { name: "Воронеж", href: "/ball-bearing-in-voronezh" },
+  { name: "Химки", href: "/ball-bearing-in-khimki" },
 ];
 
 export default function Russia() {
