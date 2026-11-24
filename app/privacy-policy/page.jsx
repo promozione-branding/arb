@@ -2,9 +2,9 @@ import React from 'react'
 import PrivacyPolicy from './PrivacyPolicy'
 
 export const metadata = {
-    title: "Privacy Policy | JNJ Aqua",
+    title: "Privacy Policy | ARB Bearing",
     description:
-        "Learn how JNJ Aqua collects, uses, protects, and manages personal information.",
+        "Learn how ARB Bearing collects, uses, protects, and manages personal information.",
 };
 
 export default function Page() {
