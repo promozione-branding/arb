@@ -12,9 +12,9 @@ const supplyRegions = [
     number: "01",
   },
   {
-    name: "Latin America",
+    name: "Latin Countries",
     description: "Expanding our supply network across diverse Latin American markets.",
-    href: "/ball-bearing-in-latin-america",
+    href: "/ball-bearing-in-latin-countries",
     number: "02",
   },
   {
