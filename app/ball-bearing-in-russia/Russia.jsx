@@ -22,7 +22,7 @@ const supplyCities = [
   { name: "Уфа", href: "/ball-bearing-in-ufa" },
   { name: "Владивосток", href: "/ball-bearing-in-vladivostok" },
   { name: "Ростов-на-Дону", href: "/ball-bearing-in-rostov-on-don" },
-  { name: "Пермь", href: "/ball-bearing-in-perm" },
+ 
   { name: "Красноярск", href: "/ball-bearing-in-krasnoyarsk" },
   { name: "Самара", href: "/ball-bearing-in-samara" },
   { name: "Воронеж", href: "/ball-bearing-in-voronezh" },
